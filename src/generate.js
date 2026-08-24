@@ -225,7 +225,8 @@ async function buildOne({ level, skill, date, upload }) {
     buildSeconds: Math.round((Date.now() - started) / 1000),
     dir: path.relative(paths.root, workDir),
   };
-  appendHistory(entry);
+  // Rehearsals should leave no trace in the published run log.
+  if (upload) appendHistory(entry);
   fs.writeFileSync(path.join(workDir, 'metadata.json'), JSON.stringify({ ...entry, ...meta }, null, 2));
   log('done', `${entry.buildSeconds}s`);
   return entry;
