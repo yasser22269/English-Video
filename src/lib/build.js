@@ -9,6 +9,16 @@ function shiftRate(rate, by) {
 
 const LETTERS = ['A', 'B', 'C', 'D'];
 
+/** The choices, one per line, for the caption band during the thinking pause. */
+function optionsBlock(q) {
+  return (q.options || []).map((opt, i) => `${LETTERS[i]}. ${opt}`).join('\n');
+}
+
+/** The same choices as one spoken sentence — a listening lesson must not force reading. */
+function readOptions(q) {
+  return (q.options || []).map((opt, i) => `${LETTERS[i]}. ${opt}.`).join(' ');
+}
+
 /** Text destined for the voice, not the screen: gaps and symbols read badly. */
 function speakable(text) {
   return String(text)
@@ -300,8 +310,12 @@ function buildListening(plan) {
 
   lesson.questions.forEach((q, i) => {
     const label = `Question ${i + 1} of ${lesson.questions.length}`;
-    plan.say(q.q, { ar: q.q_ar, note: label, cue: 'Think — then answer', pauseAfterMs: 3200 });
-    plan.say(`${LETTERS[q.answer] || 'A'}. ${q.options[q.answer]}.`, { note: label });
+    // Footage lessons have no option card to render, so the choices go into the
+    // caption track during the thinking pause. Without this the narrator asked
+    // the viewer to choose between options that were never on screen.
+    plan.say(q.q, { ar: q.q_ar, note: label, pauseAfterMs: 420 });
+    plan.say(readOptions(q), { note: label, cue: optionsBlock(q), pauseAfterMs: 4200 });
+    plan.say(`The answer is ${LETTERS[q.answer] || 'A'}. ${q.options[q.answer]}.`, { note: label });
     if (q.explain) plan.say(q.explain, { note: label });
   });
 

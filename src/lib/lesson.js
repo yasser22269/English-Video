@@ -188,6 +188,53 @@ const VALIDATORS = {
   },
 };
 
+/** Small deterministic PRNG so a re-run of the same lesson shuffles identically. */
+function seededRandom(seed) {
+  let h = 2166136261;
+  for (let i = 0; i < seed.length; i++) {
+    h ^= seed.charCodeAt(i);
+    h = Math.imul(h, 16777619);
+  }
+  return () => {
+    h = Math.imul(h ^ (h >>> 15), 2246822507);
+    h = Math.imul(h ^ (h >>> 13), 3266489909);
+    return ((h ^= h >>> 16) >>> 0) / 4294967296;
+  };
+}
+
+/**
+ * Move the correct answer around.
+ *
+ * The prompt has to show the model a shape, and that shape contains
+ * `"answer": 0`. Models copy it: a sample of generated lessons came back
+ * A A A A B. A viewer notices that within two videos and stops reading the
+ * options. Shuffling here is model-independent and cannot regress.
+ *
+ * Any "A)" / "B." prefix the model glued onto an option is stripped first,
+ * otherwise the letters contradict the new positions.
+ */
+function shuffleAnswers(lesson) {
+  if (!Array.isArray(lesson.questions)) return lesson;
+
+  lesson.questions.forEach((q, qi) => {
+    if (!Array.isArray(q.options) || q.options.length < 2) return;
+
+    const options = q.options.map(o => String(o).replace(/^\s*[A-Da-d]\s*[).:-]\s+/, '').trim());
+    const correct = options[q.answer] ?? options[0];
+
+    const rand = seededRandom(`${lesson.level}|${lesson.skill}|${lesson.topic}|q${qi}`);
+    for (let i = options.length - 1; i > 0; i--) {
+      const j = Math.floor(rand() * (i + 1));
+      [options[i], options[j]] = [options[j], options[i]];
+    }
+
+    q.options = options;
+    q.answer = options.indexOf(correct);
+    if (q.answer === -1) q.answer = 0;
+  });
+  return lesson;
+}
+
 export async function writeLesson({ level, skill, topic, focus }) {
   const lvl = levelConfig(level);
   const build = PROMPTS[skill];
@@ -201,6 +248,7 @@ export async function writeLesson({ level, skill, topic, focus }) {
 
   lesson.level = level;
   lesson.skill = skill;
+  shuffleAnswers(lesson);
   lesson.topic = topic;
   lesson.focus = focus;
   lesson.levelLabel = lvl.label;

@@ -114,6 +114,7 @@ Style: EN,${fonts.en},64,${assColor(accent)},${assColor('#FFFFFF')},${assColor('
 Style: ENPLAIN,${fonts.en},64,${assColor('#FFFFFF')},${assColor('#FFFFFF')},${assColor('#000000')},${assColor('#000000', '80')},-1,0,0,0,100,100,0,0,1,3.4,1.4,2,220,220,168,1
 Style: AR,${fonts.ar},46,${assColor('#CBD5E1')},${assColor('#CBD5E1')},${assColor('#000000')},${assColor('#000000', '80')},0,0,0,0,100,100,0,0,1,2.6,1,2,220,220,86,1
 Style: CUE,${fonts.en},56,${assColor(accent)},${assColor(accent)},${assColor('#000000')},${assColor('#000000', '80')},-1,0,0,0,100,100,2,0,1,3.2,1,2,220,220,312,1
+Style: OPTS,${fonts.en},52,${assColor('#FFFFFF')},${assColor('#FFFFFF')},${assColor('#000000')},${assColor('#000000', '60')},0,0,0,0,100,100,0,0,1,3,1,2,300,300,120,1
 Style: NOTE,${fonts.en},40,${assColor('#94A3B8')},${assColor('#94A3B8')},${assColor('#000000')},${assColor('#000000', '80')},0,0,0,0,100,100,0,0,1,2.4,1,8,220,220,60,1
 Style: SPK,${fonts.en},36,${assColor(accent)},${assColor(accent)},${assColor('#000000')},${assColor('#000000', '80')},-1,0,0,0,100,100,3,0,1,2.4,1,1,224,220,258,1
 
@@ -164,8 +165,11 @@ export function buildAss(timeline, { outFile, width, height, fonts, accent, cues
   }
 
   for (const cue of cues) {
+    // A multi-line cue is an answer block (A / B / C), not a one-line prompt:
+    // it needs the smaller, quieter style so three lines still fit the band.
+    const multiline = /\n/.test(cue.text);
     events.push(dialogue({
-      start: cue.startMs, end: cue.endMs, style: 'CUE', layer: 1,
+      start: cue.startMs, end: cue.endMs, style: multiline ? 'OPTS' : 'CUE', layer: 1,
       // gentle pulse so a silent gap does not look like a frozen video
       text: `{\\fad(220,220)}${escapeText(cue.text)}`,
     }));
