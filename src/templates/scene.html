@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<style>
+  :root {
+    --accent: #22C55E;
+    --accent-dark: #15803D;
+    --bg-a: #04120B;
+    --bg-b: #082018;
+    --bg-c: #05170F;
+    --band: 320px;            /* reserved for the burned-in caption track */
+    --ink: #F8FAFC;
+    --ink-dim: #94A3B8;
+    --font-en: system-ui, "Segoe UI", Roboto, "Noto Sans", Arial, sans-serif;
+    --font-ar: "Segoe UI", Tahoma, "Noto Sans Arabic", "Noto Naskh Arabic", sans-serif;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html, body {
+    width: 1920px; height: 1080px;
+    background: #000; color: var(--ink);
+    font-family: var(--font-en);
+    overflow: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  #stage {
+    position: relative; width: 1920px; height: 1080px;
+    background:
+      radial-gradient(1200px 900px at 18% 8%, color-mix(in srgb, var(--accent) 16%, transparent), transparent 60%),
+      radial-gradient(1000px 800px at 88% 92%, color-mix(in srgb, var(--accent) 10%, transparent), transparent 62%),
+      linear-gradient(150deg, var(--bg-a) 0%, var(--bg-b) 52%, var(--bg-c) 100%);
+  }
+
+  /* faint grid keeps large flat areas from banding on YouTube's encoder */
+  #stage::after {
+    content: ""; position: absolute; inset: 0; pointer-events: none;
+    background-image:
+      linear-gradient(color-mix(in srgb, var(--accent) 5%, transparent) 1px, transparent 1px),
+      linear-gradient(90deg, color-mix(in srgb, var(--accent) 5%, transparent) 1px, transparent 1px);
+    background-size: 96px 96px;
+    mask-image: radial-gradient(1400px 900px at 50% 30%, #000 10%, transparent 78%);
+  }
+
+  /* the caption band scrim: subtitles are drawn on top of this by ffmpeg */
+  #band {
+    position: absolute; left: 0; right: 0; bottom: 0; height: var(--band);
+    background: linear-gradient(to top, rgba(0,0,0,.82) 0%, rgba(0,0,0,.62) 45%, transparent 100%);
+  }
+
+  #progress {
+    position: absolute; top: 0; left: 0; height: 6px;
+    background: linear-gradient(90deg, var(--accent-dark), var(--accent));
+    box-shadow: 0 0 24px color-mix(in srgb, var(--accent) 60%, transparent);
+  }
+
+  header {
+    position: absolute; top: 44px; left: 64px; right: 64px;
+    display: flex; align-items: center; justify-content: space-between;
+    font-size: 26px; letter-spacing: .16em; text-transform: uppercase;
+    color: var(--ink-dim); font-weight: 600;
+  }
+  .brand { display: flex; align-items: center; gap: 16px; }
+  .brand .dot { width: 14px; height: 14px; border-radius: 50%; background: var(--accent);
+                box-shadow: 0 0 20px var(--accent); }
+  .badge {
+    background: color-mix(in srgb, var(--accent) 20%, transparent);
+    border: 2px solid color-mix(in srgb, var(--accent) 55%, transparent);
+    color: var(--ink); border-radius: 999px; padding: 12px 28px;
+    font-size: 24px; letter-spacing: .12em;
+  }
+
+  main {
+    position: absolute; left: 96px; right: 96px; top: 150px;
+    bottom: calc(var(--band) - 24px);
+    display: flex; flex-direction: column; justify-content: center;
+  }
+
+  .eyebrow { font-size: 30px; letter-spacing: .26em; text-transform: uppercase;
+             color: var(--accent); font-weight: 700; margin-bottom: 26px; }
+  .ar { font-family: var(--font-ar); direction: rtl; }
+
+  /* ── title card ─────────────────────────────────────────────── */
+  .title-h1 { font-size: 108px; line-height: 1.06; font-weight: 800; letter-spacing: -.02em; }
+  .title-sub { margin-top: 34px; font-size: 40px; color: var(--ink-dim); font-weight: 500; }
+  .title-meta { margin-top: 54px; display: flex; gap: 20px; flex-wrap: wrap; }
+  .chip { border: 2px solid rgba(255,255,255,.16); background: rgba(255,255,255,.05);
+          border-radius: 16px; padding: 16px 30px; font-size: 30px; color: var(--ink); }
+
+  /* ── vocabulary word card ───────────────────────────────────── */
+  .word-wrap { display: grid; grid-template-columns: 620px 1fr; gap: 72px; align-items: center; }
+  .word-img {
+    width: 620px; height: 480px; border-radius: 34px; object-fit: cover;
+    border: 3px solid color-mix(in srgb, var(--accent) 40%, transparent);
+    box-shadow: 0 34px 90px rgba(0,0,0,.6);
+  }
+  .word-img.placeholder {
+    display: flex; align-items: center; justify-content: center;
+    background: linear-gradient(140deg, color-mix(in srgb, var(--accent) 24%, transparent), rgba(255,255,255,.03));
+    font-size: 150px; font-weight: 800; color: color-mix(in srgb, var(--accent) 70%, white);
+  }
+  .word-term { font-size: 128px; font-weight: 800; line-height: 1; letter-spacing: -.02em; }
+  .word-ipa { margin-top: 22px; font-size: 46px; color: var(--accent); font-weight: 600; }
+  .word-pos { display: inline-block; margin-top: 26px; font-size: 26px; letter-spacing: .16em;
+              text-transform: uppercase; padding: 10px 24px; border-radius: 999px;
+              background: color-mix(in srgb, var(--accent) 22%, transparent);
+              border: 2px solid color-mix(in srgb, var(--accent) 50%, transparent); }
+  .word-ar { margin-top: 30px; font-size: 52px; color: var(--ink); font-weight: 600; }
+  .word-count { position: absolute; right: 0; top: -6px; font-size: 30px; color: var(--ink-dim);
+                letter-spacing: .18em; }
+
+  /* ── reading / passage ──────────────────────────────────────── */
+  .passage-title { font-size: 78px; font-weight: 800; line-height: 1.1; max-width: 1400px; }
+  .passage-note { margin-top: 34px; font-size: 34px; color: var(--ink-dim); }
+  .rule { width: 180px; height: 8px; border-radius: 4px; margin: 40px 0;
+          background: linear-gradient(90deg, var(--accent), transparent); }
+
+  /* ── quiz ───────────────────────────────────────────────────── */
+  .options { display: flex; flex-direction: column; gap: 26px; margin-top: 12px; }
+  .option {
+    display: flex; align-items: center; gap: 32px; padding: 30px 40px;
+    border-radius: 22px; border: 3px solid rgba(255,255,255,.14);
+    background: rgba(255,255,255,.045); font-size: 44px; font-weight: 500;
+  }
+  .option .key {
+    width: 76px; height: 76px; flex: none; border-radius: 18px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 40px; font-weight: 800; background: rgba(255,255,255,.1);
+  }
+  .option.correct {
+    border-color: var(--accent);
+    background: color-mix(in srgb, var(--accent) 22%, transparent);
+    box-shadow: 0 0 60px color-mix(in srgb, var(--accent) 30%, transparent);
+  }
+  .option.correct .key { background: var(--accent); color: #04120B; }
+  .option.dim { opacity: .38; }
+
+  /* ── dialogue ───────────────────────────────────────────────── */
+  .speakers { display: flex; gap: 60px; align-items: center; justify-content: center; }
+  .speaker { display: flex; flex-direction: column; align-items: center; gap: 22px; opacity: .35;
+             transition: none; }
+  .speaker.active { opacity: 1; }
+  .avatar {
+    width: 220px; height: 220px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 96px; font-weight: 800; color: #06110C;
+    background: linear-gradient(145deg, var(--accent), var(--accent-dark));
+    box-shadow: 0 0 0 8px rgba(255,255,255,.06);
+  }
+  .speaker.active .avatar { box-shadow: 0 0 0 10px color-mix(in srgb, var(--accent) 45%, transparent),
+                                        0 0 90px color-mix(in srgb, var(--accent) 45%, transparent); }
+  .speaker .name { font-size: 32px; letter-spacing: .2em; text-transform: uppercase; color: var(--ink-dim); }
+  .setting { text-align: center; margin-top: 46px; font-size: 36px; color: var(--ink-dim); }
+
+  /* ── speaking drill ─────────────────────────────────────────── */
+  .drill-phrase { font-size: 92px; font-weight: 800; line-height: 1.12; letter-spacing: -.01em; }
+  .drill-focus { margin-top: 40px; display: flex; align-items: center; gap: 24px;
+                 font-size: 38px; color: var(--ink); }
+  .drill-focus .pin { width: 56px; height: 56px; flex: none; border-radius: 14px;
+                      background: color-mix(in srgb, var(--accent) 28%, transparent);
+                      border: 2px solid color-mix(in srgb, var(--accent) 60%, transparent);
+                      display: flex; align-items: center; justify-content: center; font-size: 30px; }
+  .repeat-cue { margin-top: 52px; display: inline-flex; align-items: center; gap: 22px;
+                border-radius: 999px; padding: 20px 42px; font-size: 36px; font-weight: 700;
+                background: color-mix(in srgb, var(--accent) 20%, transparent);
+                border: 3px solid color-mix(in srgb, var(--accent) 55%, transparent); }
+
+  /* ── outro ──────────────────────────────────────────────────── */
+  .outro-h { font-size: 96px; font-weight: 800; line-height: 1.1; }
+  .outro-grid { margin-top: 56px; display: flex; gap: 28px; flex-wrap: wrap; }
+  .outro-card { border-radius: 22px; padding: 30px 38px; font-size: 34px;
+                background: rgba(255,255,255,.05); border: 2px solid rgba(255,255,255,.14); }
+
+  .hidden { display: none !important; }
+</style>
+</head>
+<body>
+<div id="stage">
+  <div id="progress"></div>
+  <header>
+    <div class="brand"><span class="dot"></span><span id="brand-name">English Every Day</span></div>
+    <div class="badge" id="level-badge">A1 · Beginner</div>
+  </header>
+  <main id="main"></main>
+  <div id="band"></div>
+</div>
+
+<script>
+const esc = (s) => String(s == null ? '' : s)
+  .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+
+const LAYOUTS = {
+  title: (d) => `
+    <div class="eyebrow">${esc(d.eyebrow || '')}</div>
+    <h1 class="title-h1">${esc(d.title)}</h1>
+    <div class="title-sub">${esc(d.subtitle || '')}</div>
+    <div class="title-meta">
+      ${(d.chips || []).map(c => `<span class="chip">${esc(c)}</span>`).join('')}
+    </div>`,
+
+  word: (d) => `
+    <div style="position:relative">
+      <div class="word-count">${esc(d.counter || '')}</div>
+      <div class="word-wrap">
+        ${d.image
+          ? `<img class="word-img" src="${esc(d.image)}" alt="">`
+          : `<div class="word-img placeholder">${esc((d.word || '?').slice(0, 1).toUpperCase())}</div>`}
+        <div>
+          <div class="word-term">${esc(d.word)}</div>
+          ${d.ipa ? `<div class="word-ipa">${esc(d.ipa)}</div>` : ''}
+          ${d.pos ? `<div class="word-pos">${esc(d.pos)}</div>` : ''}
+          ${d.meaning_ar ? `<div class="word-ar ar">${esc(d.meaning_ar)}</div>` : ''}
+        </div>
+      </div>
+    </div>`,
+
+  passage: (d) => `
+    <div class="eyebrow">${esc(d.eyebrow || 'Reading')}</div>
+    <div class="passage-title">${esc(d.title)}</div>
+    <div class="rule"></div>
+    <div class="passage-note">${esc(d.note || '')}</div>`,
+
+  question: (d) => `
+    <div class="eyebrow">${esc(d.eyebrow || 'Question')}</div>
+    <div class="options">
+      ${(d.options || []).map((opt, i) => {
+        const letter = String.fromCharCode(65 + i);
+        const isAnswer = d.reveal && i === d.answer;
+        const cls = d.reveal ? (isAnswer ? 'option correct' : 'option dim') : 'option';
+        return `<div class="${cls}"><div class="key">${letter}</div><div>${esc(opt)}</div></div>`;
+      }).join('')}
+    </div>`,
+
+  dialogue: (d) => `
+    <div>
+      <div class="speakers">
+        ${(d.speakers || ['A', 'B']).map(s => `
+          <div class="speaker ${d.active === s ? 'active' : ''}">
+            <div class="avatar">${esc(s)}</div>
+            <div class="name">${esc(d.names?.[s] || `Speaker ${s}`)}</div>
+          </div>`).join('')}
+      </div>
+      ${d.setting ? `<div class="setting">${esc(d.setting)}</div>` : ''}
+    </div>`,
+
+  drill: (d) => `
+    <div style="position:relative">
+      <div class="word-count">${esc(d.counter || '')}</div>
+      <div class="eyebrow">${esc(d.eyebrow || 'Repeat after me')}</div>
+      <div class="drill-phrase">${esc(d.phrase)}</div>
+      ${d.focus ? `<div class="drill-focus"><span class="pin">!</span><span>${esc(d.focus)}</span></div>` : ''}
+      ${d.cue ? `<div><span class="repeat-cue">${esc(d.cue)}</span></div>` : ''}
+    </div>`,
+
+  // Footage lessons keep the middle of the frame clear: the stock clip is the
+  // visual, section labels live in the top note line, and everything else is
+  // the burned-in caption track.
+  overlay: (d) => `
+    <div class="eyebrow">${esc(d.eyebrow || '')}</div>
+    <div class="passage-title" style="font-size:64px;max-width:1180px">${esc(d.title || '')}</div>
+    ${d.note ? `<div class="passage-note">${esc(d.note)}</div>` : ''}`,
+
+  outro: (d) => `
+    <div class="eyebrow">${esc(d.eyebrow || 'See you tomorrow')}</div>
+    <div class="outro-h">${esc(d.title)}</div>
+    <div class="outro-grid">
+      ${(d.cards || []).map(c => `<div class="outro-card">${esc(c)}</div>`).join('')}
+    </div>`,
+};
+
+window.renderScene = function renderScene(scene) {
+  const t = scene.theme || {};
+  const root = document.documentElement.style;
+  if (t.accent) root.setProperty('--accent', t.accent);
+  if (t.accentDark) root.setProperty('--accent-dark', t.accentDark);
+  if (t.bgA) root.setProperty('--bg-a', t.bgA);
+  if (t.bgB) root.setProperty('--bg-b', t.bgB);
+  if (t.bgC) root.setProperty('--bg-c', t.bgC);
+
+  document.getElementById('brand-name').textContent = scene.brand || 'English Every Day';
+  document.getElementById('level-badge').textContent = scene.levelLabel || '';
+  document.getElementById('progress').style.width =
+    `${Math.max(0, Math.min(100, scene.progress || 0))}%`;
+
+  // Over footage the stage must be transparent so ffmpeg can composite it.
+  const stage = document.getElementById('stage');
+  stage.style.background = scene.transparent ? 'transparent' : '';
+  if (scene.transparent) stage.style.setProperty('--band', '320px');
+
+  const build = LAYOUTS[scene.layout] || LAYOUTS.title;
+  document.getElementById('main').innerHTML = build(scene.data || {});
+  return true;
+};
+</script>
+</body>
+</html>

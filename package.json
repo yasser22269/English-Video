@@ -1,0 +1,22 @@
+{
+  "name": "english-video-channel",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Automated daily CEFR English-learning video channel (A1-C1 x speaking/vocabulary/reading/listening)",
+  "scripts": {
+    "generate": "node src/generate.js",
+    "daily": "node src/generate.js --today",
+    "auth:youtube": "node scripts/youtube-auth.js",
+    "plan": "node src/generate.js --plan",
+    "voices": "node scripts/list-voices.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "googleapis": "^144.0.0",
+    "puppeteer": "^24.43.1"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
