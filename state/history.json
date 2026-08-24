@@ -1,1 +1,26 @@
-[]
+[
+  {
+    "date": "2026-08-24",
+    "level": "a1",
+    "skill": "vocabulary",
+    "topic": "Numbers, Age and Phone Numbers",
+    "title": "10 English Words About Numbers, Age and Phone Numbers | A1 · Beginner",
+    "durationSec": 206,
+    "sizeMb": 11,
+    "videoId": "9mT3TnPEWXA",
+    "url": "https://www.youtube.com/watch?v=9mT3TnPEWXA",
+    "publishAt": "2026-08-24T13:00:00.000Z",
+    "playlists": [
+      {
+        "key": "level:a1",
+        "id": "PLIJ5pu8Ch1Pc"
+      },
+      {
+        "key": "skill:vocabulary",
+        "id": "PLRKWAimfYWh4"
+      }
+    ],
+    "buildSeconds": 624,
+    "dir": "output/2026-08-24-a1-vocabulary-numbers-age-and-phone-numbers"
+  }
+]
