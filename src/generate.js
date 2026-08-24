@@ -7,7 +7,7 @@ import { writeLesson, buildMetadata } from './lib/lesson.js';
 import { buildPlan, resolveTimings } from './lib/build.js';
 import { synthesizeLines, assembleVoiceTrack } from './lib/tts.js';
 import { masterVoice, mixWithMusic, ffprobeDuration } from './lib/ffmpeg.js';
-import { generateImages, fetchFootage, prepareFootage } from './lib/media.js';
+import { generateImages, fetchFootage, gradeFootage } from './lib/media.js';
 import { SceneRenderer, renderThumbnail } from './lib/render.js';
 import { buildAss, buildSrt } from './lib/ass.js';
 import { composeStills, composeFootage, generateGradientBackground } from './lib/compose.js';
@@ -56,10 +56,18 @@ async function buildOne({ level, skill, date, upload }) {
   const workDir = path.join(paths.output, `${stamp}-${level}-${skill}-${slugify(topic.topic)}`);
   fs.mkdirSync(workDir, { recursive: true });
 
-  // 1 ─ script
-  const lesson = await writeLesson({ level, skill, topic: topic.topic, focus: topic.focus });
-  fs.writeFileSync(path.join(workDir, 'lesson.json'), JSON.stringify(lesson, null, 2));
-  log('script', `"${lesson.title}"`);
+  // 1 ─ script. A previously written lesson is reused unless --fresh is passed,
+  // so re-running a failed build does not burn LLM quota rewriting it.
+  const lessonFile = path.join(workDir, 'lesson.json');
+  let lesson;
+  if (fs.existsSync(lessonFile) && !has('fresh')) {
+    lesson = JSON.parse(fs.readFileSync(lessonFile, 'utf8'));
+    log('script', `"${lesson.title}" (cached — pass --fresh to rewrite)`);
+  } else {
+    lesson = await writeLesson({ level, skill, topic: topic.topic, focus: topic.focus });
+    fs.writeFileSync(lessonFile, JSON.stringify(lesson, null, 2));
+    log('script', `"${lesson.title}"`);
+  }
 
   // 2 ─ scene/narration plan
   const plan = buildPlan(lesson);
@@ -86,10 +94,10 @@ async function buildOne({ level, skill, date, upload }) {
   const durationSec = track.totalMs / 1000;
   log('voice', `${(durationSec / 60).toFixed(1)} min narrated`);
 
-  await masterVoice(track.file, path.join(workDir, 'audio/mastered.wav'));
+  await masterVoice(track.file, path.join(workDir, 'audio/mastered.wav'), env.audioPreset);
   const audioFile = path.join(workDir, 'audio/final.m4a');
   await mixWithMusic(path.join(workDir, 'audio/mastered.wav'), pickMusic(), audioFile);
-  log('audio', `mastered to -15 LUFS -> ${path.basename(audioFile)}`);
+  log('audio', `preset "${env.audioPreset}" -> -15 LUFS -> ${path.basename(audioFile)}`);
 
   // 5 ─ timings drive both the stills and the caption track
   const { scenes, cues } = resolveTimings(plan, track.timeline);
@@ -116,7 +124,7 @@ async function buildOne({ level, skill, date, upload }) {
       }
       const file = path.join(framesDir, `${scene.id}.png`);
       await renderer.shoot(payload, file);
-      stillFiles.push({ file, durationSec: scene.durationSec });
+      stillFiles.push({ file, durationSec: scene.durationSec, startSec: scene.startMs / 1000 });
     }
   } finally {
     await renderer.close();
@@ -128,13 +136,20 @@ async function buildOne({ level, skill, date, upload }) {
   if (plan.mode === 'footage') {
     const bg = path.join(workDir, 'background.mp4');
     if (footageRaw) {
-      await prepareFootage(footageRaw, bg, { durationSec: durationSec + 2, width: video.width, height: video.height });
+      await gradeFootage(footageRaw, bg, { width: video.width, height: video.height, fps: video.fps });
     } else {
-      await generateGradientBackground({ outFile: bg, durationSec: durationSec + 2, video, colorA: lvl.bgB });
+      // A short clip is enough — compose loops whatever it is given.
+      await generateGradientBackground({ outFile: bg, durationSec: 12, video, colorA: lvl.bgB });
     }
+    // The last overlay runs to the end of the audio so the outro card does not
+    // blink out early if the closing scene is short.
+    const overlays = stillFiles.map((s, i) => ({
+      ...s,
+      durationSec: i === stillFiles.length - 1 ? durationSec - s.startSec + 1 : s.durationSec,
+    }));
     await composeFootage({
       footageFile: bg,
-      overlayPng: stillFiles[0].file,
+      overlays,
       audioFile, assFile, outFile: videoFile, video, fontsDir: fonts.dir,
     });
   } else {
@@ -172,7 +187,8 @@ async function buildOne({ level, skill, date, upload }) {
     log('youtube', 'skipped (dry run)');
   }
 
-  topic.commit();
+  // A dry run is a rehearsal: it must not burn a topic out of the rotation.
+  if (upload) topic.commit();
 
   const entry = {
     date: stamp, level, skill, topic: topic.topic, title: meta.title,

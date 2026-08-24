@@ -22,6 +22,25 @@ export function run(cmd, args, { quiet = true } = {}) {
   });
 }
 
+/** EBU R128 measurement. ffmpeg reports it on stderr, which `run` discards. */
+export function measureLoudness(file) {
+  return new Promise((resolve) => {
+    const proc = spawn(FFMPEG, ['-hide_banner', '-nostats', '-i', file,
+      '-af', 'ebur128=peak=true', '-f', 'null', '-'], { windowsHide: true });
+    let err = '';
+    proc.stderr.on('data', d => { err += d.toString(); });
+    proc.on('close', () => {
+      const tail = err.slice(-2000);
+      resolve({
+        lufs: parseFloat(/I:\s*(-?\d+(?:\.\d+)?)\s*LUFS/.exec(tail)?.[1] ?? NaN),
+        truePeak: parseFloat(/Peak:\s*(-?\d+(?:\.\d+)?)\s*dBFS/.exec(tail)?.[1] ?? NaN),
+        range: parseFloat(/LRA:\s*(-?\d+(?:\.\d+)?)\s*LU/.exec(tail)?.[1] ?? NaN),
+      });
+    });
+    proc.on('error', () => resolve({ lufs: NaN, truePeak: NaN, range: NaN }));
+  });
+}
+
 export async function ffprobeDuration(file) {
   const out = await run('ffprobe', [
     '-v', 'error', '-show_entries', 'format=duration',
@@ -33,40 +52,71 @@ export async function ffprobeDuration(file) {
 }
 
 /**
- * The mastering chain that decides whether the channel sounds like a person at
- * a microphone or like a screen reader.
+ * Mastering presets.
  *
- * Neural TTS comes out clean, flat and dead-centred: no room, no proximity, a
- * fixed dynamic range, and a sibilant top end. Each stage below fixes one of
- * those tells, in the order a real vocal chain would:
- *   1. highpass       - drop sub-bass the voice never produced
- *   2. subtractive EQ - cut the 180/420 Hz "boxy laptop speaker" build-up
- *   3. additive EQ    - lift presence (2.6k) and air (8.5k) for intelligibility
- *   4. de-esser       - tame the sibilance step 3 just exaggerated
- *   5. two compressors- slow one for level, fast one for peaks: chest and grip
- *   6. exciter        - subtle harmonics, the "recorded through hardware" sheen
- *   7. aecho          - a single 18 ms reflection: the voice is now in a room
- *   8. loudnorm       - EBU R128 to the streaming target
- *   9. limiter        - safety ceiling, never clip
+ * The source constraint drives everything here: the Edge endpoint only serves
+ * 24 kHz mono, so there is nothing above ~11 kHz. An "air" shelf at 8.5 kHz or
+ * an exciter reaching for 15 kHz has no real signal to work with and simply
+ * amplifies codec noise — which is what made the first pass sound brittle and
+ * metallic. So: no air band, no exciter, no artificial early reflection, and
+ * all EQ moves kept well inside the band.
+ *
+ * Pick one with AUDIO_PRESET; `npm run preview:audio` renders all four side by
+ * side from the same sentences.
  */
-export const MASTER_CHAIN = [
-  'highpass=f=80',
-  'equalizer=f=180:t=q:w=1.1:g=-2.5',
-  'equalizer=f=420:t=q:w=1.4:g=-1.5',
-  'equalizer=f=2600:t=q:w=1.0:g=2.0',
-  'equalizer=f=8500:t=q:w=0.9:g=1.5',
-  'deesser=i=0.35:m=0.5:f=0.35:s=o',
-  'acompressor=threshold=-19dB:ratio=2.8:attack=12:release=180:makeup=2.5:knee=6',
-  'acompressor=threshold=-9dB:ratio=4:attack=3:release=90:makeup=1',
-  'aexciter=level_in=1:level_out=1:amount=0.6:drive=4:blend=0:freq=7200:ceil=15000',
-  'aecho=0.9:0.85:18:0.045',
-  'loudnorm=I=-15:TP=-1.5:LRA=11',
-  'alimiter=level_in=1:level_out=1:limit=0.95:attack=5:release=50',
-].join(',');
+export const AUDIO_PRESETS = {
+  // Untouched synthesis, for reference.
+  raw: [],
 
-export async function masterVoice(inFile, outFile) {
-  await run('ffmpeg', ['-y', '-i', inFile, '-af', MASTER_CHAIN,
-    '-ar', '48000', '-ac', '2', '-c:a', 'pcm_s16le', outFile]);
+  // Level and cleanup only. Most transparent, least "produced".
+  clean: [
+    'highpass=f=85',
+    'equalizer=f=300:t=q:w=1.2:g=-1.5',
+    'acompressor=threshold=-20dB:ratio=2.2:attack=15:release=220:makeup=2:knee=6',
+    'loudnorm=I=-15:TP=-1.5:LRA=11',
+    'alimiter=level_in=1:level_out=1:limit=0.95:attack=5:release=50',
+  ],
+
+  // Default. Cuts the boxy low-mid, lifts presence where consonants live,
+  // controls sibilance, one musical compressor.
+  broadcast: [
+    'highpass=f=85',
+    'equalizer=f=200:t=q:w=1.1:g=-2',
+    'equalizer=f=430:t=q:w=1.4:g=-1.5',
+    'equalizer=f=2400:t=q:w=1.1:g=2',
+    'deesser=i=0.3:m=0.5:f=0.3:s=o',
+    'acompressor=threshold=-19dB:ratio=2.6:attack=12:release=200:makeup=2.5:knee=6',
+    'loudnorm=I=-15:TP=-1.5:LRA=11',
+    'alimiter=level_in=1:level_out=1:limit=0.95:attack=5:release=50',
+  ],
+
+  // Fuller and softer: a little chest, a gentler presence lift. Easier on the
+  // ear over a ten-minute lesson, slightly less crisp.
+  warm: [
+    'highpass=f=75',
+    'equalizer=f=160:t=q:w=1.0:g=1',
+    'equalizer=f=420:t=q:w=1.3:g=-2',
+    'equalizer=f=2200:t=q:w=1.2:g=1.5',
+    'deesser=i=0.35:m=0.5:f=0.3:s=o',
+    'acompressor=threshold=-18dB:ratio=2.4:attack=18:release=240:makeup=2.5:knee=8',
+    'loudnorm=I=-15:TP=-1.5:LRA=11',
+    'alimiter=level_in=1:level_out=1:limit=0.95:attack=5:release=50',
+  ],
+};
+
+export const DEFAULT_PRESET = process.env.AUDIO_PRESET || 'broadcast';
+
+export function masterChain(preset = DEFAULT_PRESET) {
+  const chain = AUDIO_PRESETS[preset] || AUDIO_PRESETS.broadcast;
+  return chain.join(',');
+}
+
+export async function masterVoice(inFile, outFile, preset = DEFAULT_PRESET) {
+  const chain = masterChain(preset);
+  const args = ['-y', '-i', inFile];
+  if (chain) args.push('-af', chain);
+  args.push('-ar', '48000', '-ac', '2', '-c:a', 'pcm_s16le', outFile);
+  await run('ffmpeg', args);
   return outFile;
 }
 

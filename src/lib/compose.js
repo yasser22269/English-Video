@@ -3,12 +3,13 @@ import path from 'path';
 import { run } from './ffmpeg.js';
 
 /**
- * ffmpeg filter arguments are parsed twice — once by the filtergraph splitter,
- * once by the filter itself — so a Windows path needs its drive colon and
- * separators escaped or `subtitles=` silently looks for the wrong file.
+ * Inside a filtergraph a Windows drive colon reads as the option separator, so
+ * it needs escaping. Arguments go to ffmpeg directly with no shell in between,
+ * so exactly one backslash is correct — doubling it makes ffmpeg look for a
+ * file literally named "C\:/...".
  */
 function filterPath(p) {
-  return p.replace(/\\/g, '/').replace(/:/g, '\\\\:').replace(/'/g, "\\\\'");
+  return p.replace(/\\/g, '/').replace(/:/g, '\\:').replace(/'/g, "\\'");
 }
 
 function concatEntry(file, durationSec) {
@@ -65,24 +66,42 @@ export async function composeStills({ scenes, audioFile, assFile, outFile, video
 }
 
 /**
- * Listening and speaking lessons: prepared stock footage underneath, one static
- * branded overlay on top of it, then the karaoke track. The overlay is a single
- * still on purpose — chaining one overlay per scene over eight minutes of 1080p
- * costs several extra minutes of runner time for no pedagogical gain.
+ * Listening and speaking lessons: graded stock footage looped underneath,
+ * branded overlays time-gated on top, then the karaoke track.
+ *
+ * These formats have a handful of scenes (a section card and the outro), not
+ * eighty, so each gets its own `enable`d overlay. `OVERLAY_LIMIT` keeps the
+ * filtergraph from exploding if a builder ever produces many more.
  */
-export async function composeFootage({ footageFile, overlayPng, audioFile, assFile, outFile, video, fontsDir }) {
-  const filter = [
-    `[0:v]fps=${video.fps},scale=${video.width}:${video.height}:flags=lanczos,setsar=1[bg]`,
-    `[bg][1:v]overlay=0:0:format=auto[ov]`,
-    `[ov]${subtitleFilter(assFile, fontsDir)},format=yuv420p,fade=t=in:st=0:d=0.7[vo]`,
-  ].join(';');
+const OVERLAY_LIMIT = 10;
+
+export async function composeFootage({ footageFile, overlays, audioFile, assFile, outFile, video, fontsDir }) {
+  const shown = overlays.slice(0, OVERLAY_LIMIT);
+
+  // `-stream_loop` restarts the input's timestamps on every pass; regenerating
+  // PTS from the frame counter is what keeps them monotonic across loops.
+  const chain = [
+    `[0:v]setpts=N/${video.fps}/TB,fps=${video.fps},` +
+    `scale=${video.width}:${video.height}:flags=lanczos,setsar=1[bg0]`,
+  ];
+
+  shown.forEach((ov, i) => {
+    const from = (ov.startSec ?? 0).toFixed(2);
+    const to = (ov.startSec + ov.durationSec).toFixed(2);
+    chain.push(`[bg${i}][${i + 1}:v]overlay=0:0:format=auto:enable='between(t,${from},${to})'[bg${i + 1}]`);
+  });
+
+  const lastLabel = `bg${shown.length}`;
+  chain.push(`[${lastLabel}]${subtitleFilter(assFile, fontsDir)},format=yuv420p,fade=t=in:st=0:d=0.7[vo]`);
+
+  const inputs = ['-stream_loop', '-1', '-i', footageFile];
+  for (const ov of shown) inputs.push('-i', ov.file);
+  inputs.push('-i', audioFile);
 
   await run('ffmpeg', ['-y',
-    '-i', footageFile,
-    '-i', overlayPng,
-    '-i', audioFile,
-    '-filter_complex', filter,
-    '-map', '[vo]', '-map', '2:a',
+    ...inputs,
+    '-filter_complex', chain.join(';'),
+    '-map', '[vo]', '-map', `${shown.length + 1}:a`,
     '-c:v', 'libx264', '-preset', video.preset, '-crf', String(video.crf),
     '-profile:v', 'high', '-level', '4.1',
     '-c:a', 'aac', '-b:a', '192k', '-ar', '48000',

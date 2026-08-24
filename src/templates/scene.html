@@ -44,10 +44,23 @@
     mask-image: radial-gradient(1400px 900px at 50% 30%, #000 10%, transparent 78%);
   }
 
+  /* Full-frame scrim, footage scenes only. Stock video has bright windows and
+     white walls exactly where the title and captions sit; without this the
+     text is unreadable half the time. */
+  #scrim { display: none; position: absolute; inset: 0; pointer-events: none;
+    background:
+      linear-gradient(to right, rgba(0,0,0,.62) 0%, rgba(0,0,0,.28) 46%, rgba(0,0,0,.12) 70%),
+      linear-gradient(to bottom, rgba(0,0,0,.55) 0%, rgba(0,0,0,.18) 20%, rgba(0,0,0,.22) 52%, rgba(0,0,0,.72) 100%);
+  }
+  #stage.no-grid #scrim { display: block; }
+
   /* the caption band scrim: subtitles are drawn on top of this by ffmpeg */
   #band {
     position: absolute; left: 0; right: 0; bottom: 0; height: var(--band);
     background: linear-gradient(to top, rgba(0,0,0,.82) 0%, rgba(0,0,0,.62) 45%, transparent 100%);
+  }
+  #stage.no-grid #band {
+    background: linear-gradient(to top, rgba(0,0,0,.92) 0%, rgba(0,0,0,.78) 48%, rgba(0,0,0,.15) 100%);
   }
 
   #progress {
@@ -90,9 +103,9 @@
           border-radius: 16px; padding: 16px 30px; font-size: 30px; color: var(--ink); }
 
   /* ── vocabulary word card ───────────────────────────────────── */
-  .word-wrap { display: grid; grid-template-columns: 620px 1fr; gap: 72px; align-items: center; }
+  .word-wrap { display: grid; grid-template-columns: 620px minmax(0, 900px); gap: 72px; align-items: center; }
   .word-img {
-    width: 620px; height: 480px; border-radius: 34px; object-fit: cover;
+    width: 620px; height: 420px; border-radius: 34px; object-fit: cover;
     border: 3px solid color-mix(in srgb, var(--accent) 40%, transparent);
     box-shadow: 0 34px 90px rgba(0,0,0,.6);
   }
@@ -107,7 +120,7 @@
               text-transform: uppercase; padding: 10px 24px; border-radius: 999px;
               background: color-mix(in srgb, var(--accent) 22%, transparent);
               border: 2px solid color-mix(in srgb, var(--accent) 50%, transparent); }
-  .word-ar { margin-top: 30px; font-size: 52px; color: var(--ink); font-weight: 600; }
+  .word-ar { margin-top: 30px; font-size: 52px; color: var(--ink); font-weight: 600; text-align: right; }
   .word-count { position: absolute; right: 0; top: -6px; font-size: 30px; color: var(--ink-dim);
                 letter-spacing: .18em; }
 
@@ -173,11 +186,14 @@
   .outro-card { border-radius: 22px; padding: 30px 38px; font-size: 34px;
                 background: rgba(255,255,255,.05); border: 2px solid rgba(255,255,255,.14); }
 
+  #stage.no-grid::after { display: none; }
+
   .hidden { display: none !important; }
 </style>
 </head>
 <body>
 <div id="stage">
+  <div id="scrim"></div>
   <div id="progress"></div>
   <header>
     <div class="brand"><span class="dot"></span><span id="brand-name">English Every Day</span></div>
@@ -284,10 +300,17 @@ window.renderScene = function renderScene(scene) {
   document.getElementById('progress').style.width =
     `${Math.max(0, Math.min(100, scene.progress || 0))}%`;
 
-  // Over footage the stage must be transparent so ffmpeg can composite it.
+  // Over footage the whole page must be transparent, not just the stage:
+  // Puppeteer's omitBackground only produces alpha when nothing underneath
+  // paints a colour, and body carries an opaque black by default.
   const stage = document.getElementById('stage');
-  stage.style.background = scene.transparent ? 'transparent' : '';
-  if (scene.transparent) stage.style.setProperty('--band', '320px');
+  const transparent = !!scene.transparent;
+  stage.style.background = transparent ? 'transparent' : '';
+  document.body.style.background = transparent ? 'transparent' : '';
+  document.documentElement.style.background = transparent ? 'transparent' : '';
+  // The faint grid is drawn for flat gradient backgrounds; over real footage it
+  // just adds noise on top of an already busy image.
+  stage.classList.toggle('no-grid', transparent);
 
   const build = LAYOUTS[scene.layout] || LAYOUTS.title;
   document.getElementById('main').innerHTML = build(scene.data || {});

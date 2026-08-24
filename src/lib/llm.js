@@ -69,6 +69,21 @@ async function callOpenAICompatible({ url, key, model, extraHeaders = {} }, prom
   return text;
 }
 
+/**
+ * A provider that reports its daily quota is gone will report it again for each
+ * of the five lessons in a batch, so once it does it stays out for the rest of
+ * the process. A merely busy provider is retried instead.
+ */
+const exhausted = new Set();
+const isQuotaError = (msg) => /exceeded your current quota|free-models-per-day|quota exceeded/i.test(msg);
+// 502/503/504 and "high demand" are weather, not a wall: wait and retry the
+// same provider instead of falling through the whole chain.
+const isTransient = (msg) => /(429|500|502|503|504)|high demand|overloaded|unavailab/i.test(msg);
+
+// Groq counts max_tokens against the free tier's tokens-per-minute budget, so
+// asking for a 12k completion is rejected outright with a 413.
+const MAX_TOKENS_BY_PROVIDER = { groq: 6000, openrouter: 8000, gemini: 12000 };
+
 function providers() {
   const list = [];
   if (env.geminiKey) list.push({ name: 'gemini', run: callGemini });
@@ -87,7 +102,8 @@ function providers() {
           extraHeaders: { 'X-Title': 'English Every Day' } }, p, o),
     });
   }
-  return list;
+  const order = (process.env.LLM_ORDER || 'gemini,groq,openrouter').split(',').map(s => s.trim());
+  return list.sort((a, b) => order.indexOf(a.name) - order.indexOf(b.name));
 }
 
 /**
@@ -101,9 +117,11 @@ export async function generateJson(prompt, { temperature = 0.85, maxTokens = 819
 
   const errors = [];
   for (const provider of chain) {
-    for (let attempt = 1; attempt <= 2; attempt++) {
+    if (exhausted.has(provider.name)) continue;
+    const cap = Math.min(maxTokens, MAX_TOKENS_BY_PROVIDER[provider.name] || maxTokens);
+    for (let attempt = 1; attempt <= 3; attempt++) {
       try {
-        const raw = await provider.run(prompt, { temperature, maxTokens });
+        const raw = await provider.run(prompt, { temperature, maxTokens: cap });
         const parsed = extractJson(raw);
         if (validate) {
           const problem = validate(parsed);
@@ -112,9 +130,15 @@ export async function generateJson(prompt, { temperature = 0.85, maxTokens = 819
         console.log(`[llm] ✓ ${provider.name}`);
         return parsed;
       } catch (err) {
-        errors.push(`${provider.name}#${attempt}: ${err.message}`);
-        console.warn(`[llm] ${provider.name} attempt ${attempt} failed — ${err.message}`);
-        if (attempt === 1) await sleep(2500);
+        errors.push(`${provider.name}#${attempt}: ${err.message.slice(0, 200)}`);
+        console.warn(`[llm] ${provider.name} attempt ${attempt} failed — ${err.message.slice(0, 160)}`);
+        if (isQuotaError(err.message)) {
+          exhausted.add(provider.name);
+          console.warn(`[llm] ${provider.name} is out of quota — skipping it for the rest of this run`);
+          break;
+        }
+        if (attempt < 3) await sleep(isTransient(err.message) ? 4000 * attempt : 2000);
+        else break;
       }
     }
   }

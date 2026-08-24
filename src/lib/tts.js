@@ -134,9 +134,22 @@ export async function synthesizeLines(lines, { outDir }) {
   try {
     const results = await Promise.all(lines.map(async (line) => {
       const file = path.join(outDir, `${line.id}.mp3`);
+      const meta = path.join(outDir, `${line.id}.json`);
       const { rate, pitch } = jitter(line.baseRate, `${line.id}|${line.text}`);
 
-      const res = await pool.request({
+      // Reuse a clip whose text and voice settings are unchanged. Retrying a
+      // build after a late failure then costs nothing at the TTS service.
+      const format = process.env.EDGE_TTS_FORMAT || 'audio-24khz-96kbitrate-mono-mp3';
+      const signature = `${format}|${line.voice}|${rate}|${pitch}|${line.text}`;
+      let cached = null;
+      if (fs.existsSync(file) && fs.existsSync(meta)) {
+        try {
+          const saved = JSON.parse(fs.readFileSync(meta, 'utf8'));
+          if (saved.signature === signature) cached = saved;
+        } catch { /* rewrite it below */ }
+      }
+
+      const res = cached || await pool.request({
         id: line.id,
         text: line.text,
         voice: line.voice,
@@ -152,6 +165,7 @@ export async function synthesizeLines(lines, { outDir }) {
         startMs: w.o / 10000,
         endMs: (w.o + w.d) / 10000,
       }));
+      if (!cached) fs.writeFileSync(meta, JSON.stringify({ signature, words: res.words || [] }));
 
       return {
         ...line,
@@ -185,19 +199,45 @@ export async function assembleVoiceTrack(lines, { outFile, workDir, leadInMs = 4
   parts.push(leadIn);
 
   for (const line of lines) {
+    // Every clip arrives with ~100 ms of service-added silence at each end.
+    // Left in place it stacks on top of the pause we insert ourselves, so the
+    // lesson drifts gappy and stilted — the rhythm stops sounding like speech.
+    // Trim to the words, then let pauseAfterMs be the only thing that spaces
+    // sentences out.
+    const first = line.words[0];
+    const last = line.words[line.words.length - 1];
+    const trimStartMs = first ? Math.max(0, first.startMs - 60) : 0;
+    const trimEndMs = last ? Math.min(line.durationMs, last.endMs + 140) : line.durationMs;
+    const speechMs = Math.max(120, trimEndMs - trimStartMs);
+
     const padded = path.join(workDir, `${line.id}.wav`);
+    const fadeOutAt = Math.max(0, speechMs / 1000 - 0.014);
+    // The trim has to happen inside the filter chain. Using -ss/-t as output
+    // options instead truncates the stream *after* apad, which silently ate
+    // every pause and ran the sentences together.
     await run('ffmpeg', ['-y', '-i', line.file,
-      '-af', `aresample=24000,apad=pad_dur=${(line.pauseAfterMs / 1000).toFixed(3)}`,
+      '-af', `atrim=start=${(trimStartMs / 1000).toFixed(3)}:end=${(trimEndMs / 1000).toFixed(3)},`
+           + `asetpts=N/SR/TB,aresample=24000,`
+           // 8/14 ms fades kill the click an MP3 boundary can leave behind
+           // once segments are butt-joined.
+           + `afade=t=in:st=0:d=0.008,`
+           + `afade=t=out:st=${fadeOutAt.toFixed(3)}:d=0.014,`
+           + `apad=pad_dur=${(line.pauseAfterMs / 1000).toFixed(3)}`,
       '-ac', '1', '-ar', '24000', '-c:a', 'pcm_s16le', padded]);
     parts.push(padded);
 
     timeline.push({
       ...line,
+      durationMs: speechMs,
       startMs: cursorMs,
-      endMs: cursorMs + line.durationMs,
-      words: line.words.map(w => ({ ...w, startMs: cursorMs + w.startMs, endMs: cursorMs + w.endMs })),
+      endMs: cursorMs + speechMs,
+      words: line.words.map(w => ({
+        ...w,
+        startMs: cursorMs + w.startMs - trimStartMs,
+        endMs: cursorMs + w.endMs - trimStartMs,
+      })),
     });
-    cursorMs += line.durationMs + line.pauseAfterMs;
+    cursorMs += speechMs + line.pauseAfterMs;
   }
 
   const listFile = path.join(workDir, 'concat.txt');

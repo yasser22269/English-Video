@@ -26,29 +26,75 @@ function escapeText(text) {
     .trim();
 }
 
+const normalize = (s) => s.toLowerCase().replace(/[^a-z0-9À-ɏ]/gi, '');
+
+/**
+ * Pair each whitespace token of the written line with the TTS word timings.
+ *
+ * The service reports words stripped of punctuation, so highlighting its
+ * tokens directly renders "Now you how old" where the script said
+ * "Now you. how old." A token can also be spoken as several words ("2026" ->
+ * "twenty twenty six"), so each written token absorbs TTS words until it is
+ * covered. If the two sequences cannot be reconciled we return null and the
+ * caller falls back to a plain, un-highlighted line — a correct caption with no
+ * sweep beats a sweep on mangled text.
+ */
+function alignTokens(text, words) {
+  const tokens = String(text).trim().split(/\s+/).filter(Boolean);
+  if (!tokens.length || !words.length) return null;
+
+  const out = [];
+  let wi = 0;
+
+  for (const token of tokens) {
+    const core = normalize(token);
+    if (!core) {                       // standalone punctuation: glue to previous
+      if (out.length) out[out.length - 1].token += ` ${token}`;
+      continue;
+    }
+    const consumed = [];
+    let acc = '';
+    while (wi < words.length && acc.length < core.length) {
+      acc += normalize(words[wi].text);
+      consumed.push(words[wi]);
+      wi++;
+    }
+    if (!consumed.length || !acc.startsWith(core.slice(0, Math.min(3, core.length)))) return null;
+    out.push({
+      token,
+      startMs: consumed[0].startMs,
+      endMs: consumed[consumed.length - 1].endMs,
+    });
+  }
+  // Leftover spoken words mean the alignment drifted somewhere in the middle.
+  return wi >= words.length - 1 ? out : null;
+}
+
 /**
  * Build the karaoke override string for one spoken line.
  *
  * Word boundaries come back from the TTS service, so the highlight lands on the
- * exact syllable being pronounced — which is the whole point for a learner
- * following along. Gaps between words are folded into the preceding word so
- * the sweep never stalls mid-line.
+ * exact word being pronounced — which is the whole point for a learner reading
+ * along. Gaps between words are folded into the preceding token so the sweep
+ * never stalls mid-line.
  */
 function karaokeText(line) {
+  const display = line.caption || line.text;
   const words = (line.words || []).filter(w => w.text && w.text.trim());
-  if (!words.length) return escapeText(line.text);
+  const aligned = words.length ? alignTokens(display, words) : null;
+  if (!aligned) return null;
 
   const parts = [];
-  const lead = Math.max(0, words[0].startMs - line.startMs);
+  const lead = Math.max(0, aligned[0].startMs - line.startMs);
   if (lead > 30) parts.push(`{\\kf${Math.round(lead / 10)}}`);
 
-  words.forEach((w, i) => {
-    const next = words[i + 1];
-    const end = next ? next.startMs : Math.max(w.endMs, line.endMs);
-    const durCs = Math.max(1, Math.round((end - w.startMs) / 10));
-    const token = escapeText(w.text);
-    // Punctuation arrives glued to the word; keep it inside the same sweep.
-    parts.push(`{\\kf${durCs}}${token}${next ? ' ' : ''}`);
+  aligned.forEach((tok, i) => {
+    const next = aligned[i + 1];
+    // The clip's own trailing silence is part of line.endMs; letting the last
+    // token sweep all the way there leaves the highlight crawling in silence.
+    const end = next ? next.startMs : Math.min(line.endMs, tok.endMs + 250);
+    const durCs = Math.max(1, Math.round((end - tok.startMs) / 10));
+    parts.push(`{\\kf${durCs}}${escapeText(tok.token)}${next ? ' ' : ''}`);
   });
   return parts.join('');
 }
@@ -67,7 +113,7 @@ Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour,
 Style: EN,${fonts.en},64,${assColor(accent)},${assColor('#FFFFFF')},${assColor('#000000')},${assColor('#000000', '80')},-1,0,0,0,100,100,0,0,1,3.4,1.4,2,220,220,168,1
 Style: ENPLAIN,${fonts.en},64,${assColor('#FFFFFF')},${assColor('#FFFFFF')},${assColor('#000000')},${assColor('#000000', '80')},-1,0,0,0,100,100,0,0,1,3.4,1.4,2,220,220,168,1
 Style: AR,${fonts.ar},46,${assColor('#CBD5E1')},${assColor('#CBD5E1')},${assColor('#000000')},${assColor('#000000', '80')},0,0,0,0,100,100,0,0,1,2.6,1,2,220,220,86,1
-Style: CUE,${fonts.en},52,${assColor(accent)},${assColor(accent)},${assColor('#000000')},${assColor('#000000', '80')},-1,0,0,0,100,100,2,0,1,3,1,2,220,220,168,1
+Style: CUE,${fonts.en},56,${assColor(accent)},${assColor(accent)},${assColor('#000000')},${assColor('#000000', '80')},-1,0,0,0,100,100,2,0,1,3.2,1,2,220,220,312,1
 Style: NOTE,${fonts.en},40,${assColor('#94A3B8')},${assColor('#94A3B8')},${assColor('#000000')},${assColor('#000000', '80')},0,0,0,0,100,100,0,0,1,2.4,1,8,220,220,60,1
 Style: SPK,${fonts.en},36,${assColor(accent)},${assColor(accent)},${assColor('#000000')},${assColor('#000000', '80')},-1,0,0,0,100,100,3,0,1,2.4,1,1,224,220,258,1
 
@@ -92,15 +138,18 @@ export function buildAss(timeline, { outFile, width, height, fonts, accent, cues
     if (mode === 'none') continue;
 
     // A short tail keeps the line on screen through the pause that follows it,
-    // instead of snapping away the instant the voice stops.
-    const tail = Math.min(line.pauseAfterMs ?? 0, 700);
+    // instead of snapping away the instant the voice stops. When a practice cue
+    // is about to appear the tail is cut short so the two never share the frame.
+    const pause = line.pauseAfterMs ?? 0;
+    const tail = line.cue ? Math.min(pause / 4, 220) : Math.min(pause, 700);
     const start = line.startMs;
     const end = line.endMs + tail;
 
-    if (mode === 'karaoke') {
-      events.push(dialogue({ start, end, style: 'EN', text: karaokeText(line) }));
+    const sweep = mode === 'karaoke' ? karaokeText(line) : null;
+    if (sweep) {
+      events.push(dialogue({ start, end, style: 'EN', text: sweep }));
     } else {
-      events.push(dialogue({ start, end, style: 'ENPLAIN', text: escapeText(line.text) }));
+      events.push(dialogue({ start, end, style: 'ENPLAIN', text: escapeText(line.caption || line.text) }));
     }
 
     if (line.ar) {

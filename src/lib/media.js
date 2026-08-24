@@ -50,14 +50,16 @@ async function huggingface(prompt, dest) {
   return dest;
 }
 
-async function pexelsPhoto(query, dest) {
+async function pexelsPhoto(query, dest, variant = '') {
   if (!env.pexelsKey) throw new Error('no PEXELS_API_KEY');
   const res = await fetch(
     `https://api.pexels.com/v1/search?query=${encodeURIComponent(query)}&per_page=10&orientation=landscape`,
     { headers: { Authorization: env.pexelsKey } });
   if (!res.ok) throw new Error(`Pexels photos ${res.status}`);
   const json = await res.json();
-  const photo = json.photos?.[seedFrom(query) % Math.max(json.photos.length, 1)];
+  // Vary by destination as well as query: several words in one lesson share a
+  // fallback query, and picking on query alone gave every card the same photo.
+  const photo = json.photos?.[seedFrom(query + variant) % Math.max(json.photos.length, 1)];
   if (!photo) throw new Error('Pexels returned no photos');
   return download(photo.src.large2x || photo.src.large, dest);
 }
@@ -74,7 +76,7 @@ export async function generateImage(prompt, dest, { fallbackQuery } = {}) {
   const attempts = [];
   if (env.imageProvider === 'pollinations') attempts.push(() => pollinations(prompt, dest));
   if (env.huggingfaceKey) attempts.push(() => huggingface(prompt, dest));
-  if (env.pexelsKey) attempts.push(() => pexelsPhoto(fallbackQuery || prompt, dest));
+  if (env.pexelsKey) attempts.push(() => pexelsPhoto(fallbackQuery || prompt, dest, dest));
 
   for (const attempt of attempts) {
     for (let tries = 0; tries < 2; tries++) {
@@ -90,7 +92,7 @@ export async function generateImage(prompt, dest, { fallbackQuery } = {}) {
   return null;
 }
 
-export async function generateImages(items, { outDir, concurrency = 3 }) {
+export async function generateImages(items, { outDir, concurrency = 2 }) {
   fs.mkdirSync(outDir, { recursive: true });
   const results = new Array(items.length).fill(null);
   let cursor = 0;
@@ -162,24 +164,28 @@ export async function fetchFootage(query, dest) {
 }
 
 /**
- * Turn a stock clip into a calm, loopable, readable backplate: slowed, gently
- * zoomed, desaturated and darkened so white subtitles stay legible over it.
+ * Turn a stock clip into a calm, readable backplate: slowed, cropped to frame,
+ * desaturated, darkened and softened so white subtitles stay legible over it.
+ *
+ * Deliberately grades the short source clip only and does NOT stretch it to the
+ * lesson length. Looping happens later inside the compose filtergraph, so the
+ * full-length 1080p encode happens exactly once instead of twice. (Looping here
+ * was also wrong: `-stream_loop` restarts input timestamps, and `setpts` on top
+ * of that produced non-monotonic PTS and dropped frames.)
  */
-export async function prepareFootage(src, dest, { durationSec, width, height, tint = '#000000' }) {
+export async function gradeFootage(src, dest, { width, height, fps = 30 }) {
   const filters = [
+    'setpts=1.35*PTS',
     `scale=${width}:${height}:force_original_aspect_ratio=increase`,
     `crop=${width}:${height}`,
-    'setpts=1.35*PTS',
-    'eq=saturation=0.72:brightness=-0.16:contrast=1.04',
-    'gblur=sigma=2.2',
-    `format=yuv420p`,
+    'eq=saturation=0.62:brightness=-0.26:contrast=0.96',
+    'gblur=sigma=1.6',
+    'format=yuv420p',
   ].join(',');
 
-  await run('ffmpeg', ['-y',
-    '-stream_loop', '-1', '-i', src,
-    '-t', durationSec.toFixed(2),
+  await run('ffmpeg', ['-y', '-i', src,
     '-vf', filters,
-    '-an', '-r', '30', '-c:v', 'libx264', '-preset', 'veryfast', '-crf', '23',
+    '-an', '-r', String(fps), '-c:v', 'libx264', '-preset', 'veryfast', '-crf', '21',
     '-pix_fmt', 'yuv420p', dest]);
   return dest;
 }

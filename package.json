@@ -9,7 +9,9 @@
     "daily": "node src/generate.js --today",
     "auth:youtube": "node scripts/youtube-auth.js",
     "plan": "node src/generate.js --plan",
-    "voices": "node scripts/list-voices.js"
+    "voices": "node scripts/list-voices.js",
+    "preview:audio": "node scripts/preview-audio.js",
+    "preview:voice": "node scripts/preview-voice.js"
   },
   "dependencies": {
     "dotenv": "^16.4.5",

@@ -1,89 +1,153 @@
 {
   "channelName": "English Every Day",
   "handle": "@EnglishEveryDay",
-  "video": { "width": 1920, "height": 1080, "fps": 30, "crf": 20, "preset": "veryfast" },
-
-  "skillCycle": ["speaking", "vocabulary", "reading", "listening"],
-  "levels": ["a1", "a2", "b1", "b2", "c1"],
-
+  "video": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "crf": 20,
+    "preset": "veryfast"
+  },
+  "skillCycle": [
+    "speaking",
+    "vocabulary",
+    "reading",
+    "listening"
+  ],
+  "levels": [
+    "a1",
+    "a2",
+    "b1",
+    "b2",
+    "c1"
+  ],
   "levelConfig": {
     "a1": {
       "label": "A1 · Beginner",
-      "accent": "#22C55E", "accentDark": "#15803D",
-      "bgA": "#04120B", "bgB": "#082018", "bgC": "#05170F",
+      "accent": "#22C55E",
+      "accentDark": "#15803D",
+      "bgA": "#04120B",
+      "bgB": "#082018",
+      "bgC": "#05170F",
       "targetMinutes": 6,
-      "rate": "-18%",
-      "teacher": "en-US-AriaNeural",
-      "speakerA": "en-US-JennyNeural",
-      "speakerB": "en-US-GuyNeural",
+      "rate": "-16%",
+      "teacher": "en-US-AndrewNeural",
+      "speakerA": "en-US-BrianNeural",
+      "speakerB": "en-GB-RyanNeural",
       "wordCount": 10,
       "questionCount": 4,
       "cefrGuide": "Use only the ~600 most common English words. Present simple, short sentences of 4-8 words, no phrasal verbs, no idioms, no relative clauses. Everyday concrete topics."
     },
     "a2": {
       "label": "A2 · Elementary",
-      "accent": "#38BDF8", "accentDark": "#0369A1",
-      "bgA": "#040D16", "bgB": "#071A2B", "bgC": "#05121F",
+      "accent": "#38BDF8",
+      "accentDark": "#0369A1",
+      "bgA": "#040D16",
+      "bgB": "#071A2B",
+      "bgC": "#05121F",
       "targetMinutes": 7,
-      "rate": "-12%",
-      "teacher": "en-GB-SoniaNeural",
-      "speakerA": "en-GB-LibbyNeural",
-      "speakerB": "en-GB-RyanNeural",
+      "rate": "-11%",
+      "teacher": "en-US-BrianNeural",
+      "speakerA": "en-US-AndrewNeural",
+      "speakerB": "en-US-ChristopherNeural",
       "wordCount": 10,
       "questionCount": 4,
       "cefrGuide": "Use the ~1500 most common words. Past simple, future with going to, comparatives, common phrasal verbs (get up, look for). Sentences of 6-12 words. Familiar everyday topics."
     },
     "b1": {
       "label": "B1 · Intermediate",
-      "accent": "#F59E0B", "accentDark": "#B45309",
-      "bgA": "#120C03", "bgB": "#241806", "bgC": "#1A1004",
+      "accent": "#F59E0B",
+      "accentDark": "#B45309",
+      "bgA": "#120C03",
+      "bgB": "#241806",
+      "bgC": "#1A1004",
       "targetMinutes": 8,
       "rate": "-6%",
-      "teacher": "en-US-AndrewNeural",
-      "speakerA": "en-US-EmmaNeural",
-      "speakerB": "en-US-BrianNeural",
+      "teacher": "en-US-GuyNeural",
+      "speakerA": "en-US-BrianNeural",
+      "speakerB": "en-GB-RyanNeural",
       "wordCount": 9,
       "questionCount": 5,
       "cefrGuide": "Use the ~2500 most common words. Present perfect, conditionals 1 and 2, passive voice, common collocations and phrasal verbs. Sentences of 10-18 words. Work, travel, opinions, experiences."
     },
     "b2": {
       "label": "B2 · Upper-Intermediate",
-      "accent": "#A78BFA", "accentDark": "#6D28D9",
-      "bgA": "#0A0616", "bgB": "#160C2A", "bgC": "#0F081F",
+      "accent": "#A78BFA",
+      "accentDark": "#6D28D9",
+      "bgA": "#0A0616",
+      "bgB": "#160C2A",
+      "bgC": "#0F081F",
       "targetMinutes": 9,
       "rate": "-2%",
       "teacher": "en-GB-RyanNeural",
-      "speakerA": "en-GB-SoniaNeural",
-      "speakerB": "en-US-ChristopherNeural",
+      "speakerA": "en-US-AndrewNeural",
+      "speakerB": "en-US-EricNeural",
       "wordCount": 9,
       "questionCount": 5,
       "cefrGuide": "Use ~4000-word range including abstract vocabulary. Mixed conditionals, perfect modals, cleft sentences, nuanced connectors (nonetheless, whereas). Idioms and collocations welcome. Abstract and professional topics, argumentation."
     },
     "c1": {
       "label": "C1 · Advanced",
-      "accent": "#F43F5E", "accentDark": "#9F1239",
-      "bgA": "#140509", "bgB": "#280A14", "bgC": "#1C060D",
+      "accent": "#F43F5E",
+      "accentDark": "#9F1239",
+      "bgA": "#140509",
+      "bgB": "#280A14",
+      "bgC": "#1C060D",
       "targetMinutes": 10,
       "rate": "+0%",
-      "teacher": "en-US-EmmaNeural",
-      "speakerA": "en-US-AndrewNeural",
-      "speakerB": "en-GB-SoniaNeural",
+      "teacher": "en-US-ChristopherNeural",
+      "speakerA": "en-GB-ThomasNeural",
+      "speakerB": "en-US-RogerNeural",
       "wordCount": 8,
       "questionCount": 5,
       "cefrGuide": "Use precise, low-frequency and academic vocabulary, register shifts, hedging, inversion, nominalisation, subtle idiom and connotation. Long complex sentences. Academic, cultural, scientific and rhetorical topics."
     }
   },
-
   "skillConfig": {
-    "speaking":   { "label": "Speaking Practice",   "emoji": "\ud83d\udde3\ufe0f", "background": "footage",    "titlePattern": "Speak English Like a Native \u2014 {topic} | {levelLabel}" },
-    "vocabulary": { "label": "New Vocabulary",      "emoji": "\ud83d\udcda", "background": "typography", "titlePattern": "{wordCount} English Words About {topic} | {levelLabel}" },
-    "reading":    { "label": "Reading Practice",    "emoji": "\ud83d\udcd6", "background": "typography", "titlePattern": "English Reading Practice \u2014 {topic} | {levelLabel}" },
-    "listening":  { "label": "Listening Practice",  "emoji": "\ud83c\udfa7", "background": "footage",    "titlePattern": "English Listening Practice \u2014 {topic} | {levelLabel}" }
+    "speaking": {
+      "label": "Speaking Practice",
+      "emoji": "🗣️",
+      "background": "footage",
+      "titlePattern": "Speak English Like a Native — {topic} | {levelLabel}"
+    },
+    "vocabulary": {
+      "label": "New Vocabulary",
+      "emoji": "📚",
+      "background": "typography",
+      "titlePattern": "{wordCount} English Words About {topic} | {levelLabel}"
+    },
+    "reading": {
+      "label": "Reading Practice",
+      "emoji": "📖",
+      "background": "typography",
+      "titlePattern": "English Reading Practice — {topic} | {levelLabel}"
+    },
+    "listening": {
+      "label": "Listening Practice",
+      "emoji": "🎧",
+      "background": "footage",
+      "titlePattern": "English Listening Practice — {topic} | {levelLabel}"
+    }
   },
-
   "youtube": {
     "categoryId": "27",
     "defaultLanguage": "en",
-    "baseTags": ["learn english", "english lesson", "english for beginners", "cefr", "esl", "english practice", "improve english", "english vocabulary", "english listening", "english speaking", "\u062a\u0639\u0644\u0645 \u0627\u0644\u0627\u0646\u062c\u0644\u064a\u0632\u064a\u0629"]
+    "baseTags": [
+      "learn english",
+      "english lesson",
+      "english for beginners",
+      "cefr",
+      "esl",
+      "english practice",
+      "improve english",
+      "english vocabulary",
+      "english listening",
+      "english speaking",
+      "تعلم الانجليزية"
+    ]
+  },
+  "audio": {
+    "preset": "broadcast",
+    "note": "Presets live in src/lib/ffmpeg.js; compare them with npm run preview:audio"
   }
 }

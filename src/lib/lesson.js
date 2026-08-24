@@ -86,7 +86,7 @@ Return this exact shape:
   "outro": "two spoken sentences encouraging re-reading and daily practice"
 }
 
-The passage must be ${lvl.targetMinutes <= 7 ? '9 to 12' : '13 to 18'} sentences, tell a small connected story or explanation with a beginning and an end, and use the language focus naturally.
+The passage must be ${lvl.targetMinutes <= 7 ? '12 to 15' : '16 to 20'} sentences, tell a small connected story or explanation with a beginning and an end, and use the language focus naturally.
 "answer" is the 0-based index of the correct option. Include 6 glossary items and exactly ${lvl.questionCount} questions.
 Distractor options must be plausible and drawn from the passage, never obviously silly.`;
   },
