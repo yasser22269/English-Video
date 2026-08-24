@@ -87,8 +87,7 @@ jobs:
       - name: 📦 Install dependencies
         run: |
           npm ci
-          pip install --upgrade "edge-tts>=7.2" aiohttp certifi \
-            google-auth google-auth-oauthlib google-api-python-client
+          pip install --upgrade -r requirements.txt
 
       # Generating five lessons costs roughly an hour of runner time. Finding out
       # afterwards that the refresh token died is an hour wasted, so check first.
