@@ -190,4 +190,16 @@ export async function gradeFootage(src, dest, { width, height, fps = 30 }) {
   return dest;
 }
 
+/**
+ * Pull a still out of a clip. Listening and speaking lessons generate no word
+ * illustrations, which left their thumbnails with an empty right half; a frame
+ * from the very footage the lesson runs on is free and exactly on topic.
+ */
+export async function extractFrame(videoFile, dest, atSec = 2) {
+  fs.mkdirSync(path.dirname(dest), { recursive: true });
+  await run('ffmpeg', ['-y', '-ss', String(atSec), '-i', videoFile,
+    '-frames:v', '1', '-q:v', '3', dest]);
+  return dest;
+}
+
 export { download };

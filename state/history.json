@@ -1,1 +1,15 @@
-[]
+[
+  {
+    "date": "2026-08-24",
+    "level": "b1",
+    "skill": "listening",
+    "topic": "Remote Work and Productivity",
+    "title": "English Listening Practice — Remote Work and Productivity | B1 · Intermediate",
+    "durationSec": 321,
+    "sizeMb": 53.7,
+    "videoId": null,
+    "url": null,
+    "buildSeconds": 115,
+    "dir": "output\\2026-08-24-b1-listening-remote-work-and-productivity"
+  }
+]

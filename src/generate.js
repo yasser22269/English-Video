@@ -7,7 +7,7 @@ import { writeLesson, buildMetadata } from './lib/lesson.js';
 import { buildPlan, resolveTimings } from './lib/build.js';
 import { synthesizeLines, assembleVoiceTrack } from './lib/tts.js';
 import { masterVoice, mixWithMusic, ffprobeDuration } from './lib/ffmpeg.js';
-import { generateImages, fetchFootage, gradeFootage } from './lib/media.js';
+import { generateImages, fetchFootage, gradeFootage, extractFrame } from './lib/media.js';
 import { SceneRenderer, renderThumbnail } from './lib/render.js';
 import { buildAss, buildSrt } from './lib/ass.js';
 import { composeStills, composeFootage, generateGradientBackground } from './lib/compose.js';
@@ -40,6 +40,28 @@ function appendHistory(entry) {
   try { list = JSON.parse(fs.readFileSync(HISTORY, 'utf8')); } catch { /* first run */ }
   list.unshift(entry);
   fs.writeFileSync(HISTORY, JSON.stringify(list.slice(0, 500), null, 2));
+}
+
+/** The fragment the eye should land on first, coloured in the thumbnail. */
+function thumbnailHighlight(lesson) {
+  if (lesson.words?.[0]?.word) return lesson.words[0].word;
+  const words = String(lesson.title || '').trim().split(/\s+/);
+  if (words.length < 3) return '';
+  return words.slice(words.length >= 5 ? -2 : -1).join(' ');
+}
+
+/**
+ * The second line has to earn its space. It used to echo the topic, which the
+ * headline already says; what a browsing learner wants to know is what they get.
+ */
+function thumbnailSub(lesson, skill) {
+  switch (lesson.skill) {
+    case 'vocabulary': return `${lesson.words?.length || 10} words · meanings + examples`;
+    case 'reading':    return `${lesson.passage?.length || 12} sentences · read along + quiz`;
+    case 'listening':  return 'Real conversation · listen twice';
+    case 'speaking':   return `${lesson.drills?.length || 8} phrases · listen and repeat`;
+    default:           return skill.label;
+  }
 }
 
 async function buildOne({ level, skill, date, upload }) {
@@ -162,13 +184,19 @@ async function buildOne({ level, skill, date, upload }) {
   // 8 ─ thumbnail
   const meta = buildMetadata(lesson, { channel });
   const thumbFile = path.join(workDir, 'thumbnail.jpg');
-  const heroImage = plan.images.length ? path.join(mediaDir, `${plan.images[0].id}.jpg`) : null;
+
+  let heroImage = plan.images.length ? path.join(mediaDir, `${plan.images[0].id}.jpg`) : null;
+  if ((!heroImage || !fs.existsSync(heroImage)) && footageRaw) {
+    heroImage = await extractFrame(footageRaw, path.join(mediaDir, 'thumb-frame.jpg'), 2)
+      .catch(() => null);
+  }
+
   await renderThumbnail({
     level: lvl.label.split('·')[0].trim(),
     skill: skl.label,
     headline: lesson.title,
-    highlight: lesson.words?.[0]?.word || lesson.drills?.[0]?.phrase?.split(' ').slice(0, 2).join(' ') || '',
-    sub: topic.topic,
+    highlight: thumbnailHighlight(lesson),
+    sub: thumbnailSub(lesson, skl),
     brand: channel.channelName,
     image: heroImage && fs.existsSync(heroImage) ? heroImage : null,
     accent: lvl.accent, accentDark: lvl.accentDark, bgA: lvl.bgA, bgB: lvl.bgB, bgC: lvl.bgC,
