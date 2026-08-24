@@ -2,7 +2,7 @@
 import fs from 'fs';
 import path from 'path';
 import { channel, levelConfig, skillConfig, paths, env, fontConfig } from './lib/config.js';
-import { todaysBatch, pickTopic, slugify, dayIndex } from './lib/schedule.js';
+import { todaysBatch, pickTopic, slugify, dayIndex, publishAtFor, describeSlot } from './lib/schedule.js';
 import { writeLesson, buildMetadata } from './lib/lesson.js';
 import { buildPlan, resolveTimings } from './lib/build.js';
 import { synthesizeLines, assembleVoiceTrack } from './lib/tts.js';
@@ -212,12 +212,20 @@ async function buildOne({ level, skill, date, upload }) {
 
   // 9 ─ publish
   let result = null;
+  let publishAt = null;
   if (upload) {
+    // Each level owns a fixed hour of the day; null means that hour is already
+    // gone and the lesson should just go out now.
+    publishAt = publishAtFor(level, date);
     result = await uploadVideo({
       videoPath: videoFile, thumbPath: thumbFile,
       title: meta.title, description: meta.description, tags: meta.tags,
+      publishAt,
     });
     log('youtube', result.url);
+    log('publish', publishAt
+      ? `scheduled for ${describeSlot(level, date)}`
+      : 'now — the slot had already passed when the build finished');
 
     const added = await addToPlaylists(result.videoId, playlists);
     if (added.length) log('added to', `${added.length} playlist(s)`);
@@ -232,6 +240,7 @@ async function buildOne({ level, skill, date, upload }) {
     date: stamp, level, skill, topic: topic.topic, title: meta.title,
     durationSec: Math.round(finalSec), sizeMb: Number(sizeMb),
     videoId: result?.videoId || null, url: result?.url || null,
+    publishAt: publishAt ? publishAt.toISOString() : null,
     playlists: playlists.map(p => ({ key: p.key, id: p.id })),
     buildSeconds: Math.round((Date.now() - started) / 1000),
     dir: path.relative(paths.root, workDir),
@@ -259,7 +268,7 @@ async function main() {
     console.log(`\nSchedule for ${date.toISOString().slice(0, 10)} (day ${dayIndex(date)}):\n`);
     for (const b of batch) {
       const t = pickTopic(b.level, b.skill, date);
-      console.log(`  ${b.level.toUpperCase().padEnd(3)} ${skillConfig(b.skill).label.padEnd(18)} ${t.topic}`);
+      console.log(`  ${b.level.toUpperCase().padEnd(3)} ${skillConfig(b.skill).label.padEnd(18)} ${describeSlot(b.level, date).padEnd(34)} ${t.topic}`);
     }
     console.log(`\nYouTube quota: ${JSON.stringify(quotaStatus())}\n`);
     return;
