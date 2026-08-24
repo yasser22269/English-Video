@@ -11,7 +11,7 @@ import { generateImages, fetchFootage, gradeFootage, extractFrame } from './lib/
 import { SceneRenderer, renderThumbnail } from './lib/render.js';
 import { buildAss, buildSrt } from './lib/ass.js';
 import { composeStills, composeFootage, generateGradientBackground } from './lib/compose.js';
-import { uploadVideo, verifyCredentials, quotaStatus } from './lib/youtube.js';
+import { uploadVideo, verifyCredentials, quotaStatus, playlistsFor, resolvePlaylists, addToPlaylists } from './lib/youtube.js';
 
 const argv = process.argv.slice(2);
 const has = (flag) => argv.includes(`--${flag}`);
@@ -181,8 +181,15 @@ async function buildOne({ level, skill, date, upload }) {
   const sizeMb = (fs.statSync(videoFile).size / 1e6).toFixed(1);
   log('video', `${(finalSec / 60).toFixed(1)} min · ${sizeMb} MB · ${path.basename(videoFile)}`);
 
-  // 8 ─ thumbnail
-  const meta = buildMetadata(lesson, { channel });
+  // 8 ─ playlists, then metadata
+  // Resolved before the upload so their URLs can go into the description; a
+  // failure here returns an empty list rather than costing us the video.
+  const playlists = upload
+    ? await resolvePlaylists(playlistsFor(lesson, { levelConfig, skillConfig }))
+    : [];
+  if (playlists.length) log('playlists', playlists.map(p => p.title).join(' · '));
+
+  const meta = buildMetadata(lesson, { channel, playlists });
   const thumbFile = path.join(workDir, 'thumbnail.jpg');
 
   let heroImage = plan.images.length ? path.join(mediaDir, `${plan.images[0].id}.jpg`) : null;
@@ -211,6 +218,9 @@ async function buildOne({ level, skill, date, upload }) {
       title: meta.title, description: meta.description, tags: meta.tags,
     });
     log('youtube', result.url);
+
+    const added = await addToPlaylists(result.videoId, playlists);
+    if (added.length) log('added to', `${added.length} playlist(s)`);
   } else {
     log('youtube', 'skipped (dry run)');
   }
@@ -222,6 +232,7 @@ async function buildOne({ level, skill, date, upload }) {
     date: stamp, level, skill, topic: topic.topic, title: meta.title,
     durationSec: Math.round(finalSec), sizeMb: Number(sizeMb),
     videoId: result?.videoId || null, url: result?.url || null,
+    playlists: playlists.map(p => ({ key: p.key, id: p.id })),
     buildSeconds: Math.round((Date.now() - started) / 1000),
     dir: path.relative(paths.root, workDir),
   };

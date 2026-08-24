@@ -5,8 +5,16 @@ import { env, paths, channel } from './config.js';
 
 const QUOTA_FILE = path.join(paths.state, 'quota.json');
 
+const PLAYLIST_FILE = path.join(paths.state, 'playlists.json');
+
 // YouTube Data API v3 costs, in quota units.
-const COST = { videosInsert: 1600, thumbnailsSet: 50, playlistItemsInsert: 50 };
+const COST = {
+  videosInsert: 1600,
+  thumbnailsSet: 50,
+  playlistItemsInsert: 50,
+  playlistsInsert: 50,
+  playlistsList: 1,
+};
 const DAILY_QUOTA = Number(process.env.YOUTUBE_DAILY_QUOTA || 10000);
 // Quota resets at midnight Pacific Time, not UTC.
 const quotaDay = () => new Date(Date.now() - 8 * 3600_000).toISOString().slice(0, 10);
@@ -105,6 +113,152 @@ export async function uploadVideo({ videoPath, thumbPath, title, description, ta
   }
 
   return { videoId, url: `https://www.youtube.com/watch?v=${videoId}` };
+}
+
+/* ── playlists ─────────────────────────────────────────────────────────────
+ * A viewer who finishes a lesson either leaves or watches the next one, and a
+ * playlist is what makes the second outcome the default. Two axes are worth
+ * having: by level, because that is the course a learner is actually following,
+ * and by skill, because "english listening practice" is what people search for.
+ *
+ * Ids are cached in state/playlists.json and committed, so the 50-unit create
+ * happens once per playlist in the channel's lifetime, not once per day.
+ */
+
+function readPlaylistCache() {
+  try {
+    return JSON.parse(fs.readFileSync(PLAYLIST_FILE, 'utf8'));
+  } catch {
+    return {};
+  }
+}
+
+function writePlaylistCache(cache) {
+  fs.mkdirSync(path.dirname(PLAYLIST_FILE), { recursive: true });
+  fs.writeFileSync(PLAYLIST_FILE, JSON.stringify(cache, null, 2));
+}
+
+/**
+ * The playlists a given lesson belongs to, as { key, title, description }.
+ * Keys are stable strings — renaming a playlist on YouTube must not orphan it.
+ */
+export function playlistsFor(lesson, { levelConfig, skillConfig }) {
+  const cfg = channel.youtube.playlists || {};
+  const out = [];
+
+  if (cfg.byLevel !== false) {
+    const lvl = levelConfig(lesson.level);
+    const name = lvl.label.split('·')[1]?.trim() || lvl.label;
+    out.push({
+      key: `level:${lesson.level}`,
+      title: `${name} English (${lesson.level.toUpperCase()}) — One Lesson Every Day`.slice(0, 150),
+      description:
+        `Every ${lvl.label} lesson from ${channel.channelName}, in the order it was published.\n\n` +
+        `Four skills on a rotating cycle: speaking, vocabulary, reading and listening. ` +
+        `One new lesson every day, with Arabic subtitles.\n\n` +
+        `Start at the beginning and work forward — the vocabulary builds on itself.`,
+    });
+  }
+
+  if (cfg.bySkill !== false) {
+    const skl = skillConfig(lesson.skill);
+    out.push({
+      key: `skill:${lesson.skill}`,
+      title: (skl.playlistTitle || `English ${skl.label} — Every Level, Every Day`).slice(0, 150),
+      description:
+        `Every ${skl.label.toLowerCase()} lesson from ${channel.channelName}, across all five CEFR levels ` +
+        `from A1 beginner to C1 advanced.\n\n` +
+        `Pick the level that matches you — the level is in every title. Arabic subtitles included.`,
+    });
+  }
+
+  return out;
+}
+
+/**
+ * Resolve a playlist id, creating the playlist the first time.
+ * Before creating, the channel's existing playlists are checked by title, so a
+ * lost state file re-adopts the real playlists instead of making duplicates.
+ */
+async function ensurePlaylist(youtube, { key, title, description }) {
+  const cache = readPlaylistCache();
+  if (cache[key]?.id) return cache[key].id;
+
+  let existingId = null;
+  try {
+    const res = await youtube.playlists.list({ part: ['id', 'snippet'], mine: true, maxResults: 50 });
+    spend(COST.playlistsList, 'playlists.list');
+    existingId = res.data.items?.find(p => p.snippet?.title === title)?.id || null;
+  } catch (err) {
+    console.warn(`[youtube] could not list playlists — ${err.message}`);
+  }
+
+  let id = existingId;
+  if (!id) {
+    if (!quotaAvailable(COST.playlistsInsert)) throw new Error('not enough quota to create a playlist');
+    const res = await youtube.playlists.insert({
+      part: ['snippet', 'status'],
+      requestBody: {
+        snippet: { title, description, defaultLanguage: channel.youtube.defaultLanguage },
+        status: { privacyStatus: 'public' },
+      },
+    });
+    spend(COST.playlistsInsert, `create playlist "${title.slice(0, 40)}"`);
+    id = res.data.id;
+  }
+
+  const next = readPlaylistCache();
+  next[key] = { id, title, createdAt: new Date().toISOString() };
+  writePlaylistCache(next);
+  return id;
+}
+
+/** Public playlist URL, for cross-linking from a video description. */
+export function playlistUrl(id) {
+  return `https://www.youtube.com/playlist?list=${id}`;
+}
+
+/**
+ * Resolve every playlist this lesson belongs to, before the upload, so their
+ * URLs can go into the description. Returns [] rather than throwing: a playlist
+ * problem must never cost us the video itself.
+ */
+export async function resolvePlaylists(specs) {
+  if (!specs.length || env.dryRun) return [];
+  const youtube = google.youtube({ version: 'v3', auth: oauthClient() });
+  const out = [];
+  for (const spec of specs) {
+    try {
+      out.push({ ...spec, id: await ensurePlaylist(youtube, spec) });
+    } catch (err) {
+      console.warn(`[youtube] playlist "${spec.title}" unavailable — ${err.message}`);
+    }
+  }
+  return out;
+}
+
+export async function addToPlaylists(videoId, playlists) {
+  const added = [];
+  if (!videoId || !playlists?.length) return added;
+
+  const youtube = google.youtube({ version: 'v3', auth: oauthClient() });
+  for (const pl of playlists) {
+    if (!quotaAvailable(COST.playlistItemsInsert)) {
+      console.warn(`[youtube] skipping playlist "${pl.title}" — quota exhausted`);
+      continue;
+    }
+    try {
+      await youtube.playlistItems.insert({
+        part: ['snippet'],
+        requestBody: { snippet: { playlistId: pl.id, resourceId: { kind: 'youtube#video', videoId } } },
+      });
+      spend(COST.playlistItemsInsert, `playlist "${pl.title.slice(0, 30)}"`);
+      added.push(pl);
+    } catch (err) {
+      console.warn(`[youtube] could not add to "${pl.title}" — ${err.message}`);
+    }
+  }
+  return added;
 }
 
 export { COST };

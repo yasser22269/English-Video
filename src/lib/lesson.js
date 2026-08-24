@@ -258,7 +258,7 @@ export async function writeLesson({ level, skill, topic, focus }) {
 }
 
 /** Titles/descriptions the channel uses. Kept here so wording stays in one place. */
-export function buildMetadata(lesson, { channel: ch }) {
+export function buildMetadata(lesson, { channel: ch, playlists = [] }) {
   const skill = skillConfig(lesson.skill);
   const lvl = levelConfig(lesson.level);
   const wordCount = lesson.words?.length || lvl.wordCount;
@@ -286,6 +286,15 @@ export function buildMetadata(lesson, { channel: ch }) {
   if (lesson.key_phrases) lines.push(...lesson.key_phrases.map((p, i) => `${i + 1}. ${p.phrase} — ${p.meaning}`));
   if (lesson.drills) lines.push(...lesson.drills.map((d, i) => `${i + 1}. ${d.phrase}`));
   if (lesson.glossary) lines.push(...lesson.glossary.map((g, i) => `${i + 1}. ${g.word} — ${g.meaning}`));
+
+  // Playlist links are the cheapest way to turn one view into a session: the
+  // viewer who finishes this lesson gets an obvious next one in their level.
+  if (playlists.length) {
+    lines.push('', 'KEEP GOING');
+    for (const pl of playlists) {
+      lines.push(`${pl.title}`, `https://www.youtube.com/playlist?list=${pl.id}`);
+    }
+  }
 
   lines.push(
     '',

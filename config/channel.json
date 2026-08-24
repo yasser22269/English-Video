@@ -1,6 +1,6 @@
 {
-  "channelName": "English Every Day",
-  "handle": "@EnglishEveryDay",
+  "channelName": "Daily English Lessons",
+  "handle": "@daily_english_lessons_new",
   "video": {
     "width": 1920,
     "height": 1080,
@@ -108,25 +108,29 @@
       "label": "Speaking Practice",
       "emoji": "🗣️",
       "background": "footage",
-      "titlePattern": "Speak English Like a Native — {topic} | {levelLabel}"
+      "titlePattern": "Speak English Like a Native — {topic} | {levelLabel}",
+      "playlistTitle": "English Speaking Practice — Listen and Repeat, Every Level"
     },
     "vocabulary": {
       "label": "New Vocabulary",
       "emoji": "📚",
       "background": "typography",
-      "titlePattern": "{wordCount} English Words About {topic} | {levelLabel}"
+      "titlePattern": "{wordCount} English Words About {topic} | {levelLabel}",
+      "playlistTitle": "English Vocabulary — New Words Every Day, Every Level"
     },
     "reading": {
       "label": "Reading Practice",
       "emoji": "📖",
       "background": "typography",
-      "titlePattern": "English Reading Practice — {topic} | {levelLabel}"
+      "titlePattern": "English Reading Practice — {topic} | {levelLabel}",
+      "playlistTitle": "English Reading Practice — Read Along, Every Level"
     },
     "listening": {
       "label": "Listening Practice",
       "emoji": "🎧",
       "background": "footage",
-      "titlePattern": "English Listening Practice — {topic} | {levelLabel}"
+      "titlePattern": "English Listening Practice — {topic} | {levelLabel}",
+      "playlistTitle": "English Listening Practice — Real Conversations, Every Level"
     }
   },
   "youtube": {
@@ -144,10 +148,28 @@
       "english listening",
       "english speaking",
       "تعلم الانجليزية"
-    ]
+    ],
+    "playlists": {
+      "byLevel": true,
+      "bySkill": true,
+      "note": "Each video joins its level playlist and its skill playlist. 2 x playlistItems.insert = 100 units per video, 500 per day."
+    }
   },
   "audio": {
     "preset": "broadcast",
     "note": "Presets live in src/lib/ffmpeg.js; compare them with npm run preview:audio"
+  },
+  "channelId": "UC-o-ibKNt-FpCrSxyTVq9zQ",
+  "publish": {
+    "timezone": "Africa/Cairo",
+    "minLeadMinutes": 15,
+    "slots": {
+      "a1": "16:00",
+      "a2": "17:30",
+      "b1": "19:00",
+      "b2": "20:30",
+      "c1": "22:00"
+    },
+    "note": "Local wall-clock times, DST-aware. Each level owns one fixed slot so a returning viewer always finds their level at the same hour. A slot already past when the run finishes falls back to publishing immediately."
   }
 }
