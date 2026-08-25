@@ -2,7 +2,22 @@
   "used": {
     "a1:vocabulary": [
       "Numbers, Age and Phone Numbers"
+    ],
+    "a1:reading": [
+      "My Family"
+    ],
+    "a2:listening": [
+      "Future Plans and Intentions"
+    ],
+    "b1:speaking": [
+      "Job Interviews and Strengths"
+    ],
+    "b2:vocabulary": [
+      "The Attention Economy"
+    ],
+    "c1:reading": [
+      "Consciousness and the Hard Problem"
     ]
   },
-  "updatedAt": "2026-08-24T12:39:57.638Z"
+  "updatedAt": "2026-08-25T10:06:52.270Z"
 }
