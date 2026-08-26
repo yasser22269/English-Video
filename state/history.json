@@ -1,5 +1,101 @@
 [
   {
+    "date": "2026-08-26",
+    "level": "c1",
+    "skill": "listening",
+    "topic": "The Economics of Scarcity and Choice",
+    "title": "English Listening Practice — The Economics of Scarcity and Choice | C1 · Advanced",
+    "durationSec": 462,
+    "sizeMb": 45.9,
+    "videoId": "0LNTatszuY8",
+    "url": "https://www.youtube.com/watch?v=0LNTatszuY8",
+    "publishAt": "2026-08-26T19:00:00.000Z",
+    "playlists": [
+      {
+        "key": "level:c1",
+        "id": "PLPYmpq9AOiZM"
+      },
+      {
+        "key": "skill:listening",
+        "id": "PLc1avYS6uKVo"
+      }
+    ],
+    "buildSeconds": 574,
+    "dir": "output/2026-08-26-c1-listening-the-economics-of-scarcity-and-choice"
+  },
+  {
+    "date": "2026-08-26",
+    "level": "b2",
+    "skill": "reading",
+    "topic": "Universal Basic Income",
+    "title": "English Reading Practice — Universal Basic Income | B2 · Upper-Intermediate",
+    "durationSec": 362,
+    "sizeMb": 19.8,
+    "videoId": "KtDOMUkutY4",
+    "url": "https://www.youtube.com/watch?v=KtDOMUkutY4",
+    "publishAt": "2026-08-26T17:30:00.000Z",
+    "playlists": [
+      {
+        "key": "level:b2",
+        "id": "PLEyMEjEr22bU"
+      },
+      {
+        "key": "skill:reading",
+        "id": "PLYub11V_0AzA"
+      }
+    ],
+    "buildSeconds": 704,
+    "dir": "output/2026-08-26-b2-reading-universal-basic-income"
+  },
+  {
+    "date": "2026-08-26",
+    "level": "a2",
+    "skill": "speaking",
+    "topic": "Comparing Cities",
+    "title": "Speak English Like a Native — Comparing Cities | A2 · Elementary",
+    "durationSec": 245,
+    "sizeMb": 53.6,
+    "videoId": "Xa2bIM0xvlY",
+    "url": "https://www.youtube.com/watch?v=Xa2bIM0xvlY",
+    "publishAt": "2026-08-26T14:30:00.000Z",
+    "playlists": [
+      {
+        "key": "level:a2",
+        "id": "PLMUHkdE-F1_Q"
+      },
+      {
+        "key": "skill:speaking",
+        "id": "PLCadq2A6pEK8"
+      }
+    ],
+    "buildSeconds": 1138,
+    "dir": "output/2026-08-26-a2-speaking-comparing-cities"
+  },
+  {
+    "date": "2026-08-26",
+    "level": "a1",
+    "skill": "listening",
+    "topic": "Colours and Clothes",
+    "title": "English Listening Practice — Colours and Clothes | A1 · Beginner",
+    "durationSec": 185,
+    "sizeMb": 27,
+    "videoId": "Zi17IbxjKxQ",
+    "url": "https://www.youtube.com/watch?v=Zi17IbxjKxQ",
+    "publishAt": "2026-08-26T13:00:00.000Z",
+    "playlists": [
+      {
+        "key": "level:a1",
+        "id": "PLIJ5pu8Ch1Pc"
+      },
+      {
+        "key": "skill:listening",
+        "id": "PLc1avYS6uKVo"
+      }
+    ],
+    "buildSeconds": 823,
+    "dir": "output/2026-08-26-a1-listening-colours-and-clothes"
+  },
+  {
     "date": "2026-08-25",
     "level": "c1",
     "skill": "reading",
