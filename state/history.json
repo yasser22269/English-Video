@@ -1,5 +1,125 @@
 [
   {
+    "date": "2026-08-27",
+    "level": "c1",
+    "skill": "speaking",
+    "topic": "Translation and the Limits of Language",
+    "title": "Speak English Like a Native — Translation and the Limits of Language | C1 · Advanced",
+    "durationSec": 368,
+    "sizeMb": 67.2,
+    "videoId": "tF9KlwAIOzg",
+    "url": "https://www.youtube.com/watch?v=tF9KlwAIOzg",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:c1",
+        "id": "PLPYmpq9AOiZM"
+      },
+      {
+        "key": "skill:speaking",
+        "id": "PLCadq2A6pEK8"
+      }
+    ],
+    "buildSeconds": 358,
+    "dir": "output/2026-08-27-c1-speaking-translation-and-the-limits-of-language"
+  },
+  {
+    "date": "2026-08-27",
+    "level": "b2",
+    "skill": "listening",
+    "topic": "Gentrification and Neighbourhoods",
+    "title": "English Listening Practice — Gentrification and Neighbourhoods | B2 · Upper-Intermediate",
+    "durationSec": 381,
+    "sizeMb": 43.1,
+    "videoId": "Mw4q2JFqD8A",
+    "url": "https://www.youtube.com/watch?v=Mw4q2JFqD8A",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:b2",
+        "id": "PLEyMEjEr22bU"
+      },
+      {
+        "key": "skill:listening",
+        "id": "PLc1avYS6uKVo"
+      }
+    ],
+    "buildSeconds": 394,
+    "dir": "output/2026-08-27-b2-listening-gentrification-and-neighbourhoods"
+  },
+  {
+    "date": "2026-08-27",
+    "level": "b1",
+    "skill": "reading",
+    "topic": "Travelling on a Budget",
+    "title": "English Reading Practice — Travelling on a Budget | B1 · Intermediate",
+    "durationSec": 297,
+    "sizeMb": 16.3,
+    "videoId": "H4YwSGHEbEo",
+    "url": "https://www.youtube.com/watch?v=H4YwSGHEbEo",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:b1",
+        "id": "PLSkG2Gz0CZos"
+      },
+      {
+        "key": "skill:reading",
+        "id": "PLYub11V_0AzA"
+      }
+    ],
+    "buildSeconds": 180,
+    "dir": "output/2026-08-27-b1-reading-travelling-on-a-budget"
+  },
+  {
+    "date": "2026-08-27",
+    "level": "a2",
+    "skill": "vocabulary",
+    "topic": "The Best and the Worst",
+    "title": "10 English Words About The Best and the Worst | A2 · Elementary",
+    "durationSec": 261,
+    "sizeMb": 13.5,
+    "videoId": "xdMxiGKxxww",
+    "url": "https://www.youtube.com/watch?v=xdMxiGKxxww",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:a2",
+        "id": "PLMUHkdE-F1_Q"
+      },
+      {
+        "key": "skill:vocabulary",
+        "id": "PLRKWAimfYWh4"
+      }
+    ],
+    "buildSeconds": 230,
+    "dir": "output/2026-08-27-a2-vocabulary-the-best-and-the-worst"
+  },
+  {
+    "date": "2026-08-27",
+    "level": "a1",
+    "skill": "speaking",
+    "topic": "Food and Drinks",
+    "title": "Speak English Like a Native — Food and Drinks | A1 · Beginner",
+    "durationSec": 185,
+    "sizeMb": 36.9,
+    "videoId": "yAVY8ycrX7w",
+    "url": "https://www.youtube.com/watch?v=yAVY8ycrX7w",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:a1",
+        "id": "PLIJ5pu8Ch1Pc"
+      },
+      {
+        "key": "skill:speaking",
+        "id": "PLCadq2A6pEK8"
+      }
+    ],
+    "buildSeconds": 271,
+    "dir": "output/2026-08-27-a1-speaking-food-and-drinks"
+  },
+  {
     "date": "2026-08-26",
     "level": "c1",
     "skill": "listening",
