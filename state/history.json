@@ -1,5 +1,125 @@
 [
   {
+    "date": "2026-08-28",
+    "level": "c1",
+    "skill": "vocabulary",
+    "topic": "Algorithmic Bias and Accountability",
+    "title": "8 English Words About Algorithmic Bias and Accountability | C1 · Advanced",
+    "durationSec": 323,
+    "sizeMb": 19.7,
+    "videoId": "lXmzQn_MpOs",
+    "url": "https://www.youtube.com/watch?v=lXmzQn_MpOs",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:c1",
+        "id": "PLPYmpq9AOiZM"
+      },
+      {
+        "key": "skill:vocabulary",
+        "id": "PLRKWAimfYWh4"
+      }
+    ],
+    "buildSeconds": 318,
+    "dir": "output/2026-08-28-c1-vocabulary-algorithmic-bias-and-accountability"
+  },
+  {
+    "date": "2026-08-28",
+    "level": "b2",
+    "skill": "speaking",
+    "topic": "The Psychology of Habits",
+    "title": "Speak English Like a Native — The Psychology of Habits | B2 · Upper-Intermediate",
+    "durationSec": 283,
+    "sizeMb": 53.9,
+    "videoId": "WzfNl2vJtJU",
+    "url": "https://www.youtube.com/watch?v=WzfNl2vJtJU",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:b2",
+        "id": "PLEyMEjEr22bU"
+      },
+      {
+        "key": "skill:speaking",
+        "id": "PLCadq2A6pEK8"
+      }
+    ],
+    "buildSeconds": 334,
+    "dir": "output/2026-08-28-b2-speaking-the-psychology-of-habits"
+  },
+  {
+    "date": "2026-08-28",
+    "level": "b1",
+    "skill": "listening",
+    "topic": "Culture Shock Abroad",
+    "title": "English Listening Practice — Culture Shock Abroad | B1 · Intermediate",
+    "durationSec": 381,
+    "sizeMb": 69.1,
+    "videoId": "3McZViuD1r8",
+    "url": "https://www.youtube.com/watch?v=3McZViuD1r8",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:b1",
+        "id": "PLSkG2Gz0CZos"
+      },
+      {
+        "key": "skill:listening",
+        "id": "PLc1avYS6uKVo"
+      }
+    ],
+    "buildSeconds": 433,
+    "dir": "output/2026-08-28-b1-listening-culture-shock-abroad"
+  },
+  {
+    "date": "2026-08-28",
+    "level": "a2",
+    "skill": "reading",
+    "topic": "Ordering Food and Complaining Politely",
+    "title": "English Reading Practice — Ordering Food and Complaining Politely | A2 · Elementary",
+    "durationSec": 207,
+    "sizeMb": 10.8,
+    "videoId": "ozHq1UBtjsw",
+    "url": "https://www.youtube.com/watch?v=ozHq1UBtjsw",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:a2",
+        "id": "PLMUHkdE-F1_Q"
+      },
+      {
+        "key": "skill:reading",
+        "id": "PLYub11V_0AzA"
+      }
+    ],
+    "buildSeconds": 174,
+    "dir": "output/2026-08-28-a2-reading-ordering-food-and-complaining-politely"
+  },
+  {
+    "date": "2026-08-28",
+    "level": "a1",
+    "skill": "vocabulary",
+    "topic": "Parts of the Body",
+    "title": "10 English Words About Parts of the Body | A1 · Beginner",
+    "durationSec": 188,
+    "sizeMb": 10.1,
+    "videoId": "yQbbES3rCWM",
+    "url": "https://www.youtube.com/watch?v=yQbbES3rCWM",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:a1",
+        "id": "PLIJ5pu8Ch1Pc"
+      },
+      {
+        "key": "skill:vocabulary",
+        "id": "PLRKWAimfYWh4"
+      }
+    ],
+    "buildSeconds": 234,
+    "dir": "output/2026-08-28-a1-vocabulary-parts-of-the-body"
+  },
+  {
     "date": "2026-08-27",
     "level": "c1",
     "skill": "speaking",

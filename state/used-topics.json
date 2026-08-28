@@ -1,7 +1,8 @@
 {
   "used": {
     "a1:vocabulary": [
-      "Numbers, Age and Phone Numbers"
+      "Numbers, Age and Phone Numbers",
+      "Parts of the Body"
     ],
     "a1:reading": [
       "My Family"
@@ -44,7 +45,19 @@
     ],
     "c1:speaking": [
       "Translation and the Limits of Language"
+    ],
+    "a2:reading": [
+      "Ordering Food and Complaining Politely"
+    ],
+    "b1:listening": [
+      "Culture Shock Abroad"
+    ],
+    "b2:speaking": [
+      "The Psychology of Habits"
+    ],
+    "c1:vocabulary": [
+      "Algorithmic Bias and Accountability"
     ]
   },
-  "updatedAt": "2026-08-27T19:48:17.299Z"
+  "updatedAt": "2026-08-28T21:04:28.810Z"
 }
