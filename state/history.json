@@ -1,5 +1,101 @@
 [
   {
+    "date": "2026-08-29",
+    "level": "c1",
+    "skill": "reading",
+    "topic": "Complexity Science and Emergence",
+    "title": "English Reading Practice — Complexity Science and Emergence | C1 · Advanced",
+    "durationSec": 453,
+    "sizeMb": 28.2,
+    "videoId": "fBjYjHA6lPc",
+    "url": "https://www.youtube.com/watch?v=fBjYjHA6lPc",
+    "publishAt": "2026-08-29T19:00:00.000Z",
+    "playlists": [
+      {
+        "key": "level:c1",
+        "id": "PLPYmpq9AOiZM"
+      },
+      {
+        "key": "skill:reading",
+        "id": "PLYub11V_0AzA"
+      }
+    ],
+    "buildSeconds": 537,
+    "dir": "output/2026-08-29-c1-reading-complexity-science-and-emergence"
+  },
+  {
+    "date": "2026-08-29",
+    "level": "b2",
+    "skill": "vocabulary",
+    "topic": "Bilingualism and the Brain",
+    "title": "9 English Words About Bilingualism and the Brain | B2 · Upper-Intermediate",
+    "durationSec": 315,
+    "sizeMb": 17,
+    "videoId": "TWYUoT1peFA",
+    "url": "https://www.youtube.com/watch?v=TWYUoT1peFA",
+    "publishAt": "2026-08-29T17:30:00.000Z",
+    "playlists": [
+      {
+        "key": "level:b2",
+        "id": "PLEyMEjEr22bU"
+      },
+      {
+        "key": "skill:vocabulary",
+        "id": "PLRKWAimfYWh4"
+      }
+    ],
+    "buildSeconds": 774,
+    "dir": "output/2026-08-29-b2-vocabulary-bilingualism-and-the-brain"
+  },
+  {
+    "date": "2026-08-29",
+    "level": "a2",
+    "skill": "listening",
+    "topic": "Talking About Films and Series",
+    "title": "English Listening Practice — Talking About Films and Series | A2 · Elementary",
+    "durationSec": 261,
+    "sizeMb": 25.6,
+    "videoId": "pXjp4Ko-jfA",
+    "url": "https://www.youtube.com/watch?v=pXjp4Ko-jfA",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:a2",
+        "id": "PLMUHkdE-F1_Q"
+      },
+      {
+        "key": "skill:listening",
+        "id": "PLc1avYS6uKVo"
+      }
+    ],
+    "buildSeconds": 712,
+    "dir": "output/2026-08-29-a2-listening-talking-about-films-and-series"
+  },
+  {
+    "date": "2026-08-29",
+    "level": "a1",
+    "skill": "reading",
+    "topic": "At the Doctor",
+    "title": "English Reading Practice — At the Doctor | A1 · Beginner",
+    "durationSec": 146,
+    "sizeMb": 8.2,
+    "videoId": "b8jkwQDMBpU",
+    "url": "https://www.youtube.com/watch?v=b8jkwQDMBpU",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:a1",
+        "id": "PLIJ5pu8Ch1Pc"
+      },
+      {
+        "key": "skill:reading",
+        "id": "PLYub11V_0AzA"
+      }
+    ],
+    "buildSeconds": 656,
+    "dir": "output/2026-08-29-a1-reading-at-the-doctor"
+  },
+  {
     "date": "2026-08-28",
     "level": "c1",
     "skill": "vocabulary",
