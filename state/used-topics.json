@@ -24,16 +24,20 @@
       "Complexity Science and Emergence"
     ],
     "a1:listening": [
-      "Colours and Clothes"
+      "Colours and Clothes",
+      "Hobbies and Free Time"
     ],
     "a2:speaking": [
-      "Comparing Cities"
+      "Comparing Cities",
+      "Social Media in Daily Life"
     ],
     "b2:reading": [
-      "Universal Basic Income"
+      "Universal Basic Income",
+      "Space Exploration Priorities"
     ],
     "c1:listening": [
-      "The Economics of Scarcity and Choice"
+      "The Economics of Scarcity and Choice",
+      "The Attention Merchants"
     ],
     "a1:speaking": [
       "Food and Drinks"
@@ -61,7 +65,10 @@
     ],
     "c1:vocabulary": [
       "Algorithmic Bias and Accountability"
+    ],
+    "b1:vocabulary": [
+      "Learning Languages Faster"
     ]
   },
-  "updatedAt": "2026-08-29T14:58:31.932Z"
+  "updatedAt": "2026-08-30T14:37:31.153Z"
 }
