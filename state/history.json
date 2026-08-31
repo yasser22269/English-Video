@@ -1,5 +1,125 @@
 [
   {
+    "date": "2026-08-31",
+    "level": "c1",
+    "skill": "speaking",
+    "topic": "Legal Reasoning and Precedent",
+    "title": "Speak English Like a Native — Legal Reasoning and Precedent | C1 · Advanced",
+    "durationSec": 342,
+    "sizeMb": 69.7,
+    "videoId": "8W8F1TJB43A",
+    "url": "https://www.youtube.com/watch?v=8W8F1TJB43A",
+    "publishAt": "2026-08-31T19:00:00.000Z",
+    "playlists": [
+      {
+        "key": "level:c1",
+        "id": "PLPYmpq9AOiZM"
+      },
+      {
+        "key": "skill:speaking",
+        "id": "PLCadq2A6pEK8"
+      }
+    ],
+    "buildSeconds": 313,
+    "dir": "output/2026-08-31-c1-speaking-legal-reasoning-and-precedent"
+  },
+  {
+    "date": "2026-08-31",
+    "level": "b2",
+    "skill": "listening",
+    "topic": "Privacy in the Age of Surveillance",
+    "title": "English Listening Practice — Privacy in the Age of Surveillance | B2 · Upper-Intermediate",
+    "durationSec": 350,
+    "sizeMb": 57.5,
+    "videoId": "SYXkklJZ5wI",
+    "url": "https://www.youtube.com/watch?v=SYXkklJZ5wI",
+    "publishAt": "2026-08-31T17:30:00.000Z",
+    "playlists": [
+      {
+        "key": "level:b2",
+        "id": "PLEyMEjEr22bU"
+      },
+      {
+        "key": "skill:listening",
+        "id": "PLc1avYS6uKVo"
+      }
+    ],
+    "buildSeconds": 306,
+    "dir": "output/2026-08-31-b2-listening-privacy-in-the-age-of-surveillance"
+  },
+  {
+    "date": "2026-08-31",
+    "level": "b1",
+    "skill": "reading",
+    "topic": "Choosing a Career Path",
+    "title": "English Reading Practice — Choosing a Career Path | B1 · Intermediate",
+    "durationSec": 278,
+    "sizeMb": 15.2,
+    "videoId": "7S8rvCEzcCo",
+    "url": "https://www.youtube.com/watch?v=7S8rvCEzcCo",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:b1",
+        "id": "PLSkG2Gz0CZos"
+      },
+      {
+        "key": "skill:reading",
+        "id": "PLYub11V_0AzA"
+      }
+    ],
+    "buildSeconds": 158,
+    "dir": "output/2026-08-31-b1-reading-choosing-a-career-path"
+  },
+  {
+    "date": "2026-08-31",
+    "level": "a2",
+    "skill": "vocabulary",
+    "topic": "Describing Your Best Friend",
+    "title": "10 English Words About Describing Your Best Friend | A2 · Elementary",
+    "durationSec": 278,
+    "sizeMb": 15.3,
+    "videoId": "iADlXpKpz14",
+    "url": "https://www.youtube.com/watch?v=iADlXpKpz14",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:a2",
+        "id": "PLMUHkdE-F1_Q"
+      },
+      {
+        "key": "skill:vocabulary",
+        "id": "PLRKWAimfYWh4"
+      }
+    ],
+    "buildSeconds": 222,
+    "dir": "output/2026-08-31-a2-vocabulary-describing-your-best-friend"
+  },
+  {
+    "date": "2026-08-31",
+    "level": "a1",
+    "skill": "speaking",
+    "topic": "Sports I Play",
+    "title": "Speak English Like a Native — Sports I Play | A1 · Beginner",
+    "durationSec": 190,
+    "sizeMb": 36.6,
+    "videoId": "hDedFglAuGM",
+    "url": "https://www.youtube.com/watch?v=hDedFglAuGM",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:a1",
+        "id": "PLIJ5pu8Ch1Pc"
+      },
+      {
+        "key": "skill:speaking",
+        "id": "PLCadq2A6pEK8"
+      }
+    ],
+    "buildSeconds": 228,
+    "dir": "output/2026-08-31-a1-speaking-sports-i-play"
+  },
+  {
     "date": "2026-08-30",
     "level": "c1",
     "skill": "listening",

@@ -40,19 +40,24 @@
       "The Attention Merchants"
     ],
     "a1:speaking": [
-      "Food and Drinks"
+      "Food and Drinks",
+      "Sports I Play"
     ],
     "a2:vocabulary": [
-      "The Best and the Worst"
+      "The Best and the Worst",
+      "Describing Your Best Friend"
     ],
     "b1:reading": [
-      "Travelling on a Budget"
+      "Travelling on a Budget",
+      "Choosing a Career Path"
     ],
     "b2:listening": [
-      "Gentrification and Neighbourhoods"
+      "Gentrification and Neighbourhoods",
+      "Privacy in the Age of Surveillance"
     ],
     "c1:speaking": [
-      "Translation and the Limits of Language"
+      "Translation and the Limits of Language",
+      "Legal Reasoning and Precedent"
     ],
     "a2:reading": [
       "Ordering Food and Complaining Politely"
@@ -70,5 +75,5 @@
       "Learning Languages Faster"
     ]
   },
-  "updatedAt": "2026-08-30T14:37:31.153Z"
+  "updatedAt": "2026-08-31T17:00:38.514Z"
 }
