@@ -1,53 +1,245 @@
 {
   "level": "c1",
   "topics": [
-    { "topic": "Epistemic Humility in Public Discourse", "focus": "hedging and epistemic modality", "footage": "debate discussion intellectual conversation" },
-    { "topic": "The Rhetoric of Political Speeches", "focus": "rhetorical devices and inversion", "footage": "political speech podium audience" },
-    { "topic": "Consciousness and the Hard Problem", "focus": "abstract nominalisation", "footage": "brain neuroscience consciousness abstract" },
-    { "topic": "The Economics of Scarcity and Choice", "focus": "conditional reasoning", "footage": "economics market data analysis" },
-    { "topic": "Translation and the Limits of Language", "focus": "concessive subordination", "footage": "books translation manuscript language" },
-    { "topic": "Algorithmic Bias and Accountability", "focus": "impersonal passive and attribution", "footage": "algorithm code data screen" },
-    { "topic": "Memory, Narrative and Identity", "focus": "cohesion and anaphora", "footage": "memory old photographs reflection" },
-    { "topic": "The Aesthetics of Minimal Art", "focus": "evaluative and figurative language", "footage": "modern art gallery minimal sculpture" },
-    { "topic": "Deliberative Democracy", "focus": "argumentation and refutation", "footage": "town hall meeting citizens debate" },
-    { "topic": "The Anthropocene Debate", "focus": "scientific register", "footage": "earth landscape industry human impact" },
-    { "topic": "Behavioural Economics and Nudging", "focus": "reporting research findings", "footage": "behaviour choice psychology experiment" },
-    { "topic": "The Ethics of Genetic Enhancement", "focus": "moral argumentation", "footage": "genetics laboratory dna ethics" },
-    { "topic": "Soft Power and Cultural Influence", "focus": "abstract collocation", "footage": "diplomacy culture international flags" },
-    { "topic": "The Philosophy of Time", "focus": "hypothetical and counterfactual", "footage": "clock time abstract philosophical" },
-    { "topic": "Postcolonial Literature", "focus": "literary and critical register", "footage": "literature books writing colonial history" },
-    { "topic": "Complexity Science and Emergence", "focus": "technical explanation", "footage": "network complexity patterns systems" },
-    { "topic": "The Attention Merchants", "focus": "critique and irony", "footage": "advertising attention media manipulation" },
-    { "topic": "Legal Reasoning and Precedent", "focus": "formal legal register", "footage": "courtroom law books justice" },
-    { "topic": "Global Health Governance", "focus": "institutional discourse", "footage": "global health organisation medical policy" },
-    { "topic": "Artificial General Intelligence Risk", "focus": "speculation and qualification", "footage": "artificial intelligence future abstract" },
-    { "topic": "The Sociology of Taste", "focus": "sociological register", "footage": "culture taste fashion society" },
-    { "topic": "Existentialism and Modern Anxiety", "focus": "philosophical abstraction", "footage": "solitary figure city existential" },
-    { "topic": "Data Journalism and Truth Claims", "focus": "evidential language", "footage": "data journalism charts newsroom" },
-    { "topic": "The Neuroscience of Decision-Making", "focus": "cause and mechanism", "footage": "brain scan decision neuroscience" },
-    { "topic": "Heritage, Restitution and Museums", "focus": "contested argument", "footage": "museum artefacts heritage restitution" },
-    { "topic": "The Grammar of Persuasive Writing", "focus": "syntactic variety", "footage": "writing desk manuscript pen" },
-    { "topic": "Urban Inequality and Spatial Justice", "focus": "critical social register", "footage": "city inequality contrast neighbourhoods" },
-    { "topic": "Scientific Consensus and Doubt", "focus": "hedging and boosting", "footage": "science research laboratory debate" },
-    { "topic": "Music Theory and Emotional Response", "focus": "technical and evaluative blend", "footage": "orchestra music performance emotion" },
-    { "topic": "The Future of Work and Meaning", "focus": "speculative argumentation", "footage": "future work office abstract technology" },
-    { "topic": "Diaspora and Cultural Memory", "focus": "narrative and abstraction", "footage": "diaspora culture family heritage" },
-    { "topic": "Bioethics at the End of Life", "focus": "sensitive formal register", "footage": "hospital care hands compassion" },
-    { "topic": "Satire as Political Critique", "focus": "irony and register shift", "footage": "satire cartoon newspaper politics" },
-    { "topic": "The Economics of Innovation", "focus": "causal argument", "footage": "innovation startup laboratory invention" },
-    { "topic": "Linguistic Relativity Revisited", "focus": "academic hedging", "footage": "language script writing diverse" },
-    { "topic": "Climate Adaptation and Justice", "focus": "policy argumentation", "footage": "climate adaptation flood community" },
-    { "topic": "Privacy, Autonomy and the Self", "focus": "philosophical nominalisation", "footage": "privacy solitude reflection window" },
-    { "topic": "The Craft of Documentary Film", "focus": "technical and aesthetic terms", "footage": "documentary camera filming interview" },
-    { "topic": "Institutional Trust and Its Erosion", "focus": "abstract cause and effect", "footage": "institution building trust society" },
-    { "topic": "Mathematics and Beauty", "focus": "metaphor and precision", "footage": "mathematics equations chalkboard patterns" },
-    { "topic": "The Ethics of Persuasive Technology", "focus": "critical evaluation", "footage": "app design persuasion smartphone" },
-    { "topic": "Nationalism and Collective Identity", "focus": "contested definitions", "footage": "flags crowd national identity" },
-    { "topic": "The Limits of Meritocracy", "focus": "counter-argument and rebuttal", "footage": "career ladder competition ambition" },
-    { "topic": "Archaeology and Interpretation", "focus": "cautious inference", "footage": "archaeology excavation ruins artefacts" },
-    { "topic": "Emotional Labour in Service Work", "focus": "sociological critique", "footage": "service worker smile customer counter" },
-    { "topic": "The Rhetoric of Crisis", "focus": "framing and metaphor", "footage": "crisis headlines emergency news" },
-    { "topic": "Utopian and Dystopian Imagination", "focus": "hypothetical worlds", "footage": "futuristic city dystopia utopia" },
-    { "topic": "The Value of the Humanities", "focus": "persuasive academic essay style", "footage": "library humanities books study" }
+    {
+      "topic": "Phrasal Verbs for Business Meetings",
+      "focus": "multi-word verbs and separability",
+      "footage": "business meeting office colleagues"
+    },
+    {
+      "topic": "Idioms Native Speakers Use Every Day",
+      "focus": "idiomatic fixed expressions",
+      "footage": "friends talking cafe casual"
+    },
+    {
+      "topic": "Sounding Polite When You Disagree",
+      "focus": "hedging and softening devices",
+      "footage": "discussion debate two people"
+    },
+    {
+      "topic": "Job Interview Answers for Senior Roles",
+      "focus": "cleft sentences for emphasis",
+      "footage": "job interview office handshake"
+    },
+    {
+      "topic": "Negotiating Salary in English",
+      "focus": "conditional bargaining language",
+      "footage": "negotiation meeting table contract"
+    },
+    {
+      "topic": "Presenting Data to an Audience",
+      "focus": "describing trends and approximation",
+      "footage": "presentation charts conference"
+    },
+    {
+      "topic": "Writing an Email That Gets a Reply",
+      "focus": "formal register and nominalisation",
+      "footage": "laptop email writing office"
+    },
+    {
+      "topic": "Small Talk That Does Not Feel Awkward",
+      "focus": "discourse markers and follow-up questions",
+      "footage": "networking event people talking"
+    },
+    {
+      "topic": "Linking Words That Make You Sound Fluent",
+      "focus": "advanced cohesive devices",
+      "footage": "writing notebook study desk"
+    },
+    {
+      "topic": "Talking About a Career Change",
+      "focus": "perfect aspect for life experience",
+      "footage": "career change office thinking"
+    },
+    {
+      "topic": "Handling a Difficult Conversation at Work",
+      "focus": "mitigation and impersonal structures",
+      "footage": "serious conversation office two people"
+    },
+    {
+      "topic": "Describing Charts, Trends and Numbers",
+      "focus": "comparatives and degree adverbs",
+      "footage": "data charts analytics screen"
+    },
+    {
+      "topic": "Giving Feedback Without Causing Offence",
+      "focus": "conditional and passive softening",
+      "footage": "feedback meeting manager employee"
+    },
+    {
+      "topic": "British Humour, Irony and Understatement",
+      "focus": "irony markers and litotes",
+      "footage": "british pub friends laughing"
+    },
+    {
+      "topic": "Formal English vs Everyday English",
+      "focus": "register shifting",
+      "footage": "formal office casual cafe"
+    },
+    {
+      "topic": "How to Sound Less Certain on Purpose",
+      "focus": "epistemic modality",
+      "footage": "thinking uncertain conversation"
+    },
+    {
+      "topic": "Collocations With Make, Do and Take",
+      "focus": "verb and noun collocation",
+      "footage": "office work writing planning"
+    },
+    {
+      "topic": "Sounding Natural on a Video Call",
+      "focus": "turn-taking and repair strategies",
+      "footage": "video call laptop remote work"
+    },
+    {
+      "topic": "Telling a Story People Want to Hear",
+      "focus": "narrative tenses and dramatic present",
+      "footage": "friends storytelling dinner"
+    },
+    {
+      "topic": "Persuading Someone to Change Their Mind",
+      "focus": "concession and counter-argument",
+      "footage": "persuasion discussion office"
+    },
+    {
+      "topic": "Academic Phrases for IELTS Writing",
+      "focus": "impersonal academic register",
+      "footage": "student writing exam library"
+    },
+    {
+      "topic": "IELTS Speaking Part 3: Abstract Answers",
+      "focus": "speculative language",
+      "footage": "exam interview speaking test"
+    },
+    {
+      "topic": "Talking About Money and Investing",
+      "focus": "financial collocation",
+      "footage": "finance charts money planning"
+    },
+    {
+      "topic": "Explaining Something Complicated Simply",
+      "focus": "paraphrase and exemplification",
+      "footage": "teaching explaining whiteboard"
+    },
+    {
+      "topic": "Interrupting Politely in a Meeting",
+      "focus": "interruption and floor-holding phrases",
+      "footage": "meeting discussion office"
+    },
+    {
+      "topic": "Apologising Like a Professional",
+      "focus": "distancing and responsibility language",
+      "footage": "apology conversation office"
+    },
+    {
+      "topic": "Weighing Advantages and Disadvantages",
+      "focus": "concessive clauses",
+      "footage": "thinking notebook decision"
+    },
+    {
+      "topic": "Talking About Risk and Probability",
+      "focus": "modals of deduction",
+      "footage": "risk planning strategy meeting"
+    },
+    {
+      "topic": "Why Natives Sound So Fast",
+      "focus": "elision, assimilation and linking",
+      "footage": "people talking fast conversation"
+    },
+    {
+      "topic": "Word Stress That Changes the Meaning",
+      "focus": "lexical stress and stress shift",
+      "footage": "pronunciation speaking microphone"
+    },
+    {
+      "topic": "Phrasal Verbs With Take, Put and Get",
+      "focus": "polysemous phrasal verbs",
+      "footage": "daily life activities city"
+    },
+    {
+      "topic": "Saying No Without Damaging the Relationship",
+      "focus": "indirect refusal",
+      "footage": "polite conversation declining"
+    },
+    {
+      "topic": "Explaining a Delay or a Mistake at Work",
+      "focus": "passive voice for distance",
+      "footage": "office problem explaining"
+    },
+    {
+      "topic": "Networking at a Conference",
+      "focus": "opening and closing conversations",
+      "footage": "conference networking badges"
+    },
+    {
+      "topic": "Talking About Films and Books Intelligently",
+      "focus": "evaluative adjectives",
+      "footage": "cinema books reading discussion"
+    },
+    {
+      "topic": "Making a Recommendation With Confidence",
+      "focus": "emphatic structures",
+      "footage": "recommendation advice conversation"
+    },
+    {
+      "topic": "Leading a Team in English",
+      "focus": "directive softening",
+      "footage": "team leader meeting office"
+    },
+    {
+      "topic": "Describing How You Work With Others",
+      "focus": "habitual aspect",
+      "footage": "teamwork collaboration office"
+    },
+    {
+      "topic": "Discussing the News Without Sounding Rude",
+      "focus": "reporting verbs and attribution",
+      "footage": "news discussion newspaper coffee"
+    },
+    {
+      "topic": "Twelve Better Words Than Very",
+      "focus": "intensifiers and gradable adjectives",
+      "footage": "writing vocabulary study"
+    },
+    {
+      "topic": "Talking About Health and Burnout",
+      "focus": "abstract noun phrases",
+      "footage": "wellbeing tired rest nature"
+    },
+    {
+      "topic": "Understanding Fast Native Conversation",
+      "focus": "reduced forms and weak forms",
+      "footage": "group conversation street cafe"
+    },
+    {
+      "topic": "Expressing Frustration Politely",
+      "focus": "emphatic negation",
+      "footage": "frustrated calm conversation office"
+    },
+    {
+      "topic": "Talking About the Future With Confidence",
+      "focus": "future perfect and continuous",
+      "footage": "planning calendar future city"
+    },
+    {
+      "topic": "Conditionals Natives Actually Use",
+      "focus": "mixed and inverted conditionals",
+      "footage": "conversation thinking decision"
+    },
+    {
+      "topic": "Reporting What Someone Said",
+      "focus": "reported speech and backshift",
+      "footage": "conversation retelling office"
+    },
+    {
+      "topic": "Talking About Culture and Belonging",
+      "focus": "abstract discussion language",
+      "footage": "travel culture people city"
+    },
+    {
+      "topic": "Asking Questions That Get Real Answers",
+      "focus": "question forms and follow-ups",
+      "footage": "interview questions conversation"
+    }
   ]
 }

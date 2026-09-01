@@ -127,6 +127,17 @@
   /* ── reading / passage ──────────────────────────────────────── */
   .passage-title { font-size: 78px; font-weight: 800; line-height: 1.1; max-width: 1400px; }
   .passage-note { margin-top: 34px; font-size: 34px; color: var(--ink-dim); }
+
+  /* Read-along body. Height is capped to the gap between the header and the
+     caption band, so a long passage can never spill over either of them. */
+  .read-body {
+    margin-top: 26px; max-width: 1620px; line-height: 1.45; font-weight: 500;
+    max-height: 520px; overflow: hidden;
+  }
+  .read-s { transition: none; }
+  .read-s.is-done { color: var(--ink-dim); opacity: .55; }
+  .read-s.is-now  { color: var(--accent); font-weight: 700; }
+  .read-s.is-next { color: var(--ink); opacity: .82; }
   .rule { width: 180px; height: 8px; border-radius: 4px; margin: 40px 0;
           background: linear-gradient(90deg, var(--accent), transparent); }
 
@@ -241,6 +252,35 @@ const LAYOUTS = {
     <div class="passage-title">${esc(d.title)}</div>
     <div class="rule"></div>
     <div class="passage-note">${esc(d.note || '')}</div>`,
+
+  // A reading lesson has to show the text it is reading. The old build held one
+  // poster carrying only the passage TITLE for 136 seconds while sixteen
+  // sentences went past in the caption band alone.
+  //
+  // Only a window around the current sentence is drawn: a full C1 passage is
+  // eighteen sentences and overflows 1080p straight through the header and the
+  // caption band. A viewer on a phone cannot read eighteen sentences at once
+  // anyway — what they need is the line being spoken, with a little of what
+  // came before and what is coming.
+  reading: (d) => {
+    const all = d.sentences || [];
+    const active = d.active || 0;
+    const from = Math.max(0, Math.min(active - 1, all.length - 3));
+    const window = all.slice(from, from + 3);
+
+    // Long sentences get smaller type rather than a broken layout.
+    const chars = window.join(' ').length;
+    const size = chars > 380 ? 40 : chars > 260 ? 46 : 54;
+
+    return `
+      <div class="read-body" style="font-size:${size}px">
+        ${window.map((s, i) => {
+          const idx = from + i;
+          const state = idx === active ? 'is-now' : (idx < active ? 'is-done' : 'is-next');
+          return `<span class="read-s ${state}">${esc(s)}</span>`;
+        }).join(' ')}
+      </div>`;
+  },
 
   question: (d) => `
     <div class="eyebrow">${esc(d.eyebrow || 'Question')}</div>

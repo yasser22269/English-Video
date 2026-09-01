@@ -236,7 +236,7 @@ function shuffleAnswers(lesson) {
   return lesson;
 }
 
-export async function writeLesson({ level, skill, topic, focus }) {
+export async function writeLesson({ level, skill, topic, focus, footage }) {
   const lvl = levelConfig(level);
   const build = PROMPTS[skill];
   if (!build) throw new Error(`No prompt for skill "${skill}"`);
@@ -249,6 +249,11 @@ export async function writeLesson({ level, skill, topic, focus }) {
 
   lesson.level = level;
   lesson.skill = skill;
+  // Hand-written stock-footage keywords from the curriculum entry. The model's
+  // own footage_query still wins when it produced one; this is the fallback
+  // that stops an abstract topic being sent to the video API as a literal
+  // search string.
+  if (footage) lesson.footage = footage;
   shuffleAnswers(lesson);
   lesson.topic = topic;
   lesson.focus = focus;

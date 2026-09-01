@@ -20,8 +20,15 @@ function readOptions(q) {
 }
 
 /** Text destined for the voice, not the screen: gaps and symbols read badly. */
+/** Half of a surrogate pair, left behind when a model mangles an emoji. */
+const LONE_SURROGATE = /[\uD800-\uDBFF](?![\uDC00-\uDFFF])|(?<![\uD800-\uDBFF])[\uDC00-\uDFFF]/g;
+
 function speakable(text) {
   return String(text)
+    // A lone surrogate cannot be UTF-8 encoded. One reaching the Python TTS
+    // worker raised UnicodeEncodeError and failed a whole lesson, so it is
+    // dropped here as well as there.
+    .replace(LONE_SURROGATE, '')
     .replace(/_{2,}/g, ' blank ')
     .replace(/\s*\/\s*/g, ' or ')
     .replace(/\s+/g, ' ')
@@ -307,15 +314,22 @@ function buildReading(plan) {
   }
 
   // 2 ─ straight through, English only: read for the gist, no translation crutch
+  const sentences = lesson.passage.map(s => s.en);
+
   plan.scene('passage', {
     eyebrow: 'Read along',
     title: lesson.passage_title || lesson.topic,
-    note: 'Follow the highlighted words. Do not stop at what you do not know.',
+    note: 'Follow the highlighted sentence. Do not stop at what you do not know.',
     imageId: heroId,
   });
   plan.say('Now read the whole text with me. Follow the words as I say them.', { note: 'Read along', chapter: 'Read the whole text' });
+
+  // One frame per sentence, each lighting the line being read. The previous
+  // build held a single poster — showing the passage TITLE, not the passage —
+  // for 136 seconds while the text went past in the caption band alone.
   lesson.passage.forEach((sentence, i) => {
-    plan.say(sentence.en, { note: `Read along · ${i + 1} of ${lesson.passage.length}`, pauseAfterMs: 260 });
+    plan.scene('reading', { eyebrow: `Read along · ${i + 1} of ${sentences.length}`, sentences, active: i });
+    plan.say(sentence.en, { note: `Read along · ${i + 1} of ${sentences.length}`, pauseAfterMs: 260 });
   });
 
   // 3 ─ again, slower, sentence by sentence, with the Arabic
@@ -327,10 +341,11 @@ function buildReading(plan) {
   });
   plan.say('Let us go through it again, slowly, one sentence at a time.', { note: 'Line by line', chapter: 'Line by line, with Arabic' });
   lesson.passage.forEach((sentence, i) => {
+    plan.scene('reading', { eyebrow: `Line by line · ${i + 1} of ${sentences.length}`, sentences, active: i });
     plan.say(sentence.en, {
       rate: shiftRate(lvl.rate, -7),
       ar: sentence.ar,
-      note: `Line by line · ${i + 1} of ${lesson.passage.length}`,
+      note: `Line by line · ${i + 1} of ${sentences.length}`,
       pauseAfterMs: 700,
     });
   });
@@ -440,7 +455,7 @@ function buildListening(plan) {
   });
 
   outro(plan);
-  return { mode: 'footage', footageQuery: lesson.footage_query || lesson.topic };
+  return { mode: 'footage', footageQuery: lesson.footage_query || lesson.footage || lesson.topic };
 }
 
 /* ── speaking ───────────────────────────────────────────────────────────── */
@@ -508,7 +523,7 @@ function buildSpeaking(plan) {
   }
 
   outro(plan);
-  return { mode: 'footage', footageQuery: lesson.footage_query || lesson.topic };
+  return { mode: 'footage', footageQuery: lesson.footage_query || lesson.footage || lesson.topic };
 }
 
 const BUILDERS = {

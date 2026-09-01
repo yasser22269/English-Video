@@ -87,7 +87,7 @@ async function buildOne({ level, skill, date, upload }) {
     lesson = JSON.parse(fs.readFileSync(lessonFile, 'utf8'));
     log('script', `"${lesson.title}" (cached — pass --fresh to rewrite)`);
   } else {
-    lesson = await writeLesson({ level, skill, topic: topic.topic, focus: topic.focus });
+    lesson = await writeLesson({ level, skill, topic: topic.topic, focus: topic.focus, footage: topic.footage });
     fs.writeFileSync(lessonFile, JSON.stringify(lesson, null, 2));
     log('script', `"${lesson.title}"`);
   }

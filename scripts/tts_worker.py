@@ -49,6 +49,10 @@ SSL_CTX = ssl.create_default_context(cafile=certifi.where())
 
 def clean(text: str) -> str:
     """Strip anything the service rejects or reads out loud as punctuation noise."""
+    # Lone surrogates survive JSON transport but cannot be UTF-8 encoded. One
+    # stray half of a surrogate pair from the model raised UnicodeEncodeError
+    # and failed the whole lesson, so drop them before anything else runs.
+    text = text.encode('utf-8', 'ignore').decode('utf-8', 'ignore')
     text = text.translate(INVISIBLE)
     text = text.replace('&', ' and ')
     text = re.sub(r'[<>]', '', text)
