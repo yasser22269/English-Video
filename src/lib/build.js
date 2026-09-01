@@ -88,16 +88,34 @@ class Plan {
   }
 }
 
-function intro(plan, { eyebrow, chips }) {
+/**
+ * The opening is the only part of the lesson most people watch.
+ *
+ * Measured on the first 34 published videos: average view duration 46 seconds,
+ * average view percentage 20.9%. The old opening spent 13-27 of those seconds
+ * on a title card, a hook and a two-sentence procedural explanation before the
+ * first English word arrived — and in the reading format the passage did not
+ * start until 52.7s, six seconds after the average viewer had already left.
+ *
+ * So the order is inverted: teach first, brand second. `taste` emits a real
+ * teaching beat before anything else, and the title becomes a bumper measured
+ * in seconds rather than a card the viewer stares at for seventeen. The
+ * procedural "here is how this lesson works" narration is gone entirely — the
+ * on-screen section note says the same thing without spending airtime.
+ */
+function coldOpen(plan, { eyebrow, chips, taste }) {
   const { lesson, lvl } = plan;
+
+  if (taste) taste();
+
   plan.scene('title', {
     eyebrow,
     title: lesson.title,
     subtitle: lesson.topic,
     chips: chips || [lvl.label, plan.lesson.skillLabel],
   });
-  if (lesson.hook) plan.say(lesson.hook, { note: 'Today' });
-  if (lesson.intro) plan.say(lesson.intro);
+  // One sentence only. `lesson.intro` is deliberately never spoken.
+  plan.say(lesson.hook || `${lesson.title}. Let us begin.`, { note: eyebrow, pauseAfterMs: 260 });
 }
 
 function outro(plan) {
@@ -116,7 +134,23 @@ function buildVocabulary(plan) {
   const { lesson, lvl } = plan;
   const words = lesson.words;
 
-  intro(plan, { eyebrow: `${words.length} new words`, chips: [lvl.label, `${words.length} words`, lesson.focus] });
+  // Taste first: the whole word list on screen while the voice fires the first
+  // three. The viewer knows inside eight seconds exactly what they are getting.
+  coldOpen(plan, {
+    eyebrow: `${words.length} new words`,
+    chips: [lvl.label, `${words.length} words`, lesson.focus],
+    taste: () => {
+      plan.scene('title', {
+        eyebrow: `${words.length} words for ${lesson.topic}`,
+        title: words.slice(0, 3).map(w => w.word).join(' · '),
+        subtitle: 'and seven more, with meanings and examples',
+        chips: words.map(w => w.word),
+      });
+      words.slice(0, 3).forEach(w => {
+        plan.say(`${w.word}.`, { rate: shiftRate(lvl.rate, -6), pauseAfterMs: 300, note: 'Today' });
+      });
+    },
+  });
 
   words.forEach((w, i) => {
     const imgId = plan.image(`word-${i + 1}`, w.image_prompt || `${w.word}, ${lesson.topic}`, `${w.word} ${lesson.topic}`);
@@ -134,10 +168,38 @@ function buildVocabulary(plan) {
     const note = `Word ${i + 1} of ${words.length}`;
     plan.say(`${w.word}.`, { rate: shiftRate(lvl.rate, -9), note, pauseAfterMs: 620 });
     plan.say(w.meaning, { ar: w.meaning_ar, note });
+
+    // Each example gets its own frame. One 'word' card held for the whole 26
+    // seconds meant the picture changed twice in the first 46 seconds of the
+    // video; the sentence on screen is also worth more to a reader than the
+    // same card again.
     (w.examples || []).slice(0, 2).forEach((ex, k) => {
+      plan.scene('drill', {
+        counter,
+        eyebrow: `${w.word} — in a sentence`,
+        phrase: ex,
+        imageId: imgId,
+      });
       plan.say(ex, { ar: w.examples_ar?.[k] || null, note });
     });
-    if (w.collocation) plan.say(`You will often hear it like this. ${w.collocation}.`, { note });
+
+    if (w.collocation) {
+      plan.scene('drill', {
+        counter,
+        eyebrow: 'You will often hear',
+        phrase: w.collocation,
+        imageId: imgId,
+      });
+      plan.say(`You will often hear it like this. ${w.collocation}.`, { note });
+    }
+
+    plan.scene('drill', {
+      counter,
+      eyebrow: 'Your turn',
+      phrase: w.word,
+      imageId: imgId,
+      cue: 'Say it out loud',
+    });
     plan.say(`Now you. ${w.word}.`, {
       rate: shiftRate(lvl.rate, -9),
       note,
@@ -146,13 +208,27 @@ function buildVocabulary(plan) {
     });
   });
 
+  // The recap used to be one card held for the whole run of ten lines. Giving
+  // each word its own frame turns a 26-second freeze into a rhythm, and puts
+  // the word being recapped on screen where the viewer can actually check it.
   plan.scene('title', {
     eyebrow: 'Quick recap',
-    title: 'Let us go through them one more time',
+    title: 'All ten, one more time',
     subtitle: lesson.topic,
     chips: words.map(w => w.word),
   });
-  (lesson.recap || []).forEach(line => plan.say(line));
+  plan.say('Here they all are again.', { note: 'Quick recap', pauseAfterMs: 320 });
+
+  (lesson.recap || []).forEach((line, i) => {
+    const w = words[i];
+    plan.scene('drill', {
+      counter: `${i + 1} / ${words.length}`,
+      eyebrow: 'Quick recap',
+      phrase: w ? w.word : '',
+      focus: w ? w.word : '',
+    });
+    plan.say(line, { ar: w?.meaning_ar || null, note: 'Quick recap' });
+  });
 
   (lesson.quiz || []).forEach((q, i) => {
     const shown = q.prompt;
@@ -188,7 +264,25 @@ function buildReading(plan) {
   const { lesson, lvl } = plan;
 
   const heroId = plan.image('hero', `${lesson.passage_title || lesson.topic}, ${lesson.topic}`, lesson.topic);
-  intro(plan, { eyebrow: 'Reading practice', chips: [lvl.label, `${lesson.passage.length} sentences`, lesson.focus] });
+
+  // Taste: the opening lines of the actual text. The old order put the passage
+  // 52.7 seconds in — six seconds past the average view duration, so most
+  // viewers never reached the thing the title promised.
+  coldOpen(plan, {
+    eyebrow: 'Reading practice',
+    chips: [lvl.label, `${lesson.passage.length} sentences`, lesson.focus],
+    taste: () => {
+      plan.scene('passage', {
+        eyebrow: lesson.passage_title || lesson.topic,
+        title: lesson.passage_title || lesson.topic,
+        note: 'Read along with me.',
+        imageId: heroId,
+      });
+      lesson.passage.slice(0, 2).forEach((sentence, i) => {
+        plan.say(sentence.en, { ar: sentence.ar, note: `Read along · ${i + 1} of ${lesson.passage.length}`, pauseAfterMs: 300 });
+      });
+    },
+  });
 
   // 1 ─ pre-teach, so the first read-through is actually comprehensible
   if (lesson.glossary?.length) {
@@ -263,28 +357,53 @@ function buildListening(plan) {
   // Title card for the opening only. Once the lesson proper starts the middle
   // of the frame is cleared: the footage is the visual, and the section label
   // lives in the top note line.
-  plan.scene('overlay', {
+  // Taste: the situation and the first exchange, before any branding.
+  coldOpen(plan, {
     eyebrow: 'Listening practice',
-    title: lesson.title,
-    note: lesson.setting || lesson.topic,
-  }, { transparent: true });
-
-  if (lesson.hook) plan.say(lesson.hook, { note: 'Today' });
-  if (lesson.intro) plan.say(lesson.intro, { note: 'How this works' });
+    chips: [lvl.label, `${lesson.dialogue.length} turns`, lesson.focus],
+    taste: () => {
+      plan.scene('overlay', {
+        eyebrow: 'Listening practice',
+        title: lesson.setting || lesson.topic,
+        note: 'Can you follow this conversation?',
+      }, { transparent: true });
+      const opener = lesson.dialogue[0];
+      if (opener) {
+        plan.say(opener.en, {
+          voice: voiceOf(opener.speaker),
+          rate: lvl.rate,
+          ar: opener.ar,
+          speakerName: opener.speaker === 'B' ? 'Speaker B' : 'Speaker A',
+          note: lesson.setting || lesson.topic,
+          pauseAfterMs: 520,
+        });
+      }
+    },
+  });
 
   plan.scene('overlay', {}, { transparent: true });
-  if (lesson.setting) plan.say(`Here is the situation. ${lesson.setting}`, { note: 'The situation' });
 
-  // Pass 1 — ears only. No text on screen at all: this is the part that
-  // actually trains listening, and subtitles would let the viewer skip it.
-  plan.say('First, listen without any text. Just listen.', { note: 'Listen — no text', pauseAfterMs: 1100 });
+  // Pass 1 — ears only. Hiding the words is the whole exercise, but the first
+  // build put NOTHING on screen for 88.5 seconds (measured: 0:27.5 to 1:56.0)
+  // over a dimmed 21-second stock loop, and the average view died 19 seconds
+  // into it. The words stay hidden; everything else that can move, moves —
+  // who is speaking, how far through we are, and how many turns are left.
+  const turns = lesson.dialogue.length;
+  plan.say('Listen once with no text. Just follow the sound.', {
+    note: 'Listen — no text', cue: 'Ears only', pauseAfterMs: 800,
+  });
   lesson.dialogue.forEach((turn, i) => {
+    const who = turn.speaker === 'B' ? 'Speaker B' : 'Speaker A';
     plan.say(turn.en, {
       voice: voiceOf(turn.speaker),
       rate: lvl.rate,
       captions: 'none',
-      note: 'Listen — no text',
-      pauseAfterMs: i === lesson.dialogue.length - 1 ? 1200 : 340,
+      // The big centred cue carries the speaker, so the small corner label
+      // would just print the same words twice. Tracking who is talking is
+      // itself a listening skill, so this is information, not filler.
+      note: `Listen — no text · ${i + 1} of ${turns}`,
+      cue: who,
+      pauseAfterMs: i === turns - 1 ? 1200 : 340,
     });
   });
 
@@ -328,14 +447,29 @@ function buildSpeaking(plan) {
   const { lesson, lvl } = plan;
   const voiceOf = (s) => (s === 'B' ? lvl.speakerB : lvl.speakerA);
 
-  plan.scene('overlay', {
+  // Taste: the first phrase, spoken and repeated, before any branding.
+  coldOpen(plan, {
     eyebrow: 'Speaking practice',
-    title: lesson.title,
-    note: 'Listen, then repeat out loud in the silence.',
-  }, { transparent: true });
-
-  if (lesson.hook) plan.say(lesson.hook, { note: 'Today' });
-  if (lesson.intro) plan.say(lesson.intro, { note: 'How this works' });
+    chips: [lvl.label, `${lesson.drills.length} phrases`, lesson.focus],
+    taste: () => {
+      plan.scene('overlay', {
+        eyebrow: 'Say it like a native',
+        title: lesson.drills[0]?.phrase || lesson.title,
+        note: 'Listen, then say it out loud.',
+      }, { transparent: true });
+      const first = lesson.drills[0];
+      if (first) {
+        plan.say(first.phrase, { ar: first.phrase_ar, note: 'Phrase 1', pauseAfterMs: 420 });
+        plan.say(first.phrase, {
+          rate: shiftRate(lvl.rate, -9),
+          ar: first.phrase_ar,
+          note: 'Phrase 1',
+          cue: 'Repeat it out loud',
+          pauseAfterMs: 2100,
+        });
+      }
+    },
+  });
 
   plan.scene('overlay', {}, { transparent: true });
 
@@ -425,13 +559,23 @@ export function resolveTimings(plan, timeline) {
     return { ...scene, startMs, durationSec: (endMs - startMs) / 1000 };
   }).filter(s => s.durationSec > 0.05);
 
+  // Two kinds of cue. On a normal line the cue belongs in the silence that
+  // follows it ("Repeat it out loud"), so it needs a pause long enough to read
+  // in. On an ears-only line there IS no caption to share the frame with, so
+  // the cue runs for the whole line — that is what keeps the listening pass
+  // from being a blank screen.
   const cues = timeline
-    .filter(l => l.cue && (l.pauseAfterMs || 0) > 900)
-    .map(l => ({
-      startMs: l.endMs + 260,
-      endMs: l.endMs + l.pauseAfterMs - 160,
-      text: l.cue,
-    }));
+    .map((l) => {
+      if (!l.cue) return null;
+      if (l.captions === 'none') {
+        return { startMs: l.startMs, endMs: l.endMs + Math.min(l.pauseAfterMs || 0, 300), text: l.cue };
+      }
+      if ((l.pauseAfterMs || 0) > 900) {
+        return { startMs: l.endMs + 260, endMs: l.endMs + l.pauseAfterMs - 160, text: l.cue };
+      }
+      return null;
+    })
+    .filter(Boolean);
 
   return { scenes, cues };
 }

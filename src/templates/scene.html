@@ -169,6 +169,10 @@
 
   /* ── speaking drill ─────────────────────────────────────────── */
   .drill-phrase { font-size: 92px; font-weight: 800; line-height: 1.12; letter-spacing: -.01em; }
+  .drill-wrap { display: grid; grid-template-columns: 520px minmax(0, 1000px); gap: 64px; align-items: center; }
+  .drill-img { width: 520px; height: 520px; object-fit: cover; border-radius: 36px;
+    box-shadow: 0 30px 80px rgba(0,0,0,.45); }
+  .drill-phrase--withart { font-size: 64px; line-height: 1.2; margin-top: 18px; }
   .drill-focus { margin-top: 40px; display: flex; align-items: center; gap: 24px;
                  font-size: 38px; color: var(--ink); }
   .drill-focus .pin { width: 56px; height: 56px; flex: none; border-radius: 14px;
@@ -261,13 +265,26 @@ const LAYOUTS = {
       ${d.setting ? `<div class="setting">${esc(d.setting)}</div>` : ''}
     </div>`,
 
+  // Two shapes share this layout. Speaking drills are text-only and set the
+  // phrase large. Vocabulary example frames pass an image, and then the word's
+  // own illustration carries the right half of the frame instead of leaving it
+  // empty — the picture is already generated either way.
   drill: (d) => `
     <div style="position:relative">
       <div class="word-count">${esc(d.counter || '')}</div>
-      <div class="eyebrow">${esc(d.eyebrow || 'Repeat after me')}</div>
-      <div class="drill-phrase">${esc(d.phrase)}</div>
-      ${d.focus ? `<div class="drill-focus"><span class="pin">!</span><span>${esc(d.focus)}</span></div>` : ''}
-      ${d.cue ? `<div><span class="repeat-cue">${esc(d.cue)}</span></div>` : ''}
+      ${d.image ? `
+        <div class="drill-wrap">
+          <img class="drill-img" src="${esc(d.image)}" alt="">
+          <div>
+            <div class="eyebrow">${esc(d.eyebrow || '')}</div>
+            <div class="drill-phrase drill-phrase--withart">${esc(d.phrase)}</div>
+            ${d.cue ? `<div><span class="repeat-cue">${esc(d.cue)}</span></div>` : ''}
+          </div>
+        </div>` : `
+        <div class="eyebrow">${esc(d.eyebrow || 'Repeat after me')}</div>
+        <div class="drill-phrase">${esc(d.phrase)}</div>
+        ${d.focus ? `<div class="drill-focus"><span class="pin">!</span><span>${esc(d.focus)}</span></div>` : ''}
+        ${d.cue ? `<div><span class="repeat-cue">${esc(d.cue)}</span></div>` : ''}`}
     </div>`,
 
   // Footage lessons keep the middle of the frame clear: the stock clip is the

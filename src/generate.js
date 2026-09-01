@@ -5,6 +5,7 @@ import { channel, levelConfig, skillConfig, paths, env, fontConfig } from './lib
 import { todaysBatch, pickTopic, slugify, dayIndex, publishAtFor, describeSlot } from './lib/schedule.js';
 import { writeLesson, buildMetadata } from './lib/lesson.js';
 import { buildPlan, resolveTimings } from './lib/build.js';
+import { checkRetention } from './lib/guards.js';
 import { synthesizeLines, assembleVoiceTrack } from './lib/tts.js';
 import { masterVoice, mixWithMusic, ffprobeDuration } from './lib/ffmpeg.js';
 import { generateImages, fetchFootage, gradeFootage, extractFrame } from './lib/media.js';
@@ -132,6 +133,11 @@ async function buildOne({ level, skill, date, upload }) {
   buildSrt(track.timeline, path.join(workDir, 'captions.en.srt'), { field: 'text' });
   buildSrt(track.timeline.filter(l => l.ar), path.join(workDir, 'captions.ar.srt'), { field: 'ar' });
   log('captions', `${track.timeline.length} lines · ${cues.length} practice cues`);
+
+  // Measure the things that actually decided the first month's retention.
+  const guard = checkRetention({ plan, timeline: track.timeline, scenes, cues, meta: null });
+  log('pacing', `first teaching ${guard.stats.firstTeachingSec}s · longest dead air ${guard.stats.deadAirSec}s · longest still ${guard.stats.longestStillSec}s · ${guard.stats.sceneCount} scenes`);
+  for (const w of guard.warnings) console.warn(`  [guard] ${w}`);
 
   // 6 ─ frames
   const renderer = await new SceneRenderer({ width: video.width, height: video.height }).open();

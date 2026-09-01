@@ -49,7 +49,7 @@ export async function composeStills({ scenes, audioFile, assFile, outFile, video
     `scale=${video.width}:${video.height}:flags=lanczos`,
     subtitleFilter(assFile, fontsDir),
     'format=yuv420p',
-    'fade=t=in:st=0:d=0.7',
+    'fade=t=in:st=0:d=0.18',
   ].join(',');
 
   await run('ffmpeg', ['-y',
@@ -92,7 +92,7 @@ export async function composeFootage({ footageFile, overlays, audioFile, assFile
   });
 
   const lastLabel = `bg${shown.length}`;
-  chain.push(`[${lastLabel}]${subtitleFilter(assFile, fontsDir)},format=yuv420p,fade=t=in:st=0:d=0.7[vo]`);
+  chain.push(`[${lastLabel}]${subtitleFilter(assFile, fontsDir)},format=yuv420p,fade=t=in:st=0:d=0.18[vo]`);
 
   const inputs = ['-stream_loop', '-1', '-i', footageFile];
   for (const ov of shown) inputs.push('-i', ov.file);

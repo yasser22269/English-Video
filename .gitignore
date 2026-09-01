@@ -5,3 +5,9 @@ output/
 *.log
 scripts/yt-client-secret.json
 .cache/
+
+# Scratch files from ad-hoc research runs — never part of the pipeline.
+.research-*.mjs
+research*.json
+newcohort.json
+search*.json

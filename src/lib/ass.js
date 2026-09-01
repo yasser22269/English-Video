@@ -136,7 +136,6 @@ export function buildAss(timeline, { outFile, width, height, fonts, accent, cues
 
   for (const line of timeline) {
     const mode = line.captions || 'karaoke';
-    if (mode === 'none') continue;
 
     // A short tail keeps the line on screen through the pause that follows it,
     // instead of snapping away the instant the voice stops. When a practice cue
@@ -146,15 +145,23 @@ export function buildAss(timeline, { outFile, width, height, fonts, accent, cues
     const start = line.startMs;
     const end = line.endMs + tail;
 
-    const sweep = mode === 'karaoke' ? karaokeText(line) : null;
-    if (sweep) {
-      events.push(dialogue({ start, end, style: 'EN', text: sweep }));
-    } else {
-      events.push(dialogue({ start, end, style: 'ENPLAIN', text: escapeText(line.caption || line.text) }));
-    }
+    // A "none" line is a deliberate ears-only beat — the listening pass where
+    // showing the words would defeat the exercise. It must still not black the
+    // frame out: the earlier build emitted nothing at all here and left 88
+    // seconds of empty screen, which is where the average view died. The
+    // speaker label and the section note reveal none of the dialogue, so they
+    // stay, and only the caption and its translation are withheld.
+    if (mode !== 'none') {
+      const sweep = mode === 'karaoke' ? karaokeText(line) : null;
+      if (sweep) {
+        events.push(dialogue({ start, end, style: 'EN', text: sweep }));
+      } else {
+        events.push(dialogue({ start, end, style: 'ENPLAIN', text: escapeText(line.caption || line.text) }));
+      }
 
-    if (line.ar) {
-      events.push(dialogue({ start, end, style: 'AR', text: escapeText(line.ar) }));
+      if (line.ar) {
+        events.push(dialogue({ start, end, style: 'AR', text: escapeText(line.ar) }));
+      }
     }
     if (line.speakerName) {
       events.push(dialogue({ start, end, style: 'SPK', text: escapeText(line.speakerName) }));

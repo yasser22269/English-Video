@@ -5,6 +5,7 @@ const COMMON_RULES = `
 GLOBAL RULES
 - The learner's first language is Arabic. Every "..._ar" field is a natural Modern Standard Arabic rendering — meaning-for-meaning, never word-for-word, and never a transliteration.
 - All English must sit strictly inside the CEFR level described. Do not show off vocabulary above the level.
+- The lesson opens on teaching, not on throat-clearing. Never write "in this video", "today we will learn", "let's get started", "by the end of this lesson", or any sentence whose only job is to announce a later sentence. Measured: viewers leave after 46 seconds, so every second of preamble is a second of the lesson nobody sees.
 - Narration is spoken aloud by a text-to-speech voice. Write for the ear: no bullet symbols, no markdown, no emoji, no parentheses, no "e.g.", no abbreviations. Spell out anything that must be pronounced.
 - Never use stage directions, speaker labels inside the text, or phrases like "in this video".
 - Vary sentence length. A teacher who speaks in identical-length sentences sounds like a machine.
@@ -31,8 +32,8 @@ TASK: a "${lvl.wordCount} new words" lesson about ${topic}.
 Return this exact shape:
 {
   "title": "short punchy English title, max 60 characters, no level name",
-  "hook": "one spoken sentence that makes the viewer stay, 12-20 words",
-  "intro": "two spoken sentences introducing what the viewer will learn",
+  "hook": "ONE spoken sentence, 10-16 words, that states the concrete benefit — never a tease, never a question, never 'in this video'",
+  "intro": "unused, return an empty string",
   "words": [
     {
       "word": "the target word or short phrase",
@@ -65,8 +66,8 @@ TASK: a guided reading lesson about ${topic}.
 Return this exact shape:
 {
   "title": "short punchy English title, max 60 characters",
-  "hook": "one spoken sentence that makes the viewer stay, 12-20 words",
-  "intro": "two spoken sentences telling the viewer how the lesson works: read along, then answer questions",
+  "hook": "ONE spoken sentence, 10-16 words, that states the concrete benefit — never a tease, never a question, never 'in this video'",
+  "intro": "unused, return an empty string",
   "passage_title": "a title for the text itself",
   "passage": [
     { "en": "one sentence of the passage", "ar": "its Arabic translation" }
@@ -99,8 +100,8 @@ TASK: a listening-comprehension lesson about ${topic}, built around a two-person
 Return this exact shape:
 {
   "title": "short punchy English title, max 60 characters",
-  "hook": "one spoken sentence that makes the viewer stay, 12-20 words",
-  "intro": "two spoken sentences explaining the method: listen once without text, then again with text, then answer",
+  "hook": "ONE spoken sentence, 10-16 words, that states the concrete benefit — never a tease, never a question, never 'in this video'",
+  "intro": "unused, return an empty string",
   "setting": "one sentence describing where the conversation happens",
   "footage_query": "three or four English stock-footage search words matching the setting",
   "dialogue": [
@@ -133,8 +134,8 @@ TASK: a speaking and pronunciation practice lesson about ${topic}, in listen-and
 Return this exact shape:
 {
   "title": "short punchy English title, max 60 characters",
-  "hook": "one spoken sentence that makes the viewer stay, 12-20 words",
-  "intro": "two spoken sentences explaining the method: you hear it, you repeat it out loud in the silence",
+  "hook": "ONE spoken sentence, 10-16 words, that states the concrete benefit — never a tease, never a question, never 'in this video'",
+  "intro": "unused, return an empty string",
   "footage_query": "three or four English stock-footage search words matching the situation",
   "drills": [
     {
