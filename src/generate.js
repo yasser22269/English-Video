@@ -45,8 +45,19 @@ function appendHistory(entry) {
 
 /** The fragment the eye should land on first, coloured in the thumbnail. */
 function thumbnailHighlight(lesson) {
-  if (lesson.words?.[0]?.word) return lesson.words[0].word;
-  const words = String(lesson.title || '').trim().split(/\s+/);
+  const headline = String(lesson.title || '').trim();
+  if (!headline) return '';
+
+  // The template colours the highlight by splitting the headline on it, so a
+  // highlight that is not IN the headline renders nothing — which is what
+  // happened to every vocabulary thumbnail: the first target word rarely
+  // appears in the lesson's own title, so no thumbnail had any colour contrast
+  // at all. Only use the word when it is really there; otherwise light the tail
+  // of the headline, which always is.
+  const first = lesson.words?.[0]?.word;
+  if (first && headline.toLowerCase().includes(first.toLowerCase())) return first;
+
+  const words = headline.split(/\s+/);
   if (words.length < 3) return '';
   return words.slice(words.length >= 5 ? -2 : -1).join(' ');
 }

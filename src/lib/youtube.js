@@ -37,6 +37,11 @@ function spend(units, label) {
   console.log(`[youtube] quota ${q.used}/${DAILY_QUOTA} after ${label}`);
 }
 
+/** For one-off maintenance scripts that spend against the same daily budget. */
+export function spendQuota(units, label) {
+  spend(units, label);
+}
+
 export function quotaAvailable(units = COST.videosInsert + COST.thumbnailsSet) {
   const q = readQuota();
   return q.used + units <= DAILY_QUOTA;

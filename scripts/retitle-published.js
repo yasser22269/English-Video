@@ -23,6 +23,7 @@ import fs from 'fs';
 import path from 'path';
 import { google } from 'googleapis';
 import { channel, levelConfig, skillConfig, env, paths } from '../src/lib/config.js';
+import { quotaStatus, spendQuota } from '../src/lib/youtube.js';
 
 const argv = process.argv.slice(2);
 const APPLY = argv.includes('--apply');
@@ -99,6 +100,15 @@ for (const entry of targets) {
 
   if (!APPLY) { changed++; continue; }
 
+  // Share the daily budget with the publishing run rather than racing it: the
+  // uploads matter more than the back catalogue, so stop while there is still
+  // room for a retry.
+  const left = quotaStatus().remaining;
+  if (left < COST_PER_VIDEO + 200) {
+    console.log(`\nstopping — ${left} quota units left, keeping the margin for the daily run`);
+    break;
+  }
+
   await yt.videos.update({
     part: ['snippet'],
     requestBody: {
@@ -115,6 +125,7 @@ for (const entry of targets) {
       },
     },
   });
+  spendQuota(COST_PER_VIDEO, `retitle ${entry.videoId}`);
   spent += COST_PER_VIDEO;
   changed++;
   console.log('  updated');
