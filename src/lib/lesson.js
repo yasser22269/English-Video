@@ -259,22 +259,36 @@ export async function writeLesson({ level, skill, topic, focus }) {
 }
 
 /** Titles/descriptions the channel uses. Kept here so wording stays in one place. */
-export function buildMetadata(lesson, { channel: ch, playlists = [] }) {
+export function buildMetadata(lesson, { channel: ch, playlists = [], chapters = [] }) {
   const skill = skillConfig(lesson.skill);
   const lvl = levelConfig(lesson.level);
   const wordCount = lesson.words?.length || lvl.wordCount;
 
+  // A phone shows roughly 48 characters of a title, and 47% of this channel's
+  // views are on a phone. So the searchable half goes first and the pattern is
+  // measured against that cut, not against YouTube's 100-character maximum.
   const title = skill.titlePattern
     .replace('{topic}', lesson.topic)
     .replace('{levelLabel}', lvl.label)
+    .replace('{level}', lesson.level.toUpperCase())
     .replace('{wordCount}', wordCount)
     .slice(0, 98);
 
+  // YouTube shows roughly the first 100 characters before "...more", and those
+  // are the characters search weighs most. They used to hold `lesson.hook` —
+  // narration written for the ear, containing no phrase anyone would type. Now
+  // they state the topic, the skill and the level in plain search language.
+  const opener = `${lesson.topic} — ${skill.label.toLowerCase()} for ${lvl.label.split('·').pop().trim()} English learners (${lesson.level.toUpperCase()}).`;
+
   const lines = [
+    opener,
     lesson.hook || '',
     '',
+    // Chapters. YouTube turns these into jump-links in search results and on
+    // the scrubber, and they let a viewer skip to word 7 instead of leaving.
+    // The timings already exist — they come back from the TTS service.
+    ...(chapters.length ? [...chapters.map(c => `${c.stamp} ${c.label}`), ''] : []),
     `${skill.emoji} ${skill.label} — ${lvl.label}`,
-    `Today's topic: ${lesson.topic}`,
     lesson.focus ? `Language focus: ${lesson.focus}` : '',
     '',
     'A new English lesson every single day, for every level from A1 to C1.',

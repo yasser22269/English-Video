@@ -102,9 +102,15 @@ export function checkRetention({ plan, timeline, scenes, cues, meta }) {
     warnings.push(`preamble in narration: "${l.text.slice(0, 70)}"`);
   }
 
-  // A title cut off mid-phrase on a phone is a title that did not do its job.
-  if (meta?.title && meta.title.length > 60) {
-    warnings.push(`title is ${meta.title.length} chars — a phone shows about 48 (\"${meta.title.slice(0, 48)}…\")`);
+  // A phone shows about 48 characters. Losing the trailing skill phrase there is
+  // fine — YouTube still matches the whole string for search, and only the human
+  // is reading the truncated version. Losing the TOPIC is not fine: that is the
+  // half that earns the click.
+  if (meta?.title && meta?.topic) {
+    const visible = meta.title.slice(0, 48);
+    if (!visible.includes(meta.topic)) {
+      warnings.push(`the topic "${meta.topic}" is cut off on a phone — visible: "${visible}"`);
+    }
   }
 
   const stats = {

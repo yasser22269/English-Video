@@ -75,6 +75,7 @@ class Plan {
       speakerName: opts.speakerName || null,
       captions: opts.captions || 'karaoke',
       cue: opts.cue || null,
+      chapter: opts.chapter || null,
       ...(opts.pauseAfterMs != null ? { pauseAfterMs: opts.pauseAfterMs } : {}),
     };
     this.lines.push(line);
@@ -166,7 +167,7 @@ function buildVocabulary(plan) {
     });
 
     const note = `Word ${i + 1} of ${words.length}`;
-    plan.say(`${w.word}.`, { rate: shiftRate(lvl.rate, -9), note, pauseAfterMs: 620 });
+    plan.say(`${w.word}.`, { rate: shiftRate(lvl.rate, -9), note, chapter: w.word, pauseAfterMs: 620 });
     plan.say(w.meaning, { ar: w.meaning_ar, note });
 
     // Each example gets its own frame. One 'word' card held for the whole 26
@@ -217,7 +218,7 @@ function buildVocabulary(plan) {
     subtitle: lesson.topic,
     chips: words.map(w => w.word),
   });
-  plan.say('Here they all are again.', { note: 'Quick recap', pauseAfterMs: 320 });
+  plan.say('Here they all are again.', { note: 'Quick recap', chapter: 'Recap — all ten words', pauseAfterMs: 320 });
 
   (lesson.recap || []).forEach((line, i) => {
     const w = words[i];
@@ -238,7 +239,7 @@ function buildVocabulary(plan) {
       phrase: shown,
       cue: 'Say the missing word',
     });
-    plan.say(shown, { caption: shown, ar: q.prompt_ar, note: 'Fill the gap', cue: 'Which word fits?', pauseAfterMs: 2400 });
+    plan.say(shown, { caption: shown, ar: q.prompt_ar, note: 'Fill the gap', chapter: i === 0 ? 'Quiz — fill the gap' : null, cue: 'Which word fits?', pauseAfterMs: 2400 });
 
     plan.scene('drill', {
       counter: `Quiz ${i + 1} / ${lesson.quiz.length}`,
@@ -292,7 +293,7 @@ function buildReading(plan) {
       subtitle: lesson.passage_title || lesson.topic,
       chips: lesson.glossary.map(g => g.word),
     });
-    plan.say('Before we read, here are the words from the text that you need.');
+    plan.say('Before we read, here are the words from the text that you need.', { chapter: 'The words you need first' });
 
     lesson.glossary.forEach((g, i) => {
       plan.scene('word', {
@@ -312,7 +313,7 @@ function buildReading(plan) {
     note: 'Follow the highlighted words. Do not stop at what you do not know.',
     imageId: heroId,
   });
-  plan.say('Now read the whole text with me. Follow the words as I say them.', { note: 'Read along' });
+  plan.say('Now read the whole text with me. Follow the words as I say them.', { note: 'Read along', chapter: 'Read the whole text' });
   lesson.passage.forEach((sentence, i) => {
     plan.say(sentence.en, { note: `Read along · ${i + 1} of ${lesson.passage.length}`, pauseAfterMs: 260 });
   });
@@ -324,7 +325,7 @@ function buildReading(plan) {
     note: 'Same text, slower, with the meaning underneath.',
     imageId: heroId,
   });
-  plan.say('Let us go through it again, slowly, one sentence at a time.', { note: 'Line by line' });
+  plan.say('Let us go through it again, slowly, one sentence at a time.', { note: 'Line by line', chapter: 'Line by line, with Arabic' });
   lesson.passage.forEach((sentence, i) => {
     plan.say(sentence.en, {
       rate: shiftRate(lvl.rate, -7),
@@ -390,7 +391,7 @@ function buildListening(plan) {
   // who is speaking, how far through we are, and how many turns are left.
   const turns = lesson.dialogue.length;
   plan.say('Listen once with no text. Just follow the sound.', {
-    note: 'Listen — no text', cue: 'Ears only', pauseAfterMs: 800,
+    note: 'Listen — no text', chapter: 'Listen once — no text', cue: 'Ears only', pauseAfterMs: 800,
   });
   lesson.dialogue.forEach((turn, i) => {
     const who = turn.speaker === 'B' ? 'Speaker B' : 'Speaker A';
@@ -408,7 +409,7 @@ function buildListening(plan) {
   });
 
   // Pass 2 — same conversation, a little slower, with karaoke and Arabic.
-  plan.say('Now listen again. This time you can read every word.', { note: 'Listen again — with text', pauseAfterMs: 900 });
+  plan.say('Now listen again. This time you can read every word.', { note: 'Listen again — with text', chapter: 'Listen again — with the words', pauseAfterMs: 900 });
   lesson.dialogue.forEach((turn) => {
     plan.say(turn.en, {
       voice: voiceOf(turn.speaker),
@@ -475,8 +476,10 @@ function buildSpeaking(plan) {
 
   lesson.drills.forEach((d, i) => {
     const note = `Phrase ${i + 1} of ${lesson.drills.length}`;
-    if (d.when) plan.say(d.when, { note });
-    plan.say(`${d.phrase}`, { note, pauseAfterMs: 520 });
+    // The phrase itself is the chapter label: someone scanning the scrubber is
+    // looking for a phrase, not for "Phrase 4 of 10".
+    if (d.when) plan.say(d.when, { note, chapter: d.phrase });
+    plan.say(`${d.phrase}`, { note, chapter: d.when ? null : d.phrase, pauseAfterMs: 520 });
     plan.say(`Listen to the sound of it. ${d.focus}.`, { ar: d.focus_ar, note });
     plan.say(`${d.phrase}`, { rate: shiftRate(lvl.rate, -9), ar: d.phrase_ar, note, pauseAfterMs: 420 });
     plan.say('Your turn.', {
@@ -487,7 +490,7 @@ function buildSpeaking(plan) {
     });
   });
 
-  plan.say('Now put it together. Listen to the whole conversation.', { note: 'Model conversation', pauseAfterMs: 800 });
+  plan.say('Now put it together. Listen to the whole conversation.', { note: 'Model conversation', chapter: 'The whole conversation', pauseAfterMs: 800 });
   lesson.dialogue.forEach((turn) => {
     plan.say(turn.en, {
       voice: voiceOf(turn.speaker),
@@ -498,7 +501,7 @@ function buildSpeaking(plan) {
   });
 
   if (lesson.shadowing?.length) {
-    plan.say('Last part. Shadowing. Speak at the same time as me, do not wait.', { note: 'Shadowing', pauseAfterMs: 900 });
+    plan.say('Last part. Shadowing. Speak at the same time as me, do not wait.', { note: 'Shadowing', chapter: 'Shadowing — speak with me', pauseAfterMs: 900 });
     lesson.shadowing.forEach((s) => {
       plan.say(s, { note: 'Shadowing', cue: 'Speak with me', pauseAfterMs: 1400 });
     });
@@ -578,4 +581,37 @@ export function resolveTimings(plan, timeline) {
     .filter(Boolean);
 
   return { scenes, cues };
+}
+
+/**
+ * YouTube chapters.
+ *
+ * Labels are declared by the builders, not derived from the section note: a
+ * chapter reading "Word 2 of 10" is worthless, while one reading "reservation"
+ * is the reason chapters exist — a learner scanning for the word they want.
+ *
+ * YouTube ignores the whole list unless it starts at 00:00, has at least three
+ * entries, and each is at least ten seconds long, so a list that cannot meet
+ * that is dropped rather than shipped broken.
+ */
+export function buildChapters(timeline) {
+  const stamp = (ms) => {
+    const total = Math.max(0, Math.floor(ms / 1000));
+    const m = String(Math.floor(total / 60)).padStart(2, '0');
+    const s = String(total % 60).padStart(2, '0');
+    return `${m}:${s}`;
+  };
+
+  const marks = [];
+  for (const line of timeline) {
+    if (!line.chapter) continue;
+    const prev = marks[marks.length - 1];
+    if (prev && prev.label === line.chapter) continue;
+    if (prev && line.startMs - prev.startMs < 10_000) continue;
+    marks.push({ startMs: line.startMs, label: line.chapter });
+  }
+
+  if (marks.length < 3) return [];
+  marks[0] = { ...marks[0], startMs: 0 };
+  return marks.map(c => ({ stamp: stamp(c.startMs), label: c.label }));
 }

@@ -108,28 +108,28 @@
       "label": "Speaking Practice",
       "emoji": "🗣️",
       "background": "footage",
-      "titlePattern": "Speak English Like a Native — {topic} | {levelLabel}",
+      "titlePattern": "{topic} — English Speaking Practice ({level})",
       "playlistTitle": "English Speaking Practice — Listen and Repeat, Every Level"
     },
     "vocabulary": {
       "label": "New Vocabulary",
       "emoji": "📚",
       "background": "typography",
-      "titlePattern": "{wordCount} English Words About {topic} | {levelLabel}",
+      "titlePattern": "{topic}: {wordCount} English Words ({level})",
       "playlistTitle": "English Vocabulary — New Words Every Day, Every Level"
     },
     "reading": {
       "label": "Reading Practice",
       "emoji": "📖",
       "background": "typography",
-      "titlePattern": "English Reading Practice — {topic} | {levelLabel}",
+      "titlePattern": "{topic} — English Reading Practice ({level})",
       "playlistTitle": "English Reading Practice — Read Along, Every Level"
     },
     "listening": {
       "label": "Listening Practice",
       "emoji": "🎧",
       "background": "footage",
-      "titlePattern": "English Listening Practice — {topic} | {levelLabel}",
+      "titlePattern": "{topic} — English Listening Practice ({level})",
       "playlistTitle": "English Listening Practice — Real Conversations, Every Level"
     }
   },

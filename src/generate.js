@@ -4,7 +4,7 @@ import path from 'path';
 import { channel, levelConfig, skillConfig, paths, env, fontConfig } from './lib/config.js';
 import { todaysBatch, pickTopic, slugify, dayIndex, publishAtFor, describeSlot } from './lib/schedule.js';
 import { writeLesson, buildMetadata } from './lib/lesson.js';
-import { buildPlan, resolveTimings } from './lib/build.js';
+import { buildPlan, resolveTimings, buildChapters } from './lib/build.js';
 import { checkRetention } from './lib/guards.js';
 import { synthesizeLines, assembleVoiceTrack } from './lib/tts.js';
 import { masterVoice, mixWithMusic, ffprobeDuration } from './lib/ffmpeg.js';
@@ -135,7 +135,7 @@ async function buildOne({ level, skill, date, upload }) {
   log('captions', `${track.timeline.length} lines · ${cues.length} practice cues`);
 
   // Measure the things that actually decided the first month's retention.
-  const guard = checkRetention({ plan, timeline: track.timeline, scenes, cues, meta: null });
+  const guard = checkRetention({ plan, timeline: track.timeline, scenes, cues, meta: { topic: topic.topic } });
   log('pacing', `first teaching ${guard.stats.firstTeachingSec}s · longest dead air ${guard.stats.deadAirSec}s · longest still ${guard.stats.longestStillSec}s · ${guard.stats.sceneCount} scenes`);
   for (const w of guard.warnings) console.warn(`  [guard] ${w}`);
 
@@ -195,7 +195,9 @@ async function buildOne({ level, skill, date, upload }) {
     : [];
   if (playlists.length) log('playlists', playlists.map(p => p.title).join(' · '));
 
-  const meta = buildMetadata(lesson, { channel, playlists });
+  const chapters = buildChapters(track.timeline);
+  if (chapters.length) log('chapters', chapters.map(c => c.stamp).join(' '));
+  const meta = buildMetadata(lesson, { channel, playlists, chapters });
   const thumbFile = path.join(workDir, 'thumbnail.jpg');
 
   let heroImage = plan.images.length ? path.join(mediaDir, `${plan.images[0].id}.jpg`) : null;
