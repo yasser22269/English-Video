@@ -170,8 +170,10 @@ jobs:
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           # used-topics keeps lessons from repeating; history and quota are the
-          # run log. Nothing else from output/ is ever committed.
-          git add state/used-topics.json state/history.json state/quota.json 2>/dev/null || true
+          # run log; playlists caches the playlist ids so the run stops
+          # re-discovering them by title every day. Nothing from output/ is
+          # ever committed.
+          git add state/used-topics.json state/history.json state/quota.json state/playlists.json 2>/dev/null || true
           if git diff --staged --quiet; then
             echo "nothing to commit"
             exit 0

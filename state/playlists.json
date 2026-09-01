@@ -1,1 +1,47 @@
-{}
+{
+  "level:c1": {
+    "id": "PLPYmpq9AOiZM",
+    "title": "Advanced English (C1) — One Lesson Every Day",
+    "createdAt": "2026-08-25T10:06:44.001057Z"
+  },
+  "skill:speaking": {
+    "id": "PLCadq2A6pEK8",
+    "title": "English Speaking Practice — Listen and Repeat, Every Level",
+    "createdAt": "2026-08-25T09:56:25.586109Z"
+  },
+  "level:b2": {
+    "id": "PLEyMEjEr22bU",
+    "title": "Upper-Intermediate English (B2) — One Lesson Every Day",
+    "createdAt": "2026-08-25T10:02:01.568263Z"
+  },
+  "skill:listening": {
+    "id": "PLc1avYS6uKVo",
+    "title": "English Listening Practice — Real Conversations, Every Level",
+    "createdAt": "2026-08-25T09:47:14.666919Z"
+  },
+  "level:b1": {
+    "id": "PLSkG2Gz0CZos",
+    "title": "Intermediate English (B1) — One Lesson Every Day",
+    "createdAt": "2026-08-25T09:56:24.357177Z"
+  },
+  "skill:reading": {
+    "id": "PLYub11V_0AzA",
+    "title": "English Reading Practice — Read Along, Every Level",
+    "createdAt": "2026-08-25T09:39:19.413186Z"
+  },
+  "level:a2": {
+    "id": "PLMUHkdE-F1_Q",
+    "title": "Elementary English (A2) — One Lesson Every Day",
+    "createdAt": "2026-08-25T09:47:13.455454Z"
+  },
+  "skill:vocabulary": {
+    "id": "PLRKWAimfYWh4",
+    "title": "English Vocabulary — New Words Every Day, Every Level",
+    "createdAt": "2026-08-24T12:39:50.389613Z"
+  },
+  "level:a1": {
+    "id": "PLIJ5pu8Ch1Pc",
+    "title": "Beginner English (A1) — One Lesson Every Day",
+    "createdAt": "2026-08-24T12:39:49.14397Z"
+  }
+}
