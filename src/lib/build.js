@@ -436,15 +436,16 @@ function buildListening(plan) {
   });
 
   if (lesson.key_phrases?.length) {
-    plan.say('Let us look at the phrases you will hear again and again.', { note: 'Key phrases' });
+    plan.say('Let us look at the phrases you will hear again and again.', { note: 'Key phrases', chapter: 'The phrases worth stealing' });
     lesson.key_phrases.forEach((p) => {
-      plan.say(`${p.phrase}.`, { rate: shiftRate(lvl.rate, -8), note: 'Key phrases', pauseAfterMs: 620 });
+      plan.say(`${p.phrase}.`, { rate: shiftRate(lvl.rate, -8), note: 'Key phrases', chapter: p.phrase, pauseAfterMs: 620 });
       plan.say(p.meaning, { ar: p.meaning_ar, note: 'Key phrases' });
     });
   }
 
   lesson.questions.forEach((q, i) => {
     const label = `Question ${i + 1} of ${lesson.questions.length}`;
+    if (i === 0) plan.say('Now check what you understood.', { note: label, chapter: 'Did you understand?', pauseAfterMs: 300 });
     // Footage lessons have no option card to render, so the choices go into the
     // caption track during the thinking pause. Without this the narrator asked
     // the viewer to choose between options that were never on screen.
