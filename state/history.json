@@ -1,5 +1,125 @@
 [
   {
+    "date": "2026-09-02",
+    "level": "c1",
+    "skill": "reading",
+    "topic": "Handling a Difficult Conversation at Work",
+    "title": "Handling a Difficult Conversation at Work — English Reading Practice (C1)",
+    "durationSec": 365,
+    "sizeMb": 24.4,
+    "videoId": "s7wcQA-1M7I",
+    "url": "https://www.youtube.com/watch?v=s7wcQA-1M7I",
+    "publishAt": "2026-09-02T19:00:00.000Z",
+    "playlists": [
+      {
+        "key": "level:c1",
+        "id": "PLPYmpq9AOiZM"
+      },
+      {
+        "key": "skill:reading",
+        "id": "PLYub11V_0AzA"
+      }
+    ],
+    "buildSeconds": 551,
+    "dir": "output/2026-09-02-c1-reading-handling-a-difficult-conversation-at-work"
+  },
+  {
+    "date": "2026-09-02",
+    "level": "b2",
+    "skill": "vocabulary",
+    "topic": "Ordering in a Restaurant Like a Local",
+    "title": "Ordering in a Restaurant Like a Local: 9 English Words (B2)",
+    "durationSec": 240,
+    "sizeMb": 13.3,
+    "videoId": "wQdlK_VHheU",
+    "url": "https://www.youtube.com/watch?v=wQdlK_VHheU",
+    "publishAt": "2026-09-02T17:30:00.000Z",
+    "playlists": [
+      {
+        "key": "level:b2",
+        "id": "PLEyMEjEr22bU"
+      },
+      {
+        "key": "skill:vocabulary",
+        "id": "PLRKWAimfYWh4"
+      }
+    ],
+    "buildSeconds": 904,
+    "dir": "output/2026-09-02-b2-vocabulary-ordering-in-a-restaurant-like-a-local"
+  },
+  {
+    "date": "2026-09-02",
+    "level": "b1",
+    "skill": "speaking",
+    "topic": "Technology That Changed Life",
+    "title": "Technology That Changed Life — English Speaking Practice (B1)",
+    "durationSec": 301,
+    "sizeMb": 33.8,
+    "videoId": "ZFme5dHPq1Y",
+    "url": "https://www.youtube.com/watch?v=ZFme5dHPq1Y",
+    "publishAt": "2026-09-02T16:00:00.000Z",
+    "playlists": [
+      {
+        "key": "level:b1",
+        "id": "PLSkG2Gz0CZos"
+      },
+      {
+        "key": "skill:speaking",
+        "id": "PLCadq2A6pEK8"
+      }
+    ],
+    "buildSeconds": 940,
+    "dir": "output/2026-09-02-b1-speaking-technology-that-changed-life"
+  },
+  {
+    "date": "2026-09-02",
+    "level": "a2",
+    "skill": "listening",
+    "topic": "Emergencies and Calling for Help",
+    "title": "Emergencies and Calling for Help — English Listening Practice (A2)",
+    "durationSec": 243,
+    "sizeMb": 77,
+    "videoId": "1soGV5puBMw",
+    "url": "https://www.youtube.com/watch?v=1soGV5puBMw",
+    "publishAt": "2026-09-02T14:30:00.000Z",
+    "playlists": [
+      {
+        "key": "level:a2",
+        "id": "PLMUHkdE-F1_Q"
+      },
+      {
+        "key": "skill:listening",
+        "id": "PLc1avYS6uKVo"
+      }
+    ],
+    "buildSeconds": 1189,
+    "dir": "output/2026-09-02-a2-listening-emergencies-and-calling-for-help"
+  },
+  {
+    "date": "2026-09-02",
+    "level": "a1",
+    "skill": "reading",
+    "topic": "My Favourite Music",
+    "title": "My Favourite Music — English Reading Practice (A1)",
+    "durationSec": 162,
+    "sizeMb": 9.4,
+    "videoId": "zWjMIREjYJI",
+    "url": "https://www.youtube.com/watch?v=zWjMIREjYJI",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:a1",
+        "id": "PLIJ5pu8Ch1Pc"
+      },
+      {
+        "key": "skill:reading",
+        "id": "PLYub11V_0AzA"
+      }
+    ],
+    "buildSeconds": 802,
+    "dir": "output/2026-09-02-a1-reading-my-favourite-music"
+  },
+  {
     "date": "2026-09-01",
     "level": "c1",
     "skill": "vocabulary",
