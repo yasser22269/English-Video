@@ -1,5 +1,125 @@
 [
   {
+    "date": "2026-09-03",
+    "level": "c1",
+    "skill": "listening",
+    "topic": "Describing Charts, Trends and Numbers",
+    "title": "Describing Charts, Trends and Numbers — English Listening Practice (C1)",
+    "durationSec": 393,
+    "sizeMb": 86.6,
+    "videoId": "pnW_ChU-CaY",
+    "url": "https://www.youtube.com/watch?v=pnW_ChU-CaY",
+    "publishAt": "2026-09-03T19:00:00.000Z",
+    "playlists": [
+      {
+        "key": "level:c1",
+        "id": "PLPYmpq9AOiZM"
+      },
+      {
+        "key": "skill:listening",
+        "id": "PLc1avYS6uKVo"
+      }
+    ],
+    "buildSeconds": 500,
+    "dir": "output/2026-09-03-c1-listening-describing-charts-trends-and-numbers"
+  },
+  {
+    "date": "2026-09-03",
+    "level": "b2",
+    "skill": "reading",
+    "topic": "Talking About Films and TV Shows",
+    "title": "Talking About Films and TV Shows — English Reading Practice (B2)",
+    "durationSec": 319,
+    "sizeMb": 19.4,
+    "videoId": "-foe7Oh3IZw",
+    "url": "https://www.youtube.com/watch?v=-foe7Oh3IZw",
+    "publishAt": "2026-09-03T17:30:00.000Z",
+    "playlists": [
+      {
+        "key": "level:b2",
+        "id": "PLEyMEjEr22bU"
+      },
+      {
+        "key": "skill:reading",
+        "id": "PLYub11V_0AzA"
+      }
+    ],
+    "buildSeconds": 308,
+    "dir": "output/2026-09-03-b2-reading-talking-about-films-and-tv-shows"
+  },
+  {
+    "date": "2026-09-03",
+    "level": "b1",
+    "skill": "vocabulary",
+    "topic": "Artificial Intelligence at Work",
+    "title": "Artificial Intelligence at Work: 9 English Words (B1)",
+    "durationSec": 306,
+    "sizeMb": 17.3,
+    "videoId": "tOIdJpEqCOc",
+    "url": "https://www.youtube.com/watch?v=tOIdJpEqCOc",
+    "publishAt": "2026-09-03T16:00:00.000Z",
+    "playlists": [
+      {
+        "key": "level:b1",
+        "id": "PLSkG2Gz0CZos"
+      },
+      {
+        "key": "skill:vocabulary",
+        "id": "PLRKWAimfYWh4"
+      }
+    ],
+    "buildSeconds": 289,
+    "dir": "output/2026-09-03-b1-vocabulary-artificial-intelligence-at-work"
+  },
+  {
+    "date": "2026-09-03",
+    "level": "a2",
+    "skill": "speaking",
+    "topic": "Ending a Conversation Politely",
+    "title": "Ending a Conversation Politely — English Speaking Practice (A2)",
+    "durationSec": 214,
+    "sizeMb": 20,
+    "videoId": "PXnn-6OYvqQ",
+    "url": "https://www.youtube.com/watch?v=PXnn-6OYvqQ",
+    "publishAt": "2026-09-03T14:30:00.000Z",
+    "playlists": [
+      {
+        "key": "level:a2",
+        "id": "PLMUHkdE-F1_Q"
+      },
+      {
+        "key": "skill:speaking",
+        "id": "PLCadq2A6pEK8"
+      }
+    ],
+    "buildSeconds": 266,
+    "dir": "output/2026-09-03-a2-speaking-ending-a-conversation-politely"
+  },
+  {
+    "date": "2026-09-03",
+    "level": "a1",
+    "skill": "listening",
+    "topic": "Saying Goodbye Politely",
+    "title": "Saying Goodbye Politely — English Listening Practice (A1)",
+    "durationSec": 190,
+    "sizeMb": 17.1,
+    "videoId": "yXBu5-IPjY8",
+    "url": "https://www.youtube.com/watch?v=yXBu5-IPjY8",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:a1",
+        "id": "PLIJ5pu8Ch1Pc"
+      },
+      {
+        "key": "skill:listening",
+        "id": "PLc1avYS6uKVo"
+      }
+    ],
+    "buildSeconds": 236,
+    "dir": "output/2026-09-03-a1-listening-saying-goodbye-politely"
+  },
+  {
     "date": "2026-09-02",
     "level": "c1",
     "skill": "reading",

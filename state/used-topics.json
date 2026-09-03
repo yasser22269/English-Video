@@ -31,19 +31,23 @@
     ],
     "a1:listening": [
       "Colours and Clothes",
-      "Hobbies and Free Time"
+      "Hobbies and Free Time",
+      "Saying Goodbye Politely"
     ],
     "a2:speaking": [
       "Comparing Cities",
-      "Social Media in Daily Life"
+      "Social Media in Daily Life",
+      "Ending a Conversation Politely"
     ],
     "b2:reading": [
       "Universal Basic Income",
-      "Space Exploration Priorities"
+      "Space Exploration Priorities",
+      "Talking About Films and TV Shows"
     ],
     "c1:listening": [
       "The Economics of Scarcity and Choice",
-      "The Attention Merchants"
+      "The Attention Merchants",
+      "Describing Charts, Trends and Numbers"
     ],
     "a1:speaking": [
       "Food and Drinks",
@@ -82,8 +86,9 @@
       "Global Health Governance"
     ],
     "b1:vocabulary": [
-      "Learning Languages Faster"
+      "Learning Languages Faster",
+      "Artificial Intelligence at Work"
     ]
   },
-  "updatedAt": "2026-09-02T14:25:09.213Z"
+  "updatedAt": "2026-09-03T13:40:06.020Z"
 }
