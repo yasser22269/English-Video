@@ -51,23 +51,28 @@
     ],
     "a1:speaking": [
       "Food and Drinks",
-      "Sports I Play"
+      "Sports I Play",
+      "Greetings and Introductions"
     ],
     "a2:vocabulary": [
       "The Best and the Worst",
-      "Describing Your Best Friend"
+      "Describing Your Best Friend",
+      "Talking About Last Weekend"
     ],
     "b1:reading": [
       "Travelling on a Budget",
-      "Choosing a Career Path"
+      "Choosing a Career Path",
+      "Work-Life Balance"
     ],
     "b2:listening": [
       "Gentrification and Neighbourhoods",
-      "Privacy in the Age of Surveillance"
+      "Privacy in the Age of Surveillance",
+      "Making Plans With Friends"
     ],
     "c1:speaking": [
       "Translation and the Limits of Language",
-      "Legal Reasoning and Precedent"
+      "Legal Reasoning and Precedent",
+      "Giving Feedback Without Causing Offence"
     ],
     "a2:reading": [
       "Ordering Food and Complaining Politely",
@@ -90,5 +95,5 @@
       "Artificial Intelligence at Work"
     ]
   },
-  "updatedAt": "2026-09-03T13:40:06.020Z"
+  "updatedAt": "2026-09-04T13:34:28.052Z"
 }

@@ -1,5 +1,125 @@
 [
   {
+    "date": "2026-09-04",
+    "level": "c1",
+    "skill": "speaking",
+    "topic": "Giving Feedback Without Causing Offence",
+    "title": "Giving Feedback Without Causing Offence — English Speaking Practice (C1)",
+    "durationSec": 314,
+    "sizeMb": 30.8,
+    "videoId": "HTw4x6cnsU0",
+    "url": "https://www.youtube.com/watch?v=HTw4x6cnsU0",
+    "publishAt": "2026-09-04T19:00:00.000Z",
+    "playlists": [
+      {
+        "key": "level:c1",
+        "id": "PLPYmpq9AOiZM"
+      },
+      {
+        "key": "skill:speaking",
+        "id": "PLCadq2A6pEK8"
+      }
+    ],
+    "buildSeconds": 295,
+    "dir": "output/2026-09-04-c1-speaking-giving-feedback-without-causing-offence"
+  },
+  {
+    "date": "2026-09-04",
+    "level": "b2",
+    "skill": "listening",
+    "topic": "Making Plans With Friends",
+    "title": "Making Plans With Friends — English Listening Practice (B2)",
+    "durationSec": 372,
+    "sizeMb": 53.9,
+    "videoId": "hi-GhUHl4FA",
+    "url": "https://www.youtube.com/watch?v=hi-GhUHl4FA",
+    "publishAt": "2026-09-04T17:30:00.000Z",
+    "playlists": [
+      {
+        "key": "level:b2",
+        "id": "PLEyMEjEr22bU"
+      },
+      {
+        "key": "skill:listening",
+        "id": "PLc1avYS6uKVo"
+      }
+    ],
+    "buildSeconds": 543,
+    "dir": "output/2026-09-04-b2-listening-making-plans-with-friends"
+  },
+  {
+    "date": "2026-09-04",
+    "level": "b1",
+    "skill": "reading",
+    "topic": "Work-Life Balance",
+    "title": "Work-Life Balance — English Reading Practice (B1)",
+    "durationSec": 295,
+    "sizeMb": 17.9,
+    "videoId": "7d7FsAyx7Hs",
+    "url": "https://www.youtube.com/watch?v=7d7FsAyx7Hs",
+    "publishAt": "2026-09-04T16:00:00.000Z",
+    "playlists": [
+      {
+        "key": "level:b1",
+        "id": "PLSkG2Gz0CZos"
+      },
+      {
+        "key": "skill:reading",
+        "id": "PLYub11V_0AzA"
+      }
+    ],
+    "buildSeconds": 260,
+    "dir": "output/2026-09-04-b1-reading-work-life-balance"
+  },
+  {
+    "date": "2026-09-04",
+    "level": "a2",
+    "skill": "vocabulary",
+    "topic": "Talking About Last Weekend",
+    "title": "Talking About Last Weekend: 10 English Words (A2)",
+    "durationSec": 247,
+    "sizeMb": 14.5,
+    "videoId": "JX5VFnKLtdM",
+    "url": "https://www.youtube.com/watch?v=JX5VFnKLtdM",
+    "publishAt": "2026-09-04T14:30:00.000Z",
+    "playlists": [
+      {
+        "key": "level:a2",
+        "id": "PLMUHkdE-F1_Q"
+      },
+      {
+        "key": "skill:vocabulary",
+        "id": "PLRKWAimfYWh4"
+      }
+    ],
+    "buildSeconds": 251,
+    "dir": "output/2026-09-04-a2-vocabulary-talking-about-last-weekend"
+  },
+  {
+    "date": "2026-09-04",
+    "level": "a1",
+    "skill": "speaking",
+    "topic": "Greetings and Introductions",
+    "title": "Greetings and Introductions — English Speaking Practice (A1)",
+    "durationSec": 165,
+    "sizeMb": 23.6,
+    "videoId": "zmdj19i-fLQ",
+    "url": "https://www.youtube.com/watch?v=zmdj19i-fLQ",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:a1",
+        "id": "PLIJ5pu8Ch1Pc"
+      },
+      {
+        "key": "skill:speaking",
+        "id": "PLCadq2A6pEK8"
+      }
+    ],
+    "buildSeconds": 308,
+    "dir": "output/2026-09-04-a1-speaking-greetings-and-introductions"
+  },
+  {
     "date": "2026-09-03",
     "level": "c1",
     "skill": "listening",
