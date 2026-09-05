@@ -3,7 +3,8 @@
     "a1:vocabulary": [
       "Numbers, Age and Phone Numbers",
       "Parts of the Body",
-      "Healthy Habits"
+      "Healthy Habits",
+      "My Family"
     ],
     "a1:reading": [
       "My Family",
@@ -76,24 +77,28 @@
     ],
     "a2:reading": [
       "Ordering Food and Complaining Politely",
-      "A Day at the Beach"
+      "A Day at the Beach",
+      "Holiday Memories"
     ],
     "b1:listening": [
       "Culture Shock Abroad",
-      "Living in a Big City"
+      "Living in a Big City",
+      "Remote Work and Productivity"
     ],
     "b2:speaking": [
       "The Psychology of Habits",
-      "Fast Fashion and Global Supply Chains"
+      "Fast Fashion and Global Supply Chains",
+      "At the Doctor: Describing Symptoms"
     ],
     "c1:vocabulary": [
       "Algorithmic Bias and Accountability",
-      "Global Health Governance"
+      "Global Health Governance",
+      "British Humour, Irony and Understatement"
     ],
     "b1:vocabulary": [
       "Learning Languages Faster",
       "Artificial Intelligence at Work"
     ]
   },
-  "updatedAt": "2026-09-04T13:34:28.052Z"
+  "updatedAt": "2026-09-05T12:39:11.474Z"
 }

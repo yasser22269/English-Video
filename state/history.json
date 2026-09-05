@@ -1,5 +1,125 @@
 [
   {
+    "date": "2026-09-05",
+    "level": "c1",
+    "skill": "vocabulary",
+    "topic": "British Humour, Irony and Understatement",
+    "title": "British Humour, Irony and Understatement: 8 English Words (C1)",
+    "durationSec": 255,
+    "sizeMb": 15.5,
+    "videoId": "5BXeQjZJ_yA",
+    "url": "https://www.youtube.com/watch?v=5BXeQjZJ_yA",
+    "publishAt": "2026-09-05T19:00:00.000Z",
+    "playlists": [
+      {
+        "key": "level:c1",
+        "id": "PLPYmpq9AOiZM"
+      },
+      {
+        "key": "skill:vocabulary",
+        "id": "PLRKWAimfYWh4"
+      }
+    ],
+    "buildSeconds": 197,
+    "dir": "output/2026-09-05-c1-vocabulary-british-humour-irony-and-understatement"
+  },
+  {
+    "date": "2026-09-05",
+    "level": "b2",
+    "skill": "speaking",
+    "topic": "At the Doctor: Describing Symptoms",
+    "title": "At the Doctor: Describing Symptoms — English Speaking Practice (B2)",
+    "durationSec": 290,
+    "sizeMb": 44.5,
+    "videoId": "kd4J8xt5UF0",
+    "url": "https://www.youtube.com/watch?v=kd4J8xt5UF0",
+    "publishAt": "2026-09-05T17:30:00.000Z",
+    "playlists": [
+      {
+        "key": "level:b2",
+        "id": "PLEyMEjEr22bU"
+      },
+      {
+        "key": "skill:speaking",
+        "id": "PLCadq2A6pEK8"
+      }
+    ],
+    "buildSeconds": 301,
+    "dir": "output/2026-09-05-b2-speaking-at-the-doctor-describing-symptoms"
+  },
+  {
+    "date": "2026-09-05",
+    "level": "b1",
+    "skill": "listening",
+    "topic": "Remote Work and Productivity",
+    "title": "Remote Work and Productivity — English Listening Practice (B1)",
+    "durationSec": 371,
+    "sizeMb": 52.1,
+    "videoId": "z-nF3KTyeVE",
+    "url": "https://www.youtube.com/watch?v=z-nF3KTyeVE",
+    "publishAt": "2026-09-05T16:00:00.000Z",
+    "playlists": [
+      {
+        "key": "level:b1",
+        "id": "PLSkG2Gz0CZos"
+      },
+      {
+        "key": "skill:listening",
+        "id": "PLc1avYS6uKVo"
+      }
+    ],
+    "buildSeconds": 350,
+    "dir": "output/2026-09-05-b1-listening-remote-work-and-productivity"
+  },
+  {
+    "date": "2026-09-05",
+    "level": "a2",
+    "skill": "reading",
+    "topic": "Holiday Memories",
+    "title": "Holiday Memories — English Reading Practice (A2)",
+    "durationSec": 203,
+    "sizeMb": 11.6,
+    "videoId": "8QjRBsGRMVI",
+    "url": "https://www.youtube.com/watch?v=8QjRBsGRMVI",
+    "publishAt": "2026-09-05T14:30:00.000Z",
+    "playlists": [
+      {
+        "key": "level:a2",
+        "id": "PLMUHkdE-F1_Q"
+      },
+      {
+        "key": "skill:reading",
+        "id": "PLYub11V_0AzA"
+      }
+    ],
+    "buildSeconds": 147,
+    "dir": "output/2026-09-05-a2-reading-holiday-memories"
+  },
+  {
+    "date": "2026-09-05",
+    "level": "a1",
+    "skill": "vocabulary",
+    "topic": "My Family",
+    "title": "My Family: 10 English Words (A1)",
+    "durationSec": 224,
+    "sizeMb": 12.9,
+    "videoId": "nQ6dts6EzV4",
+    "url": "https://www.youtube.com/watch?v=nQ6dts6EzV4",
+    "publishAt": "2026-09-05T13:00:00.000Z",
+    "playlists": [
+      {
+        "key": "level:a1",
+        "id": "PLIJ5pu8Ch1Pc"
+      },
+      {
+        "key": "skill:vocabulary",
+        "id": "PLRKWAimfYWh4"
+      }
+    ],
+    "buildSeconds": 186,
+    "dir": "output/2026-09-05-a1-vocabulary-my-family"
+  },
+  {
     "date": "2026-09-04",
     "level": "c1",
     "skill": "speaking",
