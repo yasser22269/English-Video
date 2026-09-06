@@ -9,26 +9,31 @@
     "a1:reading": [
       "My Family",
       "At the Doctor",
-      "My Favourite Music"
+      "My Favourite Music",
+      "Colours and Clothes"
     ],
     "a2:listening": [
       "Future Plans and Intentions",
       "Talking About Films and Series",
-      "Emergencies and Calling for Help"
+      "Emergencies and Calling for Help",
+      "Comparing Cities"
     ],
     "b1:speaking": [
       "Job Interviews and Strengths",
-      "Technology That Changed Life"
+      "Technology That Changed Life",
+      "Solving a Customer Problem"
     ],
     "b2:vocabulary": [
       "The Attention Economy",
       "Bilingualism and the Brain",
-      "Ordering in a Restaurant Like a Local"
+      "Ordering in a Restaurant Like a Local",
+      "Talking About Food and Cooking"
     ],
     "c1:reading": [
       "Consciousness and the Hard Problem",
       "Complexity Science and Emergence",
-      "Handling a Difficult Conversation at Work"
+      "Handling a Difficult Conversation at Work",
+      "Explaining Something Complicated Simply"
     ],
     "a1:listening": [
       "Colours and Clothes",
@@ -100,5 +105,5 @@
       "Artificial Intelligence at Work"
     ]
   },
-  "updatedAt": "2026-09-05T12:39:11.474Z"
+  "updatedAt": "2026-09-06T12:53:59.170Z"
 }

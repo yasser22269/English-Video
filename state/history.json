@@ -1,5 +1,125 @@
 [
   {
+    "date": "2026-09-06",
+    "level": "c1",
+    "skill": "reading",
+    "topic": "Explaining Something Complicated Simply",
+    "title": "Explaining Something Complicated Simply — English Reading Practice (C1)",
+    "durationSec": 392,
+    "sizeMb": 27.1,
+    "videoId": "L8FlCTKOiRE",
+    "url": "https://www.youtube.com/watch?v=L8FlCTKOiRE",
+    "publishAt": "2026-09-06T19:00:00.000Z",
+    "playlists": [
+      {
+        "key": "level:c1",
+        "id": "PLPYmpq9AOiZM"
+      },
+      {
+        "key": "skill:reading",
+        "id": "PLYub11V_0AzA"
+      }
+    ],
+    "buildSeconds": 251,
+    "dir": "output/2026-09-06-c1-reading-explaining-something-complicated-simply"
+  },
+  {
+    "date": "2026-09-06",
+    "level": "b2",
+    "skill": "vocabulary",
+    "topic": "Talking About Food and Cooking",
+    "title": "Talking About Food and Cooking: 9 English Words (B2)",
+    "durationSec": 267,
+    "sizeMb": 15.6,
+    "videoId": "7Lu1ntygsVw",
+    "url": "https://www.youtube.com/watch?v=7Lu1ntygsVw",
+    "publishAt": "2026-09-06T17:30:00.000Z",
+    "playlists": [
+      {
+        "key": "level:b2",
+        "id": "PLEyMEjEr22bU"
+      },
+      {
+        "key": "skill:vocabulary",
+        "id": "PLRKWAimfYWh4"
+      }
+    ],
+    "buildSeconds": 226,
+    "dir": "output/2026-09-06-b2-vocabulary-talking-about-food-and-cooking"
+  },
+  {
+    "date": "2026-09-06",
+    "level": "b1",
+    "skill": "speaking",
+    "topic": "Solving a Customer Problem",
+    "title": "Solving a Customer Problem — English Speaking Practice (B1)",
+    "durationSec": 312,
+    "sizeMb": 22.6,
+    "videoId": "P9O8Hi1vXIo",
+    "url": "https://www.youtube.com/watch?v=P9O8Hi1vXIo",
+    "publishAt": "2026-09-06T16:00:00.000Z",
+    "playlists": [
+      {
+        "key": "level:b1",
+        "id": "PLSkG2Gz0CZos"
+      },
+      {
+        "key": "skill:speaking",
+        "id": "PLCadq2A6pEK8"
+      }
+    ],
+    "buildSeconds": 313,
+    "dir": "output/2026-09-06-b1-speaking-solving-a-customer-problem"
+  },
+  {
+    "date": "2026-09-06",
+    "level": "a2",
+    "skill": "listening",
+    "topic": "Comparing Cities",
+    "title": "Comparing Cities — English Listening Practice (A2)",
+    "durationSec": 259,
+    "sizeMb": 33.4,
+    "videoId": "5nn6HNx9N20",
+    "url": "https://www.youtube.com/watch?v=5nn6HNx9N20",
+    "publishAt": "2026-09-06T14:30:00.000Z",
+    "playlists": [
+      {
+        "key": "level:a2",
+        "id": "PLMUHkdE-F1_Q"
+      },
+      {
+        "key": "skill:listening",
+        "id": "PLc1avYS6uKVo"
+      }
+    ],
+    "buildSeconds": 246,
+    "dir": "output/2026-09-06-a2-listening-comparing-cities"
+  },
+  {
+    "date": "2026-09-06",
+    "level": "a1",
+    "skill": "reading",
+    "topic": "Colours and Clothes",
+    "title": "Colours and Clothes — English Reading Practice (A1)",
+    "durationSec": 155,
+    "sizeMb": 9,
+    "videoId": "IOQsBIjrQKA",
+    "url": "https://www.youtube.com/watch?v=IOQsBIjrQKA",
+    "publishAt": "2026-09-06T13:00:00.000Z",
+    "playlists": [
+      {
+        "key": "level:a1",
+        "id": "PLIJ5pu8Ch1Pc"
+      },
+      {
+        "key": "skill:reading",
+        "id": "PLYub11V_0AzA"
+      }
+    ],
+    "buildSeconds": 125,
+    "dir": "output/2026-09-06-a1-reading-colours-and-clothes"
+  },
+  {
     "date": "2026-09-05",
     "level": "c1",
     "skill": "vocabulary",
