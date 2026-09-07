@@ -38,22 +38,26 @@
     "a1:listening": [
       "Colours and Clothes",
       "Hobbies and Free Time",
-      "Saying Goodbye Politely"
+      "Saying Goodbye Politely",
+      "Food and Drinks"
     ],
     "a2:speaking": [
       "Comparing Cities",
       "Social Media in Daily Life",
-      "Ending a Conversation Politely"
+      "Ending a Conversation Politely",
+      "The Best and the Worst"
     ],
     "b2:reading": [
       "Universal Basic Income",
       "Space Exploration Priorities",
-      "Talking About Films and TV Shows"
+      "Talking About Films and TV Shows",
+      "Giving Directions in a City"
     ],
     "c1:listening": [
       "The Economics of Scarcity and Choice",
       "The Attention Merchants",
-      "Describing Charts, Trends and Numbers"
+      "Describing Charts, Trends and Numbers",
+      "Interrupting Politely in a Meeting"
     ],
     "a1:speaking": [
       "Food and Drinks",
@@ -102,8 +106,9 @@
     ],
     "b1:vocabulary": [
       "Learning Languages Faster",
-      "Artificial Intelligence at Work"
+      "Artificial Intelligence at Work",
+      "Solving a Customer Problem"
     ]
   },
-  "updatedAt": "2026-09-06T12:53:59.170Z"
+  "updatedAt": "2026-09-07T15:08:45.114Z"
 }

@@ -1,5 +1,125 @@
 [
   {
+    "date": "2026-09-07",
+    "level": "c1",
+    "skill": "listening",
+    "topic": "Interrupting Politely in a Meeting",
+    "title": "Interrupting Politely in a Meeting — English Listening Practice (C1)",
+    "durationSec": 383,
+    "sizeMb": 43,
+    "videoId": "Pn0AjWxV6MA",
+    "url": "https://www.youtube.com/watch?v=Pn0AjWxV6MA",
+    "publishAt": "2026-09-07T19:00:00.000Z",
+    "playlists": [
+      {
+        "key": "level:c1",
+        "id": "PLPYmpq9AOiZM"
+      },
+      {
+        "key": "skill:listening",
+        "id": "PLc1avYS6uKVo"
+      }
+    ],
+    "buildSeconds": 393,
+    "dir": "output/2026-09-07-c1-listening-interrupting-politely-in-a-meeting"
+  },
+  {
+    "date": "2026-09-07",
+    "level": "b2",
+    "skill": "reading",
+    "topic": "Giving Directions in a City",
+    "title": "Giving Directions in a City — English Reading Practice (B2)",
+    "durationSec": 308,
+    "sizeMb": 18.4,
+    "videoId": "RFLg3gk7uTw",
+    "url": "https://www.youtube.com/watch?v=RFLg3gk7uTw",
+    "publishAt": "2026-09-07T17:30:00.000Z",
+    "playlists": [
+      {
+        "key": "level:b2",
+        "id": "PLEyMEjEr22bU"
+      },
+      {
+        "key": "skill:reading",
+        "id": "PLYub11V_0AzA"
+      }
+    ],
+    "buildSeconds": 238,
+    "dir": "output/2026-09-07-b2-reading-giving-directions-in-a-city"
+  },
+  {
+    "date": "2026-09-07",
+    "level": "b1",
+    "skill": "vocabulary",
+    "topic": "Solving a Customer Problem",
+    "title": "Solving a Customer Problem: 9 English Words (B1)",
+    "durationSec": 293,
+    "sizeMb": 16.6,
+    "videoId": "T2snmghWGxE",
+    "url": "https://www.youtube.com/watch?v=T2snmghWGxE",
+    "publishAt": "2026-09-07T16:00:00.000Z",
+    "playlists": [
+      {
+        "key": "level:b1",
+        "id": "PLSkG2Gz0CZos"
+      },
+      {
+        "key": "skill:vocabulary",
+        "id": "PLRKWAimfYWh4"
+      }
+    ],
+    "buildSeconds": 276,
+    "dir": "output/2026-09-07-b1-vocabulary-solving-a-customer-problem"
+  },
+  {
+    "date": "2026-09-07",
+    "level": "a2",
+    "skill": "speaking",
+    "topic": "The Best and the Worst",
+    "title": "The Best and the Worst — English Speaking Practice (A2)",
+    "durationSec": 219,
+    "sizeMb": 41,
+    "videoId": "SvGf8nbe52o",
+    "url": "https://www.youtube.com/watch?v=SvGf8nbe52o",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:a2",
+        "id": "PLMUHkdE-F1_Q"
+      },
+      {
+        "key": "skill:speaking",
+        "id": "PLCadq2A6pEK8"
+      }
+    ],
+    "buildSeconds": 307,
+    "dir": "output/2026-09-07-a2-speaking-the-best-and-the-worst"
+  },
+  {
+    "date": "2026-09-07",
+    "level": "a1",
+    "skill": "listening",
+    "topic": "Food and Drinks",
+    "title": "Food and Drinks — English Listening Practice (A1)",
+    "durationSec": 183,
+    "sizeMb": 36.4,
+    "videoId": "aIs7EQ0DqMc",
+    "url": "https://www.youtube.com/watch?v=aIs7EQ0DqMc",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:a1",
+        "id": "PLIJ5pu8Ch1Pc"
+      },
+      {
+        "key": "skill:listening",
+        "id": "PLc1avYS6uKVo"
+      }
+    ],
+    "buildSeconds": 257,
+    "dir": "output/2026-09-07-a1-listening-food-and-drinks"
+  },
+  {
     "date": "2026-09-06",
     "level": "c1",
     "skill": "reading",
