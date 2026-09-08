@@ -1,5 +1,125 @@
 [
   {
+    "date": "2026-09-08",
+    "level": "c1",
+    "skill": "speaking",
+    "topic": "Apologising Like a Professional",
+    "title": "Apologising Like a Professional — English Speaking Practice (C1)",
+    "durationSec": 307,
+    "sizeMb": 63.7,
+    "videoId": "43evrOiaOIQ",
+    "url": "https://www.youtube.com/watch?v=43evrOiaOIQ",
+    "publishAt": "2026-09-08T19:00:00.000Z",
+    "playlists": [
+      {
+        "key": "level:c1",
+        "id": "PLPYmpq9AOiZM"
+      },
+      {
+        "key": "skill:speaking",
+        "id": "PLCadq2A6pEK8"
+      }
+    ],
+    "buildSeconds": 407,
+    "dir": "output/2026-09-08-c1-speaking-apologising-like-a-professional"
+  },
+  {
+    "date": "2026-09-08",
+    "level": "b2",
+    "skill": "listening",
+    "topic": "Talking About Money and Budgeting",
+    "title": "Talking About Money and Budgeting — English Listening Practice (B2)",
+    "durationSec": 395,
+    "sizeMb": 55.1,
+    "videoId": "A5HhN4exhJU",
+    "url": "https://www.youtube.com/watch?v=A5HhN4exhJU",
+    "publishAt": "2026-09-08T17:30:00.000Z",
+    "playlists": [
+      {
+        "key": "level:b2",
+        "id": "PLEyMEjEr22bU"
+      },
+      {
+        "key": "skill:listening",
+        "id": "PLc1avYS6uKVo"
+      }
+    ],
+    "buildSeconds": 515,
+    "dir": "output/2026-09-08-b2-listening-talking-about-money-and-budgeting"
+  },
+  {
+    "date": "2026-09-08",
+    "level": "b1",
+    "skill": "reading",
+    "topic": "Social Media and Mental Health",
+    "title": "Social Media and Mental Health — English Reading Practice (B1)",
+    "durationSec": 306,
+    "sizeMb": 18.9,
+    "videoId": "-nMumLl_b8I",
+    "url": "https://www.youtube.com/watch?v=-nMumLl_b8I",
+    "publishAt": "2026-09-08T16:00:00.000Z",
+    "playlists": [
+      {
+        "key": "level:b1",
+        "id": "PLSkG2Gz0CZos"
+      },
+      {
+        "key": "skill:reading",
+        "id": "PLYub11V_0AzA"
+      }
+    ],
+    "buildSeconds": 360,
+    "dir": "output/2026-09-08-b1-reading-social-media-and-mental-health"
+  },
+  {
+    "date": "2026-09-08",
+    "level": "a2",
+    "skill": "vocabulary",
+    "topic": "Talking About Your Job",
+    "title": "Talking About Your Job: 10 English Words (A2)",
+    "durationSec": 283,
+    "sizeMb": 15.9,
+    "videoId": "aPyj7QTOuHo",
+    "url": "https://www.youtube.com/watch?v=aPyj7QTOuHo",
+    "publishAt": "2026-09-08T14:30:00.000Z",
+    "playlists": [
+      {
+        "key": "level:a2",
+        "id": "PLMUHkdE-F1_Q"
+      },
+      {
+        "key": "skill:vocabulary",
+        "id": "PLRKWAimfYWh4"
+      }
+    ],
+    "buildSeconds": 337,
+    "dir": "output/2026-09-08-a2-vocabulary-talking-about-your-job"
+  },
+  {
+    "date": "2026-09-08",
+    "level": "a1",
+    "skill": "speaking",
+    "topic": "Days, Months and Dates",
+    "title": "Days, Months and Dates — English Speaking Practice (A1)",
+    "durationSec": 204,
+    "sizeMb": 26.5,
+    "videoId": "PGhNhQ1GsxA",
+    "url": "https://www.youtube.com/watch?v=PGhNhQ1GsxA",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:a1",
+        "id": "PLIJ5pu8Ch1Pc"
+      },
+      {
+        "key": "skill:speaking",
+        "id": "PLCadq2A6pEK8"
+      }
+    ],
+    "buildSeconds": 297,
+    "dir": "output/2026-09-08-a1-speaking-days-months-and-dates"
+  },
+  {
     "date": "2026-09-07",
     "level": "c1",
     "skill": "listening",

@@ -62,27 +62,32 @@
     "a1:speaking": [
       "Food and Drinks",
       "Sports I Play",
-      "Greetings and Introductions"
+      "Greetings and Introductions",
+      "Days, Months and Dates"
     ],
     "a2:vocabulary": [
       "The Best and the Worst",
       "Describing Your Best Friend",
-      "Talking About Last Weekend"
+      "Talking About Last Weekend",
+      "Talking About Your Job"
     ],
     "b1:reading": [
       "Travelling on a Budget",
       "Choosing a Career Path",
-      "Work-Life Balance"
+      "Work-Life Balance",
+      "Social Media and Mental Health"
     ],
     "b2:listening": [
       "Gentrification and Neighbourhoods",
       "Privacy in the Age of Surveillance",
-      "Making Plans With Friends"
+      "Making Plans With Friends",
+      "Talking About Money and Budgeting"
     ],
     "c1:speaking": [
       "Translation and the Limits of Language",
       "Legal Reasoning and Precedent",
-      "Giving Feedback Without Causing Offence"
+      "Giving Feedback Without Causing Offence",
+      "Apologising Like a Professional"
     ],
     "a2:reading": [
       "Ordering Food and Complaining Politely",
@@ -110,5 +115,5 @@
       "Solving a Customer Problem"
     ]
   },
-  "updatedAt": "2026-09-07T15:08:45.114Z"
+  "updatedAt": "2026-09-08T13:47:51.303Z"
 }
