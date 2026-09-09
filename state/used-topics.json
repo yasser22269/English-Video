@@ -4,7 +4,8 @@
       "Numbers, Age and Phone Numbers",
       "Parts of the Body",
       "Healthy Habits",
-      "My Family"
+      "My Family",
+      "School Subjects"
     ],
     "a1:reading": [
       "My Family",
@@ -92,22 +93,26 @@
     "a2:reading": [
       "Ordering Food and Complaining Politely",
       "A Day at the Beach",
-      "Holiday Memories"
+      "Holiday Memories",
+      "Job Interviews Basics"
     ],
     "b1:listening": [
       "Culture Shock Abroad",
       "Living in a Big City",
-      "Remote Work and Productivity"
+      "Remote Work and Productivity",
+      "Learning Languages Faster"
     ],
     "b2:speaking": [
       "The Psychology of Habits",
       "Fast Fashion and Global Supply Chains",
-      "At the Doctor: Describing Symptoms"
+      "At the Doctor: Describing Symptoms",
+      "Describing Your Working Day"
     ],
     "c1:vocabulary": [
       "Algorithmic Bias and Accountability",
       "Global Health Governance",
-      "British Humour, Irony and Understatement"
+      "British Humour, Irony and Understatement",
+      "Weighing Advantages and Disadvantages"
     ],
     "b1:vocabulary": [
       "Learning Languages Faster",
@@ -115,5 +120,5 @@
       "Solving a Customer Problem"
     ]
   },
-  "updatedAt": "2026-09-08T13:47:51.303Z"
+  "updatedAt": "2026-09-09T13:44:35.695Z"
 }

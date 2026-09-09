@@ -1,5 +1,125 @@
 [
   {
+    "date": "2026-09-09",
+    "level": "c1",
+    "skill": "vocabulary",
+    "topic": "Weighing Advantages and Disadvantages",
+    "title": "Weighing Advantages and Disadvantages: 8 English Words (C1)",
+    "durationSec": 247,
+    "sizeMb": 15.8,
+    "videoId": "6Xzq-1Y1Hqk",
+    "url": "https://www.youtube.com/watch?v=6Xzq-1Y1Hqk",
+    "publishAt": "2026-09-09T19:00:00.000Z",
+    "playlists": [
+      {
+        "key": "level:c1",
+        "id": "PLPYmpq9AOiZM"
+      },
+      {
+        "key": "skill:vocabulary",
+        "id": "PLRKWAimfYWh4"
+      }
+    ],
+    "buildSeconds": 295,
+    "dir": "output/2026-09-09-c1-vocabulary-weighing-advantages-and-disadvantages"
+  },
+  {
+    "date": "2026-09-09",
+    "level": "b2",
+    "skill": "speaking",
+    "topic": "Describing Your Working Day",
+    "title": "Describing Your Working Day — English Speaking Practice (B2)",
+    "durationSec": 293,
+    "sizeMb": 32.7,
+    "videoId": "_qR0r6TBSVw",
+    "url": "https://www.youtube.com/watch?v=_qR0r6TBSVw",
+    "publishAt": "2026-09-09T17:30:00.000Z",
+    "playlists": [
+      {
+        "key": "level:b2",
+        "id": "PLEyMEjEr22bU"
+      },
+      {
+        "key": "skill:speaking",
+        "id": "PLCadq2A6pEK8"
+      }
+    ],
+    "buildSeconds": 298,
+    "dir": "output/2026-09-09-b2-speaking-describing-your-working-day"
+  },
+  {
+    "date": "2026-09-09",
+    "level": "b1",
+    "skill": "listening",
+    "topic": "Learning Languages Faster",
+    "title": "Learning Languages Faster — English Listening Practice (B1)",
+    "durationSec": 348,
+    "sizeMb": 40.9,
+    "videoId": "0Prj0ng5Vyk",
+    "url": "https://www.youtube.com/watch?v=0Prj0ng5Vyk",
+    "publishAt": "2026-09-09T16:00:00.000Z",
+    "playlists": [
+      {
+        "key": "level:b1",
+        "id": "PLSkG2Gz0CZos"
+      },
+      {
+        "key": "skill:listening",
+        "id": "PLc1avYS6uKVo"
+      }
+    ],
+    "buildSeconds": 344,
+    "dir": "output/2026-09-09-b1-listening-learning-languages-faster"
+  },
+  {
+    "date": "2026-09-09",
+    "level": "a2",
+    "skill": "reading",
+    "topic": "Job Interviews Basics",
+    "title": "Job Interviews Basics — English Reading Practice (A2)",
+    "durationSec": 235,
+    "sizeMb": 13.5,
+    "videoId": "qaROUE28oPk",
+    "url": "https://www.youtube.com/watch?v=qaROUE28oPk",
+    "publishAt": "2026-09-09T14:30:00.000Z",
+    "playlists": [
+      {
+        "key": "level:a2",
+        "id": "PLMUHkdE-F1_Q"
+      },
+      {
+        "key": "skill:reading",
+        "id": "PLYub11V_0AzA"
+      }
+    ],
+    "buildSeconds": 202,
+    "dir": "output/2026-09-09-a2-reading-job-interviews-basics"
+  },
+  {
+    "date": "2026-09-09",
+    "level": "a1",
+    "skill": "vocabulary",
+    "topic": "School Subjects",
+    "title": "School Subjects: 10 English Words (A1)",
+    "durationSec": 219,
+    "sizeMb": 12.8,
+    "videoId": "Zvv8rOmeux4",
+    "url": "https://www.youtube.com/watch?v=Zvv8rOmeux4",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:a1",
+        "id": "PLIJ5pu8Ch1Pc"
+      },
+      {
+        "key": "skill:vocabulary",
+        "id": "PLRKWAimfYWh4"
+      }
+    ],
+    "buildSeconds": 259,
+    "dir": "output/2026-09-09-a1-vocabulary-school-subjects"
+  },
+  {
     "date": "2026-09-08",
     "level": "c1",
     "skill": "speaking",
