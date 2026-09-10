@@ -1,5 +1,125 @@
 [
   {
+    "date": "2026-09-10",
+    "level": "c1",
+    "skill": "reading",
+    "topic": "Writing an Email That Gets a Reply",
+    "title": "Writing an Email That Gets a Reply — English Reading Practice (C1)",
+    "durationSec": 314,
+    "sizeMb": 20.6,
+    "videoId": "fgQW1lPm_uk",
+    "url": "https://www.youtube.com/watch?v=fgQW1lPm_uk",
+    "publishAt": "2026-09-10T19:00:00.000Z",
+    "playlists": [
+      {
+        "key": "level:c1",
+        "id": "PLPYmpq9AOiZM"
+      },
+      {
+        "key": "skill:reading",
+        "id": "PLYub11V_0AzA"
+      }
+    ],
+    "buildSeconds": 229,
+    "dir": "output/2026-09-10-c1-reading-writing-an-email-that-gets-a-reply"
+  },
+  {
+    "date": "2026-09-10",
+    "level": "b2",
+    "skill": "vocabulary",
+    "topic": "Renting a Flat or an Apartment",
+    "title": "Renting a Flat or an Apartment: 9 English Words (B2)",
+    "durationSec": 275,
+    "sizeMb": 15.4,
+    "videoId": "sqw05E9XI1E",
+    "url": "https://www.youtube.com/watch?v=sqw05E9XI1E",
+    "publishAt": "2026-09-10T17:30:00.000Z",
+    "playlists": [
+      {
+        "key": "level:b2",
+        "id": "PLEyMEjEr22bU"
+      },
+      {
+        "key": "skill:vocabulary",
+        "id": "PLRKWAimfYWh4"
+      }
+    ],
+    "buildSeconds": 293,
+    "dir": "output/2026-09-10-b2-vocabulary-renting-a-flat-or-an-apartment"
+  },
+  {
+    "date": "2026-09-10",
+    "level": "b1",
+    "skill": "speaking",
+    "topic": "Healthy Eating Habits",
+    "title": "Healthy Eating Habits — English Speaking Practice (B1)",
+    "durationSec": 306,
+    "sizeMb": 33.5,
+    "videoId": "r_86CQrDEPI",
+    "url": "https://www.youtube.com/watch?v=r_86CQrDEPI",
+    "publishAt": "2026-09-10T16:00:00.000Z",
+    "playlists": [
+      {
+        "key": "level:b1",
+        "id": "PLSkG2Gz0CZos"
+      },
+      {
+        "key": "skill:speaking",
+        "id": "PLCadq2A6pEK8"
+      }
+    ],
+    "buildSeconds": 297,
+    "dir": "output/2026-09-10-b1-speaking-healthy-eating-habits"
+  },
+  {
+    "date": "2026-09-10",
+    "level": "a2",
+    "skill": "listening",
+    "topic": "Environment and Recycling",
+    "title": "Environment and Recycling — English Listening Practice (A2)",
+    "durationSec": 238,
+    "sizeMb": 101.7,
+    "videoId": "PfeP1UE2U1E",
+    "url": "https://www.youtube.com/watch?v=PfeP1UE2U1E",
+    "publishAt": "2026-09-10T14:30:00.000Z",
+    "playlists": [
+      {
+        "key": "level:a2",
+        "id": "PLMUHkdE-F1_Q"
+      },
+      {
+        "key": "skill:listening",
+        "id": "PLc1avYS6uKVo"
+      }
+    ],
+    "buildSeconds": 372,
+    "dir": "output/2026-09-10-a2-listening-environment-and-recycling"
+  },
+  {
+    "date": "2026-09-10",
+    "level": "a1",
+    "skill": "reading",
+    "topic": "Technology at Home",
+    "title": "Technology at Home — English Reading Practice (A1)",
+    "durationSec": 148,
+    "sizeMb": 8.4,
+    "videoId": "2nYARmTNO6E",
+    "url": "https://www.youtube.com/watch?v=2nYARmTNO6E",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:a1",
+        "id": "PLIJ5pu8Ch1Pc"
+      },
+      {
+        "key": "skill:reading",
+        "id": "PLYub11V_0AzA"
+      }
+    ],
+    "buildSeconds": 155,
+    "dir": "output/2026-09-10-a1-reading-technology-at-home"
+  },
+  {
     "date": "2026-09-09",
     "level": "c1",
     "skill": "vocabulary",

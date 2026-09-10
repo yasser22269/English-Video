@@ -11,30 +11,35 @@
       "My Family",
       "At the Doctor",
       "My Favourite Music",
-      "Colours and Clothes"
+      "Colours and Clothes",
+      "Technology at Home"
     ],
     "a2:listening": [
       "Future Plans and Intentions",
       "Talking About Films and Series",
       "Emergencies and Calling for Help",
-      "Comparing Cities"
+      "Comparing Cities",
+      "Environment and Recycling"
     ],
     "b1:speaking": [
       "Job Interviews and Strengths",
       "Technology That Changed Life",
-      "Solving a Customer Problem"
+      "Solving a Customer Problem",
+      "Healthy Eating Habits"
     ],
     "b2:vocabulary": [
       "The Attention Economy",
       "Bilingualism and the Brain",
       "Ordering in a Restaurant Like a Local",
-      "Talking About Food and Cooking"
+      "Talking About Food and Cooking",
+      "Renting a Flat or an Apartment"
     ],
     "c1:reading": [
       "Consciousness and the Hard Problem",
       "Complexity Science and Emergence",
       "Handling a Difficult Conversation at Work",
-      "Explaining Something Complicated Simply"
+      "Explaining Something Complicated Simply",
+      "Writing an Email That Gets a Reply"
     ],
     "a1:listening": [
       "Colours and Clothes",
@@ -120,5 +125,5 @@
       "Solving a Customer Problem"
     ]
   },
-  "updatedAt": "2026-09-09T13:44:35.695Z"
+  "updatedAt": "2026-09-10T13:40:42.873Z"
 }
