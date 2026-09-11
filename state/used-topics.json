@@ -45,25 +45,29 @@
       "Colours and Clothes",
       "Hobbies and Free Time",
       "Saying Goodbye Politely",
-      "Food and Drinks"
+      "Food and Drinks",
+      "Feelings and Emotions"
     ],
     "a2:speaking": [
       "Comparing Cities",
       "Social Media in Daily Life",
       "Ending a Conversation Politely",
-      "The Best and the Worst"
+      "The Best and the Worst",
+      "Technology and Gadgets"
     ],
     "b2:reading": [
       "Universal Basic Income",
       "Space Exploration Priorities",
       "Talking About Films and TV Shows",
-      "Giving Directions in a City"
+      "Giving Directions in a City",
+      "Talking About Your Weekend Naturally"
     ],
     "c1:listening": [
       "The Economics of Scarcity and Choice",
       "The Attention Merchants",
       "Describing Charts, Trends and Numbers",
-      "Interrupting Politely in a Meeting"
+      "Interrupting Politely in a Meeting",
+      "Small Talk That Does Not Feel Awkward"
     ],
     "a1:speaking": [
       "Food and Drinks",
@@ -122,8 +126,9 @@
     "b1:vocabulary": [
       "Learning Languages Faster",
       "Artificial Intelligence at Work",
-      "Solving a Customer Problem"
+      "Solving a Customer Problem",
+      "Exercise and Motivation"
     ]
   },
-  "updatedAt": "2026-09-10T13:40:42.873Z"
+  "updatedAt": "2026-09-11T13:38:38.979Z"
 }

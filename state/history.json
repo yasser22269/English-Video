@@ -1,5 +1,125 @@
 [
   {
+    "date": "2026-09-11",
+    "level": "c1",
+    "skill": "listening",
+    "topic": "Small Talk That Does Not Feel Awkward",
+    "title": "Small Talk That Does Not Feel Awkward — English Listening Practice (C1)",
+    "durationSec": 388,
+    "sizeMb": 107.9,
+    "videoId": "GpQkn6W78qw",
+    "url": "https://www.youtube.com/watch?v=GpQkn6W78qw",
+    "publishAt": "2026-09-11T19:00:00.000Z",
+    "playlists": [
+      {
+        "key": "level:c1",
+        "id": "PLPYmpq9AOiZM"
+      },
+      {
+        "key": "skill:listening",
+        "id": "PLc1avYS6uKVo"
+      }
+    ],
+    "buildSeconds": 480,
+    "dir": "output/2026-09-11-c1-listening-small-talk-that-does-not-feel-awkward"
+  },
+  {
+    "date": "2026-09-11",
+    "level": "b2",
+    "skill": "reading",
+    "topic": "Talking About Your Weekend Naturally",
+    "title": "Talking About Your Weekend Naturally — English Reading Practice (B2)",
+    "durationSec": 316,
+    "sizeMb": 19,
+    "videoId": "7fWfT6qNxoQ",
+    "url": "https://www.youtube.com/watch?v=7fWfT6qNxoQ",
+    "publishAt": "2026-09-11T17:30:00.000Z",
+    "playlists": [
+      {
+        "key": "level:b2",
+        "id": "PLEyMEjEr22bU"
+      },
+      {
+        "key": "skill:reading",
+        "id": "PLYub11V_0AzA"
+      }
+    ],
+    "buildSeconds": 253,
+    "dir": "output/2026-09-11-b2-reading-talking-about-your-weekend-naturally"
+  },
+  {
+    "date": "2026-09-11",
+    "level": "b1",
+    "skill": "vocabulary",
+    "topic": "Exercise and Motivation",
+    "title": "Exercise and Motivation: 9 English Words (B1)",
+    "durationSec": 294,
+    "sizeMb": 16.5,
+    "videoId": "ecwoJQDgCek",
+    "url": "https://www.youtube.com/watch?v=ecwoJQDgCek",
+    "publishAt": "2026-09-11T16:00:00.000Z",
+    "playlists": [
+      {
+        "key": "level:b1",
+        "id": "PLSkG2Gz0CZos"
+      },
+      {
+        "key": "skill:vocabulary",
+        "id": "PLRKWAimfYWh4"
+      }
+    ],
+    "buildSeconds": 279,
+    "dir": "output/2026-09-11-b1-vocabulary-exercise-and-motivation"
+  },
+  {
+    "date": "2026-09-11",
+    "level": "a2",
+    "skill": "speaking",
+    "topic": "Technology and Gadgets",
+    "title": "Technology and Gadgets — English Speaking Practice (A2)",
+    "durationSec": 213,
+    "sizeMb": 43.5,
+    "videoId": "_SBRNEL0Ru8",
+    "url": "https://www.youtube.com/watch?v=_SBRNEL0Ru8",
+    "publishAt": "2026-09-11T14:30:00.000Z",
+    "playlists": [
+      {
+        "key": "level:a2",
+        "id": "PLMUHkdE-F1_Q"
+      },
+      {
+        "key": "skill:speaking",
+        "id": "PLCadq2A6pEK8"
+      }
+    ],
+    "buildSeconds": 288,
+    "dir": "output/2026-09-11-a2-speaking-technology-and-gadgets"
+  },
+  {
+    "date": "2026-09-11",
+    "level": "a1",
+    "skill": "listening",
+    "topic": "Feelings and Emotions",
+    "title": "Feelings and Emotions — English Listening Practice (A1)",
+    "durationSec": 193,
+    "sizeMb": 20.7,
+    "videoId": "7pJfrrAsH84",
+    "url": "https://www.youtube.com/watch?v=7pJfrrAsH84",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:a1",
+        "id": "PLIJ5pu8Ch1Pc"
+      },
+      {
+        "key": "skill:listening",
+        "id": "PLc1avYS6uKVo"
+      }
+    ],
+    "buildSeconds": 246,
+    "dir": "output/2026-09-11-a1-listening-feelings-and-emotions"
+  },
+  {
     "date": "2026-09-10",
     "level": "c1",
     "skill": "reading",
