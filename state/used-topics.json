@@ -73,31 +73,36 @@
       "Food and Drinks",
       "Sports I Play",
       "Greetings and Introductions",
-      "Days, Months and Dates"
+      "Days, Months and Dates",
+      "On the Phone"
     ],
     "a2:vocabulary": [
       "The Best and the Worst",
       "Describing Your Best Friend",
       "Talking About Last Weekend",
-      "Talking About Your Job"
+      "Talking About Your Job",
+      "Talking About Your Studies"
     ],
     "b1:reading": [
       "Travelling on a Budget",
       "Choosing a Career Path",
       "Work-Life Balance",
-      "Social Media and Mental Health"
+      "Social Media and Mental Health",
+      "Digital Detox Weekend"
     ],
     "b2:listening": [
       "Gentrification and Neighbourhoods",
       "Privacy in the Age of Surveillance",
       "Making Plans With Friends",
-      "Talking About Money and Budgeting"
+      "Talking About Money and Budgeting",
+      "Describing Someone's Personality"
     ],
     "c1:speaking": [
       "Translation and the Limits of Language",
       "Legal Reasoning and Precedent",
       "Giving Feedback Without Causing Offence",
-      "Apologising Like a Professional"
+      "Apologising Like a Professional",
+      "Linking Words That Make You Sound Fluent"
     ],
     "a2:reading": [
       "Ordering Food and Complaining Politely",
@@ -130,5 +135,5 @@
       "Exercise and Motivation"
     ]
   },
-  "updatedAt": "2026-09-11T13:38:38.979Z"
+  "updatedAt": "2026-09-12T12:57:02.612Z"
 }

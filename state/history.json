@@ -1,5 +1,125 @@
 [
   {
+    "date": "2026-09-12",
+    "level": "c1",
+    "skill": "speaking",
+    "topic": "Linking Words That Make You Sound Fluent",
+    "title": "Linking Words That Make You Sound Fluent — English Speaking Practice (C1)",
+    "durationSec": 308,
+    "sizeMb": 31.7,
+    "videoId": "fcI22349HlU",
+    "url": "https://www.youtube.com/watch?v=fcI22349HlU",
+    "publishAt": "2026-09-12T19:00:00.000Z",
+    "playlists": [
+      {
+        "key": "level:c1",
+        "id": "PLPYmpq9AOiZM"
+      },
+      {
+        "key": "skill:speaking",
+        "id": "PLCadq2A6pEK8"
+      }
+    ],
+    "buildSeconds": 277,
+    "dir": "output/2026-09-12-c1-speaking-linking-words-that-make-you-sound-fluent"
+  },
+  {
+    "date": "2026-09-12",
+    "level": "b2",
+    "skill": "listening",
+    "topic": "Describing Someone's Personality",
+    "title": "Describing Someone's Personality — English Listening Practice (B2)",
+    "durationSec": 367,
+    "sizeMb": 58.4,
+    "videoId": "zFLn-htw730",
+    "url": "https://www.youtube.com/watch?v=zFLn-htw730",
+    "publishAt": "2026-09-12T17:30:00.000Z",
+    "playlists": [
+      {
+        "key": "level:b2",
+        "id": "PLEyMEjEr22bU"
+      },
+      {
+        "key": "skill:listening",
+        "id": "PLc1avYS6uKVo"
+      }
+    ],
+    "buildSeconds": 353,
+    "dir": "output/2026-09-12-b2-listening-describing-someone-s-personality"
+  },
+  {
+    "date": "2026-09-12",
+    "level": "b1",
+    "skill": "reading",
+    "topic": "Digital Detox Weekend",
+    "title": "Digital Detox Weekend — English Reading Practice (B1)",
+    "durationSec": 316,
+    "sizeMb": 19.6,
+    "videoId": "JvRuWHfbQ14",
+    "url": "https://www.youtube.com/watch?v=JvRuWHfbQ14",
+    "publishAt": "2026-09-12T16:00:00.000Z",
+    "playlists": [
+      {
+        "key": "level:b1",
+        "id": "PLSkG2Gz0CZos"
+      },
+      {
+        "key": "skill:reading",
+        "id": "PLYub11V_0AzA"
+      }
+    ],
+    "buildSeconds": 183,
+    "dir": "output/2026-09-12-b1-reading-digital-detox-weekend"
+  },
+  {
+    "date": "2026-09-12",
+    "level": "a2",
+    "skill": "vocabulary",
+    "topic": "Talking About Your Studies",
+    "title": "Talking About Your Studies: 10 English Words (A2)",
+    "durationSec": 276,
+    "sizeMb": 15.6,
+    "videoId": "YrJAPdXrbFE",
+    "url": "https://www.youtube.com/watch?v=YrJAPdXrbFE",
+    "publishAt": "2026-09-12T14:30:00.000Z",
+    "playlists": [
+      {
+        "key": "level:a2",
+        "id": "PLMUHkdE-F1_Q"
+      },
+      {
+        "key": "skill:vocabulary",
+        "id": "PLRKWAimfYWh4"
+      }
+    ],
+    "buildSeconds": 260,
+    "dir": "output/2026-09-12-a2-vocabulary-talking-about-your-studies"
+  },
+  {
+    "date": "2026-09-12",
+    "level": "a1",
+    "skill": "speaking",
+    "topic": "On the Phone",
+    "title": "On the Phone — English Speaking Practice (A1)",
+    "durationSec": 171,
+    "sizeMb": 19,
+    "videoId": "rgWjjx1LJlQ",
+    "url": "https://www.youtube.com/watch?v=rgWjjx1LJlQ",
+    "publishAt": "2026-09-12T13:00:00.000Z",
+    "playlists": [
+      {
+        "key": "level:a1",
+        "id": "PLIJ5pu8Ch1Pc"
+      },
+      {
+        "key": "skill:speaking",
+        "id": "PLCadq2A6pEK8"
+      }
+    ],
+    "buildSeconds": 192,
+    "dir": "output/2026-09-12-a1-speaking-on-the-phone"
+  },
+  {
     "date": "2026-09-11",
     "level": "c1",
     "skill": "listening",
