@@ -5,7 +5,8 @@
       "Parts of the Body",
       "Healthy Habits",
       "My Family",
-      "School Subjects"
+      "School Subjects",
+      "Feelings and Emotions"
     ],
     "a1:reading": [
       "My Family",
@@ -108,25 +109,29 @@
       "Ordering Food and Complaining Politely",
       "A Day at the Beach",
       "Holiday Memories",
-      "Job Interviews Basics"
+      "Job Interviews Basics",
+      "Neighbours and Community"
     ],
     "b1:listening": [
       "Culture Shock Abroad",
       "Living in a Big City",
       "Remote Work and Productivity",
-      "Learning Languages Faster"
+      "Learning Languages Faster",
+      "Living with Housemates"
     ],
     "b2:speaking": [
       "The Psychology of Habits",
       "Fast Fashion and Global Supply Chains",
       "At the Doctor: Describing Symptoms",
-      "Describing Your Working Day"
+      "Describing Your Working Day",
+      "Job Interview: Strengths and Weaknesses"
     ],
     "c1:vocabulary": [
       "Algorithmic Bias and Accountability",
       "Global Health Governance",
       "British Humour, Irony and Understatement",
-      "Weighing Advantages and Disadvantages"
+      "Weighing Advantages and Disadvantages",
+      "Talking About a Career Change"
     ],
     "b1:vocabulary": [
       "Learning Languages Faster",
@@ -135,5 +140,5 @@
       "Exercise and Motivation"
     ]
   },
-  "updatedAt": "2026-09-12T12:57:02.612Z"
+  "updatedAt": "2026-09-13T13:59:02.597Z"
 }

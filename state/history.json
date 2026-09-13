@@ -1,5 +1,125 @@
 [
   {
+    "date": "2026-09-13",
+    "level": "c1",
+    "skill": "vocabulary",
+    "topic": "Talking About a Career Change",
+    "title": "Talking About a Career Change: 8 English Words (C1)",
+    "durationSec": 260,
+    "sizeMb": 16.1,
+    "videoId": "3PdKcVsLmzA",
+    "url": "https://www.youtube.com/watch?v=3PdKcVsLmzA",
+    "publishAt": "2026-09-13T19:00:00.000Z",
+    "playlists": [
+      {
+        "key": "level:c1",
+        "id": "PLPYmpq9AOiZM"
+      },
+      {
+        "key": "skill:vocabulary",
+        "id": "PLRKWAimfYWh4"
+      }
+    ],
+    "buildSeconds": 197,
+    "dir": "output/2026-09-13-c1-vocabulary-talking-about-a-career-change"
+  },
+  {
+    "date": "2026-09-13",
+    "level": "b2",
+    "skill": "speaking",
+    "topic": "Job Interview: Strengths and Weaknesses",
+    "title": "Job Interview: Strengths and Weaknesses — English Speaking Practice (B2)",
+    "durationSec": 283,
+    "sizeMb": 23.5,
+    "videoId": "aXKYdLBykxo",
+    "url": "https://www.youtube.com/watch?v=aXKYdLBykxo",
+    "publishAt": "2026-09-13T17:30:00.000Z",
+    "playlists": [
+      {
+        "key": "level:b2",
+        "id": "PLEyMEjEr22bU"
+      },
+      {
+        "key": "skill:speaking",
+        "id": "PLCadq2A6pEK8"
+      }
+    ],
+    "buildSeconds": 317,
+    "dir": "output/2026-09-13-b2-speaking-job-interview-strengths-and-weaknesses"
+  },
+  {
+    "date": "2026-09-13",
+    "level": "b1",
+    "skill": "listening",
+    "topic": "Living with Housemates",
+    "title": "Living with Housemates — English Listening Practice (B1)",
+    "durationSec": 345,
+    "sizeMb": 43.2,
+    "videoId": "kpE_E-mnxy8",
+    "url": "https://www.youtube.com/watch?v=kpE_E-mnxy8",
+    "publishAt": "2026-09-13T16:00:00.000Z",
+    "playlists": [
+      {
+        "key": "level:b1",
+        "id": "PLSkG2Gz0CZos"
+      },
+      {
+        "key": "skill:listening",
+        "id": "PLc1avYS6uKVo"
+      }
+    ],
+    "buildSeconds": 280,
+    "dir": "output/2026-09-13-b1-listening-living-with-housemates"
+  },
+  {
+    "date": "2026-09-13",
+    "level": "a2",
+    "skill": "reading",
+    "topic": "Neighbours and Community",
+    "title": "Neighbours and Community — English Reading Practice (A2)",
+    "durationSec": 218,
+    "sizeMb": 12.3,
+    "videoId": "0NW26aRGkiY",
+    "url": "https://www.youtube.com/watch?v=0NW26aRGkiY",
+    "publishAt": "2026-09-13T14:30:00.000Z",
+    "playlists": [
+      {
+        "key": "level:a2",
+        "id": "PLMUHkdE-F1_Q"
+      },
+      {
+        "key": "skill:reading",
+        "id": "PLYub11V_0AzA"
+      }
+    ],
+    "buildSeconds": 188,
+    "dir": "output/2026-09-13-a2-reading-neighbours-and-community"
+  },
+  {
+    "date": "2026-09-13",
+    "level": "a1",
+    "skill": "vocabulary",
+    "topic": "Feelings and Emotions",
+    "title": "Feelings and Emotions: 10 English Words (A1)",
+    "durationSec": 200,
+    "sizeMb": 11.2,
+    "videoId": "OQ8Dd2CVpc0",
+    "url": "https://www.youtube.com/watch?v=OQ8Dd2CVpc0",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:a1",
+        "id": "PLIJ5pu8Ch1Pc"
+      },
+      {
+        "key": "skill:vocabulary",
+        "id": "PLRKWAimfYWh4"
+      }
+    ],
+    "buildSeconds": 328,
+    "dir": "output/2026-09-13-a1-vocabulary-feelings-and-emotions"
+  },
+  {
     "date": "2026-09-12",
     "level": "c1",
     "skill": "speaking",
