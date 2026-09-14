@@ -13,34 +13,39 @@
       "At the Doctor",
       "My Favourite Music",
       "Colours and Clothes",
-      "Technology at Home"
+      "Technology at Home",
+      "Seasons of the Year"
     ],
     "a2:listening": [
       "Future Plans and Intentions",
       "Talking About Films and Series",
       "Emergencies and Calling for Help",
       "Comparing Cities",
-      "Environment and Recycling"
+      "Environment and Recycling",
+      "Learning a New Skill"
     ],
     "b1:speaking": [
       "Job Interviews and Strengths",
       "Technology That Changed Life",
       "Solving a Customer Problem",
-      "Healthy Eating Habits"
+      "Healthy Eating Habits",
+      "Getting a Driving Licence"
     ],
     "b2:vocabulary": [
       "The Attention Economy",
       "Bilingualism and the Brain",
       "Ordering in a Restaurant Like a Local",
       "Talking About Food and Cooking",
-      "Renting a Flat or an Apartment"
+      "Renting a Flat or an Apartment",
+      "Making Plans With Friends"
     ],
     "c1:reading": [
       "Consciousness and the Hard Problem",
       "Complexity Science and Emergence",
       "Handling a Difficult Conversation at Work",
       "Explaining Something Complicated Simply",
-      "Writing an Email That Gets a Reply"
+      "Writing an Email That Gets a Reply",
+      "Giving Feedback Without Causing Offence"
     ],
     "a1:listening": [
       "Colours and Clothes",
@@ -140,5 +145,5 @@
       "Exercise and Motivation"
     ]
   },
-  "updatedAt": "2026-09-13T13:59:02.597Z"
+  "updatedAt": "2026-09-14T15:57:45.265Z"
 }

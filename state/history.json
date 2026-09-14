@@ -1,5 +1,125 @@
 [
   {
+    "date": "2026-09-14",
+    "level": "c1",
+    "skill": "reading",
+    "topic": "Giving Feedback Without Causing Offence",
+    "title": "Giving Feedback Without Causing Offence — English Reading Practice (C1)",
+    "durationSec": 384,
+    "sizeMb": 26.6,
+    "videoId": "fGp3wOQSEo0",
+    "url": "https://www.youtube.com/watch?v=fGp3wOQSEo0",
+    "publishAt": "2026-09-14T19:00:00.000Z",
+    "playlists": [
+      {
+        "key": "level:c1",
+        "id": "PLPYmpq9AOiZM"
+      },
+      {
+        "key": "skill:reading",
+        "id": "PLYub11V_0AzA"
+      }
+    ],
+    "buildSeconds": 242,
+    "dir": "output/2026-09-14-c1-reading-giving-feedback-without-causing-offence"
+  },
+  {
+    "date": "2026-09-14",
+    "level": "b2",
+    "skill": "vocabulary",
+    "topic": "Making Plans With Friends",
+    "title": "Making Plans With Friends: 9 English Words (B2)",
+    "durationSec": 249,
+    "sizeMb": 14,
+    "videoId": "3w4xbVC9PZ8",
+    "url": "https://www.youtube.com/watch?v=3w4xbVC9PZ8",
+    "publishAt": "2026-09-14T17:30:00.000Z",
+    "playlists": [
+      {
+        "key": "level:b2",
+        "id": "PLEyMEjEr22bU"
+      },
+      {
+        "key": "skill:vocabulary",
+        "id": "PLRKWAimfYWh4"
+      }
+    ],
+    "buildSeconds": 258,
+    "dir": "output/2026-09-14-b2-vocabulary-making-plans-with-friends"
+  },
+  {
+    "date": "2026-09-14",
+    "level": "b1",
+    "skill": "speaking",
+    "topic": "Getting a Driving Licence",
+    "title": "Getting a Driving Licence — English Speaking Practice (B1)",
+    "durationSec": 348,
+    "sizeMb": 51.2,
+    "videoId": "zR8U58mFoS0",
+    "url": "https://www.youtube.com/watch?v=zR8U58mFoS0",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:b1",
+        "id": "PLSkG2Gz0CZos"
+      },
+      {
+        "key": "skill:speaking",
+        "id": "PLCadq2A6pEK8"
+      }
+    ],
+    "buildSeconds": 339,
+    "dir": "output/2026-09-14-b1-speaking-getting-a-driving-licence"
+  },
+  {
+    "date": "2026-09-14",
+    "level": "a2",
+    "skill": "listening",
+    "topic": "Learning a New Skill",
+    "title": "Learning a New Skill — English Listening Practice (A2)",
+    "durationSec": 246,
+    "sizeMb": 38.6,
+    "videoId": "JwbGT1F4dgs",
+    "url": "https://www.youtube.com/watch?v=JwbGT1F4dgs",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:a2",
+        "id": "PLMUHkdE-F1_Q"
+      },
+      {
+        "key": "skill:listening",
+        "id": "PLc1avYS6uKVo"
+      }
+    ],
+    "buildSeconds": 265,
+    "dir": "output/2026-09-14-a2-listening-learning-a-new-skill"
+  },
+  {
+    "date": "2026-09-14",
+    "level": "a1",
+    "skill": "reading",
+    "topic": "Seasons of the Year",
+    "title": "Seasons of the Year — English Reading Practice (A1)",
+    "durationSec": 146,
+    "sizeMb": 8.4,
+    "videoId": "A2qnhxB9ykw",
+    "url": "https://www.youtube.com/watch?v=A2qnhxB9ykw",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:a1",
+        "id": "PLIJ5pu8Ch1Pc"
+      },
+      {
+        "key": "skill:reading",
+        "id": "PLYub11V_0AzA"
+      }
+    ],
+    "buildSeconds": 150,
+    "dir": "output/2026-09-14-a1-reading-seasons-of-the-year"
+  },
+  {
     "date": "2026-09-13",
     "level": "c1",
     "skill": "vocabulary",
