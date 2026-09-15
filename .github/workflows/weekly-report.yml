@@ -1,0 +1,66 @@
+name: 📈 Weekly Channel Report
+
+on:
+  schedule:
+    # Mondays, after the daily lesson run has committed its state.
+    - cron: '43 12 * * 1'
+  workflow_dispatch:
+    inputs:
+      end:
+        description: 'Last day of the week to report (YYYY-MM-DD, blank = yesterday)'
+        required: false
+        default: ''
+
+concurrency:
+  group: weekly-report
+  cancel-in-progress: false
+
+jobs:
+  report:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      # Node 20 for the same reason as the daily run: googleapis' token refresh
+      # broke on the runner's newer default.
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: npm
+
+      - run: npm ci --omit=optional
+        env:
+          PUPPETEER_SKIP_DOWNLOAD: 'true'
+
+      # The comparison that month one showed actually matters: each video over
+      # its own first 7 days, this week's publications against last week's.
+      - name: Build the report
+        env:
+          YOUTUBE_CLIENT_ID: ${{ secrets.YOUTUBE_CLIENT_ID }}
+          YOUTUBE_CLIENT_SECRET: ${{ secrets.YOUTUBE_CLIENT_SECRET }}
+          YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
+        run: |
+          if [ -n "${{ github.event.inputs.end }}" ]; then
+            node scripts/weekly-report.js --end "${{ github.event.inputs.end }}"
+          else
+            node scripts/weekly-report.js
+          fi
+
+      - name: Commit the report
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add reports/weekly-*.md
+          if git diff --staged --quiet; then echo "nothing new"; exit 0; fi
+          git commit -m "chore: weekly channel report [skip ci]"
+          for attempt in 1 2 3; do
+            git push && exit 0
+            git fetch origin "${GITHUB_REF_NAME}"
+            git rebase "origin/${GITHUB_REF_NAME}" || { git rebase --abort || true; exit 1; }
+            sleep $((attempt * 3))
+          done
+          exit 1
