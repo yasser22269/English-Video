@@ -38,7 +38,8 @@
       "questionCount": 4,
       "cefrGuide": "Use only the ~600 most common English words. Present simple, short sentences of 4-8 words, no phrasal verbs, no idioms, no relative clauses. Everyday concrete topics.",
       "storyLevel": 1,
-      "levelName": "Beginner"
+      "levelName": "Beginner",
+      "playlistTitle": "English for Beginners (A1) — One Lesson Every Day"
     },
     "a2": {
       "label": "A2 · Elementary",
@@ -119,7 +120,7 @@
       "emoji": "🗣️",
       "background": "footage",
       "titlePattern": "{topic} — English Speaking Practice & Shadowing ({level})",
-      "playlistTitle": "English Speaking Practice — Listen and Repeat, Every Level",
+      "playlistTitle": "English Speaking Practice & Shadowing — A1 to C1",
       "searchTags": [
         "english speaking practice",
         "shadowing english speaking practice",
@@ -133,7 +134,7 @@
       "emoji": "📚",
       "background": "typography",
       "titlePattern": "{topic}: {wordCount} English Words with Pictures ({level} {levelName})",
-      "playlistTitle": "English Vocabulary — New Words Every Day, Every Level",
+      "playlistTitle": "English Vocabulary with Pictures — New Words Every Day",
       "searchTags": [
         "english words with pictures",
         "english vocabulary with pictures and pronunciation",
@@ -146,7 +147,7 @@
       "emoji": "📖",
       "background": "typography",
       "titlePattern": "{topic} — Learn English Through Story Level {storyLevel} ({level})",
-      "playlistTitle": "English Reading Practice — Read Along, Every Level",
+      "playlistTitle": "Learn English Through Story — Every Level, A1 to C1",
       "searchTags": [
         "learn english through story",
         "english story",
@@ -160,7 +161,7 @@
       "emoji": "🎧",
       "background": "footage",
       "titlePattern": "{topic} — English Conversation Practice ({level} {levelName})",
-      "playlistTitle": "English Listening Practice — Real Conversations, Every Level",
+      "playlistTitle": "English Conversation Practice — Every Level, A1 to C1",
       "searchTags": [
         "english conversation practice",
         "english conversation practice {level}",
@@ -217,16 +218,16 @@
   },
   "channelId": "UC-o-ibKNt-FpCrSxyTVq9zQ",
   "publish": {
-    "timezone": "Africa/Cairo",
+    "timezone": "UTC",
     "minLeadMinutes": 15,
     "slots": {
-      "a1": "16:00",
-      "a2": "17:30",
-      "b1": "19:00",
-      "b2": "20:30",
-      "c1": "22:00"
+      "a1": "13:00",
+      "a2": "14:30",
+      "b1": "16:00",
+      "b2": "17:30",
+      "c1": "19:00"
     },
-    "note": "Local wall-clock times, DST-aware. Each level owns one fixed slot so a returning viewer always finds their level at the same hour. A slot already past when the run finishes falls back to publishing immediately."
+    "note": "UTC wall-clock times, so the schedule is the same everywhere and never shifts with daylight saving. Each level owns one slot; B2 and C1 alternate days. A slot already past when the run finishes falls back to publishing immediately."
   },
   "translation": {
     "code": "ar",

@@ -43,6 +43,9 @@ node scripts/keywords.js expand "english words for"       # a-z expansion
 node scripts/keywords.js topics --level a1                # demand score per curriculum topic
 node scripts/reach-report.js                              # impressions + CTR (Reporting API)
 node scripts/retitle-published.js                         # dry-run the back-catalogue refresh
+node scripts/refresh-playlists.js                         # sync live playlist titles/descriptions
+node scripts/update-channel-about.js                       # publish config/channel-about.txt in 8 languages
+node scripts/weekly-report.js                              # same-age cohort report (also runs every Monday)
 ```
 
 Each lesson joins two playlists — its level and its skill — so a viewer who finishes one has an obvious next one either way. Ids are cached in `state/playlists.json`, so the 50-unit create happens once per playlist rather than once per day. Either axis can be turned off in `config/channel.json` under `youtube.playlists`.

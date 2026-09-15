@@ -162,7 +162,7 @@ export function playlistsFor(lesson, { levelConfig, skillConfig }) {
     const name = lvl.label.split('·')[1]?.trim() || lvl.label;
     out.push({
       key: `level:${lesson.level}`,
-      title: `${name} English (${lesson.level.toUpperCase()}) — One Lesson Every Day`.slice(0, 150),
+      title: (lvl.playlistTitle || `${name} English (${lesson.level.toUpperCase()}) — One Lesson Every Day`).slice(0, 150),
       description:
         `Every ${lvl.label} lesson from ${channel.channelName}, in the order it was published.\n\n` +
         `Four skills on a rotating cycle: speaking, vocabulary, reading and listening. ` +

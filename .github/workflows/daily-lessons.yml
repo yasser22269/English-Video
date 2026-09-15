@@ -166,7 +166,10 @@ jobs:
           YOUTUBE_CLIENT_ID: ${{ secrets.YOUTUBE_CLIENT_ID }}
           YOUTUBE_CLIENT_SECRET: ${{ secrets.YOUTUBE_CLIENT_SECRET }}
           YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
-        run: node scripts/retitle-published.js --apply --limit 20
+        run: |
+          # Playlists first: nine calls at most, then a no-op once they match.
+          node scripts/refresh-playlists.js --apply || true
+          node scripts/retitle-published.js --apply --limit 20
 
       # MP4s are 10-80 MB each and already on YouTube; keeping them on every run
       # would blow the artifact quota within a week. Only on failure, briefly.
