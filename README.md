@@ -27,10 +27,23 @@ There is a second reason. High upload volume on one channel demonstrably dilutes
 
 | Operation | Calls/day | Units |
 |---|---|---|
-| `videos.insert` | 5 | 8,000 |
-| `thumbnails.set` | 5 | 250 |
-| `playlistItems.insert` | 10 | 500 |
-| **Total** | | **8,750 / 10,000** |
+| `videos.insert` — 4 lessons + 1 Short | 5 | 8,000 |
+| `thumbnails.set` — lessons only | 4 | 200 |
+| `playlistItems.insert` — level + skill, Short level only | 9 | 450 |
+| **Publishing total** | | **8,650 / 10,000** |
+| `videos.update` — back catalogue, leftover quota | ~20 | ~1,000 |
+
+B2 and C1 share one daily slot (`channel.batch.alternate`) and the freed upload is a vertical Short (`channel.batch.shorts`). After month one A1 earned 9.5 views per video against 1.8 for B2 and C1, and the channel had no Shorts at all. Localised titles and descriptions in eight languages ride along inside `videos.insert` at no extra cost.
+
+### Research tools
+
+```bash
+node scripts/keywords.js markets "learn english"          # autocomplete in 8 markets
+node scripts/keywords.js expand "english words for"       # a-z expansion
+node scripts/keywords.js topics --level a1                # demand score per curriculum topic
+node scripts/reach-report.js                              # impressions + CTR (Reporting API)
+node scripts/retitle-published.js                         # dry-run the back-catalogue refresh
+```
 
 Each lesson joins two playlists — its level and its skill — so a viewer who finishes one has an obvious next one either way. Ids are cached in `state/playlists.json`, so the 50-unit create happens once per playlist rather than once per day. Either axis can be turned off in `config/channel.json` under `youtube.playlists`.
 

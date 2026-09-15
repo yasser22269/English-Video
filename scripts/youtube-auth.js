@@ -21,6 +21,11 @@ const REDIRECT = `http://localhost:${PORT}/callback`;
 const SCOPES = [
   'https://www.googleapis.com/auth/youtube.upload',
   'https://www.googleapis.com/auth/youtube',
+  // Impressions and click-through rate exist only in the YouTube Reporting API
+  // (channel_reach_basic_a1), which refuses the two scopes above with a 403.
+  // Without this the channel has no way to tell a thumbnail problem from a
+  // retention problem.
+  'https://www.googleapis.com/auth/yt-analytics.readonly',
 ];
 
 if (!env.ytClientId || !env.ytClientSecret) {

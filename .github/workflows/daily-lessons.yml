@@ -2,10 +2,12 @@ name: 📚 Daily English Lessons
 
 on:
   schedule:
-    # 09:00 UTC — just after the YouTube quota resets at Pacific midnight, so a
-    # run always starts with a full 10,000 units. Also a reasonable publish hour
-    # for the audience: 11:00 Cairo, 10:00 London, 05:00 New York.
-    - cron: '0 9 * * *'
+    # 08:17 UTC. The YouTube quota resets at Pacific midnight — 07:00 UTC in
+    # summer, 08:00 UTC in winter — so this is after the reset all year. The odd
+    # minute is deliberate: scheduled runs are queued behind everyone else's
+    # top-of-the-hour jobs, and the old '0 9' schedule actually started between
+    # 12:18 and 15:36 UTC across September.
+    - cron: '17 8 * * *'
   workflow_dispatch:
     inputs:
       level:
@@ -148,6 +150,23 @@ jobs:
           fi
           echo "node src/generate.js $ARGS"
           node src/generate.js $ARGS
+
+      # Whatever quota the uploads left (about 1,350 units with 4 lessons and a
+      # Short) goes to bringing older videos onto the current title patterns and
+      # adding localised titles. Best effort: it never fails the run.
+      - name: 🔁 Refresh the back catalogue
+        if: ${{ success() && github.event.inputs.upload != 'false' }}
+        continue-on-error: true
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GEMINI_MODEL: ${{ vars.GEMINI_MODEL }}
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          GROQ_MODEL: ${{ vars.GROQ_MODEL }}
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          YOUTUBE_CLIENT_ID: ${{ secrets.YOUTUBE_CLIENT_ID }}
+          YOUTUBE_CLIENT_SECRET: ${{ secrets.YOUTUBE_CLIENT_SECRET }}
+          YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
+        run: node scripts/retitle-published.js --apply --limit 20
 
       # MP4s are 10-80 MB each and already on YouTube; keeping them on every run
       # would blow the artifact quota within a week. Only on failure, briefly.
