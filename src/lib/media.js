@@ -65,6 +65,23 @@ async function pexelsPhoto(query, dest, variant = '') {
 }
 
 /**
+ * Per-process circuit breaker. On 15 Sep every Pollinations request answered
+ * 429 and every Hugging Face request failed outright, so each of ~30 daily
+ * images burned four failed attempts and their back-off before Pexels supplied
+ * it anyway — 29 wasted attempts in one production run. After three straight
+ * failures a provider is skipped for the rest of the run.
+ */
+const TRIP_AFTER = 3;
+const failures = new Map();
+const tripped = (name) => (failures.get(name) || 0) >= TRIP_AFTER;
+function record(name, ok) {
+  if (ok) { failures.set(name, 0); return; }
+  const n = (failures.get(name) || 0) + 1;
+  failures.set(name, n);
+  if (n === TRIP_AFTER) console.warn(`[media] ${name} failed ${n} times in a row — skipping it for the rest of this run`);
+}
+
+/**
  * One illustration per vocabulary word / scene. Providers are tried in order
  * and a failure is never fatal — the templates look fine without an image, so
  * a flaky image host must not take down the whole night's batch.
@@ -74,16 +91,20 @@ export async function generateImage(prompt, dest, { fallbackQuery } = {}) {
   if (env.imageProvider === 'off') return null;
 
   const attempts = [];
-  if (env.imageProvider === 'pollinations') attempts.push(() => pollinations(prompt, dest));
-  if (env.huggingfaceKey) attempts.push(() => huggingface(prompt, dest));
-  if (env.pexelsKey) attempts.push(() => pexelsPhoto(fallbackQuery || prompt, dest, dest));
+  if (env.imageProvider === 'pollinations') attempts.push(['pollinations', () => pollinations(prompt, dest)]);
+  if (env.huggingfaceKey) attempts.push(['huggingface', () => huggingface(prompt, dest)]);
+  if (env.pexelsKey) attempts.push(['pexels', () => pexelsPhoto(fallbackQuery || prompt, dest, dest)]);
 
-  for (const attempt of attempts) {
-    for (let tries = 0; tries < 2; tries++) {
+  for (const [name, attempt] of attempts) {
+    if (tripped(name)) continue;
+    for (let tries = 0; tries < 2 && !tripped(name); tries++) {
       try {
-        return await attempt();
+        const out = await attempt();
+        record(name, true);
+        return out;
       } catch (err) {
-        console.warn(`[media] image attempt failed — ${err.message}`);
+        record(name, false);
+        console.warn(`[media] ${name} image attempt failed — ${err.message}`);
         await sleep(1500);
       }
     }
