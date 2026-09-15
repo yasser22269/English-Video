@@ -13,9 +13,11 @@ const THUMB_TEMPLATE = path.join(paths.templates, 'thumbnail.html');
  * faster and matters when a lesson has 80 scenes.
  */
 export class SceneRenderer {
-  constructor({ width = 1920, height = 1080 } = {}) {
+  constructor({ width = 1920, height = 1080, template = 'scene.html' } = {}) {
     this.width = width;
     this.height = height;
+    // Shorts render through their own vertical template (short.html).
+    this.template = path.join(paths.templates, template);
   }
 
   async open() {
@@ -32,7 +34,7 @@ export class SceneRenderer {
     });
     this.page = await this.browser.newPage();
     await this.page.setViewport({ width: this.width, height: this.height, deviceScaleFactor: 1 });
-    await this.page.goto(pathToFileURL(SCENE_TEMPLATE).href, { waitUntil: 'load' });
+    await this.page.goto(pathToFileURL(this.template || SCENE_TEMPLATE).href, { waitUntil: 'load' });
     return this;
   }
 

@@ -20,8 +20,37 @@ export function skillFor(level, date = new Date()) {
   return cycle[(dayIndex(date) + levelIdx) % cycle.length];
 }
 
+/**
+ * Which levels publish a long lesson today.
+ *
+ * `channel.batch.alternate` lists levels that share one slot, taking turns day
+ * by day. Month one measured A1 at 9.5 views per video and B2/C1 at 1.8 (C1's
+ * newest cohort: 5.7% average view percentage), so B2 and C1 now alternate
+ * rather than each taking a daily slot — both stay on the channel, roughly
+ * fifteen lessons a month each — and the freed upload goes to a Short. Set
+ * `alternate` to [] to go back to one long lesson per level per day.
+ */
+export function levelsFor(date = new Date()) {
+  const alternate = channel.batch?.alternate || [];
+  const fixed = channel.levels.filter(l => !alternate.includes(l));
+  if (!alternate.length) return channel.levels;
+  const turn = alternate[dayIndex(date) % alternate.length];
+  return channel.levels.filter(l => fixed.includes(l) || l === turn);
+}
+
 export function todaysBatch(date = new Date()) {
-  return channel.levels.map(level => ({ level, skill: skillFor(level, date), date }));
+  return levelsFor(date).map(level => ({ level, skill: skillFor(level, date), date }));
+}
+
+/**
+ * Today's Short: a vertical micro-lesson cut from the level that earns views.
+ * Rotates through `channel.batch.shorts.levels` so each gets its turn.
+ */
+export function todaysShort(date = new Date()) {
+  const cfg = channel.batch?.shorts;
+  if (!cfg?.enabled || !cfg.levels?.length) return null;
+  const level = cfg.levels[dayIndex(date) % cfg.levels.length];
+  return { level, skill: 'short', date };
 }
 
 function loadState() {

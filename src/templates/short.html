@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<style>
+  /*
+   * Vertical 1080x1920 frame for YouTube Shorts.
+   *
+   * The Shorts player paints its own interface over the video: search and
+   * camera at the top (~220px), the like/comment/share column down the right
+   * edge (~150px), and the title, channel and description across the bottom
+   * (~560px). Nothing that matters is drawn there. The content lives in the
+   * band between 240px and 1340px, left-weighted, and the burned-in caption
+   * track is lifted to sit just below it (see buildAss vertical margins).
+   */
+  :root {
+    --accent: #22C55E;
+    --accent-dark: #15803D;
+    --bg-a: #04120B;
+    --bg-b: #082018;
+    --bg-c: #05170F;
+    --ink: #F8FAFC;
+    --ink-dim: #9FB0C2;
+    --font-en: system-ui, "Segoe UI", Roboto, "Noto Sans", Arial, sans-serif;
+    --font-ar: "Segoe UI", Tahoma, "Noto Sans Arabic", "Noto Naskh Arabic", sans-serif;
+    --tr-dir: rtl;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body {
+    width: 1080px; height: 1920px; overflow: hidden;
+    background: #000; color: var(--ink); font-family: var(--font-en);
+    -webkit-font-smoothing: antialiased;
+  }
+  #stage {
+    position: relative; width: 1080px; height: 1920px;
+    background:
+      radial-gradient(900px 900px at 20% 12%, color-mix(in srgb, var(--accent) 22%, transparent), transparent 62%),
+      radial-gradient(800px 800px at 90% 70%, color-mix(in srgb, var(--accent) 12%, transparent), transparent 60%),
+      linear-gradient(165deg, var(--bg-a) 0%, var(--bg-b) 55%, var(--bg-c) 100%);
+  }
+  /* a soft floor behind the caption track so it reads over any image */
+  #floor {
+    position: absolute; left: 0; right: 0; top: 1290px; height: 420px;
+    background: linear-gradient(to bottom, transparent, rgba(0,0,0,.55) 40%, rgba(0,0,0,.55) 70%, transparent);
+  }
+  #progress {
+    position: absolute; top: 236px; left: 64px; right: 190px; height: 10px;
+    border-radius: 6px; background: rgba(255,255,255,.12); overflow: hidden;
+  }
+  #progress i {
+    display: block; height: 100%; width: 0;
+    background: linear-gradient(90deg, var(--accent-dark), var(--accent));
+  }
+  #badge {
+    position: absolute; top: 270px; left: 64px;
+    font-size: 34px; font-weight: 800; letter-spacing: .08em;
+    padding: 12px 26px; border-radius: 999px;
+    background: color-mix(in srgb, var(--accent) 24%, transparent);
+    border: 3px solid color-mix(in srgb, var(--accent) 60%, transparent);
+  }
+  main {
+    position: absolute; left: 64px; right: 170px; top: 370px; height: 900px;
+    display: flex; flex-direction: column; justify-content: center; gap: 30px;
+  }
+  .ar { font-family: var(--font-ar); direction: var(--tr-dir); }
+
+  /* hook */
+  .hook { font-size: 92px; line-height: 1.08; font-weight: 900; letter-spacing: -.02em; }
+  .chips { display: flex; flex-wrap: wrap; gap: 18px; margin-top: 16px; }
+  .chip {
+    font-size: 46px; font-weight: 800; padding: 16px 30px; border-radius: 22px;
+    background: rgba(255,255,255,.08); border: 3px solid rgba(255,255,255,.18);
+  }
+  .chip:first-child { background: color-mix(in srgb, var(--accent) 30%, transparent); border-color: var(--accent); }
+
+  /* word */
+  .count { font-size: 36px; color: var(--ink-dim); font-weight: 700; letter-spacing: .12em; }
+  .art {
+    width: 846px; height: 520px; object-fit: cover; border-radius: 40px;
+    border: 4px solid color-mix(in srgb, var(--accent) 45%, transparent);
+    box-shadow: 0 30px 80px rgba(0,0,0,.55);
+  }
+  .art.placeholder {
+    display: flex; align-items: center; justify-content: center;
+    font-size: 240px; font-weight: 900; color: var(--accent);
+    background: color-mix(in srgb, var(--accent) 14%, transparent);
+  }
+  .term { font-size: 124px; font-weight: 900; line-height: 1; letter-spacing: -.02em; }
+  .ipa { font-size: 52px; color: var(--accent); font-weight: 700; }
+  .tr { font-size: 60px; font-weight: 700; }
+
+  /* example */
+  .example { font-size: 76px; line-height: 1.16; font-weight: 800; }
+  .example b { color: var(--accent); }
+  .art.small { height: 380px; }
+
+  /* end */
+  .end-h { font-size: 88px; line-height: 1.08; font-weight: 900; }
+  .end-sub { font-size: 48px; color: var(--ink-dim); font-weight: 600; }
+</style>
+</head>
+<body>
+<div id="stage">
+  <div id="progress"><i id="bar"></i></div>
+  <div id="badge"></div>
+  <main id="main"></main>
+  <div id="floor"></div>
+</div>
+<script>
+const esc = (s) => String(s ?? '').replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+
+function art(d, cls = '') {
+  return d.image
+    ? `<img class="art ${cls}" src="${esc(d.image)}" alt="">`
+    : `<div class="art placeholder ${cls}">${esc((d.word || '?').slice(0, 1).toUpperCase())}</div>`;
+}
+
+/** Bold every occurrence of the target word inside its example sentence. */
+function mark(sentence, word) {
+  const safe = esc(sentence);
+  if (!word) return safe;
+  const re = new RegExp(`(${String(word).replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'ig');
+  return safe.replace(re, '<b>$1</b>');
+}
+
+const LAYOUTS = {
+  'short-hook': (d) => `
+    <div class="hook">${esc(d.hook)}</div>
+    <div class="chips">${(d.chips || []).map(c => `<span class="chip">${esc(c)}</span>`).join('')}</div>`,
+
+  'short-word': (d) => `
+    <div class="count">${esc(d.counter)}</div>
+    ${art(d)}
+    <div class="term">${esc(d.word)}</div>
+    ${d.ipa ? `<div class="ipa">${esc(d.ipa)}</div>` : ''}
+    ${d.meaning_ar ? `<div class="tr ar">${esc(d.meaning_ar)}</div>` : ''}`,
+
+  'short-example': (d) => `
+    <div class="count">${esc(d.counter)} · in a sentence</div>
+    ${art(d, 'small')}
+    <div class="example">${mark(d.example, d.word)}</div>`,
+
+  'short-end': (d) => `
+    <div class="end-h">Full lesson on the channel</div>
+    <div class="end-sub">${esc(d.level)} · a new one every day</div>
+    <div class="chips">${(d.chips || []).map(c => `<span class="chip">${esc(c)}</span>`).join('')}</div>`,
+};
+
+window.renderScene = function renderScene(scene) {
+  const t = scene.theme || {};
+  const root = document.documentElement.style;
+  for (const [k, v] of Object.entries({ '--accent': t.accent, '--accent-dark': t.accentDark, '--bg-a': t.bgA, '--bg-b': t.bgB, '--bg-c': t.bgC })) {
+    if (v) root.setProperty(k, v);
+  }
+  root.setProperty('--tr-dir', scene.translationRtl === false ? 'ltr' : 'rtl');
+  document.getElementById('badge').textContent = (scene.levelLabel || '').split('·')[0].trim();
+  document.getElementById('bar').style.width = `${Math.max(0, Math.min(100, scene.progress || 0))}%`;
+  const build = LAYOUTS[scene.layout] || LAYOUTS['short-hook'];
+  document.getElementById('main').innerHTML = build(scene.data || {});
+  return true;
+};
+</script>
+</body>
+</html>

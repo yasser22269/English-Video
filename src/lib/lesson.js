@@ -126,6 +126,32 @@ The dialogue alternates strictly between speaker "A" and speaker "B", is ${lvl.t
 Include 5 key phrases and exactly ${lvl.questionCount} questions. "answer" is the 0-based index.`;
   },
 
+  short(level, topic, focus) {
+    return `${head(level, topic, focus)}
+TASK: a vertical YouTube Short under 50 seconds that teaches exactly THREE useful English words about ${topic}.
+A Short is watched on a phone by someone scrolling. The first sentence decides whether they stay, and the video should feel complete and loop cleanly.
+
+Return this exact shape:
+{
+  "title": "punchy title under 50 characters, no level name, no hashtags",
+  "hook": "ONE spoken sentence of 6 to 10 words that challenges the viewer, e.g. 'Three words every beginner needs at the airport.' Never a question about subscribing.",
+  "words": [
+    {
+      "word": "the target word or short phrase",
+      "ipa": "IPA between slashes",
+      "meaning": "definition in English simpler than the word, max 10 words",
+      "meaning_ar": "the ${translation.name} meaning, one to three words",
+      "example": "one short natural example sentence, max 9 words",
+      "example_ar": "${translation.name} of the example",
+      "image_prompt": "a concrete literal photo description of the word, 8-14 words, no text in image"
+    }
+  ],
+  "cta": "one short spoken sentence, max 10 words, telling them the full lesson is on the channel"
+}
+
+Exactly 3 items in "words". Choose words a learner at this level genuinely needs and probably does not know yet. No proper nouns.`;
+  },
+
   speaking(level, topic, focus) {
     const lvl = levelConfig(level);
     return `${head(level, topic, focus)}
@@ -179,6 +205,14 @@ const VALIDATORS = {
     if (!Array.isArray(lesson.dialogue) || lesson.dialogue.length < 8) return 'dialogue too short';
     if (lesson.dialogue.some(d => !d.en || !d.ar || !d.speaker)) return 'dialogue turn incomplete';
     if (!Array.isArray(lesson.questions) || lesson.questions.length < 3) return 'too few questions';
+    return null;
+  },
+  short: (lesson) => {
+    if (!lesson.hook) return 'missing hook';
+    if (!Array.isArray(lesson.words) || lesson.words.length !== 3) return 'a Short needs exactly three words';
+    for (const w of lesson.words) {
+      if (!w.word || !w.meaning || !w.meaning_ar || !w.example) return `word entry incomplete: ${JSON.stringify(w).slice(0, 80)}`;
+    }
     return null;
   },
   speaking: (lesson) => {
@@ -282,6 +316,7 @@ const FORMAT_PHRASE = {
   reading: 'learn English through a short story',
   listening: 'English conversation practice',
   speaking: 'English speaking practice with shadowing',
+  short: 'three English words with pictures and examples',
 };
 
 export function buildMetadata(lesson, { channel: ch, playlists = [], chapters = [] }) {

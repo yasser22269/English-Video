@@ -2,7 +2,7 @@
 import fs from 'fs';
 import path from 'path';
 import { channel, levelConfig, skillConfig, paths, env, fontConfig } from './lib/config.js';
-import { todaysBatch, pickTopic, slugify, dayIndex, publishAtFor, describeSlot } from './lib/schedule.js';
+import { todaysBatch, todaysShort, pickTopic, slugify, dayIndex, publishAtFor, describeSlot } from './lib/schedule.js';
 import { writeLesson, buildMetadata, localizeMetadata } from './lib/lesson.js';
 import { buildPlan, resolveTimings, buildChapters } from './lib/build.js';
 import { checkRetention } from './lib/guards.js';
@@ -80,6 +80,10 @@ async function buildOne({ level, skill, date, upload }) {
   const started = Date.now();
   const lvl = levelConfig(level);
   const skl = skillConfig(skill);
+  // A Short is the same pipeline in a vertical frame: its own template, its own
+  // dimensions, lifted captions, no thumbnail, no chapters.
+  const isShort = skill === 'short';
+  const vid = isShort ? channel.shortVideo : video;
   const stamp = date.toISOString().slice(0, 10);
 
   console.log(`\n═══ ${level.toUpperCase()} · ${skl.label} · ${stamp} ═══`);
@@ -138,7 +142,7 @@ async function buildOne({ level, skill, date, upload }) {
 
   const assFile = buildAss(track.timeline, {
     outFile: path.join(workDir, 'captions.ass'),
-    width: video.width, height: video.height,
+    width: vid.width, height: vid.height,
     fonts, accent: lvl.accent, cues,
   });
   buildSrt(track.timeline, path.join(workDir, 'captions.en.srt'), { field: 'text' });
@@ -151,7 +155,7 @@ async function buildOne({ level, skill, date, upload }) {
   for (const w of guard.warnings) console.warn(`  [guard] ${w}`);
 
   // 6 ─ frames
-  const renderer = await new SceneRenderer({ width: video.width, height: video.height }).open();
+  const renderer = await new SceneRenderer({ width: vid.width, height: vid.height, template: isShort ? 'short.html' : 'scene.html' }).open();
   const framesDir = path.join(workDir, 'frames');
   let stillFiles = [];
   try {
@@ -192,7 +196,7 @@ async function buildOne({ level, skill, date, upload }) {
       audioFile, assFile, outFile: videoFile, video, fontsDir: fonts.dir,
     });
   } else {
-    await composeStills({ scenes: stillFiles, audioFile, assFile, outFile: videoFile, video, fontsDir: fonts.dir });
+    await composeStills({ scenes: stillFiles, audioFile, assFile, outFile: videoFile, video: vid, fontsDir: fonts.dir });
   }
   const finalSec = await ffprobeDuration(videoFile);
   const sizeMb = (fs.statSync(videoFile).size / 1e6).toFixed(1);
@@ -206,28 +210,32 @@ async function buildOne({ level, skill, date, upload }) {
     : [];
   if (playlists.length) log('playlists', playlists.map(p => p.title).join(' · '));
 
-  const chapters = buildChapters(track.timeline);
+  const chapters = isShort ? [] : buildChapters(track.timeline);
   if (chapters.length) log('chapters', chapters.map(c => c.stamp).join(' '));
   const meta = buildMetadata(lesson, { channel, playlists, chapters });
-  const thumbFile = path.join(workDir, 'thumbnail.jpg');
+  // The Shorts feed never shows a custom thumbnail, so a Short skips both the
+  // render and the 50-unit thumbnails.set call.
+  const thumbFile = isShort ? null : path.join(workDir, 'thumbnail.jpg');
 
-  let heroImage = plan.images.length ? path.join(mediaDir, `${plan.images[0].id}.jpg`) : null;
-  if ((!heroImage || !fs.existsSync(heroImage)) && footageRaw) {
-    heroImage = await extractFrame(footageRaw, path.join(mediaDir, 'thumb-frame.jpg'), 2)
-      .catch(() => null);
+  if (!isShort) {
+    let heroImage = plan.images.length ? path.join(mediaDir, `${plan.images[0].id}.jpg`) : null;
+    if ((!heroImage || !fs.existsSync(heroImage)) && footageRaw) {
+      heroImage = await extractFrame(footageRaw, path.join(mediaDir, 'thumb-frame.jpg'), 2)
+        .catch(() => null);
+    }
+
+    await renderThumbnail({
+      level: lvl.label.split('·')[0].trim(),
+      skill: skl.label,
+      headline: lesson.title,
+      highlight: thumbnailHighlight(lesson),
+      sub: thumbnailSub(lesson, skl),
+      brand: channel.channelName,
+      image: heroImage && fs.existsSync(heroImage) ? heroImage : null,
+      accent: lvl.accent, accentDark: lvl.accentDark, bgA: lvl.bgA, bgB: lvl.bgB, bgC: lvl.bgC,
+    }, thumbFile);
+    log('thumbnail', path.basename(thumbFile));
   }
-
-  await renderThumbnail({
-    level: lvl.label.split('·')[0].trim(),
-    skill: skl.label,
-    headline: lesson.title,
-    highlight: thumbnailHighlight(lesson),
-    sub: thumbnailSub(lesson, skl),
-    brand: channel.channelName,
-    image: heroImage && fs.existsSync(heroImage) ? heroImage : null,
-    accent: lvl.accent, accentDark: lvl.accentDark, bgA: lvl.bgA, bgB: lvl.bgB, bgC: lvl.bgC,
-  }, thumbFile);
-  log('thumbnail', path.basename(thumbFile));
 
   // 9 ─ publish
   let result = null;
@@ -235,7 +243,7 @@ async function buildOne({ level, skill, date, upload }) {
   if (upload) {
     // Each level owns a fixed hour of the day; null means that hour is already
     // gone and the lesson should just go out now.
-    publishAt = publishAtFor(level, date);
+    publishAt = isShort ? null : publishAtFor(level, date);
     let localizations = {};
     try {
       localizations = await localizeMetadata(lesson, meta, { languages: channel.youtube.localizations });
@@ -288,6 +296,9 @@ async function main() {
     batch = [{ level: arg('level'), skill: arg('skill') || 'vocabulary', date }];
   } else {
     batch = todaysBatch(date);
+    // One vertical Short a day, on top of the long lessons.
+    const short = todaysShort(date);
+    if (short) batch.push(short);
     if (arg('only')) batch = batch.filter(b => b.level === arg('only'));
   }
 

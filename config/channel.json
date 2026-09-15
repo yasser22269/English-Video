@@ -168,6 +168,19 @@
         "english listening practice {level}",
         "english podcast for learning english"
       ]
+    },
+    "short": {
+      "label": "Short",
+      "emoji": "⚡",
+      "titlePattern": "{topic}: 3 English Words in 60 Seconds ({level}) #shorts",
+      "searchTags": [
+        "english words",
+        "english vocabulary",
+        "learn english",
+        "english shorts",
+        "english words for {levelName}"
+      ],
+      "playlistTitle": null
     }
   },
   "youtube": {
@@ -225,5 +238,28 @@
       "linux": "Noto Sans Arabic"
     },
     "note": "To switch the burned-in translation to another language, change this block (e.g. {code:\"pt\", name:\"Portuguese\", promptStyle:\"natural Brazilian Portuguese\", rtl:false, font:{windows:\"Segoe UI\", linux:\"Noto Sans\"}}). Titles and descriptions are localised separately via youtube.localizations."
+  },
+  "batch": {
+    "alternate": [
+      "b2",
+      "c1"
+    ],
+    "shorts": {
+      "enabled": true,
+      "levels": [
+        "a1",
+        "a2",
+        "a1",
+        "b1"
+      ]
+    },
+    "note": "Month one: A1 9.5 views/video, B2 and C1 1.8 (C1 newest cohort 5.7% retention). B2 and C1 share one daily slot and the freed upload becomes a Short, weighted to A1/A2 where the audience is. Set alternate to [] and shorts.enabled to false to restore one long lesson per level."
+  },
+  "shortVideo": {
+    "width": 1080,
+    "height": 1920,
+    "fps": 30,
+    "crf": 20,
+    "preset": "veryfast"
   }
 }

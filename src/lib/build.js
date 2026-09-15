@@ -557,11 +557,48 @@ function buildSpeaking(plan) {
   return { mode: 'footage', footageQuery: lesson.footage_query || lesson.footage || lesson.topic };
 }
 
+/* ── short ──────────────────────────────────────────────────────────────── */
+/**
+ * A vertical micro-lesson: three words in under a minute.
+ *
+ * The channel published 108 long videos in its first month and no Shorts, and
+ * Shorts are where a channel with nine subscribers gets shown to strangers. The
+ * shape follows the one thing month one proved about attention: value from the
+ * first second. The hook names the three words' payoff, every word arrives on
+ * its own frame with its picture, and nothing asks the viewer to wait.
+ */
+function buildShort(plan) {
+  const { lesson, lvl } = plan;
+  const words = lesson.words;
+
+  plan.scene('short-hook', { hook: lesson.hook, chips: words.map(w => w.word) });
+  plan.say(lesson.hook, { pauseAfterMs: 260 });
+
+  words.forEach((w, i) => {
+    const imgId = plan.image(`short-${i + 1}`, w.image_prompt || `${w.word}, ${lesson.topic}`, `${w.word} ${lesson.topic}`);
+    plan.scene('short-word', {
+      counter: `${i + 1}/${words.length}`,
+      word: w.word, ipa: w.ipa, meaning_ar: w.meaning_ar, imageId: imgId,
+    });
+    plan.say(`${w.word}.`, { rate: shiftRate(lvl.rate, -6), pauseAfterMs: 380 });
+    plan.say(w.meaning, { ar: w.meaning_ar, pauseAfterMs: 240 });
+
+    plan.scene('short-example', { counter: `${i + 1}/${words.length}`, word: w.word, example: w.example, imageId: imgId });
+    plan.say(w.example, { ar: w.example_ar || null, pauseAfterMs: 320 });
+  });
+
+  plan.scene('short-end', { level: lvl.label, chips: words.map(w => w.word) });
+  plan.say(lesson.cta || 'The full lesson is on the channel.', { pauseAfterMs: 500 });
+
+  return { mode: 'stills', format: 'vertical' };
+}
+
 const BUILDERS = {
   vocabulary: buildVocabulary,
   reading: buildReading,
   listening: buildListening,
   speaking: buildSpeaking,
+  short: buildShort,
 };
 
 export function buildPlan(lesson) {

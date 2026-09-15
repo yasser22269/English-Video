@@ -171,7 +171,9 @@ export function playlistsFor(lesson, { levelConfig, skillConfig }) {
     });
   }
 
-  if (cfg.bySkill !== false) {
+  // A Short joins its level's playlist only: there is no "Shorts" skill course,
+  // and one playlist add is 50 units a Short does not need to spend twice.
+  if (cfg.bySkill !== false && lesson.skill !== 'short') {
     const skl = skillConfig(lesson.skill);
     out.push({
       key: `skill:${lesson.skill}`,

@@ -127,6 +127,26 @@ function dialogue({ start, end, style, text, layer = 0, effect = '' }) {
 }
 
 /**
+ * Re-seat the caption styles for a vertical Short.
+ *
+ * The margins were tuned for a 1080p landscape frame, where the caption band is
+ * the bottom 320px. On a Short the bottom ~560px belongs to YouTube's own
+ * title-and-buttons overlay, and the right edge to the like/comment column, so
+ * bottom-anchored styles are lifted clear of it, top-anchored ones pushed below
+ * the search bar, and the side margins narrowed to a 1080px-wide frame.
+ */
+function liftForVertical(header) {
+  return header.replace(/^Style: ([^,]+),(.*),(\d+),(\d+),(\d+),(\d+),(\d+)(\r?)$/gm, (line, name, mid, align, ml, mr, mv, enc, cr) => {
+    const a = Number(align);
+    const bottom = a >= 1 && a <= 3;
+    const top = a >= 7 && a <= 9;
+    const lift = bottom ? 500 : top ? 150 : 0;
+    const left = a === 1 ? 64 : 60;
+    return `Style: ${name},${mid},${align},${left},150,${Number(mv) + lift},${enc}${cr}`;
+  });
+}
+
+/**
  * @param {Array} timeline  lines from assembleVoiceTrack, each optionally with
  *                          { ar, captions: 'karaoke'|'plain'|'none', note }
  * @param {Array} cues      [{ startMs, endMs, text }] shown during silences
@@ -182,7 +202,9 @@ export function buildAss(timeline, { outFile, width, height, fonts, accent, cues
     }));
   }
 
-  const body = HEADER({ width, height, fonts, accent }) + events.join('\n') + '\n';
+  let header = HEADER({ width, height, fonts, accent });
+  if (height > width) header = liftForVertical(header);
+  const body = header + events.join('\n') + '\n';
   fs.mkdirSync(path.dirname(outFile), { recursive: true });
   fs.writeFileSync(outFile, body, 'utf8');
   return outFile;
