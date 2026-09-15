@@ -1,6 +1,6 @@
 # English Every Day
 
-An automated YouTube channel that publishes **five English lessons a day**, one for each CEFR level, rotating through the four skills.
+An automated YouTube channel that publishes **four English lessons and one Short a day** across the CEFR levels (B2 and C1 alternate days), rotating through the four skills, for a global audience.
 
 ```
 day 0   A1 speaking   A2 vocabulary  B1 reading    B2 listening  C1 speaking
@@ -54,13 +54,19 @@ Each lesson joins two playlists — its level and its skill — so a viewer who 
 
 ## What each lesson looks like
 
-**Vocabulary** — ten words. Each gets a card with an AI-generated illustration, IPA, part of speech and the Arabic meaning; the voice says the word slowly, defines it, gives two examples and a collocation, then leaves a silence for the viewer to repeat. Ends with a recap and four gap-fill questions.
+Every format opens on teaching, not on a title card, and runs **comprehensible first, challenge last** — month one's retention curves showed viewers leaving exactly where the video asked them to follow English they could not yet read.
 
-**Reading** — pre-teach the six words that appear in the text, read the passage straight through for gist, then walk it again slowly sentence by sentence with the Arabic underneath, then comprehension questions with a pause to think before the answer is revealed.
+**Vocabulary** — ten words. Each gets a card with an illustration, IPA, part of speech and its translation, then its examples and collocation on their own frames, and a silence to repeat. Ends with a recap and four gap-fill questions.
 
-**Listening** — a two-person conversation over stock footage. Played **once with no text on screen at all** (that is the part that trains listening), then again slightly slower with the karaoke line and the translation, then key phrases and comprehension questions.
+**Reading** — the text from the first second: read line by line with the translation, then the key words from it, then the whole text again at natural speed, then comprehension questions.
 
-**Speaking** — listen-and-repeat drills. Context, the phrase at natural speed, the pronunciation point, the phrase again slowly, then a silence scaled to the phrase's length with a "Repeat it out loud" cue. Ends with a model dialogue and a shadowing round.
+**Listening** — a two-person conversation over stock footage, first with the karaoke line and translation, then key phrases and comprehension questions, and finally a **no-text challenge** pass for the viewers who stayed.
+
+**Speaking** — opens on three of the phrases, then listen-and-repeat drills with a pronunciation point and a silence scaled to each phrase. Ends with a model dialogue and a shadowing round.
+
+**Short** — vertical 1080x1920, under a minute: a hook, three words with a picture and an example each.
+
+The translation language is one block in `config/channel.json` (`translation`); titles and descriptions are localised separately into the languages in `youtube.localizations`.
 
 ---
 
