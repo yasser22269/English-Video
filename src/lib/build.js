@@ -134,7 +134,15 @@ function outro(plan) {
     cards: ['A1 · A2 · B1 · B2 · C1', 'Speaking · Vocabulary · Reading · Listening', 'Subscribe to keep the streak'],
   });
   if (lesson.outro) plan.say(lesson.outro);
-  plan.say('Subscribe, and I will see you in tomorrow lesson.', { pauseAfterMs: 900 });
+  // 0 comments across the first 108 videos. Asking for one concrete, useful
+  // thing — a sentence with today's language — is practice for the learner and
+  // the only engagement signal the channel is not currently sending at all.
+  plan.say('Practise right now. Write one sentence in the comments using something from today.', {
+    cue: 'Write your sentence in the comments', pauseAfterMs: 1600,
+  });
+  // Was "see you in tomorrow lesson" — a grammar mistake in the closing line of
+  // an English lesson.
+  plan.say("Subscribe, and I will see you in tomorrow's lesson.", { pauseAfterMs: 900 });
 }
 
 /* ── vocabulary ─────────────────────────────────────────────────────────── */
@@ -292,15 +300,33 @@ function buildReading(plan) {
     },
   });
 
-  // 1 ─ pre-teach, so the first read-through is actually comprehensible
+  // 1 ─ keep reading, with the translation. The viewer is already inside the
+  // text from the cold open. The old order stopped there for ~45 seconds of
+  // pre-taught glossary before the passage resumed, and the September reading
+  // cohort averaged 33 seconds watched — the same comprehensible-first order
+  // that the listening retention curves argued for.
+  const sentences = lesson.passage.map(s => s.en);
+
+  plan.say('Let us read the whole text, one sentence at a time.', { note: 'Line by line', chapter: 'Read it line by line, with translation', pauseAfterMs: 300 });
+  lesson.passage.forEach((sentence, i) => {
+    plan.scene('reading', { eyebrow: `Line by line · ${i + 1} of ${sentences.length}`, sentences, active: i });
+    plan.say(sentence.en, {
+      rate: shiftRate(lvl.rate, -6),
+      ar: sentence.ar,
+      note: `Line by line · ${i + 1} of ${sentences.length}`,
+      pauseAfterMs: 560,
+    });
+  });
+
+  // 2 ─ the words worth keeping, now that the viewer has met them in context
   if (lesson.glossary?.length) {
     plan.scene('title', {
-      eyebrow: 'Before you read',
-      title: 'The words you will meet in the text',
+      eyebrow: 'Words from the text',
+      title: 'The words worth keeping',
       subtitle: lesson.passage_title || lesson.topic,
       chips: lesson.glossary.map(g => g.word),
     });
-    plan.say('Before we read, here are the words from the text that you need.', { chapter: 'The words you need first' });
+    plan.say('Here are the words from the text worth keeping.', { chapter: 'Key words from the text' });
 
     lesson.glossary.forEach((g, i) => {
       plan.scene('word', {
@@ -308,46 +334,23 @@ function buildReading(plan) {
         word: g.word,
         meaning_ar: g.meaning_ar,
       });
-      plan.say(`${g.word}.`, { rate: shiftRate(lvl.rate, -8), pauseAfterMs: 560, note: 'Before you read' });
-      plan.say(g.meaning, { ar: g.meaning_ar, note: 'Before you read' });
+      plan.say(`${g.word}.`, { rate: shiftRate(lvl.rate, -8), pauseAfterMs: 560, note: 'Key words' });
+      plan.say(g.meaning, { ar: g.meaning_ar, note: 'Key words' });
     });
   }
 
-  // 2 ─ straight through, English only: read for the gist, no translation crutch
-  const sentences = lesson.passage.map(s => s.en);
-
+  // 3 ─ the whole text at natural speed with no translation: the fluency test
   plan.scene('passage', {
-    eyebrow: 'Read along',
+    eyebrow: 'Now read it fluently',
     title: lesson.passage_title || lesson.topic,
-    note: 'Follow the highlighted sentence. Do not stop at what you do not know.',
+    note: 'Natural speed, no translation. Follow the highlighted sentence.',
     imageId: heroId,
   });
-  plan.say('Now read the whole text with me. Follow the words as I say them.', { note: 'Read along', chapter: 'Read the whole text' });
+  plan.say('Now read it again at natural speed, with no translation.', { note: 'Read along', chapter: 'Read it at natural speed' });
 
-  // One frame per sentence, each lighting the line being read. The previous
-  // build held a single poster — showing the passage TITLE, not the passage —
-  // for 136 seconds while the text went past in the caption band alone.
   lesson.passage.forEach((sentence, i) => {
     plan.scene('reading', { eyebrow: `Read along · ${i + 1} of ${sentences.length}`, sentences, active: i });
     plan.say(sentence.en, { note: `Read along · ${i + 1} of ${sentences.length}`, pauseAfterMs: 260 });
-  });
-
-  // 3 ─ again, slower, sentence by sentence, with the Arabic
-  plan.scene('passage', {
-    eyebrow: 'Line by line',
-    title: lesson.passage_title || lesson.topic,
-    note: 'Same text, slower, with the meaning underneath.',
-    imageId: heroId,
-  });
-  plan.say('Let us go through it again, slowly, one sentence at a time.', { note: 'Line by line', chapter: 'Line by line, with Arabic' });
-  lesson.passage.forEach((sentence, i) => {
-    plan.scene('reading', { eyebrow: `Line by line · ${i + 1} of ${sentences.length}`, sentences, active: i });
-    plan.say(sentence.en, {
-      rate: shiftRate(lvl.rate, -7),
-      ar: sentence.ar,
-      note: `Line by line · ${i + 1} of ${sentences.length}`,
-      pauseAfterMs: 700,
-    });
   });
 
   // 4 ─ comprehension
@@ -370,10 +373,10 @@ function buildListening(plan) {
   const { lesson, lvl } = plan;
   const voiceOf = (s) => (s === 'B' ? lvl.speakerB : lvl.speakerA);
 
-  // Title card for the opening only. Once the lesson proper starts the middle
-  // of the frame is cleared: the footage is the visual, and the section label
-  // lives in the top note line.
-  // Taste: the situation and the first exchange, before any branding.
+  // Taste: the line of the conversation that is most about the topic — not
+  // simply dialogue[0], which is nearly always a greeting ("Hi, I am Sam") and
+  // off-promise for a lesson titled, say, "Saying Goodbye Politely".
+  const taste = pickTasteTurn(lesson);
   coldOpen(plan, {
     eyebrow: 'Listening practice',
     chips: [lvl.label, `${lesson.dialogue.length} turns`, lesson.focus],
@@ -383,13 +386,12 @@ function buildListening(plan) {
         title: lesson.setting || lesson.topic,
         note: 'Can you follow this conversation?',
       }, { transparent: true });
-      const opener = lesson.dialogue[0];
-      if (opener) {
-        plan.say(opener.en, {
-          voice: voiceOf(opener.speaker),
+      if (taste) {
+        plan.say(taste.en, {
+          voice: voiceOf(taste.speaker),
           rate: lvl.rate,
-          ar: opener.ar,
-          speakerName: opener.speaker === 'B' ? 'Speaker B' : 'Speaker A',
+          ar: taste.ar,
+          speakerName: taste.speaker === 'B' ? 'Speaker B' : 'Speaker A',
           note: lesson.setting || lesson.topic,
           pauseAfterMs: 520,
         });
@@ -399,39 +401,22 @@ function buildListening(plan) {
 
   plan.scene('overlay', {}, { transparent: true });
 
-  // Pass 1 — ears only. Hiding the words is the whole exercise, but the first
-  // build put NOTHING on screen for 88.5 seconds (measured: 0:27.5 to 1:56.0)
-  // over a dimmed 21-second stock loop, and the average view died 19 seconds
-  // into it. The words stay hidden; everything else that can move, moves —
-  // who is speaking, how far through we are, and how many turns are left.
+  // Pass 1 — WITH the words. Measured on the September cohort: the ears-only
+  // pass began 13.8s in (7% of the video), and the retention curves fell from
+  // 54% to 15% and from 92% to 42% in exactly that window. A beginner who came
+  // for a lesson does not stay through a conversation they cannot follow yet.
+  // So the order is comprehensible input first, challenge last.
   const turns = lesson.dialogue.length;
-  plan.say('Listen once with no text. Just follow the sound.', {
-    note: 'Listen — no text', chapter: 'Listen once — no text', cue: 'Ears only', pauseAfterMs: 800,
+  plan.say('Here is the conversation. Read along as you listen.', {
+    note: 'The conversation', chapter: 'The conversation — with the words', pauseAfterMs: 500,
   });
   lesson.dialogue.forEach((turn, i) => {
-    const who = turn.speaker === 'B' ? 'Speaker B' : 'Speaker A';
     plan.say(turn.en, {
       voice: voiceOf(turn.speaker),
-      rate: lvl.rate,
-      captions: 'none',
-      // The big centred cue carries the speaker, so the small corner label
-      // would just print the same words twice. Tracking who is talking is
-      // itself a listening skill, so this is information, not filler.
-      note: `Listen — no text · ${i + 1} of ${turns}`,
-      cue: who,
-      pauseAfterMs: i === turns - 1 ? 1200 : 340,
-    });
-  });
-
-  // Pass 2 — same conversation, a little slower, with karaoke and Arabic.
-  plan.say('Now listen again. This time you can read every word.', { note: 'Listen again — with text', chapter: 'Listen again — with the words', pauseAfterMs: 900 });
-  lesson.dialogue.forEach((turn) => {
-    plan.say(turn.en, {
-      voice: voiceOf(turn.speaker),
-      rate: shiftRate(lvl.rate, -10),
+      rate: shiftRate(lvl.rate, -6),
       ar: turn.ar,
       speakerName: turn.speaker === 'B' ? 'Speaker B' : 'Speaker A',
-      note: 'Listen again — with text',
+      note: `The conversation · ${i + 1} of ${turns}`,
     });
   });
 
@@ -455,8 +440,56 @@ function buildListening(plan) {
     if (q.explain) plan.say(q.explain, { note: label });
   });
 
+  // The ears-only pass is still the part that actually trains listening — it
+  // just belongs at the end, as a test for the viewers who stayed, instead of
+  // at second fourteen, where it was losing the ones who had not decided yet.
+  plan.say('Last challenge. Listen one more time, with no text at all. How much do you understand now?', {
+    note: 'Challenge — no text', chapter: 'Challenge — listen with no text', cue: 'Ears only', pauseAfterMs: 900,
+  });
+  lesson.dialogue.forEach((turn, i) => {
+    const who = turn.speaker === 'B' ? 'Speaker B' : 'Speaker A';
+    plan.say(turn.en, {
+      voice: voiceOf(turn.speaker),
+      rate: lvl.rate,
+      captions: 'none',
+      // Words stay hidden; the speaker and the turn counter keep the frame alive
+      // without giving any of them away.
+      note: `Challenge — no text · ${i + 1} of ${turns}`,
+      cue: who,
+      pauseAfterMs: i === turns - 1 ? 1200 : 340,
+    });
+  });
+
   outro(plan);
   return { mode: 'footage', footageQuery: lesson.footage_query || lesson.footage || lesson.topic };
+}
+
+/**
+ * The dialogue turn that best represents the lesson's topic, for the cold open.
+ * Prefers a turn containing a key phrase, then the turn sharing the most words
+ * with the topic, and never a bare greeting.
+ */
+function pickTasteTurn(lesson) {
+  const turns = lesson.dialogue || [];
+  if (!turns.length) return null;
+
+  const norm = (s) => String(s).toLowerCase().replace(/[^a-z\s']/g, ' ');
+  const greeting = /^(hi|hello|hey|good (morning|afternoon|evening))\b/;
+
+  for (const p of lesson.key_phrases || []) {
+    const hit = turns.find(t => norm(t.en).includes(norm(p.phrase).trim()));
+    if (hit) return hit;
+  }
+
+  const topicWords = new Set(norm(lesson.topic).split(/\s+/).filter(w => w.length > 3));
+  let best = null;
+  let bestScore = -1;
+  for (const t of turns) {
+    if (greeting.test(norm(t.en).trim())) continue;
+    const score = norm(t.en).split(/\s+/).filter(w => topicWords.has(w)).length;
+    if (score > bestScore) { best = t; bestScore = score; }
+  }
+  return best || turns[Math.min(1, turns.length - 1)];
 }
 
 /* ── speaking ───────────────────────────────────────────────────────────── */
@@ -464,27 +497,24 @@ function buildSpeaking(plan) {
   const { lesson, lvl } = plan;
   const voiceOf = (s) => (s === 'B' ? lvl.speakerB : lvl.speakerA);
 
-  // Taste: the first phrase, spoken and repeated, before any branding.
+  // Taste: three of the phrases, back to back, with their meaning — the whole
+  // value of the lesson in the first ten seconds. The old taste asked the viewer
+  // to repeat a phrase aloud and then held 2.1 seconds of silence before the
+  // title had even appeared; the C1 speaking lesson that search delivered 14
+  // viewers to kept them for an average of 17 seconds.
   coldOpen(plan, {
     eyebrow: 'Speaking practice',
     chips: [lvl.label, `${lesson.drills.length} phrases`, lesson.focus],
     taste: () => {
+      const preview = lesson.drills.slice(0, 3);
       plan.scene('overlay', {
-        eyebrow: 'Say it like a native',
-        title: lesson.drills[0]?.phrase || lesson.title,
-        note: 'Listen, then say it out loud.',
+        eyebrow: `${lesson.drills.length} phrases for ${lesson.topic}`,
+        title: preview[0]?.phrase || lesson.title,
+        note: 'Say them like a native speaker.',
       }, { transparent: true });
-      const first = lesson.drills[0];
-      if (first) {
-        plan.say(first.phrase, { ar: first.phrase_ar, note: 'Phrase 1', pauseAfterMs: 420 });
-        plan.say(first.phrase, {
-          rate: shiftRate(lvl.rate, -9),
-          ar: first.phrase_ar,
-          note: 'Phrase 1',
-          cue: 'Repeat it out loud',
-          pauseAfterMs: 2100,
-        });
-      }
+      preview.forEach((d, i) => {
+        plan.say(d.phrase, { ar: d.phrase_ar, note: `Today · ${i + 1} of ${lesson.drills.length}`, pauseAfterMs: 360 });
+      });
     },
   });
 

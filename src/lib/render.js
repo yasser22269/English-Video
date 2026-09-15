@@ -2,7 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import { pathToFileURL } from 'url';
 import puppeteer from 'puppeteer';
-import { paths } from './config.js';
+import { paths, translation } from './config.js';
 
 const SCENE_TEMPLATE = path.join(paths.templates, 'scene.html');
 const THUMB_TEMPLATE = path.join(paths.templates, 'thumbnail.html');
@@ -46,6 +46,7 @@ export class SceneRenderer {
     // Local images have to be inlined: file:// pages cannot load sibling files
     // reliably across platforms, and a half-loaded <img> would screenshot blank.
     const payload = { ...scene, data: { ...(scene.data || {}) } };
+    payload.translationRtl = translation.rtl;
     if (payload.data.image && fs.existsSync(payload.data.image)) {
       const ext = path.extname(payload.data.image).slice(1).toLowerCase() || 'jpg';
       const mime = ext === 'png' ? 'image/png' : 'image/jpeg';

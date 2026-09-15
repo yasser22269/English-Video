@@ -1,7 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import { google } from 'googleapis';
-import { env, paths, channel } from './config.js';
+import { env, paths, channel, translation } from './config.js';
 
 const QUOTA_FILE = path.join(paths.state, 'quota.json');
 
@@ -16,8 +16,9 @@ const COST = {
   playlistsList: 1,
 };
 const DAILY_QUOTA = Number(process.env.YOUTUBE_DAILY_QUOTA || 10000);
-// Quota resets at midnight Pacific Time, not UTC.
-const quotaDay = () => new Date(Date.now() - 8 * 3600_000).toISOString().slice(0, 10);
+// Quota resets at midnight Pacific Time. A fixed UTC-8 offset was an hour off
+// for the whole of daylight saving (March to November), so ask for the zone.
+const quotaDay = () => new Intl.DateTimeFormat('en-CA', { timeZone: 'America/Los_Angeles' }).format(new Date());
 
 function readQuota() {
   try {
@@ -74,7 +75,7 @@ export async function verifyCredentials() {
   return true;
 }
 
-export async function uploadVideo({ videoPath, thumbPath, title, description, tags, publishAt }) {
+export async function uploadVideo({ videoPath, thumbPath, title, description, tags, publishAt, localizations = {} }) {
   if (!quotaAvailable()) {
     const q = quotaStatus();
     throw new Error(`YouTube quota exhausted for ${q.day}: ${q.used}/${q.limit} units used. Try again after the Pacific-midnight reset.`);
@@ -83,8 +84,12 @@ export async function uploadVideo({ videoPath, thumbPath, title, description, ta
   const youtube = google.youtube({ version: 'v3', auth: oauthClient() });
   const privacy = publishAt ? 'private' : env.ytPrivacy;
 
+  // Localised titles and descriptions ride along with the insert: a viewer
+  // whose YouTube interface is in Portuguese or Hindi sees them, at no extra
+  // quota cost.
+  const hasLocalizations = Object.keys(localizations).length > 0;
   const res = await youtube.videos.insert({
-    part: ['snippet', 'status'],
+    part: hasLocalizations ? ['snippet', 'status', 'localizations'] : ['snippet', 'status'],
     notifySubscribers: process.env.YOUTUBE_NOTIFY === '1',
     requestBody: {
       snippet: {
@@ -100,6 +105,7 @@ export async function uploadVideo({ videoPath, thumbPath, title, description, ta
         selfDeclaredMadeForKids: false,
         ...(publishAt ? { publishAt: new Date(publishAt).toISOString() } : {}),
       },
+      ...(hasLocalizations ? { localizations } : {}),
     },
     media: { body: fs.createReadStream(videoPath) },
   });
@@ -160,7 +166,7 @@ export function playlistsFor(lesson, { levelConfig, skillConfig }) {
       description:
         `Every ${lvl.label} lesson from ${channel.channelName}, in the order it was published.\n\n` +
         `Four skills on a rotating cycle: speaking, vocabulary, reading and listening. ` +
-        `One new lesson every day, with Arabic subtitles.\n\n` +
+        `One new lesson every day, with English captions and ${translation.name} translation on screen.\n\n` +
         `Start at the beginning and work forward — the vocabulary builds on itself.`,
     });
   }
@@ -173,7 +179,7 @@ export function playlistsFor(lesson, { levelConfig, skillConfig }) {
       description:
         `Every ${skl.label.toLowerCase()} lesson from ${channel.channelName}, across all five CEFR levels ` +
         `from A1 beginner to C1 advanced.\n\n` +
-        `Pick the level that matches you — the level is in every title. Arabic subtitles included.`,
+        `Pick the level that matches you — the level is in every title.`,
     });
   }
 

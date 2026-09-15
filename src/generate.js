@@ -3,7 +3,7 @@ import fs from 'fs';
 import path from 'path';
 import { channel, levelConfig, skillConfig, paths, env, fontConfig } from './lib/config.js';
 import { todaysBatch, pickTopic, slugify, dayIndex, publishAtFor, describeSlot } from './lib/schedule.js';
-import { writeLesson, buildMetadata } from './lib/lesson.js';
+import { writeLesson, buildMetadata, localizeMetadata } from './lib/lesson.js';
 import { buildPlan, resolveTimings, buildChapters } from './lib/build.js';
 import { checkRetention } from './lib/guards.js';
 import { synthesizeLines, assembleVoiceTrack } from './lib/tts.js';
@@ -70,7 +70,7 @@ function thumbnailSub(lesson, skill) {
   switch (lesson.skill) {
     case 'vocabulary': return `${lesson.words?.length || 10} words · meanings + examples`;
     case 'reading':    return `${lesson.passage?.length || 12} sentences · read along + quiz`;
-    case 'listening':  return 'Real conversation · listen twice';
+    case 'listening':  return 'Real conversation · read, listen, then test yourself';
     case 'speaking':   return `${lesson.drills?.length || 8} phrases · listen and repeat`;
     default:           return skill.label;
   }
@@ -236,9 +236,17 @@ async function buildOne({ level, skill, date, upload }) {
     // Each level owns a fixed hour of the day; null means that hour is already
     // gone and the lesson should just go out now.
     publishAt = publishAtFor(level, date);
+    let localizations = {};
+    try {
+      localizations = await localizeMetadata(lesson, meta, { languages: channel.youtube.localizations });
+      log('localized', Object.keys(localizations).join(' ') || 'none');
+    } catch (err) {
+      // A missing translation must never cost the upload.
+      console.warn(`  [localize] skipped — ${err.message}`);
+    }
     result = await uploadVideo({
       videoPath: videoFile, thumbPath: thumbFile,
-      title: meta.title, description: meta.description, tags: meta.tags,
+      title: meta.title, description: meta.description, tags: meta.tags, localizations,
       publishAt,
     });
     log('youtube', result.url);

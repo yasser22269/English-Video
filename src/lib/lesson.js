@@ -1,9 +1,9 @@
 import { generateJson } from './llm.js';
-import { levelConfig, skillConfig } from './config.js';
+import { levelConfig, skillConfig, translation } from './config.js';
 
 const COMMON_RULES = `
 GLOBAL RULES
-- The learner's first language is Arabic. Every "..._ar" field is a natural Modern Standard Arabic rendering — meaning-for-meaning, never word-for-word, and never a transliteration.
+- Every "..._ar" field holds the ${translation.name} translation shown on screen (the field name is historical). Write it as ${translation.promptStyle} — meaning-for-meaning, never word-for-word, and never a transliteration.
 - All English must sit strictly inside the CEFR level described. Do not show off vocabulary above the level.
 - The lesson opens on teaching, not on throat-clearing. Never write "in this video", "today we will learn", "let's get started", "by the end of this lesson", or any sentence whose only job is to announce a later sentence. Measured: viewers leave after 46 seconds, so every second of preamble is a second of the lesson nobody sees.
 - Narration is spoken aloud by a text-to-speech voice. Write for the ear: no bullet symbols, no markdown, no emoji, no parentheses, no "e.g.", no abbreviations. Spell out anything that must be pronounced.
@@ -40,16 +40,16 @@ Return this exact shape:
       "ipa": "IPA transcription between slashes",
       "pos": "noun | verb | adjective | adverb | phrase",
       "meaning": "definition in English SIMPLER than the word itself, one sentence",
-      "meaning_ar": "the Arabic meaning",
+      "meaning_ar": "the ${translation.name} meaning",
       "examples": ["natural example sentence", "a second example in a different situation"],
-      "examples_ar": ["Arabic of example 1", "Arabic of example 2"],
+      "examples_ar": ["${translation.name} of example 1", "${translation.name} of example 2"],
       "collocation": "one very common collocation or chunk using this word",
       "image_prompt": "a concrete, literal photo description that illustrates the word, 10-18 words, no text in image, no people's faces close up"
     }
   ],
   "recap": ["one short spoken line per word, in the same order, reminding the meaning"],
   "quiz": [
-    { "prompt": "a gap-fill sentence using ___ for the missing word", "answer": "the word", "prompt_ar": "Arabic of the sentence" }
+    { "prompt": "a gap-fill sentence using ___ for the missing word", "answer": "the word", "prompt_ar": "${translation.name} of the sentence" }
   ],
   "outro": "two spoken sentences: tell them to say the words out loud, and to subscribe for a lesson every day"
 }
@@ -70,15 +70,15 @@ Return this exact shape:
   "intro": "unused, return an empty string",
   "passage_title": "a title for the text itself",
   "passage": [
-    { "en": "one sentence of the passage", "ar": "its Arabic translation" }
+    { "en": "one sentence of the passage", "ar": "its ${translation.name} translation" }
   ],
   "glossary": [
-    { "word": "a word from the passage worth teaching", "meaning": "simple English definition", "meaning_ar": "Arabic meaning" }
+    { "word": "a word from the passage worth teaching", "meaning": "simple English definition", "meaning_ar": "${translation.name} meaning" }
   ],
   "questions": [
     {
       "q": "a comprehension question in English",
-      "q_ar": "Arabic of the question",
+      "q_ar": "${translation.name} of the question",
       "options": ["option A", "option B", "option C"],
       "answer": 0,
       "explain": "one spoken sentence explaining why that answer is right, quoting the passage"
@@ -105,15 +105,15 @@ Return this exact shape:
   "setting": "one sentence describing where the conversation happens",
   "footage_query": "three or four English stock-footage search words matching the setting",
   "dialogue": [
-    { "speaker": "A", "en": "what this person says", "ar": "Arabic translation" }
+    { "speaker": "A", "en": "what this person says", "ar": "${translation.name} translation" }
   ],
   "key_phrases": [
-    { "phrase": "a useful chunk from the dialogue", "meaning": "simple English explanation", "meaning_ar": "Arabic meaning" }
+    { "phrase": "a useful chunk from the dialogue", "meaning": "simple English explanation", "meaning_ar": "${translation.name} meaning" }
   ],
   "questions": [
     {
       "q": "a comprehension question about the conversation",
-      "q_ar": "Arabic of the question",
+      "q_ar": "${translation.name} of the question",
       "options": ["option A", "option B", "option C"],
       "answer": 0,
       "explain": "one spoken sentence explaining the answer"
@@ -140,14 +140,14 @@ Return this exact shape:
   "drills": [
     {
       "phrase": "a genuinely useful spoken phrase for this topic",
-      "phrase_ar": "Arabic meaning",
+      "phrase_ar": "${translation.name} meaning",
       "when": "one short spoken sentence saying when you use this phrase",
       "focus": "the pronunciation point, such as word stress on the second syllable, or the linking of two words",
-      "focus_ar": "Arabic of the pronunciation point"
+      "focus_ar": "${translation.name} of the pronunciation point"
     }
   ],
   "dialogue": [
-    { "speaker": "A", "en": "line of a short model conversation that reuses the drilled phrases", "ar": "Arabic translation" }
+    { "speaker": "A", "en": "line of a short model conversation that reuses the drilled phrases", "ar": "${translation.name} translation" }
   ],
   "shadowing": ["three to five sentences the viewer will shadow at natural speed, reusing the phrases"],
   "outro": "two spoken sentences telling them to record themselves and compare, and to come back tomorrow"
@@ -264,40 +264,52 @@ export async function writeLesson({ level, skill, topic, focus, footage }) {
 }
 
 /** Titles/descriptions the channel uses. Kept here so wording stays in one place. */
+/** Fill a title or tag pattern from the lesson and its level. */
+export function fillPattern(pattern, lesson, { wordCount } = {}) {
+  const lvl = levelConfig(lesson.level);
+  return String(pattern)
+    .replaceAll('{topic}', lesson.topic)
+    .replaceAll('{levelLabel}', lvl.label)
+    .replaceAll('{levelName}', lvl.levelName || lvl.label.split('·').pop().trim())
+    .replaceAll('{level}', lesson.level.toUpperCase())
+    .replaceAll('{storyLevel}', String(lvl.storyLevel ?? ''))
+    .replaceAll('{wordCount}', String(wordCount ?? lvl.wordCount));
+}
+
+// Short, search-language names for each format, used in the description opener.
+const FORMAT_PHRASE = {
+  vocabulary: 'English vocabulary with pictures, pronunciation and examples',
+  reading: 'learn English through a short story',
+  listening: 'English conversation practice',
+  speaking: 'English speaking practice with shadowing',
+};
+
 export function buildMetadata(lesson, { channel: ch, playlists = [], chapters = [] }) {
   const skill = skillConfig(lesson.skill);
   const lvl = levelConfig(lesson.level);
   const wordCount = lesson.words?.length || lvl.wordCount;
+  const levelName = lvl.levelName || lvl.label.split('·').pop().trim();
 
-  // A phone shows roughly 48 characters of a title, and 47% of this channel's
-  // views are on a phone. So the searchable half goes first and the pattern is
-  // measured against that cut, not against YouTube's 100-character maximum.
-  const title = skill.titlePattern
-    .replace('{topic}', lesson.topic)
-    .replace('{levelLabel}', lvl.label)
-    .replace('{level}', lesson.level.toUpperCase())
-    .replace('{wordCount}', wordCount)
-    .slice(0, 98);
+  // Patterns come from YouTube autocomplete data (scripts/keywords.js). The
+  // topic goes first because a phone shows ~48 characters; the query family
+  // ("learn english through story level 2", "english conversation practice a1")
+  // follows, and YouTube still matches the whole string for search.
+  const title = fillPattern(skill.titlePattern, lesson, { wordCount }).slice(0, 98);
 
-  // YouTube shows roughly the first 100 characters before "...more", and those
-  // are the characters search weighs most. They used to hold `lesson.hook` —
-  // narration written for the ear, containing no phrase anyone would type. Now
-  // they state the topic, the skill and the level in plain search language.
-  const opener = `${lesson.topic} — ${skill.label.toLowerCase()} for ${lvl.label.split('·').pop().trim()} English learners (${lesson.level.toUpperCase()}).`;
+  // The ~100 characters shown before "...more" carry the most search weight, so
+  // they state topic, format and level in the phrasing learners actually type.
+  const opener = `${lesson.topic}: ${FORMAT_PHRASE[lesson.skill] || skill.label} for ${levelName.toLowerCase()} learners (${lesson.level.toUpperCase()}).`;
 
   const lines = [
     opener,
     lesson.hook || '',
     '',
-    // Chapters. YouTube turns these into jump-links in search results and on
-    // the scrubber, and they let a viewer skip to word 7 instead of leaving.
-    // The timings already exist — they come back from the TTS service.
     ...(chapters.length ? [...chapters.map(c => `${c.stamp} ${c.label}`), ''] : []),
     `${skill.emoji} ${skill.label} — ${lvl.label}`,
     lesson.focus ? `Language focus: ${lesson.focus}` : '',
     '',
-    'A new English lesson every single day, for every level from A1 to C1.',
-    'Turn on subtitles for the Arabic translation. الترجمة العربية متاحة داخل الفيديو.',
+    'A new English lesson every day, for every level from A1 to C1.',
+    `English captions with ${translation.name} translation on screen.`,
     '',
     'IN THIS LESSON',
   ];
@@ -307,13 +319,10 @@ export function buildMetadata(lesson, { channel: ch, playlists = [], chapters = 
   if (lesson.drills) lines.push(...lesson.drills.map((d, i) => `${i + 1}. ${d.phrase}`));
   if (lesson.glossary) lines.push(...lesson.glossary.map((g, i) => `${i + 1}. ${g.word} — ${g.meaning}`));
 
-  // Playlist links are the cheapest way to turn one view into a session: the
-  // viewer who finishes this lesson gets an obvious next one in their level.
+  // Playlist links are the cheapest way to turn one view into a session.
   if (playlists.length) {
     lines.push('', 'KEEP GOING');
-    for (const pl of playlists) {
-      lines.push(`${pl.title}`, `https://www.youtube.com/playlist?list=${pl.id}`);
-    }
+    for (const pl of playlists) lines.push(`${pl.title}`, `https://www.youtube.com/playlist?list=${pl.id}`);
   }
 
   lines.push(
@@ -323,14 +332,83 @@ export function buildMetadata(lesson, { channel: ch, playlists = [], chapters = 
     `#LearnEnglish #English${lesson.level.toUpperCase()} #${skill.label.replace(/\s+/g, '')} #ESL`,
   );
 
-  const tags = [
-    ...ch.youtube.baseTags,
+  // Tags: the skill's real query family first, then the topic, then the base
+  // set. De-duplicated, and capped to YouTube's 500-character tag budget.
+  const candidates = [
+    ...(skill.searchTags || []).map(t => fillPattern(t, lesson, { wordCount }).toLowerCase()),
+    lesson.topic.toLowerCase().replace(/,/g, ''),
+    `${lesson.topic.toLowerCase().replace(/,/g, '')} in english`,
     `english ${lesson.level}`,
-    `${lesson.level} english lesson`,
-    `english ${lesson.skill}`,
-    lesson.topic.toLowerCase(),
-    `learn english ${lesson.skill}`,
-  ].slice(0, 30);
+    `english for ${levelName.toLowerCase()}`,
+    ...ch.youtube.baseTags,
+  ];
+  const tags = [];
+  let budget = 0;
+  for (const t of candidates) {
+    if (!t || tags.includes(t)) continue;
+    if (budget + t.length + 2 > 480) break;
+    tags.push(t);
+    budget += t.length + 2;
+  }
 
   return { title, description: lines.filter(l => l !== undefined).join('\n').slice(0, 4900), tags };
+}
+
+/**
+ * Localised title and description for each language in
+ * channel.youtube.localizations. YouTube shows a viewer the localisation that
+ * matches their interface language, so a learner in São Paulo or Jakarta finds
+ * and reads the lesson in their own language while the video stays English.
+ * Sent inside videos.insert, so it costs no extra quota.
+ *
+ * One LLM call for all languages. Any language the model gets wrong is dropped
+ * rather than shipped — an untranslated fallback is worse than none.
+ */
+export async function localizeMetadata(lesson, meta, { languages }) {
+  if (!languages?.length) return {};
+  const lvl = levelConfig(lesson.level);
+  const levelName = lvl.levelName || lvl.label;
+  const intro = meta.description.split('\n').slice(0, 2).join(' ');
+
+  const prompt = `You localise YouTube metadata for an English-teaching channel.
+The VIDEO stays in English. You write the title and a short description in each target language, the way learners in that language actually search YouTube for English lessons.
+
+LESSON
+- English title: ${meta.title}
+- Topic: ${lesson.topic}
+- Format: ${lesson.skill}
+- Level: ${lesson.level.toUpperCase()} (${levelName})
+- English opening lines: ${intro}
+
+RULES
+- Title in the target language, max 95 characters. Keep the level code (${lesson.level.toUpperCase()}) exactly as written. Say that it is an English lesson, in that language (for example Portuguese "inglês", Spanish "inglés", Hindi "अंग्रेज़ी").
+- Keep any English target words or phrases from the topic in English inside quotes if they are what is being taught.
+- Description: 2 natural sentences in the target language saying what the learner gets. No hashtags, no emoji, no links.
+- Languages: ${languages.join(', ')}
+
+Return ONE JSON object shaped exactly like:
+{ ${languages.map(l => `"${l}": { "title": "...", "description": "..." }`).join(', ')} }`;
+
+  const raw = await generateJson(prompt, {
+    temperature: 0.4,
+    maxTokens: 3000,
+    validate: (j) => {
+      const ok = languages.filter(l => j?.[l]?.title && j?.[l]?.description);
+      if (ok.length < Math.ceil(languages.length / 2)) throw new Error(`only ${ok.length}/${languages.length} localisations returned`);
+    },
+  });
+
+  const out = {};
+  for (const lang of languages) {
+    const loc = raw?.[lang];
+    if (!loc?.title || !loc?.description) continue;
+    const title = String(loc.title).replace(/[\r\n]+/g, ' ').trim().slice(0, 100);
+    if (!title.includes(lesson.level.toUpperCase())) continue;
+    out[lang] = {
+      title,
+      // Localised lead, then the English body (chapters, word list, playlists).
+      description: `${String(loc.description).trim()}\n\n${meta.description}`.slice(0, 4900),
+    };
+  }
+  return out;
 }

@@ -36,7 +36,9 @@
       "speakerB": "en-GB-RyanNeural",
       "wordCount": 10,
       "questionCount": 4,
-      "cefrGuide": "Use only the ~600 most common English words. Present simple, short sentences of 4-8 words, no phrasal verbs, no idioms, no relative clauses. Everyday concrete topics."
+      "cefrGuide": "Use only the ~600 most common English words. Present simple, short sentences of 4-8 words, no phrasal verbs, no idioms, no relative clauses. Everyday concrete topics.",
+      "storyLevel": 1,
+      "levelName": "Beginner"
     },
     "a2": {
       "label": "A2 · Elementary",
@@ -52,7 +54,9 @@
       "speakerB": "en-US-ChristopherNeural",
       "wordCount": 10,
       "questionCount": 4,
-      "cefrGuide": "Use the ~1500 most common words. Past simple, future with going to, comparatives, common phrasal verbs (get up, look for). Sentences of 6-12 words. Familiar everyday topics."
+      "cefrGuide": "Use the ~1500 most common words. Past simple, future with going to, comparatives, common phrasal verbs (get up, look for). Sentences of 6-12 words. Familiar everyday topics.",
+      "storyLevel": 2,
+      "levelName": "Elementary"
     },
     "b1": {
       "label": "B1 · Intermediate",
@@ -68,7 +72,9 @@
       "speakerB": "en-GB-RyanNeural",
       "wordCount": 9,
       "questionCount": 5,
-      "cefrGuide": "Use the ~2500 most common words. Present perfect, conditionals 1 and 2, passive voice, common collocations and phrasal verbs. Sentences of 10-18 words. Work, travel, opinions, experiences."
+      "cefrGuide": "Use the ~2500 most common words. Present perfect, conditionals 1 and 2, passive voice, common collocations and phrasal verbs. Sentences of 10-18 words. Work, travel, opinions, experiences.",
+      "storyLevel": 3,
+      "levelName": "Intermediate"
     },
     "b2": {
       "label": "B2 · Upper-Intermediate",
@@ -84,7 +90,9 @@
       "speakerB": "en-US-EricNeural",
       "wordCount": 9,
       "questionCount": 5,
-      "cefrGuide": "Use ~4000-word range including abstract vocabulary. Mixed conditionals, perfect modals, cleft sentences, nuanced connectors (nonetheless, whereas). Idioms and collocations welcome. Abstract and professional topics, argumentation."
+      "cefrGuide": "Use ~4000-word range including abstract vocabulary. Mixed conditionals, perfect modals, cleft sentences, nuanced connectors (nonetheless, whereas). Idioms and collocations welcome. Abstract and professional topics, argumentation.",
+      "storyLevel": 4,
+      "levelName": "Upper-Intermediate"
     },
     "c1": {
       "label": "C1 · Advanced",
@@ -100,7 +108,9 @@
       "speakerB": "en-US-RogerNeural",
       "wordCount": 8,
       "questionCount": 5,
-      "cefrGuide": "Use precise, low-frequency and academic vocabulary, register shifts, hedging, inversion, nominalisation, subtle idiom and connotation. Long complex sentences. Academic, cultural, scientific and rhetorical topics."
+      "cefrGuide": "Use precise, low-frequency and academic vocabulary, register shifts, hedging, inversion, nominalisation, subtle idiom and connotation. Long complex sentences. Academic, cultural, scientific and rhetorical topics.",
+      "storyLevel": 5,
+      "levelName": "Advanced"
     }
   },
   "skillConfig": {
@@ -108,29 +118,56 @@
       "label": "Speaking Practice",
       "emoji": "🗣️",
       "background": "footage",
-      "titlePattern": "{topic} — English Speaking Practice ({level})",
-      "playlistTitle": "English Speaking Practice — Listen and Repeat, Every Level"
+      "titlePattern": "{topic} — English Speaking Practice & Shadowing ({level})",
+      "playlistTitle": "English Speaking Practice — Listen and Repeat, Every Level",
+      "searchTags": [
+        "english speaking practice",
+        "shadowing english speaking practice",
+        "shadowing english speaking practice {level}",
+        "english phrases for daily use",
+        "english speaking practice {level}"
+      ]
     },
     "vocabulary": {
       "label": "New Vocabulary",
       "emoji": "📚",
       "background": "typography",
-      "titlePattern": "{topic}: {wordCount} English Words ({level})",
-      "playlistTitle": "English Vocabulary — New Words Every Day, Every Level"
+      "titlePattern": "{topic}: {wordCount} English Words with Pictures ({level} {levelName})",
+      "playlistTitle": "English Vocabulary — New Words Every Day, Every Level",
+      "searchTags": [
+        "english words with pictures",
+        "english vocabulary with pictures and pronunciation",
+        "english vocabulary for beginners",
+        "english words for beginners"
+      ]
     },
     "reading": {
       "label": "Reading Practice",
       "emoji": "📖",
       "background": "typography",
-      "titlePattern": "{topic} — English Reading Practice ({level})",
-      "playlistTitle": "English Reading Practice — Read Along, Every Level"
+      "titlePattern": "{topic} — Learn English Through Story Level {storyLevel} ({level})",
+      "playlistTitle": "English Reading Practice — Read Along, Every Level",
+      "searchTags": [
+        "learn english through story",
+        "english story",
+        "english reading practice",
+        "learn english through story level {storyLevel}",
+        "english story {level}"
+      ]
     },
     "listening": {
       "label": "Listening Practice",
       "emoji": "🎧",
       "background": "footage",
-      "titlePattern": "{topic} — English Listening Practice ({level})",
-      "playlistTitle": "English Listening Practice — Real Conversations, Every Level"
+      "titlePattern": "{topic} — English Conversation Practice ({level} {levelName})",
+      "playlistTitle": "English Listening Practice — Real Conversations, Every Level",
+      "searchTags": [
+        "english conversation practice",
+        "english conversation practice {level}",
+        "english listening practice",
+        "english listening practice {level}",
+        "english podcast for learning english"
+      ]
     }
   },
   "youtube": {
@@ -140,20 +177,26 @@
       "learn english",
       "english lesson",
       "english for beginners",
-      "cefr",
-      "esl",
       "english practice",
-      "improve english",
-      "english vocabulary",
-      "english listening",
-      "english speaking",
-      "تعلم الانجليزية"
+      "esl",
+      "cefr",
+      "daily english"
     ],
     "playlists": {
       "byLevel": true,
       "bySkill": true,
       "note": "Each video joins its level playlist and its skill playlist. 2 x playlistItems.insert = 100 units per video, 500 per day."
-    }
+    },
+    "localizations": [
+      "es",
+      "pt",
+      "ar",
+      "hi",
+      "id",
+      "tr",
+      "vi",
+      "fr"
+    ]
   },
   "audio": {
     "preset": "broadcast",
@@ -171,5 +214,16 @@
       "c1": "22:00"
     },
     "note": "Local wall-clock times, DST-aware. Each level owns one fixed slot so a returning viewer always finds their level at the same hour. A slot already past when the run finishes falls back to publishing immediately."
+  },
+  "translation": {
+    "code": "ar",
+    "name": "Arabic",
+    "promptStyle": "natural Modern Standard Arabic",
+    "rtl": true,
+    "font": {
+      "windows": "Tahoma",
+      "linux": "Noto Sans Arabic"
+    },
+    "note": "To switch the burned-in translation to another language, change this block (e.g. {code:\"pt\", name:\"Portuguese\", promptStyle:\"natural Brazilian Portuguese\", rtl:false, font:{windows:\"Segoe UI\", linux:\"Noto Sans\"}}). Titles and descriptions are localised separately via youtube.localizations."
   }
 }

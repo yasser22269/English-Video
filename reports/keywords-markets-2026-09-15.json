@@ -1,0 +1,101 @@
+{
+  "seed": "learn english",
+  "markets": {
+    "en": [
+      "learn english",
+      "learn english with tv series",
+      "learn english with movies",
+      "learn english podcast",
+      "learn english with jessica",
+      "learn english with bob the canadian",
+      "learn english with vanessa",
+      "learn english through story",
+      "learn english for kids",
+      "learn english with lucy"
+    ],
+    "es": [
+      "learn english",
+      "learn english with tv series",
+      "learn english podcast",
+      "learn english conversation a1",
+      "learn english with bob the canadian",
+      "learn english for beginners",
+      "learn english with tv",
+      "learn english with songs",
+      "learn english with rebecca",
+      "learn english with stories"
+    ],
+    "pt": [
+      "learn english with",
+      "learn english with movie",
+      "learn english with jessica",
+      "learn english with bob the canadian",
+      "learn english podcast",
+      "learn english with fun",
+      "learn english through story",
+      "learn english with music",
+      "learn english while sleeping",
+      "learn english conversation"
+    ],
+    "hi": [
+      "learn english",
+      "learn english with jessica",
+      "learn english with tv series",
+      "learn english daily use sentences",
+      "learn english from hindi",
+      "learn english speaking",
+      "learn english through movies",
+      "learn english with emma",
+      "learn english with aryan",
+      "learn english with let's talk"
+    ],
+    "ar": [
+      "learn english",
+      "learn english with tv series",
+      "learn english podcast",
+      "learn english with movies",
+      "learn english with bob the canadian",
+      "learn english with jessica",
+      "learn english through story",
+      "learn english a1",
+      "learn english with emma",
+      "learn english with rania"
+    ],
+    "id": [
+      "learn english",
+      "learn english with tv series",
+      "learn english with bob the canadian",
+      "learn english podcast",
+      "learn english with movies",
+      "learn english with spongebob squarepants",
+      "learn english beginner",
+      "learn english by movie",
+      "learn english with cooking",
+      "learn english with cartoon"
+    ],
+    "tr": [
+      "learn english",
+      "learn english with tv series",
+      "learn english easy",
+      "learn english through story",
+      "learn english turkish",
+      "learn english with jessica",
+      "learn english a2",
+      "learn english with lucy",
+      "learn english with cambridge",
+      "learn english with podcast"
+    ],
+    "vi": [
+      "learn english with jessica",
+      "learn english",
+      "learn english with tv series",
+      "learn english podcast",
+      "learn english with om",
+      "learn english with papa teach me",
+      "learn english through story",
+      "learn english with bob the canadian",
+      "learn english with anna",
+      "learn english daily"
+    ]
+  }
+}

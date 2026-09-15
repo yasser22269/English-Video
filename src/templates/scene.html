@@ -93,7 +93,7 @@
 
   .eyebrow { font-size: 30px; letter-spacing: .26em; text-transform: uppercase;
              color: var(--accent); font-weight: 700; margin-bottom: 26px; }
-  .ar { font-family: var(--font-ar); direction: rtl; }
+  .ar { font-family: var(--font-ar); direction: var(--tr-dir, rtl); }
 
   /* ── title card ─────────────────────────────────────────────── */
   .title-h1 { font-size: 108px; line-height: 1.06; font-weight: 800; letter-spacing: -.02em; }
@@ -120,7 +120,7 @@
               text-transform: uppercase; padding: 10px 24px; border-radius: 999px;
               background: color-mix(in srgb, var(--accent) 22%, transparent);
               border: 2px solid color-mix(in srgb, var(--accent) 50%, transparent); }
-  .word-ar { margin-top: 30px; font-size: 52px; color: var(--ink); font-weight: 600; text-align: right; }
+  .word-ar { margin-top: 30px; font-size: 52px; color: var(--ink); font-weight: 600; text-align: var(--tr-align, right); }
   .word-count { position: absolute; right: 0; top: -6px; font-size: 30px; color: var(--ink-dim);
                 letter-spacing: .18em; }
 
@@ -353,6 +353,9 @@ window.renderScene = function renderScene(scene) {
   if (t.bgC) root.setProperty('--bg-c', t.bgC);
 
   document.getElementById('brand-name').textContent = scene.brand || 'English Every Day';
+  // The translation line is right-to-left only when the configured language is.
+  root.setProperty('--tr-dir', scene.translationRtl === false ? 'ltr' : 'rtl');
+  root.setProperty('--tr-align', scene.translationRtl === false ? 'left' : 'right');
   document.getElementById('level-badge').textContent = scene.levelLabel || '';
   document.getElementById('progress').style.width =
     `${Math.max(0, Math.min(100, scene.progress || 0))}%`;

@@ -59,18 +59,29 @@ export const env = {
  * we fall back to whatever each OS ships (Tahoma renders Arabic correctly on
  * Windows, Noto on Ubuntu).
  */
+/**
+ * The language of the on-screen translation line. Everything language-specific
+ * — the prompt, the text direction, the font — reads from here, so moving the
+ * channel to another translation language is a config change, not a code one.
+ */
+export const translation = {
+  code: 'ar', name: 'Arabic', promptStyle: 'natural Modern Standard Arabic', rtl: true,
+  font: { windows: 'Tahoma', linux: 'Noto Sans Arabic' },
+  ...(channel.translation || {}),
+};
+
 export function fontConfig() {
   const hasLocal = fs.existsSync(paths.fonts) && fs.readdirSync(paths.fonts).some(f => /\.(ttf|otf)$/i.test(f));
   if (hasLocal) {
-    return { dir: paths.fonts, en: process.env.FONT_EN || 'Montserrat', ar: process.env.FONT_AR || 'Noto Sans Arabic' };
+    return { dir: paths.fonts, en: process.env.FONT_EN || 'Montserrat', ar: process.env.FONT_AR || translation.font.linux };
   }
   const onWindows = process.platform === 'win32';
   return {
     dir: null,
     // On the runner both faces come from fonts-noto-core, so the Latin and
-    // Arabic lines are from one family and sit together properly.
+    // translation lines are from one family and sit together properly.
     en: process.env.FONT_EN || (onWindows ? 'Segoe UI' : 'Noto Sans'),
-    ar: process.env.FONT_AR || (onWindows ? 'Tahoma' : 'Noto Sans Arabic'),
+    ar: process.env.FONT_AR || (onWindows ? translation.font.windows : translation.font.linux),
   };
 }
 
