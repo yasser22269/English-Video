@@ -1,5 +1,121 @@
 [
   {
+    "date": "2026-09-16",
+    "level": "a1",
+    "skill": "short",
+    "topic": "Countries and Nationalities",
+    "title": "Countries and Nationalities: 3 English Words in 60 Seconds (A1) #shorts",
+    "durationSec": 21,
+    "sizeMb": 1.6,
+    "videoId": "FYpAKK-QIwU",
+    "url": "https://www.youtube.com/watch?v=FYpAKK-QIwU",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:a1",
+        "id": "PLIJ5pu8Ch1Pc"
+      }
+    ],
+    "buildSeconds": 73,
+    "dir": "output/2026-09-16-a1-short-countries-and-nationalities"
+  },
+  {
+    "date": "2026-09-16",
+    "level": "b2",
+    "skill": "listening",
+    "topic": "English Idioms About Time",
+    "title": "English Idioms About Time — English Conversation Practice (B2 Upper-Intermediate)",
+    "durationSec": 362,
+    "sizeMb": 43.6,
+    "videoId": "VHoUb5dIXAY",
+    "url": "https://www.youtube.com/watch?v=VHoUb5dIXAY",
+    "publishAt": "2026-09-16T17:30:00.000Z",
+    "playlists": [
+      {
+        "key": "level:b2",
+        "id": "PLEyMEjEr22bU"
+      },
+      {
+        "key": "skill:listening",
+        "id": "PLc1avYS6uKVo"
+      }
+    ],
+    "buildSeconds": 715,
+    "dir": "output/2026-09-16-b2-listening-english-idioms-about-time"
+  },
+  {
+    "date": "2026-09-16",
+    "level": "b1",
+    "skill": "reading",
+    "topic": "Getting a Driving Licence",
+    "title": "Getting a Driving Licence — Learn English Through Story Level 3 (B1)",
+    "durationSec": 301,
+    "sizeMb": 18.3,
+    "videoId": "SbW8PDjhuHw",
+    "url": "https://www.youtube.com/watch?v=SbW8PDjhuHw",
+    "publishAt": "2026-09-16T16:00:00.000Z",
+    "playlists": [
+      {
+        "key": "level:b1",
+        "id": "PLSkG2Gz0CZos"
+      },
+      {
+        "key": "skill:reading",
+        "id": "PLYub11V_0AzA"
+      }
+    ],
+    "buildSeconds": 279,
+    "dir": "output/2026-09-16-b1-reading-getting-a-driving-licence"
+  },
+  {
+    "date": "2026-09-16",
+    "level": "a2",
+    "skill": "vocabulary",
+    "topic": "Describing Personality",
+    "title": "Describing Personality: 10 English Words with Pictures (A2 Elementary)",
+    "durationSec": 273,
+    "sizeMb": 15,
+    "videoId": "oxnylSV2XtM",
+    "url": "https://www.youtube.com/watch?v=oxnylSV2XtM",
+    "publishAt": "2026-09-16T14:30:00.000Z",
+    "playlists": [
+      {
+        "key": "level:a2",
+        "id": "PLMUHkdE-F1_Q"
+      },
+      {
+        "key": "skill:vocabulary",
+        "id": "PLRKWAimfYWh4"
+      }
+    ],
+    "buildSeconds": 548,
+    "dir": "output/2026-09-16-a2-vocabulary-describing-personality"
+  },
+  {
+    "date": "2026-09-16",
+    "level": "a1",
+    "skill": "speaking",
+    "topic": "My Weekend",
+    "title": "My Weekend — English Speaking Practice & Shadowing (A1)",
+    "durationSec": 168,
+    "sizeMb": 30.2,
+    "videoId": "Khr5Ijwhpjo",
+    "url": "https://www.youtube.com/watch?v=Khr5Ijwhpjo",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:a1",
+        "id": "PLIJ5pu8Ch1Pc"
+      },
+      {
+        "key": "skill:speaking",
+        "id": "PLCadq2A6pEK8"
+      }
+    ],
+    "buildSeconds": 646,
+    "dir": "output/2026-09-16-a1-speaking-my-weekend"
+  },
+  {
     "date": "2026-09-15",
     "level": "c1",
     "skill": "listening",

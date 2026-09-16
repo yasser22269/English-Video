@@ -84,28 +84,32 @@
       "Sports I Play",
       "Greetings and Introductions",
       "Days, Months and Dates",
-      "On the Phone"
+      "On the Phone",
+      "My Weekend"
     ],
     "a2:vocabulary": [
       "The Best and the Worst",
       "Describing Your Best Friend",
       "Talking About Last Weekend",
       "Talking About Your Job",
-      "Talking About Your Studies"
+      "Talking About Your Studies",
+      "Describing Personality"
     ],
     "b1:reading": [
       "Travelling on a Budget",
       "Choosing a Career Path",
       "Work-Life Balance",
       "Social Media and Mental Health",
-      "Digital Detox Weekend"
+      "Digital Detox Weekend",
+      "Getting a Driving Licence"
     ],
     "b2:listening": [
       "Gentrification and Neighbourhoods",
       "Privacy in the Age of Surveillance",
       "Making Plans With Friends",
       "Talking About Money and Budgeting",
-      "Describing Someone's Personality"
+      "Describing Someone's Personality",
+      "English Idioms About Time"
     ],
     "c1:speaking": [
       "Translation and the Limits of Language",
@@ -148,7 +152,10 @@
       "Solving a Customer Problem",
       "Exercise and Motivation",
       "Health Insurance and Doctors"
+    ],
+    "a1:short": [
+      "Countries and Nationalities"
     ]
   },
-  "updatedAt": "2026-09-15T14:34:59.640Z"
+  "updatedAt": "2026-09-16T14:11:58.420Z"
 }
