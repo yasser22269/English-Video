@@ -6,7 +6,8 @@
       "Healthy Habits",
       "My Family",
       "School Subjects",
-      "Feelings and Emotions"
+      "Feelings and Emotions",
+      "My House and Rooms"
     ],
     "a1:reading": [
       "My Family",
@@ -123,14 +124,16 @@
       "A Day at the Beach",
       "Holiday Memories",
       "Job Interviews Basics",
-      "Neighbours and Community"
+      "Neighbours and Community",
+      "Small Talk with Strangers"
     ],
     "b1:listening": [
       "Culture Shock Abroad",
       "Living in a Big City",
       "Remote Work and Productivity",
       "Learning Languages Faster",
-      "Living with Housemates"
+      "Living with Housemates",
+      "Health Insurance and Doctors"
     ],
     "b2:speaking": [
       "The Psychology of Habits",
@@ -144,7 +147,8 @@
       "Global Health Governance",
       "British Humour, Irony and Understatement",
       "Weighing Advantages and Disadvantages",
-      "Talking About a Career Change"
+      "Talking About a Career Change",
+      "How to Sound Less Certain on Purpose"
     ],
     "b1:vocabulary": [
       "Learning Languages Faster",
@@ -155,7 +159,10 @@
     ],
     "a1:short": [
       "Countries and Nationalities"
+    ],
+    "a2:short": [
+      "Giving Simple Instructions"
     ]
   },
-  "updatedAt": "2026-09-16T14:11:58.420Z"
+  "updatedAt": "2026-09-17T13:48:32.108Z"
 }

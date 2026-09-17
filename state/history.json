@@ -1,5 +1,121 @@
 [
   {
+    "date": "2026-09-17",
+    "level": "a2",
+    "skill": "short",
+    "topic": "Giving Simple Instructions",
+    "title": "Giving Simple Instructions: 3 English Words in 60 Seconds (A2) #shorts",
+    "durationSec": 20,
+    "sizeMb": 1.5,
+    "videoId": "Js2choaIWlA",
+    "url": "https://www.youtube.com/watch?v=Js2choaIWlA",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:a2",
+        "id": "PLMUHkdE-F1_Q"
+      }
+    ],
+    "buildSeconds": 26,
+    "dir": "output/2026-09-17-a2-short-giving-simple-instructions"
+  },
+  {
+    "date": "2026-09-17",
+    "level": "c1",
+    "skill": "vocabulary",
+    "topic": "How to Sound Less Certain on Purpose",
+    "title": "How to Sound Less Certain on Purpose: 8 English Words with Pictures (C1 Advanced)",
+    "durationSec": 256,
+    "sizeMb": 16,
+    "videoId": "-AzeloQkfBc",
+    "url": "https://www.youtube.com/watch?v=-AzeloQkfBc",
+    "publishAt": "2026-09-17T19:00:00.000Z",
+    "playlists": [
+      {
+        "key": "level:c1",
+        "id": "PLPYmpq9AOiZM"
+      },
+      {
+        "key": "skill:vocabulary",
+        "id": "PLRKWAimfYWh4"
+      }
+    ],
+    "buildSeconds": 156,
+    "dir": "output/2026-09-17-c1-vocabulary-how-to-sound-less-certain-on-purpose"
+  },
+  {
+    "date": "2026-09-17",
+    "level": "b1",
+    "skill": "listening",
+    "topic": "Health Insurance and Doctors",
+    "title": "Health Insurance and Doctors — English Conversation Practice (B1 Intermediate)",
+    "durationSec": 382,
+    "sizeMb": 47.5,
+    "videoId": "nJbxjjlzvZg",
+    "url": "https://www.youtube.com/watch?v=nJbxjjlzvZg",
+    "publishAt": "2026-09-17T16:00:00.000Z",
+    "playlists": [
+      {
+        "key": "level:b1",
+        "id": "PLSkG2Gz0CZos"
+      },
+      {
+        "key": "skill:listening",
+        "id": "PLc1avYS6uKVo"
+      }
+    ],
+    "buildSeconds": 345,
+    "dir": "output/2026-09-17-b1-listening-health-insurance-and-doctors"
+  },
+  {
+    "date": "2026-09-17",
+    "level": "a2",
+    "skill": "reading",
+    "topic": "Small Talk with Strangers",
+    "title": "Small Talk with Strangers — Learn English Through Story Level 2 (A2)",
+    "durationSec": 197,
+    "sizeMb": 11,
+    "videoId": "GE5b-vj4XGw",
+    "url": "https://www.youtube.com/watch?v=GE5b-vj4XGw",
+    "publishAt": "2026-09-17T14:30:00.000Z",
+    "playlists": [
+      {
+        "key": "level:a2",
+        "id": "PLMUHkdE-F1_Q"
+      },
+      {
+        "key": "skill:reading",
+        "id": "PLYub11V_0AzA"
+      }
+    ],
+    "buildSeconds": 133,
+    "dir": "output/2026-09-17-a2-reading-small-talk-with-strangers"
+  },
+  {
+    "date": "2026-09-17",
+    "level": "a1",
+    "skill": "vocabulary",
+    "topic": "My House and Rooms",
+    "title": "My House and Rooms: 10 English Words with Pictures (A1 Beginner)",
+    "durationSec": 220,
+    "sizeMb": 12.9,
+    "videoId": "FRgPPsTrO4s",
+    "url": "https://www.youtube.com/watch?v=FRgPPsTrO4s",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:a1",
+        "id": "PLIJ5pu8Ch1Pc"
+      },
+      {
+        "key": "skill:vocabulary",
+        "id": "PLRKWAimfYWh4"
+      }
+    ],
+    "buildSeconds": 213,
+    "dir": "output/2026-09-17-a1-vocabulary-my-house-and-rooms"
+  },
+  {
     "date": "2026-09-16",
     "level": "a1",
     "skill": "short",
