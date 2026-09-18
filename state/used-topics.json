@@ -15,7 +15,8 @@
       "My Favourite Music",
       "Colours and Clothes",
       "Technology at Home",
-      "Seasons of the Year"
+      "Seasons of the Year",
+      "In the Classroom"
     ],
     "a2:listening": [
       "Future Plans and Intentions",
@@ -23,14 +24,16 @@
       "Emergencies and Calling for Help",
       "Comparing Cities",
       "Environment and Recycling",
-      "Learning a New Skill"
+      "Learning a New Skill",
+      "Renting an Apartment"
     ],
     "b1:speaking": [
       "Job Interviews and Strengths",
       "Technology That Changed Life",
       "Solving a Customer Problem",
       "Healthy Eating Habits",
-      "Getting a Driving Licence"
+      "Getting a Driving Licence",
+      "Describing a Turning Point"
     ],
     "b2:vocabulary": [
       "The Attention Economy",
@@ -38,7 +41,8 @@
       "Ordering in a Restaurant Like a Local",
       "Talking About Food and Cooking",
       "Renting a Flat or an Apartment",
-      "Making Plans With Friends"
+      "Making Plans With Friends",
+      "Talking About Learning English"
     ],
     "c1:reading": [
       "Consciousness and the Hard Problem",
@@ -158,11 +162,12 @@
       "Health Insurance and Doctors"
     ],
     "a1:short": [
-      "Countries and Nationalities"
+      "Countries and Nationalities",
+      "Birthdays and Celebrations"
     ],
     "a2:short": [
       "Giving Simple Instructions"
     ]
   },
-  "updatedAt": "2026-09-17T13:48:32.108Z"
+  "updatedAt": "2026-09-18T13:55:26.572Z"
 }

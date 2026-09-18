@@ -1,5 +1,121 @@
 [
   {
+    "date": "2026-09-18",
+    "level": "a1",
+    "skill": "short",
+    "topic": "Birthdays and Celebrations",
+    "title": "Birthdays and Celebrations: 3 English Words in 60 Seconds (A1) #shorts",
+    "durationSec": 21,
+    "sizeMb": 1.5,
+    "videoId": "xww8knWsmjs",
+    "url": "https://www.youtube.com/watch?v=xww8knWsmjs",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:a1",
+        "id": "PLIJ5pu8Ch1Pc"
+      }
+    ],
+    "buildSeconds": 25,
+    "dir": "output/2026-09-18-a1-short-birthdays-and-celebrations"
+  },
+  {
+    "date": "2026-09-18",
+    "level": "b2",
+    "skill": "vocabulary",
+    "topic": "Talking About Learning English",
+    "title": "Talking About Learning English: 9 English Words with Pictures (B2 Upper-Intermediate)",
+    "durationSec": 265,
+    "sizeMb": 14.5,
+    "videoId": "v4oO5MOnCZU",
+    "url": "https://www.youtube.com/watch?v=v4oO5MOnCZU",
+    "publishAt": "2026-09-18T17:30:00.000Z",
+    "playlists": [
+      {
+        "key": "level:b2",
+        "id": "PLEyMEjEr22bU"
+      },
+      {
+        "key": "skill:vocabulary",
+        "id": "PLRKWAimfYWh4"
+      }
+    ],
+    "buildSeconds": 216,
+    "dir": "output/2026-09-18-b2-vocabulary-talking-about-learning-english"
+  },
+  {
+    "date": "2026-09-18",
+    "level": "b1",
+    "skill": "speaking",
+    "topic": "Describing a Turning Point",
+    "title": "Describing a Turning Point — English Speaking Practice & Shadowing (B1)",
+    "durationSec": 303,
+    "sizeMb": 62.3,
+    "videoId": "1V3hpVxs2xs",
+    "url": "https://www.youtube.com/watch?v=1V3hpVxs2xs",
+    "publishAt": "2026-09-18T16:00:00.000Z",
+    "playlists": [
+      {
+        "key": "level:b1",
+        "id": "PLSkG2Gz0CZos"
+      },
+      {
+        "key": "skill:speaking",
+        "id": "PLCadq2A6pEK8"
+      }
+    ],
+    "buildSeconds": 631,
+    "dir": "output/2026-09-18-b1-speaking-describing-a-turning-point"
+  },
+  {
+    "date": "2026-09-18",
+    "level": "a2",
+    "skill": "listening",
+    "topic": "Renting an Apartment",
+    "title": "Renting an Apartment — English Conversation Practice (A2 Elementary)",
+    "durationSec": 263,
+    "sizeMb": 41.6,
+    "videoId": "uqMMKKdrnS0",
+    "url": "https://www.youtube.com/watch?v=uqMMKKdrnS0",
+    "publishAt": "2026-09-18T14:30:00.000Z",
+    "playlists": [
+      {
+        "key": "level:a2",
+        "id": "PLMUHkdE-F1_Q"
+      },
+      {
+        "key": "skill:listening",
+        "id": "PLc1avYS6uKVo"
+      }
+    ],
+    "buildSeconds": 1302,
+    "dir": "output/2026-09-18-a2-listening-renting-an-apartment"
+  },
+  {
+    "date": "2026-09-18",
+    "level": "a1",
+    "skill": "reading",
+    "topic": "In the Classroom",
+    "title": "In the Classroom — Learn English Through Story Level 1 (A1)",
+    "durationSec": 165,
+    "sizeMb": 9.6,
+    "videoId": "hnZcsdej0w0",
+    "url": "https://www.youtube.com/watch?v=hnZcsdej0w0",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:a1",
+        "id": "PLIJ5pu8Ch1Pc"
+      },
+      {
+        "key": "skill:reading",
+        "id": "PLYub11V_0AzA"
+      }
+    ],
+    "buildSeconds": 1118,
+    "dir": "output/2026-09-18-a1-reading-in-the-classroom"
+  },
+  {
     "date": "2026-09-17",
     "level": "a2",
     "skill": "short",
