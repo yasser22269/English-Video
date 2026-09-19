@@ -58,7 +58,8 @@
       "Saying Goodbye Politely",
       "Food and Drinks",
       "Feelings and Emotions",
-      "On the Phone"
+      "On the Phone",
+      "Jobs and Occupations"
     ],
     "a2:speaking": [
       "Comparing Cities",
@@ -66,7 +67,8 @@
       "Ending a Conversation Politely",
       "The Best and the Worst",
       "Technology and Gadgets",
-      "Talking About Your Studies"
+      "Talking About Your Studies",
+      "Public Transport Problems"
     ],
     "b2:reading": [
       "Universal Basic Income",
@@ -82,7 +84,8 @@
       "Describing Charts, Trends and Numbers",
       "Interrupting Politely in a Meeting",
       "Small Talk That Does Not Feel Awkward",
-      "British Humour, Irony and Understatement"
+      "British Humour, Irony and Understatement",
+      "Twelve Better Words Than Very"
     ],
     "a1:speaking": [
       "Food and Drinks",
@@ -159,7 +162,8 @@
       "Artificial Intelligence at Work",
       "Solving a Customer Problem",
       "Exercise and Motivation",
-      "Health Insurance and Doctors"
+      "Health Insurance and Doctors",
+      "Comparing Education Systems"
     ],
     "a1:short": [
       "Countries and Nationalities",
@@ -167,7 +171,10 @@
     ],
     "a2:short": [
       "Giving Simple Instructions"
+    ],
+    "b1:short": [
+      "Fake News and Media Literacy"
     ]
   },
-  "updatedAt": "2026-09-18T13:55:26.572Z"
+  "updatedAt": "2026-09-19T12:56:04.101Z"
 }
