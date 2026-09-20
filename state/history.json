@@ -1,5 +1,121 @@
 [
   {
+    "date": "2026-09-20",
+    "level": "a1",
+    "skill": "short",
+    "topic": "Hobbies and Free Time",
+    "title": "Hobbies and Free Time: 3 English Words in 60 Seconds (A1) #shorts",
+    "durationSec": 22,
+    "sizeMb": 1.7,
+    "videoId": "yDXX6HK5XZA",
+    "url": "https://www.youtube.com/watch?v=yDXX6HK5XZA",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:a1",
+        "id": "PLIJ5pu8Ch1Pc"
+      }
+    ],
+    "buildSeconds": 69,
+    "dir": "output/2026-09-20-a1-short-hobbies-and-free-time"
+  },
+  {
+    "date": "2026-09-20",
+    "level": "b2",
+    "skill": "listening",
+    "topic": "Talking About Holidays and Trips",
+    "title": "Talking About Holidays and Trips — English Conversation Practice (B2 Upper-Intermediate)",
+    "durationSec": 372,
+    "sizeMb": 70.4,
+    "videoId": "WE6IV1TNINc",
+    "url": "https://www.youtube.com/watch?v=WE6IV1TNINc",
+    "publishAt": "2026-09-20T17:30:00.000Z",
+    "playlists": [
+      {
+        "key": "level:b2",
+        "id": "PLEyMEjEr22bU"
+      },
+      {
+        "key": "skill:listening",
+        "id": "PLc1avYS6uKVo"
+      }
+    ],
+    "buildSeconds": 393,
+    "dir": "output/2026-09-20-b2-listening-talking-about-holidays-and-trips"
+  },
+  {
+    "date": "2026-09-20",
+    "level": "b1",
+    "skill": "reading",
+    "topic": "Online Shopping and Scams",
+    "title": "Online Shopping and Scams — Learn English Through Story Level 3 (B1)",
+    "durationSec": 323,
+    "sizeMb": 20.2,
+    "videoId": "X00LTjP8MRk",
+    "url": "https://www.youtube.com/watch?v=X00LTjP8MRk",
+    "publishAt": "2026-09-20T16:00:00.000Z",
+    "playlists": [
+      {
+        "key": "level:b1",
+        "id": "PLSkG2Gz0CZos"
+      },
+      {
+        "key": "skill:reading",
+        "id": "PLYub11V_0AzA"
+      }
+    ],
+    "buildSeconds": 227,
+    "dir": "output/2026-09-20-b1-reading-online-shopping-and-scams"
+  },
+  {
+    "date": "2026-09-20",
+    "level": "a2",
+    "skill": "vocabulary",
+    "topic": "Talking About the Weather",
+    "title": "Talking About the Weather: 10 English Words with Pictures (A2 Elementary)",
+    "durationSec": 284,
+    "sizeMb": 16.2,
+    "videoId": "QgkBd6Ye9_0",
+    "url": "https://www.youtube.com/watch?v=QgkBd6Ye9_0",
+    "publishAt": "2026-09-20T14:30:00.000Z",
+    "playlists": [
+      {
+        "key": "level:a2",
+        "id": "PLMUHkdE-F1_Q"
+      },
+      {
+        "key": "skill:vocabulary",
+        "id": "PLRKWAimfYWh4"
+      }
+    ],
+    "buildSeconds": 217,
+    "dir": "output/2026-09-20-a2-vocabulary-talking-about-the-weather"
+  },
+  {
+    "date": "2026-09-20",
+    "level": "a1",
+    "skill": "speaking",
+    "topic": "Animals and Pets",
+    "title": "Animals and Pets — English Speaking Practice & Shadowing (A1)",
+    "durationSec": 215,
+    "sizeMb": 25,
+    "videoId": "HTbnxjcIpuw",
+    "url": "https://www.youtube.com/watch?v=HTbnxjcIpuw",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:a1",
+        "id": "PLIJ5pu8Ch1Pc"
+      },
+      {
+        "key": "skill:speaking",
+        "id": "PLCadq2A6pEK8"
+      }
+    ],
+    "buildSeconds": 242,
+    "dir": "output/2026-09-20-a1-speaking-animals-and-pets"
+  },
+  {
     "date": "2026-09-19",
     "level": "b1",
     "skill": "short",

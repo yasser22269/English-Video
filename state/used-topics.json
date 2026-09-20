@@ -93,7 +93,8 @@
       "Greetings and Introductions",
       "Days, Months and Dates",
       "On the Phone",
-      "My Weekend"
+      "My Weekend",
+      "Animals and Pets"
     ],
     "a2:vocabulary": [
       "The Best and the Worst",
@@ -101,7 +102,8 @@
       "Talking About Last Weekend",
       "Talking About Your Job",
       "Talking About Your Studies",
-      "Describing Personality"
+      "Describing Personality",
+      "Talking About the Weather"
     ],
     "b1:reading": [
       "Travelling on a Budget",
@@ -109,7 +111,8 @@
       "Work-Life Balance",
       "Social Media and Mental Health",
       "Digital Detox Weekend",
-      "Getting a Driving Licence"
+      "Getting a Driving Licence",
+      "Online Shopping and Scams"
     ],
     "b2:listening": [
       "Gentrification and Neighbourhoods",
@@ -117,7 +120,8 @@
       "Making Plans With Friends",
       "Talking About Money and Budgeting",
       "Describing Someone's Personality",
-      "English Idioms About Time"
+      "English Idioms About Time",
+      "Talking About Holidays and Trips"
     ],
     "c1:speaking": [
       "Translation and the Limits of Language",
@@ -167,7 +171,8 @@
     ],
     "a1:short": [
       "Countries and Nationalities",
-      "Birthdays and Celebrations"
+      "Birthdays and Celebrations",
+      "Hobbies and Free Time"
     ],
     "a2:short": [
       "Giving Simple Instructions"
@@ -176,5 +181,5 @@
       "Fake News and Media Literacy"
     ]
   },
-  "updatedAt": "2026-09-19T12:56:04.101Z"
+  "updatedAt": "2026-09-20T13:24:39.242Z"
 }
