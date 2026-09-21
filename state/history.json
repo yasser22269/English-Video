@@ -1,5 +1,121 @@
 [
   {
+    "date": "2026-09-21",
+    "level": "a2",
+    "skill": "short",
+    "topic": "Weekend Markets and Bargaining",
+    "title": "Weekend Markets and Bargaining: 3 English Words in 60 Seconds (A2) #shorts",
+    "durationSec": 25,
+    "sizeMb": 1.6,
+    "videoId": "OehThgpNNPA",
+    "url": "https://www.youtube.com/watch?v=OehThgpNNPA",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:a2",
+        "id": "PLMUHkdE-F1_Q"
+      }
+    ],
+    "buildSeconds": 38,
+    "dir": "output/2026-09-21-a2-short-weekend-markets-and-bargaining"
+  },
+  {
+    "date": "2026-09-21",
+    "level": "c1",
+    "skill": "vocabulary",
+    "topic": "Understanding Fast Native Conversation",
+    "title": "Understanding Fast Native Conversation: 8 English Words with Pictures (C1 Advanced)",
+    "durationSec": 312,
+    "sizeMb": 20,
+    "videoId": "Aw3KZsc8EXQ",
+    "url": "https://www.youtube.com/watch?v=Aw3KZsc8EXQ",
+    "publishAt": "2026-09-21T19:00:00.000Z",
+    "playlists": [
+      {
+        "key": "level:c1",
+        "id": "PLPYmpq9AOiZM"
+      },
+      {
+        "key": "skill:vocabulary",
+        "id": "PLRKWAimfYWh4"
+      }
+    ],
+    "buildSeconds": 207,
+    "dir": "output/2026-09-21-c1-vocabulary-understanding-fast-native-conversation"
+  },
+  {
+    "date": "2026-09-21",
+    "level": "b1",
+    "skill": "listening",
+    "topic": "Making Small Talk at Work",
+    "title": "Making Small Talk at Work — English Conversation Practice (B1 Intermediate)",
+    "durationSec": 355,
+    "sizeMb": 56.2,
+    "videoId": "dL-DIIY6bWA",
+    "url": "https://www.youtube.com/watch?v=dL-DIIY6bWA",
+    "publishAt": "2026-09-21T16:00:00.000Z",
+    "playlists": [
+      {
+        "key": "level:b1",
+        "id": "PLSkG2Gz0CZos"
+      },
+      {
+        "key": "skill:listening",
+        "id": "PLc1avYS6uKVo"
+      }
+    ],
+    "buildSeconds": 368,
+    "dir": "output/2026-09-21-b1-listening-making-small-talk-at-work"
+  },
+  {
+    "date": "2026-09-21",
+    "level": "a2",
+    "skill": "reading",
+    "topic": "Making Invitations",
+    "title": "Making Invitations — Learn English Through Story Level 2 (A2)",
+    "durationSec": 215,
+    "sizeMb": 12.2,
+    "videoId": "dk1Oz-N9dA8",
+    "url": "https://www.youtube.com/watch?v=dk1Oz-N9dA8",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:a2",
+        "id": "PLMUHkdE-F1_Q"
+      },
+      {
+        "key": "skill:reading",
+        "id": "PLYub11V_0AzA"
+      }
+    ],
+    "buildSeconds": 184,
+    "dir": "output/2026-09-21-a2-reading-making-invitations"
+  },
+  {
+    "date": "2026-09-21",
+    "level": "a1",
+    "skill": "vocabulary",
+    "topic": "Hobbies and Free Time",
+    "title": "Hobbies and Free Time: 10 English Words with Pictures (A1 Beginner)",
+    "durationSec": 218,
+    "sizeMb": 12.4,
+    "videoId": "eUauWMPkkIE",
+    "url": "https://www.youtube.com/watch?v=eUauWMPkkIE",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:a1",
+        "id": "PLIJ5pu8Ch1Pc"
+      },
+      {
+        "key": "skill:vocabulary",
+        "id": "PLRKWAimfYWh4"
+      }
+    ],
+    "buildSeconds": 214,
+    "dir": "output/2026-09-21-a1-vocabulary-hobbies-and-free-time"
+  },
+  {
     "date": "2026-09-20",
     "level": "a1",
     "skill": "short",

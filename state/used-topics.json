@@ -7,7 +7,8 @@
       "My Family",
       "School Subjects",
       "Feelings and Emotions",
-      "My House and Rooms"
+      "My House and Rooms",
+      "Hobbies and Free Time"
     ],
     "a1:reading": [
       "My Family",
@@ -136,7 +137,8 @@
       "Holiday Memories",
       "Job Interviews Basics",
       "Neighbours and Community",
-      "Small Talk with Strangers"
+      "Small Talk with Strangers",
+      "Making Invitations"
     ],
     "b1:listening": [
       "Culture Shock Abroad",
@@ -144,7 +146,8 @@
       "Remote Work and Productivity",
       "Learning Languages Faster",
       "Living with Housemates",
-      "Health Insurance and Doctors"
+      "Health Insurance and Doctors",
+      "Making Small Talk at Work"
     ],
     "b2:speaking": [
       "The Psychology of Habits",
@@ -159,7 +162,8 @@
       "British Humour, Irony and Understatement",
       "Weighing Advantages and Disadvantages",
       "Talking About a Career Change",
-      "How to Sound Less Certain on Purpose"
+      "How to Sound Less Certain on Purpose",
+      "Understanding Fast Native Conversation"
     ],
     "b1:vocabulary": [
       "Learning Languages Faster",
@@ -175,11 +179,12 @@
       "Hobbies and Free Time"
     ],
     "a2:short": [
-      "Giving Simple Instructions"
+      "Giving Simple Instructions",
+      "Weekend Markets and Bargaining"
     ],
     "b1:short": [
       "Fake News and Media Literacy"
     ]
   },
-  "updatedAt": "2026-09-20T13:24:39.242Z"
+  "updatedAt": "2026-09-21T15:26:32.485Z"
 }
