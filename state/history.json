@@ -1,5 +1,121 @@
 [
   {
+    "date": "2026-09-22",
+    "level": "a1",
+    "skill": "short",
+    "topic": "Asking for Directions",
+    "title": "Asking for Directions: 3 English Words in 60 Seconds (A1) #shorts",
+    "durationSec": 20,
+    "sizeMb": 1.7,
+    "videoId": "bUvMxlZZw1s",
+    "url": "https://www.youtube.com/watch?v=bUvMxlZZw1s",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:a1",
+        "id": "PLIJ5pu8Ch1Pc"
+      }
+    ],
+    "buildSeconds": 69,
+    "dir": "output/2026-09-22-a1-short-asking-for-directions"
+  },
+  {
+    "date": "2026-09-22",
+    "level": "b2",
+    "skill": "vocabulary",
+    "topic": "Talking About Holidays and Trips",
+    "title": "Talking About Holidays and Trips: 9 English Words with Pictures (B2 Upper-Intermediate)",
+    "durationSec": 273,
+    "sizeMb": 15.2,
+    "videoId": "1Lcns9J9XRg",
+    "url": "https://www.youtube.com/watch?v=1Lcns9J9XRg",
+    "publishAt": "2026-09-22T17:30:00.000Z",
+    "playlists": [
+      {
+        "key": "level:b2",
+        "id": "PLEyMEjEr22bU"
+      },
+      {
+        "key": "skill:vocabulary",
+        "id": "PLRKWAimfYWh4"
+      }
+    ],
+    "buildSeconds": 244,
+    "dir": "output/2026-09-22-b2-vocabulary-talking-about-holidays-and-trips"
+  },
+  {
+    "date": "2026-09-22",
+    "level": "b1",
+    "skill": "speaking",
+    "topic": "Giving and Receiving Feedback",
+    "title": "Giving and Receiving Feedback — English Speaking Practice & Shadowing (B1)",
+    "durationSec": 316,
+    "sizeMb": 44.2,
+    "videoId": "gMMiwb8QQhk",
+    "url": "https://www.youtube.com/watch?v=gMMiwb8QQhk",
+    "publishAt": "2026-09-22T16:00:00.000Z",
+    "playlists": [
+      {
+        "key": "level:b1",
+        "id": "PLSkG2Gz0CZos"
+      },
+      {
+        "key": "skill:speaking",
+        "id": "PLCadq2A6pEK8"
+      }
+    ],
+    "buildSeconds": 443,
+    "dir": "output/2026-09-22-b1-speaking-giving-and-receiving-feedback"
+  },
+  {
+    "date": "2026-09-22",
+    "level": "a2",
+    "skill": "listening",
+    "topic": "Describing Your Best Friend",
+    "title": "Describing Your Best Friend — English Conversation Practice (A2 Elementary)",
+    "durationSec": 269,
+    "sizeMb": 63.1,
+    "videoId": "oElXs7kGnJ0",
+    "url": "https://www.youtube.com/watch?v=oElXs7kGnJ0",
+    "publishAt": "2026-09-22T14:30:00.000Z",
+    "playlists": [
+      {
+        "key": "level:a2",
+        "id": "PLMUHkdE-F1_Q"
+      },
+      {
+        "key": "skill:listening",
+        "id": "PLc1avYS6uKVo"
+      }
+    ],
+    "buildSeconds": 410,
+    "dir": "output/2026-09-22-a2-listening-describing-your-best-friend"
+  },
+  {
+    "date": "2026-09-22",
+    "level": "a1",
+    "skill": "reading",
+    "topic": "Sports I Play",
+    "title": "Sports I Play — Learn English Through Story Level 1 (A1)",
+    "durationSec": 168,
+    "sizeMb": 10,
+    "videoId": "XF1smiBIYmc",
+    "url": "https://www.youtube.com/watch?v=XF1smiBIYmc",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:a1",
+        "id": "PLIJ5pu8Ch1Pc"
+      },
+      {
+        "key": "skill:reading",
+        "id": "PLYub11V_0AzA"
+      }
+    ],
+    "buildSeconds": 230,
+    "dir": "output/2026-09-22-a1-reading-sports-i-play"
+  },
+  {
     "date": "2026-09-21",
     "level": "a2",
     "skill": "short",
