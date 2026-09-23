@@ -64,7 +64,8 @@
       "Food and Drinks",
       "Feelings and Emotions",
       "On the Phone",
-      "Jobs and Occupations"
+      "Jobs and Occupations",
+      "In the City"
     ],
     "a2:speaking": [
       "Comparing Cities",
@@ -73,7 +74,8 @@
       "The Best and the Worst",
       "Technology and Gadgets",
       "Talking About Your Studies",
-      "Public Transport Problems"
+      "Public Transport Problems",
+      "A Day at the Beach"
     ],
     "b2:reading": [
       "Universal Basic Income",
@@ -90,7 +92,8 @@
       "Interrupting Politely in a Meeting",
       "Small Talk That Does Not Feel Awkward",
       "British Humour, Irony and Understatement",
-      "Twelve Better Words Than Very"
+      "Twelve Better Words Than Very",
+      "Understanding Fast Native Conversation"
     ],
     "a1:speaking": [
       "Food and Drinks",
@@ -175,7 +178,8 @@
       "Solving a Customer Problem",
       "Exercise and Motivation",
       "Health Insurance and Doctors",
-      "Comparing Education Systems"
+      "Comparing Education Systems",
+      "Public Speaking Nerves"
     ],
     "a1:short": [
       "Countries and Nationalities",
@@ -188,8 +192,9 @@
       "Weekend Markets and Bargaining"
     ],
     "b1:short": [
-      "Fake News and Media Literacy"
+      "Fake News and Media Literacy",
+      "Time Management Techniques"
     ]
   },
-  "updatedAt": "2026-09-22T13:51:49.875Z"
+  "updatedAt": "2026-09-23T14:02:46.225Z"
 }

@@ -1,5 +1,121 @@
 [
   {
+    "date": "2026-09-23",
+    "level": "b1",
+    "skill": "short",
+    "topic": "Time Management Techniques",
+    "title": "Time Management Techniques: 3 English Words in 60 Seconds (B1) #shorts",
+    "durationSec": 27,
+    "sizeMb": 1.9,
+    "videoId": "MmF4adyaeY0",
+    "url": "https://www.youtube.com/watch?v=MmF4adyaeY0",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:b1",
+        "id": "PLSkG2Gz0CZos"
+      }
+    ],
+    "buildSeconds": 73,
+    "dir": "output/2026-09-23-b1-short-time-management-techniques"
+  },
+  {
+    "date": "2026-09-23",
+    "level": "c1",
+    "skill": "listening",
+    "topic": "Understanding Fast Native Conversation",
+    "title": "Understanding Fast Native Conversation — English Conversation Practice (C1 Advanced)",
+    "durationSec": 387,
+    "sizeMb": 49.7,
+    "videoId": "ftJTHg5fP78",
+    "url": "https://www.youtube.com/watch?v=ftJTHg5fP78",
+    "publishAt": "2026-09-23T19:00:00.000Z",
+    "playlists": [
+      {
+        "key": "level:c1",
+        "id": "PLPYmpq9AOiZM"
+      },
+      {
+        "key": "skill:listening",
+        "id": "PLc1avYS6uKVo"
+      }
+    ],
+    "buildSeconds": 360,
+    "dir": "output/2026-09-23-c1-listening-understanding-fast-native-conversation"
+  },
+  {
+    "date": "2026-09-23",
+    "level": "b1",
+    "skill": "vocabulary",
+    "topic": "Public Speaking Nerves",
+    "title": "Public Speaking Nerves: 9 English Words with Pictures (B1 Intermediate)",
+    "durationSec": 289,
+    "sizeMb": 16.2,
+    "videoId": "7vNMVXH5AUY",
+    "url": "https://www.youtube.com/watch?v=7vNMVXH5AUY",
+    "publishAt": "2026-09-23T16:00:00.000Z",
+    "playlists": [
+      {
+        "key": "level:b1",
+        "id": "PLSkG2Gz0CZos"
+      },
+      {
+        "key": "skill:vocabulary",
+        "id": "PLRKWAimfYWh4"
+      }
+    ],
+    "buildSeconds": 238,
+    "dir": "output/2026-09-23-b1-vocabulary-public-speaking-nerves"
+  },
+  {
+    "date": "2026-09-23",
+    "level": "a2",
+    "skill": "speaking",
+    "topic": "A Day at the Beach",
+    "title": "A Day at the Beach — English Speaking Practice & Shadowing (A2)",
+    "durationSec": 264,
+    "sizeMb": 85.4,
+    "videoId": "EEjTjRKh-QU",
+    "url": "https://www.youtube.com/watch?v=EEjTjRKh-QU",
+    "publishAt": "2026-09-23T14:30:00.000Z",
+    "playlists": [
+      {
+        "key": "level:a2",
+        "id": "PLMUHkdE-F1_Q"
+      },
+      {
+        "key": "skill:speaking",
+        "id": "PLCadq2A6pEK8"
+      }
+    ],
+    "buildSeconds": 306,
+    "dir": "output/2026-09-23-a2-speaking-a-day-at-the-beach"
+  },
+  {
+    "date": "2026-09-23",
+    "level": "a1",
+    "skill": "listening",
+    "topic": "In the City",
+    "title": "In the City — English Conversation Practice (A1 Beginner)",
+    "durationSec": 206,
+    "sizeMb": 18.8,
+    "videoId": "5DJxydDYrPs",
+    "url": "https://www.youtube.com/watch?v=5DJxydDYrPs",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:a1",
+        "id": "PLIJ5pu8Ch1Pc"
+      },
+      {
+        "key": "skill:listening",
+        "id": "PLc1avYS6uKVo"
+      }
+    ],
+    "buildSeconds": 257,
+    "dir": "output/2026-09-23-a1-listening-in-the-city"
+  },
+  {
     "date": "2026-09-22",
     "level": "a1",
     "skill": "short",
