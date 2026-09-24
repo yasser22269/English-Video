@@ -1,5 +1,121 @@
 [
   {
+    "date": "2026-09-24",
+    "level": "a1",
+    "skill": "short",
+    "topic": "Simple Online Shopping",
+    "title": "Simple Online Shopping: 3 English Words in 60 Seconds (A1) #shorts",
+    "durationSec": 19,
+    "sizeMb": 1.4,
+    "videoId": "jr-Ix3ZOmQM",
+    "url": "https://www.youtube.com/watch?v=jr-Ix3ZOmQM",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:a1",
+        "id": "PLIJ5pu8Ch1Pc"
+      }
+    ],
+    "buildSeconds": 68,
+    "dir": "output/2026-09-24-a1-short-simple-online-shopping"
+  },
+  {
+    "date": "2026-09-24",
+    "level": "b2",
+    "skill": "listening",
+    "topic": "Habits in the Past: Used To",
+    "title": "Habits in the Past: Used To — English Conversation Practice (B2 Upper-Intermediate)",
+    "durationSec": 323,
+    "sizeMb": 55,
+    "videoId": "d7vAd3cWIYk",
+    "url": "https://www.youtube.com/watch?v=d7vAd3cWIYk",
+    "publishAt": "2026-09-24T17:30:00.000Z",
+    "playlists": [
+      {
+        "key": "level:b2",
+        "id": "PLEyMEjEr22bU"
+      },
+      {
+        "key": "skill:listening",
+        "id": "PLc1avYS6uKVo"
+      }
+    ],
+    "buildSeconds": 294,
+    "dir": "output/2026-09-24-b2-listening-habits-in-the-past-used-to"
+  },
+  {
+    "date": "2026-09-24",
+    "level": "b1",
+    "skill": "reading",
+    "topic": "Artificial Intelligence at Work",
+    "title": "Artificial Intelligence at Work — Learn English Through Story Level 3 (B1)",
+    "durationSec": 329,
+    "sizeMb": 20.3,
+    "videoId": "j-nKT9TNzaU",
+    "url": "https://www.youtube.com/watch?v=j-nKT9TNzaU",
+    "publishAt": "2026-09-24T16:00:00.000Z",
+    "playlists": [
+      {
+        "key": "level:b1",
+        "id": "PLSkG2Gz0CZos"
+      },
+      {
+        "key": "skill:reading",
+        "id": "PLYub11V_0AzA"
+      }
+    ],
+    "buildSeconds": 204,
+    "dir": "output/2026-09-24-b1-reading-artificial-intelligence-at-work"
+  },
+  {
+    "date": "2026-09-24",
+    "level": "a2",
+    "skill": "vocabulary",
+    "topic": "Sports and Fitness Routines",
+    "title": "Sports and Fitness Routines: 10 English Words with Pictures (A2 Elementary)",
+    "durationSec": 275,
+    "sizeMb": 14.9,
+    "videoId": "g1r_P2wUQXY",
+    "url": "https://www.youtube.com/watch?v=g1r_P2wUQXY",
+    "publishAt": "2026-09-24T14:30:00.000Z",
+    "playlists": [
+      {
+        "key": "level:a2",
+        "id": "PLMUHkdE-F1_Q"
+      },
+      {
+        "key": "skill:vocabulary",
+        "id": "PLRKWAimfYWh4"
+      }
+    ],
+    "buildSeconds": 265,
+    "dir": "output/2026-09-24-a2-vocabulary-sports-and-fitness-routines"
+  },
+  {
+    "date": "2026-09-24",
+    "level": "a1",
+    "skill": "speaking",
+    "topic": "Transport and Travel",
+    "title": "Transport and Travel — English Speaking Practice & Shadowing (A1)",
+    "durationSec": 174,
+    "sizeMb": 33.1,
+    "videoId": "jc5ZnLnx1io",
+    "url": "https://www.youtube.com/watch?v=jc5ZnLnx1io",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:a1",
+        "id": "PLIJ5pu8Ch1Pc"
+      },
+      {
+        "key": "skill:speaking",
+        "id": "PLCadq2A6pEK8"
+      }
+    ],
+    "buildSeconds": 218,
+    "dir": "output/2026-09-24-a1-speaking-transport-and-travel"
+  },
+  {
     "date": "2026-09-23",
     "level": "b1",
     "skill": "short",

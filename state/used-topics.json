@@ -102,7 +102,8 @@
       "Days, Months and Dates",
       "On the Phone",
       "My Weekend",
-      "Animals and Pets"
+      "Animals and Pets",
+      "Transport and Travel"
     ],
     "a2:vocabulary": [
       "The Best and the Worst",
@@ -111,7 +112,8 @@
       "Talking About Your Job",
       "Talking About Your Studies",
       "Describing Personality",
-      "Talking About the Weather"
+      "Talking About the Weather",
+      "Sports and Fitness Routines"
     ],
     "b1:reading": [
       "Travelling on a Budget",
@@ -120,7 +122,8 @@
       "Social Media and Mental Health",
       "Digital Detox Weekend",
       "Getting a Driving Licence",
-      "Online Shopping and Scams"
+      "Online Shopping and Scams",
+      "Artificial Intelligence at Work"
     ],
     "b2:listening": [
       "Gentrification and Neighbourhoods",
@@ -129,7 +132,8 @@
       "Talking About Money and Budgeting",
       "Describing Someone's Personality",
       "English Idioms About Time",
-      "Talking About Holidays and Trips"
+      "Talking About Holidays and Trips",
+      "Habits in the Past: Used To"
     ],
     "c1:speaking": [
       "Translation and the Limits of Language",
@@ -185,7 +189,8 @@
       "Countries and Nationalities",
       "Birthdays and Celebrations",
       "Hobbies and Free Time",
-      "Asking for Directions"
+      "Asking for Directions",
+      "Simple Online Shopping"
     ],
     "a2:short": [
       "Giving Simple Instructions",
@@ -196,5 +201,5 @@
       "Time Management Techniques"
     ]
   },
-  "updatedAt": "2026-09-23T14:02:46.225Z"
+  "updatedAt": "2026-09-24T13:54:07.673Z"
 }
