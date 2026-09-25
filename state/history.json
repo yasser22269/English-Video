@@ -1,5 +1,121 @@
 [
   {
+    "date": "2026-09-25",
+    "level": "a2",
+    "skill": "short",
+    "topic": "Talking on the Phone at Work",
+    "title": "Talking on the Phone at Work: 3 English Words in 60 Seconds (A2) #shorts",
+    "durationSec": 24,
+    "sizeMb": 1.6,
+    "videoId": "-BDgyKOsRAs",
+    "url": "https://www.youtube.com/watch?v=-BDgyKOsRAs",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:a2",
+        "id": "PLMUHkdE-F1_Q"
+      }
+    ],
+    "buildSeconds": 27,
+    "dir": "output/2026-09-25-a2-short-talking-on-the-phone-at-work"
+  },
+  {
+    "date": "2026-09-25",
+    "level": "c1",
+    "skill": "vocabulary",
+    "topic": "Talking About the Future With Confidence",
+    "title": "Talking About the Future With Confidence: 8 English Words with Pictures (C1 Advanced)",
+    "durationSec": 266,
+    "sizeMb": 16.3,
+    "videoId": "BZuj1zeYxqQ",
+    "url": "https://www.youtube.com/watch?v=BZuj1zeYxqQ",
+    "publishAt": "2026-09-25T19:00:00.000Z",
+    "playlists": [
+      {
+        "key": "level:c1",
+        "id": "PLPYmpq9AOiZM"
+      },
+      {
+        "key": "skill:vocabulary",
+        "id": "PLRKWAimfYWh4"
+      }
+    ],
+    "buildSeconds": 215,
+    "dir": "output/2026-09-25-c1-vocabulary-talking-about-the-future-with-confidence"
+  },
+  {
+    "date": "2026-09-25",
+    "level": "b1",
+    "skill": "listening",
+    "topic": "Books That Changed My Mind",
+    "title": "Books That Changed My Mind — English Conversation Practice (B1 Intermediate)",
+    "durationSec": 365,
+    "sizeMb": 79.7,
+    "videoId": "Wj3JEj0Innw",
+    "url": "https://www.youtube.com/watch?v=Wj3JEj0Innw",
+    "publishAt": "2026-09-25T16:00:00.000Z",
+    "playlists": [
+      {
+        "key": "level:b1",
+        "id": "PLSkG2Gz0CZos"
+      },
+      {
+        "key": "skill:listening",
+        "id": "PLc1avYS6uKVo"
+      }
+    ],
+    "buildSeconds": 396,
+    "dir": "output/2026-09-25-b1-listening-books-that-changed-my-mind"
+  },
+  {
+    "date": "2026-09-25",
+    "level": "a2",
+    "skill": "reading",
+    "topic": "Talking on the Phone at Work",
+    "title": "Talking on the Phone at Work — Learn English Through Story Level 2 (A2)",
+    "durationSec": 223,
+    "sizeMb": 12.7,
+    "videoId": "UQiCgOOqJlI",
+    "url": "https://www.youtube.com/watch?v=UQiCgOOqJlI",
+    "publishAt": "2026-09-25T14:30:00.000Z",
+    "playlists": [
+      {
+        "key": "level:a2",
+        "id": "PLMUHkdE-F1_Q"
+      },
+      {
+        "key": "skill:reading",
+        "id": "PLYub11V_0AzA"
+      }
+    ],
+    "buildSeconds": 177,
+    "dir": "output/2026-09-25-a2-reading-talking-on-the-phone-at-work"
+  },
+  {
+    "date": "2026-09-25",
+    "level": "a1",
+    "skill": "vocabulary",
+    "topic": "Colours and Clothes",
+    "title": "Colours and Clothes: 10 English Words with Pictures (A1 Beginner)",
+    "durationSec": 200,
+    "sizeMb": 11.6,
+    "videoId": "XJ2spnXuB0w",
+    "url": "https://www.youtube.com/watch?v=XJ2spnXuB0w",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:a1",
+        "id": "PLIJ5pu8Ch1Pc"
+      },
+      {
+        "key": "skill:vocabulary",
+        "id": "PLRKWAimfYWh4"
+      }
+    ],
+    "buildSeconds": 211,
+    "dir": "output/2026-09-25-a1-vocabulary-colours-and-clothes"
+  },
+  {
     "date": "2026-09-24",
     "level": "a1",
     "skill": "short",
