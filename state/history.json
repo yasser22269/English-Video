@@ -1,5 +1,121 @@
 [
   {
+    "date": "2026-09-26",
+    "level": "a1",
+    "skill": "short",
+    "topic": "Making Plans with Friends",
+    "title": "Making Plans with Friends: 3 English Words in 60 Seconds (A1) #shorts",
+    "durationSec": 21,
+    "sizeMb": 1.7,
+    "videoId": "IUwGSSVAP5M",
+    "url": "https://www.youtube.com/watch?v=IUwGSSVAP5M",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:a1",
+        "id": "PLIJ5pu8Ch1Pc"
+      }
+    ],
+    "buildSeconds": 87,
+    "dir": "output/2026-09-26-a1-short-making-plans-with-friends"
+  },
+  {
+    "date": "2026-09-26",
+    "level": "b2",
+    "skill": "vocabulary",
+    "topic": "Prepositions People Get Wrong",
+    "title": "Prepositions People Get Wrong: 9 English Words with Pictures (B2 Upper-Intermediate)",
+    "durationSec": 323,
+    "sizeMb": 18.5,
+    "videoId": "c39TCWCTDA0",
+    "url": "https://www.youtube.com/watch?v=c39TCWCTDA0",
+    "publishAt": "2026-09-26T17:30:00.000Z",
+    "playlists": [
+      {
+        "key": "level:b2",
+        "id": "PLEyMEjEr22bU"
+      },
+      {
+        "key": "skill:vocabulary",
+        "id": "PLRKWAimfYWh4"
+      }
+    ],
+    "buildSeconds": 253,
+    "dir": "output/2026-09-26-b2-vocabulary-prepositions-people-get-wrong"
+  },
+  {
+    "date": "2026-09-26",
+    "level": "b1",
+    "skill": "speaking",
+    "topic": "Music and Memory",
+    "title": "Music and Memory — English Speaking Practice & Shadowing (B1)",
+    "durationSec": 323,
+    "sizeMb": 45.1,
+    "videoId": "Yms3oKWiNBA",
+    "url": "https://www.youtube.com/watch?v=Yms3oKWiNBA",
+    "publishAt": "2026-09-26T16:00:00.000Z",
+    "playlists": [
+      {
+        "key": "level:b1",
+        "id": "PLSkG2Gz0CZos"
+      },
+      {
+        "key": "skill:speaking",
+        "id": "PLCadq2A6pEK8"
+      }
+    ],
+    "buildSeconds": 307,
+    "dir": "output/2026-09-26-b1-speaking-music-and-memory"
+  },
+  {
+    "date": "2026-09-26",
+    "level": "a2",
+    "skill": "listening",
+    "topic": "The Best and the Worst",
+    "title": "The Best and the Worst — English Conversation Practice (A2 Elementary)",
+    "durationSec": 251,
+    "sizeMb": 40.7,
+    "videoId": "EEcx5_GgPHc",
+    "url": "https://www.youtube.com/watch?v=EEcx5_GgPHc",
+    "publishAt": "2026-09-26T14:30:00.000Z",
+    "playlists": [
+      {
+        "key": "level:a2",
+        "id": "PLMUHkdE-F1_Q"
+      },
+      {
+        "key": "skill:listening",
+        "id": "PLc1avYS6uKVo"
+      }
+    ],
+    "buildSeconds": 254,
+    "dir": "output/2026-09-26-a2-listening-the-best-and-the-worst"
+  },
+  {
+    "date": "2026-09-26",
+    "level": "a1",
+    "skill": "reading",
+    "topic": "Food and Drinks",
+    "title": "Food and Drinks — Learn English Through Story Level 1 (A1)",
+    "durationSec": 151,
+    "sizeMb": 8.7,
+    "videoId": "J_xlsPPUAyY",
+    "url": "https://www.youtube.com/watch?v=J_xlsPPUAyY",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:a1",
+        "id": "PLIJ5pu8Ch1Pc"
+      },
+      {
+        "key": "skill:reading",
+        "id": "PLYub11V_0AzA"
+      }
+    ],
+    "buildSeconds": 117,
+    "dir": "output/2026-09-26-a1-reading-food-and-drinks"
+  },
+  {
     "date": "2026-09-25",
     "level": "a2",
     "skill": "short",
