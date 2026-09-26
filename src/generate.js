@@ -2,7 +2,7 @@
 import fs from 'fs';
 import path from 'path';
 import { channel, levelConfig, skillConfig, paths, env, fontConfig } from './lib/config.js';
-import { todaysBatch, todaysShort, pickTopic, slugify, dayIndex, publishAtFor, describeSlot } from './lib/schedule.js';
+import { todaysBatch, todaysShorts, pickTopic, slugify, dayIndex, publishAtFor, publishAtSlot, describeSlot } from './lib/schedule.js';
 import { writeLesson, buildMetadata, localizeMetadata } from './lib/lesson.js';
 import { buildPlan, resolveTimings, buildChapters } from './lib/build.js';
 import { checkRetention } from './lib/guards.js';
@@ -76,7 +76,7 @@ function thumbnailSub(lesson, skill) {
   }
 }
 
-async function buildOne({ level, skill, date, upload }) {
+async function buildOne({ level, skill, date, upload, slot = null }) {
   const started = Date.now();
   const lvl = levelConfig(level);
   const skl = skillConfig(skill);
@@ -243,7 +243,7 @@ async function buildOne({ level, skill, date, upload }) {
   if (upload) {
     // Each level owns a fixed hour of the day; null means that hour is already
     // gone and the lesson should just go out now.
-    publishAt = isShort ? null : publishAtFor(level, date);
+    publishAt = isShort ? publishAtSlot(slot, date) : publishAtFor(level, date);
     let localizations = {};
     try {
       localizations = await localizeMetadata(lesson, meta, { languages: channel.youtube.localizations });
@@ -296,9 +296,8 @@ async function main() {
     batch = [{ level: arg('level'), skill: arg('skill') || 'vocabulary', date }];
   } else {
     batch = todaysBatch(date);
-    // One vertical Short a day, on top of the long lessons.
-    const short = todaysShort(date);
-    if (short) batch.push(short);
+    // Shorts on top of the long lessons — see todaysShorts for why there are two.
+    batch.push(...todaysShorts(date));
     if (arg('only')) batch = batch.filter(b => b.level === arg('only'));
   }
 

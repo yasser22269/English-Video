@@ -242,19 +242,27 @@
   },
   "batch": {
     "alternate": [
+      "b1",
       "b2",
       "c1"
     ],
     "shorts": {
       "enabled": true,
+      "perDay": 2,
       "levels": [
         "a1",
         "a2",
+        "b1",
         "a1",
-        "b1"
+        "a2",
+        "b2"
+      ],
+      "slots": [
+        "12:30",
+        "18:00"
       ]
     },
-    "note": "Month one: A1 9.5 views/video, B2 and C1 1.8 (C1 newest cohort 5.7% retention). B2 and C1 share one daily slot and the freed upload becomes a Short, weighted to A1/A2 where the audience is. Set alternate to [] and shorts.enabled to false to restore one long lesson per level."
+    "note": "16-26 Sep measured: 11 Shorts earned 963 views (88 each) against ~290 for 44 long lessons, and the channel went from 472 to 1,725 views. So three long lessons a day (A1, A2, and B1/B2/C1 in turn) plus two Shorts, weighted to A1/A2. Quota: 5 inserts 8,000 + 3 thumbnails 150 + 8 playlist adds 400 = 8,550. Set shorts.enabled false and alternate [] to restore one long lesson per level."
   },
   "shortVideo": {
     "width": 1080,

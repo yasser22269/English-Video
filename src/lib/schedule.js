@@ -43,14 +43,25 @@ export function todaysBatch(date = new Date()) {
 }
 
 /**
- * Today's Short: a vertical micro-lesson cut from the level that earns views.
- * Rotates through `channel.batch.shorts.levels` so each gets its turn.
+ * Today's Shorts: vertical micro-lessons, rotating through
+ * `channel.batch.shorts.levels` so every level gets its turn.
+ *
+ * Measured 16-26 Sep, the first eleven days with Shorts: 11 Shorts earned 963
+ * views (88 each) while 44 long lessons earned about 290 between them — 77% of
+ * the channel's growth from a fifth of the uploads. `perDay` is why there are
+ * now two.
  */
-export function todaysShort(date = new Date()) {
+export function todaysShorts(date = new Date()) {
   const cfg = channel.batch?.shorts;
-  if (!cfg?.enabled || !cfg.levels?.length) return null;
-  const level = cfg.levels[dayIndex(date) % cfg.levels.length];
-  return { level, skill: 'short', date };
+  if (!cfg?.enabled || !cfg.levels?.length) return [];
+  const perDay = Math.max(1, cfg.perDay || 1);
+  const out = [];
+  for (let i = 0; i < perDay; i++) {
+    const level = cfg.levels[(dayIndex(date) * perDay + i) % cfg.levels.length];
+    // Each Short gets its own hour so two do not land in the same minute.
+    out.push({ level, skill: 'short', date, slot: cfg.slots?.[i] || null });
+  }
+  return out;
 }
 
 function loadState() {
@@ -144,8 +155,12 @@ function wallClockToUtc(date, hhmm, tz) {
  * started late should still get the day's lesson out, not hold it for 24 hours.
  */
 export function publishAtFor(level, date = new Date(), now = new Date()) {
+  return publishAtSlot(channel.publish?.slots?.[level], date, now);
+}
+
+/** The instant of a wall-clock slot, or null once it has already passed. */
+export function publishAtSlot(slot, date = new Date(), now = new Date()) {
   const cfg = channel.publish;
-  const slot = cfg?.slots?.[level];
   if (!slot) return null;
 
   const at = wallClockToUtc(date, slot, cfg.timezone || 'UTC');
