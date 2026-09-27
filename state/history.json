@@ -1,5 +1,97 @@
 [
   {
+    "date": "2026-09-27",
+    "level": "a2",
+    "skill": "short",
+    "topic": "Describing a Photograph",
+    "title": "Describing a Photograph: 3 English Words in 60 Seconds (A2) #shorts",
+    "durationSec": 29,
+    "sizeMb": 1.9,
+    "videoId": "tYFC9Pcmoo8",
+    "url": "https://www.youtube.com/watch?v=tYFC9Pcmoo8",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:a2",
+        "id": "PLMUHkdE-F1_Q"
+      }
+    ],
+    "buildSeconds": 106,
+    "dir": "output/2026-09-27-a2-short-describing-a-photograph"
+  },
+  {
+    "date": "2026-09-27",
+    "level": "c1",
+    "skill": "listening",
+    "topic": "Academic Phrases for IELTS Writing",
+    "title": "Academic Phrases for IELTS Writing — English Conversation Practice (C1 Advanced)",
+    "durationSec": 395,
+    "sizeMb": 14.4,
+    "videoId": "OvVSKRfsbq8",
+    "url": "https://www.youtube.com/watch?v=OvVSKRfsbq8",
+    "publishAt": "2026-09-27T19:00:00.000Z",
+    "playlists": [
+      {
+        "key": "level:c1",
+        "id": "PLPYmpq9AOiZM"
+      },
+      {
+        "key": "skill:listening",
+        "id": "PLc1avYS6uKVo"
+      }
+    ],
+    "buildSeconds": 298,
+    "dir": "output/2026-09-27-c1-listening-academic-phrases-for-ielts-writing"
+  },
+  {
+    "date": "2026-09-27",
+    "level": "a2",
+    "skill": "speaking",
+    "topic": "Ordering Food and Complaining Politely",
+    "title": "Ordering Food and Complaining Politely — English Speaking Practice & Shadowing (A2)",
+    "durationSec": 230,
+    "sizeMb": 47.4,
+    "videoId": "9ehu2ZhlyJg",
+    "url": "https://www.youtube.com/watch?v=9ehu2ZhlyJg",
+    "publishAt": "2026-09-27T14:30:00.000Z",
+    "playlists": [
+      {
+        "key": "level:a2",
+        "id": "PLMUHkdE-F1_Q"
+      },
+      {
+        "key": "skill:speaking",
+        "id": "PLCadq2A6pEK8"
+      }
+    ],
+    "buildSeconds": 233,
+    "dir": "output/2026-09-27-a2-speaking-ordering-food-and-complaining-politely"
+  },
+  {
+    "date": "2026-09-27",
+    "level": "a1",
+    "skill": "listening",
+    "topic": "At the Supermarket",
+    "title": "At the Supermarket — English Conversation Practice (A1 Beginner)",
+    "durationSec": 188,
+    "sizeMb": 25.1,
+    "videoId": "35TCywk6b7o",
+    "url": "https://www.youtube.com/watch?v=35TCywk6b7o",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:a1",
+        "id": "PLIJ5pu8Ch1Pc"
+      },
+      {
+        "key": "skill:listening",
+        "id": "PLc1avYS6uKVo"
+      }
+    ],
+    "buildSeconds": 206,
+    "dir": "output/2026-09-27-a1-listening-at-the-supermarket"
+  },
+  {
     "date": "2026-09-26",
     "level": "a1",
     "skill": "short",

@@ -70,7 +70,8 @@
       "Feelings and Emotions",
       "On the Phone",
       "Jobs and Occupations",
-      "In the City"
+      "In the City",
+      "At the Supermarket"
     ],
     "a2:speaking": [
       "Comparing Cities",
@@ -80,7 +81,8 @@
       "Technology and Gadgets",
       "Talking About Your Studies",
       "Public Transport Problems",
-      "A Day at the Beach"
+      "A Day at the Beach",
+      "Ordering Food and Complaining Politely"
     ],
     "b2:reading": [
       "Universal Basic Income",
@@ -98,7 +100,8 @@
       "Small Talk That Does Not Feel Awkward",
       "British Humour, Irony and Understatement",
       "Twelve Better Words Than Very",
-      "Understanding Fast Native Conversation"
+      "Understanding Fast Native Conversation",
+      "Academic Phrases for IELTS Writing"
     ],
     "a1:speaking": [
       "Food and Drinks",
@@ -204,12 +207,13 @@
     "a2:short": [
       "Giving Simple Instructions",
       "Weekend Markets and Bargaining",
-      "Talking on the Phone at Work"
+      "Talking on the Phone at Work",
+      "Describing a Photograph"
     ],
     "b1:short": [
       "Fake News and Media Literacy",
       "Time Management Techniques"
     ]
   },
-  "updatedAt": "2026-09-26T13:28:28.937Z"
+  "updatedAt": "2026-09-27T14:17:58.407Z"
 }
