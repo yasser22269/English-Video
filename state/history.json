@@ -1,5 +1,93 @@
 [
   {
+    "date": "2026-09-28",
+    "level": "a2",
+    "skill": "short",
+    "topic": "Talking About Last Weekend",
+    "title": "Talking About Last Weekend: 3 English Words in 60 Seconds (A2) #shorts",
+    "durationSec": 26,
+    "sizeMb": 1.8,
+    "videoId": "_iQiyQV-AWc",
+    "url": "https://www.youtube.com/watch?v=_iQiyQV-AWc",
+    "publishAt": "2026-09-28T18:00:00.000Z",
+    "playlists": [
+      {
+        "key": "level:a2",
+        "id": "PLMUHkdE-F1_Q"
+      }
+    ],
+    "buildSeconds": 76,
+    "dir": "output/2026-09-28-a2-short-talking-about-last-weekend"
+  },
+  {
+    "date": "2026-09-28",
+    "level": "a1",
+    "skill": "short",
+    "topic": "Transport and Travel",
+    "title": "Transport and Travel: 3 English Words in 60 Seconds (A1) #shorts",
+    "durationSec": 21,
+    "sizeMb": 1.6,
+    "videoId": "mhJqNQbGuRs",
+    "url": "https://www.youtube.com/watch?v=mhJqNQbGuRs",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:a1",
+        "id": "PLIJ5pu8Ch1Pc"
+      }
+    ],
+    "buildSeconds": 108,
+    "dir": "output/2026-09-28-a1-short-transport-and-travel"
+  },
+  {
+    "date": "2026-09-28",
+    "level": "b1",
+    "skill": "reading",
+    "topic": "Learning Languages Faster",
+    "title": "Learning Languages Faster — Learn English Through Story Level 3 (B1)",
+    "durationSec": 302,
+    "sizeMb": 18.5,
+    "videoId": "afWbMix73Ys",
+    "url": "https://www.youtube.com/watch?v=afWbMix73Ys",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:b1",
+        "id": "PLSkG2Gz0CZos"
+      },
+      {
+        "key": "skill:reading",
+        "id": "PLYub11V_0AzA"
+      }
+    ],
+    "buildSeconds": 213,
+    "dir": "output/2026-09-28-b1-reading-learning-languages-faster"
+  },
+  {
+    "date": "2026-09-28",
+    "level": "a2",
+    "skill": "vocabulary",
+    "topic": "Job Interviews Basics",
+    "title": "Job Interviews Basics: 10 English Words with Pictures (A2 Elementary)",
+    "durationSec": 280,
+    "sizeMb": 15.1,
+    "videoId": "c4KQCvwDZMw",
+    "url": "https://www.youtube.com/watch?v=c4KQCvwDZMw",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:a2",
+        "id": "PLMUHkdE-F1_Q"
+      },
+      {
+        "key": "skill:vocabulary",
+        "id": "PLRKWAimfYWh4"
+      }
+    ],
+    "buildSeconds": 227,
+    "dir": "output/2026-09-28-a2-vocabulary-job-interviews-basics"
+  },
+  {
     "date": "2026-09-27",
     "level": "a2",
     "skill": "short",
