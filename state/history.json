@@ -1,5 +1,117 @@
 [
   {
+    "date": "2026-09-29",
+    "level": "a1",
+    "skill": "short",
+    "topic": "My Friends",
+    "title": "My Friends: 3 English Words in 60 Seconds (A1) #shorts",
+    "durationSec": 18,
+    "sizeMb": 1.3,
+    "videoId": "XH0cslB8tFM",
+    "url": "https://www.youtube.com/watch?v=XH0cslB8tFM",
+    "publishAt": "2026-09-29T18:00:00.000Z",
+    "playlists": [
+      {
+        "key": "level:a1",
+        "id": "PLIJ5pu8Ch1Pc"
+      }
+    ],
+    "buildSeconds": 29,
+    "dir": "output/2026-09-29-a1-short-my-friends"
+  },
+  {
+    "date": "2026-09-29",
+    "level": "b1",
+    "skill": "short",
+    "topic": "Volunteering and Community",
+    "title": "Volunteering and Community: 3 English Words in 60 Seconds (B1) #shorts",
+    "durationSec": 28,
+    "sizeMb": 1.9,
+    "videoId": "07UIoCwJWik",
+    "url": "https://www.youtube.com/watch?v=07UIoCwJWik",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:b1",
+        "id": "PLSkG2Gz0CZos"
+      }
+    ],
+    "buildSeconds": 28,
+    "dir": "output/2026-09-29-b1-short-volunteering-and-community"
+  },
+  {
+    "date": "2026-09-29",
+    "level": "b2",
+    "skill": "speaking",
+    "topic": "Talking About the Weather Naturally",
+    "title": "Talking About the Weather Naturally — English Speaking Practice & Shadowing (B2)",
+    "durationSec": 280,
+    "sizeMb": 137.9,
+    "videoId": "kAMnAujkE64",
+    "url": "https://www.youtube.com/watch?v=kAMnAujkE64",
+    "publishAt": "2026-09-29T17:30:00.000Z",
+    "playlists": [
+      {
+        "key": "level:b2",
+        "id": "PLEyMEjEr22bU"
+      },
+      {
+        "key": "skill:speaking",
+        "id": "PLCadq2A6pEK8"
+      }
+    ],
+    "buildSeconds": 461,
+    "dir": "output/2026-09-29-b2-speaking-talking-about-the-weather-naturally"
+  },
+  {
+    "date": "2026-09-29",
+    "level": "a2",
+    "skill": "reading",
+    "topic": "Health Problems and Advice",
+    "title": "Health Problems and Advice — Learn English Through Story Level 2 (A2)",
+    "durationSec": 200,
+    "sizeMb": 11.2,
+    "videoId": "PyICrix2YIM",
+    "url": "https://www.youtube.com/watch?v=PyICrix2YIM",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:a2",
+        "id": "PLMUHkdE-F1_Q"
+      },
+      {
+        "key": "skill:reading",
+        "id": "PLYub11V_0AzA"
+      }
+    ],
+    "buildSeconds": 167,
+    "dir": "output/2026-09-29-a2-reading-health-problems-and-advice"
+  },
+  {
+    "date": "2026-09-29",
+    "level": "a1",
+    "skill": "vocabulary",
+    "topic": "Shopping for Clothes",
+    "title": "Shopping for Clothes: 10 English Words with Pictures (A1 Beginner)",
+    "durationSec": 208,
+    "sizeMb": 11.5,
+    "videoId": "OP5GkNKqzTc",
+    "url": "https://www.youtube.com/watch?v=OP5GkNKqzTc",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:a1",
+        "id": "PLIJ5pu8Ch1Pc"
+      },
+      {
+        "key": "skill:vocabulary",
+        "id": "PLRKWAimfYWh4"
+      }
+    ],
+    "buildSeconds": 309,
+    "dir": "output/2026-09-29-a1-vocabulary-shopping-for-clothes"
+  },
+  {
     "date": "2026-09-28",
     "level": "a2",
     "skill": "short",
