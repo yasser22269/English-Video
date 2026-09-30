@@ -21,7 +21,8 @@
       "Seasons of the Year",
       "In the Classroom",
       "Sports I Play",
-      "Food and Drinks"
+      "Food and Drinks",
+      "My Friends"
     ],
     "a2:listening": [
       "Future Plans and Intentions",
@@ -32,7 +33,8 @@
       "Learning a New Skill",
       "Renting an Apartment",
       "Describing Your Best Friend",
-      "The Best and the Worst"
+      "The Best and the Worst",
+      "Money, Saving and Spending"
     ],
     "b1:speaking": [
       "Job Interviews and Strengths",
@@ -61,7 +63,8 @@
       "Handling a Difficult Conversation at Work",
       "Explaining Something Complicated Simply",
       "Writing an Email That Gets a Reply",
-      "Giving Feedback Without Causing Offence"
+      "Giving Feedback Without Causing Offence",
+      "Sounding Polite When You Disagree"
     ],
     "a1:listening": [
       "Colours and Clothes",
@@ -216,13 +219,17 @@
       "Weekend Markets and Bargaining",
       "Talking on the Phone at Work",
       "Describing a Photograph",
-      "Talking About Last Weekend"
+      "Talking About Last Weekend",
+      "Holiday Memories"
     ],
     "b1:short": [
       "Fake News and Media Literacy",
       "Time Management Techniques",
       "Volunteering and Community"
+    ],
+    "b2:short": [
+      "Talking About Learning English"
     ]
   },
-  "updatedAt": "2026-09-29T15:10:20.637Z"
+  "updatedAt": "2026-09-30T15:36:30.971Z"
 }

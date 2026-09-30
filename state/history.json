@@ -1,5 +1,117 @@
 [
   {
+    "date": "2026-09-30",
+    "level": "b2",
+    "skill": "short",
+    "topic": "Talking About Learning English",
+    "title": "Talking About Learning English: 3 English Words in 60 Seconds (B2) #shorts",
+    "durationSec": 23,
+    "sizeMb": 1.4,
+    "videoId": "AvNdiYYWyqM",
+    "url": "https://www.youtube.com/watch?v=AvNdiYYWyqM",
+    "publishAt": "2026-09-30T18:00:00.000Z",
+    "playlists": [
+      {
+        "key": "level:b2",
+        "id": "PLEyMEjEr22bU"
+      }
+    ],
+    "buildSeconds": 29,
+    "dir": "output/2026-09-30-b2-short-talking-about-learning-english"
+  },
+  {
+    "date": "2026-09-30",
+    "level": "a2",
+    "skill": "short",
+    "topic": "Holiday Memories",
+    "title": "Holiday Memories: 3 English Words in 60 Seconds (A2) #shorts",
+    "durationSec": 24,
+    "sizeMb": 1.6,
+    "videoId": "q0cQwgGVeYM",
+    "url": "https://www.youtube.com/watch?v=q0cQwgGVeYM",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:a2",
+        "id": "PLMUHkdE-F1_Q"
+      }
+    ],
+    "buildSeconds": 180,
+    "dir": "output/2026-09-30-a2-short-holiday-memories"
+  },
+  {
+    "date": "2026-09-30",
+    "level": "c1",
+    "skill": "reading",
+    "topic": "Sounding Polite When You Disagree",
+    "title": "Sounding Polite When You Disagree — Learn English Through Story Level 5 (C1)",
+    "durationSec": 386,
+    "sizeMb": 26.5,
+    "videoId": "Qh7x2uEujh8",
+    "url": "https://www.youtube.com/watch?v=Qh7x2uEujh8",
+    "publishAt": "2026-09-30T19:00:00.000Z",
+    "playlists": [
+      {
+        "key": "level:c1",
+        "id": "PLPYmpq9AOiZM"
+      },
+      {
+        "key": "skill:reading",
+        "id": "PLYub11V_0AzA"
+      }
+    ],
+    "buildSeconds": 428,
+    "dir": "output/2026-09-30-c1-reading-sounding-polite-when-you-disagree"
+  },
+  {
+    "date": "2026-09-30",
+    "level": "a2",
+    "skill": "listening",
+    "topic": "Money, Saving and Spending",
+    "title": "Money, Saving and Spending — English Conversation Practice (A2 Elementary)",
+    "durationSec": 241,
+    "sizeMb": 26.7,
+    "videoId": "dsJa1aL0B5k",
+    "url": "https://www.youtube.com/watch?v=dsJa1aL0B5k",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:a2",
+        "id": "PLMUHkdE-F1_Q"
+      },
+      {
+        "key": "skill:listening",
+        "id": "PLc1avYS6uKVo"
+      }
+    ],
+    "buildSeconds": 259,
+    "dir": "output/2026-09-30-a2-listening-money-saving-and-spending"
+  },
+  {
+    "date": "2026-09-30",
+    "level": "a1",
+    "skill": "reading",
+    "topic": "My Friends",
+    "title": "My Friends — Learn English Through Story Level 1 (A1)",
+    "durationSec": 143,
+    "sizeMb": 8.4,
+    "videoId": "tfLp1ixzE4Q",
+    "url": "https://www.youtube.com/watch?v=tfLp1ixzE4Q",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:a1",
+        "id": "PLIJ5pu8Ch1Pc"
+      },
+      {
+        "key": "skill:reading",
+        "id": "PLYub11V_0AzA"
+      }
+    ],
+    "buildSeconds": 482,
+    "dir": "output/2026-09-30-a1-reading-my-friends"
+  },
+  {
     "date": "2026-09-29",
     "level": "a1",
     "skill": "short",
