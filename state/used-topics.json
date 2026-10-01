@@ -75,7 +75,8 @@
       "On the Phone",
       "Jobs and Occupations",
       "In the City",
-      "At the Supermarket"
+      "At the Supermarket",
+      "Countries and Nationalities"
     ],
     "a2:speaking": [
       "Comparing Cities",
@@ -86,7 +87,8 @@
       "Talking About Your Studies",
       "Public Transport Problems",
       "A Day at the Beach",
-      "Ordering Food and Complaining Politely"
+      "Ordering Food and Complaining Politely",
+      "Describing a Photograph"
     ],
     "b2:reading": [
       "Universal Basic Income",
@@ -202,7 +204,8 @@
       "Exercise and Motivation",
       "Health Insurance and Doctors",
       "Comparing Education Systems",
-      "Public Speaking Nerves"
+      "Public Speaking Nerves",
+      "Fake News and Media Literacy"
     ],
     "a1:short": [
       "Countries and Nationalities",
@@ -212,7 +215,8 @@
       "Simple Online Shopping",
       "Making Plans with Friends",
       "Transport and Travel",
-      "My Friends"
+      "My Friends",
+      "Telling the Time"
     ],
     "a2:short": [
       "Giving Simple Instructions",
@@ -220,7 +224,8 @@
       "Talking on the Phone at Work",
       "Describing a Photograph",
       "Talking About Last Weekend",
-      "Holiday Memories"
+      "Holiday Memories",
+      "Talking About Music Taste"
     ],
     "b1:short": [
       "Fake News and Media Literacy",
@@ -231,5 +236,5 @@
       "Talking About Learning English"
     ]
   },
-  "updatedAt": "2026-09-30T15:36:30.971Z"
+  "updatedAt": "2026-10-01T16:05:35.770Z"
 }

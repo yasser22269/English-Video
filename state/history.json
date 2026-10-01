@@ -1,5 +1,117 @@
 [
   {
+    "date": "2026-10-01",
+    "level": "a2",
+    "skill": "short",
+    "topic": "Talking About Music Taste",
+    "title": "Talking About Music Taste: 3 English Words in 60 Seconds (A2) #shorts",
+    "durationSec": 26,
+    "sizeMb": 1.7,
+    "videoId": "U4cqdC73Dqw",
+    "url": "https://www.youtube.com/watch?v=U4cqdC73Dqw",
+    "publishAt": "2026-10-01T18:00:00.000Z",
+    "playlists": [
+      {
+        "key": "level:a2",
+        "id": "PLMUHkdE-F1_Q"
+      }
+    ],
+    "buildSeconds": 29,
+    "dir": "output/2026-10-01-a2-short-talking-about-music-taste"
+  },
+  {
+    "date": "2026-10-01",
+    "level": "a1",
+    "skill": "short",
+    "topic": "Telling the Time",
+    "title": "Telling the Time: 3 English Words in 60 Seconds (A1) #shorts",
+    "durationSec": 19,
+    "sizeMb": 1.4,
+    "videoId": "_BvOadLVarw",
+    "url": "https://www.youtube.com/watch?v=_BvOadLVarw",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:a1",
+        "id": "PLIJ5pu8Ch1Pc"
+      }
+    ],
+    "buildSeconds": 29,
+    "dir": "output/2026-10-01-a1-short-telling-the-time"
+  },
+  {
+    "date": "2026-10-01",
+    "level": "b1",
+    "skill": "vocabulary",
+    "topic": "Fake News and Media Literacy",
+    "title": "Fake News and Media Literacy: 9 English Words with Pictures (B1 Intermediate)",
+    "durationSec": 293,
+    "sizeMb": 16.2,
+    "videoId": "D2fS9Tp280A",
+    "url": "https://www.youtube.com/watch?v=D2fS9Tp280A",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:b1",
+        "id": "PLSkG2Gz0CZos"
+      },
+      {
+        "key": "skill:vocabulary",
+        "id": "PLRKWAimfYWh4"
+      }
+    ],
+    "buildSeconds": 215,
+    "dir": "output/2026-10-01-b1-vocabulary-fake-news-and-media-literacy"
+  },
+  {
+    "date": "2026-10-01",
+    "level": "a2",
+    "skill": "speaking",
+    "topic": "Describing a Photograph",
+    "title": "Describing a Photograph — English Speaking Practice & Shadowing (A2)",
+    "durationSec": 227,
+    "sizeMb": 41.8,
+    "videoId": "7X2vlL0MBus",
+    "url": "https://www.youtube.com/watch?v=7X2vlL0MBus",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:a2",
+        "id": "PLMUHkdE-F1_Q"
+      },
+      {
+        "key": "skill:speaking",
+        "id": "PLCadq2A6pEK8"
+      }
+    ],
+    "buildSeconds": 271,
+    "dir": "output/2026-10-01-a2-speaking-describing-a-photograph"
+  },
+  {
+    "date": "2026-10-01",
+    "level": "a1",
+    "skill": "listening",
+    "topic": "Countries and Nationalities",
+    "title": "Countries and Nationalities — English Conversation Practice (A1 Beginner)",
+    "durationSec": 205,
+    "sizeMb": 25.8,
+    "videoId": "Fv1nDIRg1b0",
+    "url": "https://www.youtube.com/watch?v=Fv1nDIRg1b0",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:a1",
+        "id": "PLIJ5pu8Ch1Pc"
+      },
+      {
+        "key": "skill:listening",
+        "id": "PLc1avYS6uKVo"
+      }
+    ],
+    "buildSeconds": 252,
+    "dir": "output/2026-10-01-a1-listening-countries-and-nationalities"
+  },
+  {
     "date": "2026-09-30",
     "level": "b2",
     "skill": "short",
