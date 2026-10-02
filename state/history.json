@@ -1,5 +1,117 @@
 [
   {
+    "date": "2026-10-02",
+    "level": "a1",
+    "skill": "short",
+    "topic": "My Bedroom and Furniture",
+    "title": "My Bedroom and Furniture: 3 English Words in 60 Seconds (A1) #shorts",
+    "durationSec": 20,
+    "sizeMb": 1.4,
+    "videoId": "0SUQZwYayZo",
+    "url": "https://www.youtube.com/watch?v=0SUQZwYayZo",
+    "publishAt": "2026-10-02T18:00:00.000Z",
+    "playlists": [
+      {
+        "key": "level:a1",
+        "id": "PLIJ5pu8Ch1Pc"
+      }
+    ],
+    "buildSeconds": 27,
+    "dir": "output/2026-10-02-a1-short-my-bedroom-and-furniture"
+  },
+  {
+    "date": "2026-10-02",
+    "level": "b1",
+    "skill": "short",
+    "topic": "Starting a Small Business",
+    "title": "Starting a Small Business: 3 English Words in 60 Seconds (B1) #shorts",
+    "durationSec": 27,
+    "sizeMb": 1.9,
+    "videoId": "wpyWxUl_0o8",
+    "url": "https://www.youtube.com/watch?v=wpyWxUl_0o8",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:b1",
+        "id": "PLSkG2Gz0CZos"
+      }
+    ],
+    "buildSeconds": 57,
+    "dir": "output/2026-10-02-b1-short-starting-a-small-business"
+  },
+  {
+    "date": "2026-10-02",
+    "level": "b2",
+    "skill": "listening",
+    "topic": "Describing Your Working Day",
+    "title": "Describing Your Working Day — English Conversation Practice (B2 Upper-Intermediate)",
+    "durationSec": 374,
+    "sizeMb": 28.2,
+    "videoId": "_frd5hPj_KI",
+    "url": "https://www.youtube.com/watch?v=_frd5hPj_KI",
+    "publishAt": "2026-10-02T17:30:00.000Z",
+    "playlists": [
+      {
+        "key": "level:b2",
+        "id": "PLEyMEjEr22bU"
+      },
+      {
+        "key": "skill:listening",
+        "id": "PLc1avYS6uKVo"
+      }
+    ],
+    "buildSeconds": 401,
+    "dir": "output/2026-10-02-b2-listening-describing-your-working-day"
+  },
+  {
+    "date": "2026-10-02",
+    "level": "a2",
+    "skill": "vocabulary",
+    "topic": "Talking About Music Taste",
+    "title": "Talking About Music Taste: 10 English Words with Pictures (A2 Elementary)",
+    "durationSec": 286,
+    "sizeMb": 15.5,
+    "videoId": "3Zyo5yA7NzI",
+    "url": "https://www.youtube.com/watch?v=3Zyo5yA7NzI",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:a2",
+        "id": "PLMUHkdE-F1_Q"
+      },
+      {
+        "key": "skill:vocabulary",
+        "id": "PLRKWAimfYWh4"
+      }
+    ],
+    "buildSeconds": 463,
+    "dir": "output/2026-10-02-a2-vocabulary-talking-about-music-taste"
+  },
+  {
+    "date": "2026-10-02",
+    "level": "a1",
+    "skill": "speaking",
+    "topic": "Jobs and Occupations",
+    "title": "Jobs and Occupations — English Speaking Practice & Shadowing (A1)",
+    "durationSec": 165,
+    "sizeMb": 27.1,
+    "videoId": "fw1a0sZfkxU",
+    "url": "https://www.youtube.com/watch?v=fw1a0sZfkxU",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:a1",
+        "id": "PLIJ5pu8Ch1Pc"
+      },
+      {
+        "key": "skill:speaking",
+        "id": "PLCadq2A6pEK8"
+      }
+    ],
+    "buildSeconds": 556,
+    "dir": "output/2026-10-02-a1-speaking-jobs-and-occupations"
+  },
+  {
     "date": "2026-10-01",
     "level": "a2",
     "skill": "short",

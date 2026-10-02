@@ -117,7 +117,8 @@
       "On the Phone",
       "My Weekend",
       "Animals and Pets",
-      "Transport and Travel"
+      "Transport and Travel",
+      "Jobs and Occupations"
     ],
     "a2:vocabulary": [
       "The Best and the Worst",
@@ -128,7 +129,8 @@
       "Describing Personality",
       "Talking About the Weather",
       "Sports and Fitness Routines",
-      "Job Interviews Basics"
+      "Job Interviews Basics",
+      "Talking About Music Taste"
     ],
     "b1:reading": [
       "Travelling on a Budget",
@@ -149,7 +151,8 @@
       "Describing Someone's Personality",
       "English Idioms About Time",
       "Talking About Holidays and Trips",
-      "Habits in the Past: Used To"
+      "Habits in the Past: Used To",
+      "Describing Your Working Day"
     ],
     "c1:speaking": [
       "Translation and the Limits of Language",
@@ -216,7 +219,8 @@
       "Making Plans with Friends",
       "Transport and Travel",
       "My Friends",
-      "Telling the Time"
+      "Telling the Time",
+      "My Bedroom and Furniture"
     ],
     "a2:short": [
       "Giving Simple Instructions",
@@ -230,11 +234,12 @@
     "b1:short": [
       "Fake News and Media Literacy",
       "Time Management Techniques",
-      "Volunteering and Community"
+      "Volunteering and Community",
+      "Starting a Small Business"
     ],
     "b2:short": [
       "Talking About Learning English"
     ]
   },
-  "updatedAt": "2026-10-01T16:05:35.770Z"
+  "updatedAt": "2026-10-02T15:12:30.948Z"
 }
