@@ -10,7 +10,8 @@
       "My House and Rooms",
       "Hobbies and Free Time",
       "Colours and Clothes",
-      "Shopping for Clothes"
+      "Shopping for Clothes",
+      "Fruits and Vegetables"
     ],
     "a1:reading": [
       "My Family",
@@ -170,7 +171,8 @@
       "Small Talk with Strangers",
       "Making Invitations",
       "Talking on the Phone at Work",
-      "Health Problems and Advice"
+      "Health Problems and Advice",
+      "Travelling by Plane"
     ],
     "b1:listening": [
       "Culture Shock Abroad",
@@ -198,7 +200,8 @@
       "Talking About a Career Change",
       "How to Sound Less Certain on Purpose",
       "Understanding Fast Native Conversation",
-      "Talking About the Future With Confidence"
+      "Talking About the Future With Confidence",
+      "Talking About Risk and Probability"
     ],
     "b1:vocabulary": [
       "Learning Languages Faster",
@@ -229,7 +232,8 @@
       "Describing a Photograph",
       "Talking About Last Weekend",
       "Holiday Memories",
-      "Talking About Music Taste"
+      "Talking About Music Taste",
+      "Technology and Gadgets"
     ],
     "b1:short": [
       "Fake News and Media Literacy",
@@ -238,8 +242,9 @@
       "Starting a Small Business"
     ],
     "b2:short": [
-      "Talking About Learning English"
+      "Talking About Learning English",
+      "Talking About Your Job and What You Do"
     ]
   },
-  "updatedAt": "2026-10-02T15:12:30.948Z"
+  "updatedAt": "2026-10-03T13:45:03.822Z"
 }

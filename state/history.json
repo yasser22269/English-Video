@@ -1,5 +1,117 @@
 [
   {
+    "date": "2026-10-03",
+    "level": "b2",
+    "skill": "short",
+    "topic": "Talking About Your Job and What You Do",
+    "title": "Talking About Your Job and What You Do: 3 English Words in 60 Seconds (B2) #shorts",
+    "durationSec": 31,
+    "sizeMb": 1.8,
+    "videoId": "sq_QHzcFNQc",
+    "url": "https://www.youtube.com/watch?v=sq_QHzcFNQc",
+    "publishAt": "2026-10-03T18:00:00.000Z",
+    "playlists": [
+      {
+        "key": "level:b2",
+        "id": "PLEyMEjEr22bU"
+      }
+    ],
+    "buildSeconds": 152,
+    "dir": "output/2026-10-03-b2-short-talking-about-your-job-and-what-you-do"
+  },
+  {
+    "date": "2026-10-03",
+    "level": "a2",
+    "skill": "short",
+    "topic": "Technology and Gadgets",
+    "title": "Technology and Gadgets: 3 English Words in 60 Seconds (A2) #shorts",
+    "durationSec": 28,
+    "sizeMb": 1.9,
+    "videoId": "XhjKafyvEvI",
+    "url": "https://www.youtube.com/watch?v=XhjKafyvEvI",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:a2",
+        "id": "PLMUHkdE-F1_Q"
+      }
+    ],
+    "buildSeconds": 160,
+    "dir": "output/2026-10-03-a2-short-technology-and-gadgets"
+  },
+  {
+    "date": "2026-10-03",
+    "level": "c1",
+    "skill": "vocabulary",
+    "topic": "Talking About Risk and Probability",
+    "title": "Talking About Risk and Probability: 8 English Words with Pictures (C1 Advanced)",
+    "durationSec": 250,
+    "sizeMb": 14.9,
+    "videoId": "195S8pv49V0",
+    "url": "https://www.youtube.com/watch?v=195S8pv49V0",
+    "publishAt": "2026-10-03T19:00:00.000Z",
+    "playlists": [
+      {
+        "key": "level:c1",
+        "id": "PLPYmpq9AOiZM"
+      },
+      {
+        "key": "skill:vocabulary",
+        "id": "PLRKWAimfYWh4"
+      }
+    ],
+    "buildSeconds": 237,
+    "dir": "output/2026-10-03-c1-vocabulary-talking-about-risk-and-probability"
+  },
+  {
+    "date": "2026-10-03",
+    "level": "a2",
+    "skill": "reading",
+    "topic": "Travelling by Plane",
+    "title": "Travelling by Plane — Learn English Through Story Level 2 (A2)",
+    "durationSec": 245,
+    "sizeMb": 14.2,
+    "videoId": "ghGuQ64NIhU",
+    "url": "https://www.youtube.com/watch?v=ghGuQ64NIhU",
+    "publishAt": "2026-10-03T14:30:00.000Z",
+    "playlists": [
+      {
+        "key": "level:a2",
+        "id": "PLMUHkdE-F1_Q"
+      },
+      {
+        "key": "skill:reading",
+        "id": "PLYub11V_0AzA"
+      }
+    ],
+    "buildSeconds": 246,
+    "dir": "output/2026-10-03-a2-reading-travelling-by-plane"
+  },
+  {
+    "date": "2026-10-03",
+    "level": "a1",
+    "skill": "vocabulary",
+    "topic": "Fruits and Vegetables",
+    "title": "Fruits and Vegetables: 10 English Words with Pictures (A1 Beginner)",
+    "durationSec": 244,
+    "sizeMb": 13.7,
+    "videoId": "zBFjxTthug0",
+    "url": "https://www.youtube.com/watch?v=zBFjxTthug0",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:a1",
+        "id": "PLIJ5pu8Ch1Pc"
+      },
+      {
+        "key": "skill:vocabulary",
+        "id": "PLRKWAimfYWh4"
+      }
+    ],
+    "buildSeconds": 190,
+    "dir": "output/2026-10-03-a1-vocabulary-fruits-and-vegetables"
+  },
+  {
     "date": "2026-10-02",
     "level": "a1",
     "skill": "short",
