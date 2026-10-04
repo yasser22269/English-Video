@@ -1,5 +1,93 @@
 [
   {
+    "date": "2026-10-04",
+    "level": "a2",
+    "skill": "short",
+    "topic": "Shopping Online and Returns",
+    "title": "Shopping Online and Returns: 3 English Words in 60 Seconds (A2) #shorts",
+    "durationSec": 27,
+    "sizeMb": 1.8,
+    "videoId": "HCEVZ9-NcO4",
+    "url": "https://www.youtube.com/watch?v=HCEVZ9-NcO4",
+    "publishAt": "2026-10-04T18:00:00.000Z",
+    "playlists": [
+      {
+        "key": "level:a2",
+        "id": "PLMUHkdE-F1_Q"
+      }
+    ],
+    "buildSeconds": 31,
+    "dir": "output/2026-10-04-a2-short-shopping-online-and-returns"
+  },
+  {
+    "date": "2026-10-04",
+    "level": "a1",
+    "skill": "short",
+    "topic": "Breakfast, Lunch and Dinner",
+    "title": "Breakfast, Lunch and Dinner: 3 English Words in 60 Seconds (A1) #shorts",
+    "durationSec": 21,
+    "sizeMb": 1.5,
+    "videoId": "g4Dxcb_7XpA",
+    "url": "https://www.youtube.com/watch?v=g4Dxcb_7XpA",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:a1",
+        "id": "PLIJ5pu8Ch1Pc"
+      }
+    ],
+    "buildSeconds": 42,
+    "dir": "output/2026-10-04-a1-short-breakfast-lunch-and-dinner"
+  },
+  {
+    "date": "2026-10-04",
+    "level": "a2",
+    "skill": "listening",
+    "topic": "Travelling by Plane",
+    "title": "Travelling by Plane — English Conversation Practice (A2 Elementary)",
+    "durationSec": 268,
+    "sizeMb": 25.6,
+    "videoId": "Ui0Arjx4-Ak",
+    "url": "https://www.youtube.com/watch?v=Ui0Arjx4-Ak",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:a2",
+        "id": "PLMUHkdE-F1_Q"
+      },
+      {
+        "key": "skill:listening",
+        "id": "PLc1avYS6uKVo"
+      }
+    ],
+    "buildSeconds": 272,
+    "dir": "output/2026-10-04-a2-listening-travelling-by-plane"
+  },
+  {
+    "date": "2026-10-04",
+    "level": "a1",
+    "skill": "reading",
+    "topic": "Breakfast, Lunch and Dinner",
+    "title": "Breakfast, Lunch and Dinner — Learn English Through Story Level 1 (A1)",
+    "durationSec": 145,
+    "sizeMb": 8.4,
+    "videoId": "xQF-ArbJdao",
+    "url": "https://www.youtube.com/watch?v=xQF-ArbJdao",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:a1",
+        "id": "PLIJ5pu8Ch1Pc"
+      },
+      {
+        "key": "skill:reading",
+        "id": "PLYub11V_0AzA"
+      }
+    ],
+    "buildSeconds": 149,
+    "dir": "output/2026-10-04-a1-reading-breakfast-lunch-and-dinner"
+  },
+  {
     "date": "2026-10-03",
     "level": "b2",
     "skill": "short",
