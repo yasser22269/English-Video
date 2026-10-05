@@ -79,7 +79,8 @@
       "Jobs and Occupations",
       "In the City",
       "At the Supermarket",
-      "Countries and Nationalities"
+      "Countries and Nationalities",
+      "School Subjects"
     ],
     "a2:speaking": [
       "Comparing Cities",
@@ -91,7 +92,8 @@
       "Public Transport Problems",
       "A Day at the Beach",
       "Ordering Food and Complaining Politely",
-      "Describing a Photograph"
+      "Describing a Photograph",
+      "Staying at a Hotel"
     ],
     "b2:reading": [
       "Universal Basic Income",
@@ -99,7 +101,8 @@
       "Talking About Films and TV Shows",
       "Giving Directions in a City",
       "Talking About Your Weekend Naturally",
-      "At the Doctor: Describing Symptoms"
+      "At the Doctor: Describing Symptoms",
+      "Describing Someone's Personality"
     ],
     "c1:listening": [
       "The Economics of Scarcity and Choice",
@@ -226,7 +229,8 @@
       "My Friends",
       "Telling the Time",
       "My Bedroom and Furniture",
-      "Breakfast, Lunch and Dinner"
+      "Breakfast, Lunch and Dinner",
+      "The Weather"
     ],
     "a2:short": [
       "Giving Simple Instructions",
@@ -243,12 +247,13 @@
       "Fake News and Media Literacy",
       "Time Management Techniques",
       "Volunteering and Community",
-      "Starting a Small Business"
+      "Starting a Small Business",
+      "Learning Languages Faster"
     ],
     "b2:short": [
       "Talking About Learning English",
       "Talking About Your Job and What You Do"
     ]
   },
-  "updatedAt": "2026-10-04T14:18:01.620Z"
+  "updatedAt": "2026-10-05T17:29:10.545Z"
 }

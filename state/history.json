@@ -1,5 +1,117 @@
 [
   {
+    "date": "2026-10-05",
+    "level": "a1",
+    "skill": "short",
+    "topic": "The Weather",
+    "title": "The Weather: 3 English Words in 60 Seconds (A1) #shorts",
+    "durationSec": 18,
+    "sizeMb": 1.3,
+    "videoId": "9XcyQfTv8fI",
+    "url": "https://www.youtube.com/watch?v=9XcyQfTv8fI",
+    "publishAt": "2026-10-05T18:00:00.000Z",
+    "playlists": [
+      {
+        "key": "level:a1",
+        "id": "PLIJ5pu8Ch1Pc"
+      }
+    ],
+    "buildSeconds": 29,
+    "dir": "output/2026-10-05-a1-short-the-weather"
+  },
+  {
+    "date": "2026-10-05",
+    "level": "b1",
+    "skill": "short",
+    "topic": "Learning Languages Faster",
+    "title": "Learning Languages Faster: 3 English Words in 60 Seconds (B1) #shorts",
+    "durationSec": 29,
+    "sizeMb": 2,
+    "videoId": "tlRICcKRigo",
+    "url": "https://www.youtube.com/watch?v=tlRICcKRigo",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:b1",
+        "id": "PLSkG2Gz0CZos"
+      }
+    ],
+    "buildSeconds": 59,
+    "dir": "output/2026-10-05-b1-short-learning-languages-faster"
+  },
+  {
+    "date": "2026-10-05",
+    "level": "b2",
+    "skill": "reading",
+    "topic": "Describing Someone's Personality",
+    "title": "Describing Someone's Personality — Learn English Through Story Level 4 (B2)",
+    "durationSec": 345,
+    "sizeMb": 21.2,
+    "videoId": "W33WU8JnJVA",
+    "url": "https://www.youtube.com/watch?v=W33WU8JnJVA",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:b2",
+        "id": "PLEyMEjEr22bU"
+      },
+      {
+        "key": "skill:reading",
+        "id": "PLYub11V_0AzA"
+      }
+    ],
+    "buildSeconds": 271,
+    "dir": "output/2026-10-05-b2-reading-describing-someone-s-personality"
+  },
+  {
+    "date": "2026-10-05",
+    "level": "a2",
+    "skill": "speaking",
+    "topic": "Staying at a Hotel",
+    "title": "Staying at a Hotel — English Speaking Practice & Shadowing (A2)",
+    "durationSec": 229,
+    "sizeMb": 33.9,
+    "videoId": "bOj12TTj8Xc",
+    "url": "https://www.youtube.com/watch?v=bOj12TTj8Xc",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:a2",
+        "id": "PLMUHkdE-F1_Q"
+      },
+      {
+        "key": "skill:speaking",
+        "id": "PLCadq2A6pEK8"
+      }
+    ],
+    "buildSeconds": 347,
+    "dir": "output/2026-10-05-a2-speaking-staying-at-a-hotel"
+  },
+  {
+    "date": "2026-10-05",
+    "level": "a1",
+    "skill": "listening",
+    "topic": "School Subjects",
+    "title": "School Subjects — English Conversation Practice (A1 Beginner)",
+    "durationSec": 227,
+    "sizeMb": 19.8,
+    "videoId": "VTNAJoPt_1c",
+    "url": "https://www.youtube.com/watch?v=VTNAJoPt_1c",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:a1",
+        "id": "PLIJ5pu8Ch1Pc"
+      },
+      {
+        "key": "skill:listening",
+        "id": "PLc1avYS6uKVo"
+      }
+    ],
+    "buildSeconds": 274,
+    "dir": "output/2026-10-05-a1-listening-school-subjects"
+  },
+  {
     "date": "2026-10-04",
     "level": "a2",
     "skill": "short",
