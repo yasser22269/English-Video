@@ -124,7 +124,8 @@
       "My Weekend",
       "Animals and Pets",
       "Transport and Travel",
-      "Jobs and Occupations"
+      "Jobs and Occupations",
+      "Feelings and Emotions"
     ],
     "a2:vocabulary": [
       "The Best and the Worst",
@@ -136,7 +137,8 @@
       "Talking About the Weather",
       "Sports and Fitness Routines",
       "Job Interviews Basics",
-      "Talking About Music Taste"
+      "Talking About Music Taste",
+      "Technology and Gadgets"
     ],
     "b1:reading": [
       "Travelling on a Budget",
@@ -165,7 +167,8 @@
       "Legal Reasoning and Precedent",
       "Giving Feedback Without Causing Offence",
       "Apologising Like a Professional",
-      "Linking Words That Make You Sound Fluent"
+      "Linking Words That Make You Sound Fluent",
+      "Making a Recommendation With Confidence"
     ],
     "a2:reading": [
       "Ordering Food and Complaining Politely",
@@ -241,7 +244,8 @@
       "Holiday Memories",
       "Talking About Music Taste",
       "Technology and Gadgets",
-      "Shopping Online and Returns"
+      "Shopping Online and Returns",
+      "Learning a New Skill"
     ],
     "b1:short": [
       "Fake News and Media Literacy",
@@ -252,8 +256,9 @@
     ],
     "b2:short": [
       "Talking About Learning English",
-      "Talking About Your Job and What You Do"
+      "Talking About Your Job and What You Do",
+      "At the Airport and on the Plane"
     ]
   },
-  "updatedAt": "2026-10-05T17:29:10.545Z"
+  "updatedAt": "2026-10-06T15:33:29.251Z"
 }

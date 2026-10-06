@@ -1,5 +1,117 @@
 [
   {
+    "date": "2026-10-06",
+    "level": "b2",
+    "skill": "short",
+    "topic": "At the Airport and on the Plane",
+    "title": "At the Airport and on the Plane: 3 English Words in 60 Seconds (B2) #shorts",
+    "durationSec": 25,
+    "sizeMb": 1.5,
+    "videoId": "kppzy_IMw2A",
+    "url": "https://www.youtube.com/watch?v=kppzy_IMw2A",
+    "publishAt": "2026-10-06T18:00:00.000Z",
+    "playlists": [
+      {
+        "key": "level:b2",
+        "id": "PLEyMEjEr22bU"
+      }
+    ],
+    "buildSeconds": 22,
+    "dir": "output/2026-10-06-b2-short-at-the-airport-and-on-the-plane"
+  },
+  {
+    "date": "2026-10-06",
+    "level": "a2",
+    "skill": "short",
+    "topic": "Learning a New Skill",
+    "title": "Learning a New Skill: 3 English Words in 60 Seconds (A2) #shorts",
+    "durationSec": 28,
+    "sizeMb": 1.8,
+    "videoId": "bD2T9Mt9qVY",
+    "url": "https://www.youtube.com/watch?v=bD2T9Mt9qVY",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:a2",
+        "id": "PLMUHkdE-F1_Q"
+      }
+    ],
+    "buildSeconds": 41,
+    "dir": "output/2026-10-06-a2-short-learning-a-new-skill"
+  },
+  {
+    "date": "2026-10-06",
+    "level": "c1",
+    "skill": "speaking",
+    "topic": "Making a Recommendation With Confidence",
+    "title": "Making a Recommendation With Confidence — English Speaking Practice & Shadowing (C1)",
+    "durationSec": 289,
+    "sizeMb": 35.5,
+    "videoId": "qZmSHkzwDsI",
+    "url": "https://www.youtube.com/watch?v=qZmSHkzwDsI",
+    "publishAt": "2026-10-06T19:00:00.000Z",
+    "playlists": [
+      {
+        "key": "level:c1",
+        "id": "PLPYmpq9AOiZM"
+      },
+      {
+        "key": "skill:speaking",
+        "id": "PLCadq2A6pEK8"
+      }
+    ],
+    "buildSeconds": 505,
+    "dir": "output/2026-10-06-c1-speaking-making-a-recommendation-with-confidence"
+  },
+  {
+    "date": "2026-10-06",
+    "level": "a2",
+    "skill": "vocabulary",
+    "topic": "Technology and Gadgets",
+    "title": "Technology and Gadgets: 10 English Words with Pictures (A2 Elementary)",
+    "durationSec": 294,
+    "sizeMb": 16,
+    "videoId": "73k-JNuJ8pA",
+    "url": "https://www.youtube.com/watch?v=73k-JNuJ8pA",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:a2",
+        "id": "PLMUHkdE-F1_Q"
+      },
+      {
+        "key": "skill:vocabulary",
+        "id": "PLRKWAimfYWh4"
+      }
+    ],
+    "buildSeconds": 236,
+    "dir": "output/2026-10-06-a2-vocabulary-technology-and-gadgets"
+  },
+  {
+    "date": "2026-10-06",
+    "level": "a1",
+    "skill": "speaking",
+    "topic": "Feelings and Emotions",
+    "title": "Feelings and Emotions — English Speaking Practice & Shadowing (A1)",
+    "durationSec": 162,
+    "sizeMb": 33.7,
+    "videoId": "al64_m1J3_8",
+    "url": "https://www.youtube.com/watch?v=al64_m1J3_8",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:a1",
+        "id": "PLIJ5pu8Ch1Pc"
+      },
+      {
+        "key": "skill:speaking",
+        "id": "PLCadq2A6pEK8"
+      }
+    ],
+    "buildSeconds": 195,
+    "dir": "output/2026-10-06-a1-speaking-feelings-and-emotions"
+  },
+  {
     "date": "2026-10-05",
     "level": "a1",
     "skill": "short",
