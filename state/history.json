@@ -1,5 +1,117 @@
 [
   {
+    "date": "2026-10-07",
+    "level": "a2",
+    "skill": "short",
+    "topic": "Talking About Your Studies",
+    "title": "Talking About Your Studies: 3 English Words in 60 Seconds (A2) #shorts",
+    "durationSec": 24,
+    "sizeMb": 1.5,
+    "videoId": "xE4Se-8eNUw",
+    "url": "https://www.youtube.com/watch?v=xE4Se-8eNUw",
+    "publishAt": "2026-10-07T18:00:00.000Z",
+    "playlists": [
+      {
+        "key": "level:a2",
+        "id": "PLMUHkdE-F1_Q"
+      }
+    ],
+    "buildSeconds": 31,
+    "dir": "output/2026-10-07-a2-short-talking-about-your-studies"
+  },
+  {
+    "date": "2026-10-07",
+    "level": "a1",
+    "skill": "short",
+    "topic": "Healthy Habits",
+    "title": "Healthy Habits: 3 English Words in 60 Seconds (A1) #shorts",
+    "durationSec": 21,
+    "sizeMb": 1.5,
+    "videoId": "J0B6zU7y884",
+    "url": "https://www.youtube.com/watch?v=J0B6zU7y884",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:a1",
+        "id": "PLIJ5pu8Ch1Pc"
+      }
+    ],
+    "buildSeconds": 636,
+    "dir": "output/2026-10-07-a1-short-healthy-habits"
+  },
+  {
+    "date": "2026-10-07",
+    "level": "b1",
+    "skill": "listening",
+    "topic": "Choosing a Career Path",
+    "title": "Choosing a Career Path — English Conversation Practice (B1 Intermediate)",
+    "durationSec": 361,
+    "sizeMb": 76.9,
+    "videoId": "Wauhht3crXc",
+    "url": "https://www.youtube.com/watch?v=Wauhht3crXc",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:b1",
+        "id": "PLSkG2Gz0CZos"
+      },
+      {
+        "key": "skill:listening",
+        "id": "PLc1avYS6uKVo"
+      }
+    ],
+    "buildSeconds": 1293,
+    "dir": "output/2026-10-07-b1-listening-choosing-a-career-path"
+  },
+  {
+    "date": "2026-10-07",
+    "level": "a2",
+    "skill": "reading",
+    "topic": "Learning a New Skill",
+    "title": "Learning a New Skill — Learn English Through Story Level 2 (A2)",
+    "durationSec": 240,
+    "sizeMb": 13.7,
+    "videoId": "6pwnPhkHCpA",
+    "url": "https://www.youtube.com/watch?v=6pwnPhkHCpA",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:a2",
+        "id": "PLMUHkdE-F1_Q"
+      },
+      {
+        "key": "skill:reading",
+        "id": "PLYub11V_0AzA"
+      }
+    ],
+    "buildSeconds": 938,
+    "dir": "output/2026-10-07-a2-reading-learning-a-new-skill"
+  },
+  {
+    "date": "2026-10-07",
+    "level": "a1",
+    "skill": "vocabulary",
+    "topic": "Asking for Directions",
+    "title": "Asking for Directions: 10 English Words with Pictures (A1 Beginner)",
+    "durationSec": 219,
+    "sizeMb": 12.3,
+    "videoId": "xsb3XjZFLYw",
+    "url": "https://www.youtube.com/watch?v=xsb3XjZFLYw",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:a1",
+        "id": "PLIJ5pu8Ch1Pc"
+      },
+      {
+        "key": "skill:vocabulary",
+        "id": "PLRKWAimfYWh4"
+      }
+    ],
+    "buildSeconds": 835,
+    "dir": "output/2026-10-07-a1-vocabulary-asking-for-directions"
+  },
+  {
     "date": "2026-10-06",
     "level": "b2",
     "skill": "short",

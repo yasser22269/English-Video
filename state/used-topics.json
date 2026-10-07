@@ -11,7 +11,8 @@
       "Hobbies and Free Time",
       "Colours and Clothes",
       "Shopping for Clothes",
-      "Fruits and Vegetables"
+      "Fruits and Vegetables",
+      "Asking for Directions"
     ],
     "a1:reading": [
       "My Family",
@@ -180,7 +181,8 @@
       "Making Invitations",
       "Talking on the Phone at Work",
       "Health Problems and Advice",
-      "Travelling by Plane"
+      "Travelling by Plane",
+      "Learning a New Skill"
     ],
     "b1:listening": [
       "Culture Shock Abroad",
@@ -190,7 +192,8 @@
       "Living with Housemates",
       "Health Insurance and Doctors",
       "Making Small Talk at Work",
-      "Books That Changed My Mind"
+      "Books That Changed My Mind",
+      "Choosing a Career Path"
     ],
     "b2:speaking": [
       "The Psychology of Habits",
@@ -233,7 +236,8 @@
       "Telling the Time",
       "My Bedroom and Furniture",
       "Breakfast, Lunch and Dinner",
-      "The Weather"
+      "The Weather",
+      "Healthy Habits"
     ],
     "a2:short": [
       "Giving Simple Instructions",
@@ -245,7 +249,8 @@
       "Talking About Music Taste",
       "Technology and Gadgets",
       "Shopping Online and Returns",
-      "Learning a New Skill"
+      "Learning a New Skill",
+      "Talking About Your Studies"
     ],
     "b1:short": [
       "Fake News and Media Literacy",
@@ -260,5 +265,5 @@
       "At the Airport and on the Plane"
     ]
   },
-  "updatedAt": "2026-10-06T15:33:29.251Z"
+  "updatedAt": "2026-10-07T16:38:48.161Z"
 }
