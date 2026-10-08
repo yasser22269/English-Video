@@ -25,7 +25,8 @@
       "Sports I Play",
       "Food and Drinks",
       "My Friends",
-      "Breakfast, Lunch and Dinner"
+      "Breakfast, Lunch and Dinner",
+      "Transport and Travel"
     ],
     "a2:listening": [
       "Future Plans and Intentions",
@@ -257,7 +258,8 @@
       "Time Management Techniques",
       "Volunteering and Community",
       "Starting a Small Business",
-      "Learning Languages Faster"
+      "Learning Languages Faster",
+      "Exercise and Motivation"
     ],
     "b2:short": [
       "Talking About Learning English",
@@ -265,5 +267,5 @@
       "At the Airport and on the Plane"
     ]
   },
-  "updatedAt": "2026-10-07T16:38:48.161Z"
+  "updatedAt": "2026-10-08T16:01:49.556Z"
 }

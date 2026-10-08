@@ -1,5 +1,49 @@
 [
   {
+    "date": "2026-10-08",
+    "level": "b1",
+    "skill": "short",
+    "topic": "Exercise and Motivation",
+    "title": "Exercise and Motivation: 3 English Words in 60 Seconds (B1) #shorts",
+    "durationSec": 24,
+    "sizeMb": 1.6,
+    "videoId": "jWgcS9T1LBQ",
+    "url": "https://www.youtube.com/watch?v=jWgcS9T1LBQ",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:b1",
+        "id": "PLSkG2Gz0CZos"
+      }
+    ],
+    "buildSeconds": 45,
+    "dir": "output/2026-10-08-b1-short-exercise-and-motivation"
+  },
+  {
+    "date": "2026-10-08",
+    "level": "a1",
+    "skill": "reading",
+    "topic": "Transport and Travel",
+    "title": "Transport and Travel — Learn English Through Story Level 1 (A1)",
+    "durationSec": 152,
+    "sizeMb": 8.8,
+    "videoId": "GcYX66uXy3U",
+    "url": "https://www.youtube.com/watch?v=GcYX66uXy3U",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:a1",
+        "id": "PLIJ5pu8Ch1Pc"
+      },
+      {
+        "key": "skill:reading",
+        "id": "PLYub11V_0AzA"
+      }
+    ],
+    "buildSeconds": 336,
+    "dir": "output/2026-10-08-a1-reading-transport-and-travel"
+  },
+  {
     "date": "2026-10-07",
     "level": "a2",
     "skill": "short",
