@@ -1,5 +1,117 @@
 [
   {
+    "date": "2026-10-09",
+    "level": "b2",
+    "skill": "short",
+    "topic": "Phrasal Verbs With Get",
+    "title": "Phrasal Verbs With Get: 3 English Words in 60 Seconds (B2) #shorts",
+    "durationSec": 26,
+    "sizeMb": 1.6,
+    "videoId": "cE3RLRvece0",
+    "url": "https://www.youtube.com/watch?v=cE3RLRvece0",
+    "publishAt": "2026-10-09T18:00:00.000Z",
+    "playlists": [
+      {
+        "key": "level:b2",
+        "id": "PLEyMEjEr22bU"
+      }
+    ],
+    "buildSeconds": 31,
+    "dir": "output/2026-10-09-b2-short-phrasal-verbs-with-get"
+  },
+  {
+    "date": "2026-10-09",
+    "level": "a2",
+    "skill": "short",
+    "topic": "A Day at the Beach",
+    "title": "A Day at the Beach: 3 English Words in 60 Seconds (A2) #shorts",
+    "durationSec": 26,
+    "sizeMb": 1.7,
+    "videoId": "26IWx-Bfiqo",
+    "url": "https://www.youtube.com/watch?v=26IWx-Bfiqo",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:a2",
+        "id": "PLMUHkdE-F1_Q"
+      }
+    ],
+    "buildSeconds": 70,
+    "dir": "output/2026-10-09-a2-short-a-day-at-the-beach"
+  },
+  {
+    "date": "2026-10-09",
+    "level": "c1",
+    "skill": "listening",
+    "topic": "Making a Recommendation With Confidence",
+    "title": "Making a Recommendation With Confidence — English Conversation Practice (C1 Advanced)",
+    "durationSec": 411,
+    "sizeMb": 30.4,
+    "videoId": "2--9Xr6vW7M",
+    "url": "https://www.youtube.com/watch?v=2--9Xr6vW7M",
+    "publishAt": "2026-10-09T19:00:00.000Z",
+    "playlists": [
+      {
+        "key": "level:c1",
+        "id": "PLPYmpq9AOiZM"
+      },
+      {
+        "key": "skill:listening",
+        "id": "PLc1avYS6uKVo"
+      }
+    ],
+    "buildSeconds": 443,
+    "dir": "output/2026-10-09-c1-listening-making-a-recommendation-with-confidence"
+  },
+  {
+    "date": "2026-10-09",
+    "level": "a2",
+    "skill": "speaking",
+    "topic": "Talking on the Phone at Work",
+    "title": "Talking on the Phone at Work — English Speaking Practice & Shadowing (A2)",
+    "durationSec": 249,
+    "sizeMb": 17.2,
+    "videoId": "Inae6FplpR4",
+    "url": "https://www.youtube.com/watch?v=Inae6FplpR4",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:a2",
+        "id": "PLMUHkdE-F1_Q"
+      },
+      {
+        "key": "skill:speaking",
+        "id": "PLCadq2A6pEK8"
+      }
+    ],
+    "buildSeconds": 379,
+    "dir": "output/2026-10-09-a2-speaking-talking-on-the-phone-at-work"
+  },
+  {
+    "date": "2026-10-09",
+    "level": "a1",
+    "skill": "listening",
+    "topic": "At a Restaurant",
+    "title": "At a Restaurant — English Conversation Practice (A1 Beginner)",
+    "durationSec": 193,
+    "sizeMb": 13.1,
+    "videoId": "9yqd33HCJBo",
+    "url": "https://www.youtube.com/watch?v=9yqd33HCJBo",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:a1",
+        "id": "PLIJ5pu8Ch1Pc"
+      },
+      {
+        "key": "skill:listening",
+        "id": "PLc1avYS6uKVo"
+      }
+    ],
+    "buildSeconds": 370,
+    "dir": "output/2026-10-09-a1-listening-at-a-restaurant"
+  },
+  {
     "date": "2026-10-08",
     "level": "b1",
     "skill": "short",

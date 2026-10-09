@@ -82,7 +82,8 @@
       "In the City",
       "At the Supermarket",
       "Countries and Nationalities",
-      "School Subjects"
+      "School Subjects",
+      "At a Restaurant"
     ],
     "a2:speaking": [
       "Comparing Cities",
@@ -95,7 +96,8 @@
       "A Day at the Beach",
       "Ordering Food and Complaining Politely",
       "Describing a Photograph",
-      "Staying at a Hotel"
+      "Staying at a Hotel",
+      "Talking on the Phone at Work"
     ],
     "b2:reading": [
       "Universal Basic Income",
@@ -115,7 +117,8 @@
       "British Humour, Irony and Understatement",
       "Twelve Better Words Than Very",
       "Understanding Fast Native Conversation",
-      "Academic Phrases for IELTS Writing"
+      "Academic Phrases for IELTS Writing",
+      "Making a Recommendation With Confidence"
     ],
     "a1:speaking": [
       "Food and Drinks",
@@ -251,7 +254,8 @@
       "Technology and Gadgets",
       "Shopping Online and Returns",
       "Learning a New Skill",
-      "Talking About Your Studies"
+      "Talking About Your Studies",
+      "A Day at the Beach"
     ],
     "b1:short": [
       "Fake News and Media Literacy",
@@ -264,8 +268,9 @@
     "b2:short": [
       "Talking About Learning English",
       "Talking About Your Job and What You Do",
-      "At the Airport and on the Plane"
+      "At the Airport and on the Plane",
+      "Phrasal Verbs With Get"
     ]
   },
-  "updatedAt": "2026-10-08T16:01:49.556Z"
+  "updatedAt": "2026-10-09T15:43:20.901Z"
 }
