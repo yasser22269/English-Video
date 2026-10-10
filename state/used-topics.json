@@ -130,7 +130,8 @@
       "Animals and Pets",
       "Transport and Travel",
       "Jobs and Occupations",
-      "Feelings and Emotions"
+      "Feelings and Emotions",
+      "At the Airport"
     ],
     "a2:vocabulary": [
       "The Best and the Worst",
@@ -143,7 +144,8 @@
       "Sports and Fitness Routines",
       "Job Interviews Basics",
       "Talking About Music Taste",
-      "Technology and Gadgets"
+      "Technology and Gadgets",
+      "Money, Saving and Spending"
     ],
     "b1:reading": [
       "Travelling on a Budget",
@@ -154,7 +156,8 @@
       "Getting a Driving Licence",
       "Online Shopping and Scams",
       "Artificial Intelligence at Work",
-      "Learning Languages Faster"
+      "Learning Languages Faster",
+      "Describing a Turning Point"
     ],
     "b2:listening": [
       "Gentrification and Neighbourhoods",
@@ -241,7 +244,8 @@
       "My Bedroom and Furniture",
       "Breakfast, Lunch and Dinner",
       "The Weather",
-      "Healthy Habits"
+      "Healthy Habits",
+      "At a Restaurant"
     ],
     "a2:short": [
       "Giving Simple Instructions",
@@ -255,7 +259,8 @@
       "Shopping Online and Returns",
       "Learning a New Skill",
       "Talking About Your Studies",
-      "A Day at the Beach"
+      "A Day at the Beach",
+      "Future Plans and Intentions"
     ],
     "b1:short": [
       "Fake News and Media Literacy",
@@ -272,5 +277,5 @@
       "Phrasal Verbs With Get"
     ]
   },
-  "updatedAt": "2026-10-09T15:43:20.901Z"
+  "updatedAt": "2026-10-10T15:02:02.533Z"
 }

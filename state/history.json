@@ -1,5 +1,117 @@
 [
   {
+    "date": "2026-10-10",
+    "level": "a2",
+    "skill": "short",
+    "topic": "Future Plans and Intentions",
+    "title": "Future Plans and Intentions: 3 English Words in 60 Seconds (A2) #shorts",
+    "durationSec": 24,
+    "sizeMb": 1.6,
+    "videoId": "0qMZHdeXRkA",
+    "url": "https://www.youtube.com/watch?v=0qMZHdeXRkA",
+    "publishAt": "2026-10-10T18:00:00.000Z",
+    "playlists": [
+      {
+        "key": "level:a2",
+        "id": "PLMUHkdE-F1_Q"
+      }
+    ],
+    "buildSeconds": 258,
+    "dir": "output/2026-10-10-a2-short-future-plans-and-intentions"
+  },
+  {
+    "date": "2026-10-10",
+    "level": "a1",
+    "skill": "short",
+    "topic": "At a Restaurant",
+    "title": "At a Restaurant: 3 English Words in 60 Seconds (A1) #shorts",
+    "durationSec": 22,
+    "sizeMb": 1.6,
+    "videoId": "mARgCEMbfc4",
+    "url": "https://www.youtube.com/watch?v=mARgCEMbfc4",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:a1",
+        "id": "PLIJ5pu8Ch1Pc"
+      }
+    ],
+    "buildSeconds": 167,
+    "dir": "output/2026-10-10-a1-short-at-a-restaurant"
+  },
+  {
+    "date": "2026-10-10",
+    "level": "b1",
+    "skill": "reading",
+    "topic": "Describing a Turning Point",
+    "title": "Describing a Turning Point — Learn English Through Story Level 3 (B1)",
+    "durationSec": 334,
+    "sizeMb": 21,
+    "videoId": "oEJVH6Yr5D0",
+    "url": "https://www.youtube.com/watch?v=oEJVH6Yr5D0",
+    "publishAt": "2026-10-10T16:00:00.000Z",
+    "playlists": [
+      {
+        "key": "level:b1",
+        "id": "PLSkG2Gz0CZos"
+      },
+      {
+        "key": "skill:reading",
+        "id": "PLYub11V_0AzA"
+      }
+    ],
+    "buildSeconds": 452,
+    "dir": "output/2026-10-10-b1-reading-describing-a-turning-point"
+  },
+  {
+    "date": "2026-10-10",
+    "level": "a2",
+    "skill": "vocabulary",
+    "topic": "Money, Saving and Spending",
+    "title": "Money, Saving and Spending: 10 English Words with Pictures (A2 Elementary)",
+    "durationSec": 296,
+    "sizeMb": 16.1,
+    "videoId": "8k3Kfq8cfLE",
+    "url": "https://www.youtube.com/watch?v=8k3Kfq8cfLE",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:a2",
+        "id": "PLMUHkdE-F1_Q"
+      },
+      {
+        "key": "skill:vocabulary",
+        "id": "PLRKWAimfYWh4"
+      }
+    ],
+    "buildSeconds": 500,
+    "dir": "output/2026-10-10-a2-vocabulary-money-saving-and-spending"
+  },
+  {
+    "date": "2026-10-10",
+    "level": "a1",
+    "skill": "speaking",
+    "topic": "At the Airport",
+    "title": "At the Airport — English Speaking Practice & Shadowing (A1)",
+    "durationSec": 209,
+    "sizeMb": 30.4,
+    "videoId": "WlAKlQCK9Qs",
+    "url": "https://www.youtube.com/watch?v=WlAKlQCK9Qs",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:a1",
+        "id": "PLIJ5pu8Ch1Pc"
+      },
+      {
+        "key": "skill:speaking",
+        "id": "PLCadq2A6pEK8"
+      }
+    ],
+    "buildSeconds": 474,
+    "dir": "output/2026-10-10-a1-speaking-at-the-airport"
+  },
+  {
     "date": "2026-10-09",
     "level": "b2",
     "skill": "short",
