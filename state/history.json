@@ -1,5 +1,117 @@
 [
   {
+    "date": "2026-10-11",
+    "level": "a1",
+    "skill": "short",
+    "topic": "At the Park",
+    "title": "At the Park: 3 English Words in 60 Seconds (A1) #shorts",
+    "durationSec": 24,
+    "sizeMb": 1.7,
+    "videoId": "RKz25n0WZ3U",
+    "url": "https://www.youtube.com/watch?v=RKz25n0WZ3U",
+    "publishAt": "2026-10-11T18:00:00.000Z",
+    "playlists": [
+      {
+        "key": "level:a1",
+        "id": "PLIJ5pu8Ch1Pc"
+      }
+    ],
+    "buildSeconds": 52,
+    "dir": "output/2026-10-11-a1-short-at-the-park"
+  },
+  {
+    "date": "2026-10-11",
+    "level": "b1",
+    "skill": "short",
+    "topic": "Describing a Turning Point",
+    "title": "Describing a Turning Point: 3 English Words in 60 Seconds (B1) #shorts",
+    "durationSec": 29,
+    "sizeMb": 2,
+    "videoId": "8iTiPuJbjuQ",
+    "url": "https://www.youtube.com/watch?v=8iTiPuJbjuQ",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:b1",
+        "id": "PLSkG2Gz0CZos"
+      }
+    ],
+    "buildSeconds": 151,
+    "dir": "output/2026-10-11-b1-short-describing-a-turning-point"
+  },
+  {
+    "date": "2026-10-11",
+    "level": "b2",
+    "skill": "speaking",
+    "topic": "Talking About Your Studies",
+    "title": "Talking About Your Studies — English Speaking Practice & Shadowing (B2)",
+    "durationSec": 337,
+    "sizeMb": 39,
+    "videoId": "AEO_S3wtgh4",
+    "url": "https://www.youtube.com/watch?v=AEO_S3wtgh4",
+    "publishAt": "2026-10-11T17:30:00.000Z",
+    "playlists": [
+      {
+        "key": "level:b2",
+        "id": "PLEyMEjEr22bU"
+      },
+      {
+        "key": "skill:speaking",
+        "id": "PLCadq2A6pEK8"
+      }
+    ],
+    "buildSeconds": 706,
+    "dir": "output/2026-10-11-b2-speaking-talking-about-your-studies"
+  },
+  {
+    "date": "2026-10-11",
+    "level": "a2",
+    "skill": "reading",
+    "topic": "Describing a Photograph",
+    "title": "Describing a Photograph — Learn English Through Story Level 2 (A2)",
+    "durationSec": 234,
+    "sizeMb": 13.4,
+    "videoId": "r32ysByq2sw",
+    "url": "https://www.youtube.com/watch?v=r32ysByq2sw",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:a2",
+        "id": "PLMUHkdE-F1_Q"
+      },
+      {
+        "key": "skill:reading",
+        "id": "PLYub11V_0AzA"
+      }
+    ],
+    "buildSeconds": 373,
+    "dir": "output/2026-10-11-a2-reading-describing-a-photograph"
+  },
+  {
+    "date": "2026-10-11",
+    "level": "a1",
+    "skill": "vocabulary",
+    "topic": "Food and Drinks",
+    "title": "Food and Drinks: 10 English Words with Pictures (A1 Beginner)",
+    "durationSec": 211,
+    "sizeMb": 11.8,
+    "videoId": "3CIuNVrWB8Y",
+    "url": "https://www.youtube.com/watch?v=3CIuNVrWB8Y",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:a1",
+        "id": "PLIJ5pu8Ch1Pc"
+      },
+      {
+        "key": "skill:vocabulary",
+        "id": "PLRKWAimfYWh4"
+      }
+    ],
+    "buildSeconds": 219,
+    "dir": "output/2026-10-11-a1-vocabulary-food-and-drinks"
+  },
+  {
     "date": "2026-10-10",
     "level": "a2",
     "skill": "short",

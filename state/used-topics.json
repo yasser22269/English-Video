@@ -12,7 +12,8 @@
       "Colours and Clothes",
       "Shopping for Clothes",
       "Fruits and Vegetables",
-      "Asking for Directions"
+      "Asking for Directions",
+      "Food and Drinks"
     ],
     "a1:reading": [
       "My Family",
@@ -189,7 +190,8 @@
       "Talking on the Phone at Work",
       "Health Problems and Advice",
       "Travelling by Plane",
-      "Learning a New Skill"
+      "Learning a New Skill",
+      "Describing a Photograph"
     ],
     "b1:listening": [
       "Culture Shock Abroad",
@@ -208,7 +210,8 @@
       "At the Doctor: Describing Symptoms",
       "Describing Your Working Day",
       "Job Interview: Strengths and Weaknesses",
-      "Talking About the Weather Naturally"
+      "Talking About the Weather Naturally",
+      "Talking About Your Studies"
     ],
     "c1:vocabulary": [
       "Algorithmic Bias and Accountability",
@@ -245,7 +248,8 @@
       "Breakfast, Lunch and Dinner",
       "The Weather",
       "Healthy Habits",
-      "At a Restaurant"
+      "At a Restaurant",
+      "At the Park"
     ],
     "a2:short": [
       "Giving Simple Instructions",
@@ -268,7 +272,8 @@
       "Volunteering and Community",
       "Starting a Small Business",
       "Learning Languages Faster",
-      "Exercise and Motivation"
+      "Exercise and Motivation",
+      "Describing a Turning Point"
     ],
     "b2:short": [
       "Talking About Learning English",
@@ -277,5 +282,5 @@
       "Phrasal Verbs With Get"
     ]
   },
-  "updatedAt": "2026-10-10T15:02:02.533Z"
+  "updatedAt": "2026-10-11T15:22:56.624Z"
 }
