@@ -84,7 +84,8 @@
       "At the Supermarket",
       "Countries and Nationalities",
       "School Subjects",
-      "At a Restaurant"
+      "At a Restaurant",
+      "Days, Months and Dates"
     ],
     "a2:speaking": [
       "Comparing Cities",
@@ -98,7 +99,8 @@
       "Ordering Food and Complaining Politely",
       "Describing a Photograph",
       "Staying at a Hotel",
-      "Talking on the Phone at Work"
+      "Talking on the Phone at Work",
+      "Talking About Your Job"
     ],
     "b2:reading": [
       "Universal Basic Income",
@@ -232,7 +234,8 @@
       "Health Insurance and Doctors",
       "Comparing Education Systems",
       "Public Speaking Nerves",
-      "Fake News and Media Literacy"
+      "Fake News and Media Literacy",
+      "Friendship as an Adult"
     ],
     "a1:short": [
       "Countries and Nationalities",
@@ -249,7 +252,8 @@
       "The Weather",
       "Healthy Habits",
       "At a Restaurant",
-      "At the Park"
+      "At the Park",
+      "In the City"
     ],
     "a2:short": [
       "Giving Simple Instructions",
@@ -264,7 +268,8 @@
       "Learning a New Skill",
       "Talking About Your Studies",
       "A Day at the Beach",
-      "Future Plans and Intentions"
+      "Future Plans and Intentions",
+      "Staying at a Hotel"
     ],
     "b1:short": [
       "Fake News and Media Literacy",
@@ -282,5 +287,5 @@
       "Phrasal Verbs With Get"
     ]
   },
-  "updatedAt": "2026-10-11T15:22:56.624Z"
+  "updatedAt": "2026-10-13T16:19:27.722Z"
 }

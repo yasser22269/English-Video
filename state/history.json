@@ -1,5 +1,117 @@
 [
   {
+    "date": "2026-10-13",
+    "level": "a2",
+    "skill": "short",
+    "topic": "Staying at a Hotel",
+    "title": "Staying at a Hotel: 3 English Words in 60 Seconds (A2) #shorts",
+    "durationSec": 27,
+    "sizeMb": 1.8,
+    "videoId": "GBl2m3XU6WY",
+    "url": "https://www.youtube.com/watch?v=GBl2m3XU6WY",
+    "publishAt": "2026-10-13T18:00:00.000Z",
+    "playlists": [
+      {
+        "key": "level:a2",
+        "id": "PLMUHkdE-F1_Q"
+      }
+    ],
+    "buildSeconds": 29,
+    "dir": "output/2026-10-13-a2-short-staying-at-a-hotel"
+  },
+  {
+    "date": "2026-10-13",
+    "level": "a1",
+    "skill": "short",
+    "topic": "In the City",
+    "title": "In the City: 3 English Words in 60 Seconds (A1) #shorts",
+    "durationSec": 23,
+    "sizeMb": 1.6,
+    "videoId": "O32dhym1elI",
+    "url": "https://www.youtube.com/watch?v=O32dhym1elI",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:a1",
+        "id": "PLIJ5pu8Ch1Pc"
+      }
+    ],
+    "buildSeconds": 53,
+    "dir": "output/2026-10-13-a1-short-in-the-city"
+  },
+  {
+    "date": "2026-10-13",
+    "level": "b1",
+    "skill": "vocabulary",
+    "topic": "Friendship as an Adult",
+    "title": "Friendship as an Adult: 9 English Words with Pictures (B1 Intermediate)",
+    "durationSec": 297,
+    "sizeMb": 16.7,
+    "videoId": "UxnFQ6bDd4k",
+    "url": "https://www.youtube.com/watch?v=UxnFQ6bDd4k",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:b1",
+        "id": "PLSkG2Gz0CZos"
+      },
+      {
+        "key": "skill:vocabulary",
+        "id": "PLRKWAimfYWh4"
+      }
+    ],
+    "buildSeconds": 222,
+    "dir": "output/2026-10-13-b1-vocabulary-friendship-as-an-adult"
+  },
+  {
+    "date": "2026-10-13",
+    "level": "a2",
+    "skill": "speaking",
+    "topic": "Talking About Your Job",
+    "title": "Talking About Your Job — English Speaking Practice & Shadowing (A2)",
+    "durationSec": 238,
+    "sizeMb": 31.8,
+    "videoId": "qeJWL_bVj0o",
+    "url": "https://www.youtube.com/watch?v=qeJWL_bVj0o",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:a2",
+        "id": "PLMUHkdE-F1_Q"
+      },
+      {
+        "key": "skill:speaking",
+        "id": "PLCadq2A6pEK8"
+      }
+    ],
+    "buildSeconds": 268,
+    "dir": "output/2026-10-13-a2-speaking-talking-about-your-job"
+  },
+  {
+    "date": "2026-10-13",
+    "level": "a1",
+    "skill": "listening",
+    "topic": "Days, Months and Dates",
+    "title": "Days, Months and Dates — English Conversation Practice (A1 Beginner)",
+    "durationSec": 195,
+    "sizeMb": 14,
+    "videoId": "EDhYoRqjc74",
+    "url": "https://www.youtube.com/watch?v=EDhYoRqjc74",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:a1",
+        "id": "PLIJ5pu8Ch1Pc"
+      },
+      {
+        "key": "skill:listening",
+        "id": "PLc1avYS6uKVo"
+      }
+    ],
+    "buildSeconds": 241,
+    "dir": "output/2026-10-13-a1-listening-days-months-and-dates"
+  },
+  {
     "date": "2026-10-11",
     "level": "a1",
     "skill": "short",
