@@ -134,7 +134,8 @@
       "Transport and Travel",
       "Jobs and Occupations",
       "Feelings and Emotions",
-      "At the Airport"
+      "At the Airport",
+      "Breakfast, Lunch and Dinner"
     ],
     "a2:vocabulary": [
       "The Best and the Worst",
@@ -148,7 +149,8 @@
       "Job Interviews Basics",
       "Talking About Music Taste",
       "Technology and Gadgets",
-      "Money, Saving and Spending"
+      "Money, Saving and Spending",
+      "Health Problems and Advice"
     ],
     "b1:reading": [
       "Travelling on a Budget",
@@ -171,7 +173,8 @@
       "English Idioms About Time",
       "Talking About Holidays and Trips",
       "Habits in the Past: Used To",
-      "Describing Your Working Day"
+      "Describing Your Working Day",
+      "Describing a Photo in Detail"
     ],
     "c1:speaking": [
       "Translation and the Limits of Language",
@@ -253,7 +256,8 @@
       "Healthy Habits",
       "At a Restaurant",
       "At the Park",
-      "In the City"
+      "In the City",
+      "Food and Drinks"
     ],
     "a2:short": [
       "Giving Simple Instructions",
@@ -278,7 +282,8 @@
       "Starting a Small Business",
       "Learning Languages Faster",
       "Exercise and Motivation",
-      "Describing a Turning Point"
+      "Describing a Turning Point",
+      "Dealing with Difficult People"
     ],
     "b2:short": [
       "Talking About Learning English",
@@ -287,5 +292,5 @@
       "Phrasal Verbs With Get"
     ]
   },
-  "updatedAt": "2026-10-13T16:19:27.722Z"
+  "updatedAt": "2026-10-14T14:10:27.624Z"
 }

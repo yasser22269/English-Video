@@ -1,5 +1,117 @@
 [
   {
+    "date": "2026-10-14",
+    "level": "a1",
+    "skill": "short",
+    "topic": "Food and Drinks",
+    "title": "Food and Drinks: 3 English Words in 60 Seconds (A1) #shorts",
+    "durationSec": 22,
+    "sizeMb": 1.5,
+    "videoId": "cKRG2cqL5po",
+    "url": "https://www.youtube.com/watch?v=cKRG2cqL5po",
+    "publishAt": "2026-10-14T18:00:00.000Z",
+    "playlists": [
+      {
+        "key": "level:a1",
+        "id": "PLIJ5pu8Ch1Pc"
+      }
+    ],
+    "buildSeconds": 28,
+    "dir": "output/2026-10-14-a1-short-food-and-drinks"
+  },
+  {
+    "date": "2026-10-14",
+    "level": "b1",
+    "skill": "short",
+    "topic": "Dealing with Difficult People",
+    "title": "Dealing with Difficult People: 3 English Words in 60 Seconds (B1) #shorts",
+    "durationSec": 30,
+    "sizeMb": 1.9,
+    "videoId": "Gic9VN7-EN4",
+    "url": "https://www.youtube.com/watch?v=Gic9VN7-EN4",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:b1",
+        "id": "PLSkG2Gz0CZos"
+      }
+    ],
+    "buildSeconds": 152,
+    "dir": "output/2026-10-14-b1-short-dealing-with-difficult-people"
+  },
+  {
+    "date": "2026-10-14",
+    "level": "b2",
+    "skill": "listening",
+    "topic": "Describing a Photo in Detail",
+    "title": "Describing a Photo in Detail — English Conversation Practice (B2 Upper-Intermediate)",
+    "durationSec": 348,
+    "sizeMb": 42.7,
+    "videoId": "yXqhnxgwz88",
+    "url": "https://www.youtube.com/watch?v=yXqhnxgwz88",
+    "publishAt": "2026-10-14T17:30:00.000Z",
+    "playlists": [
+      {
+        "key": "level:b2",
+        "id": "PLEyMEjEr22bU"
+      },
+      {
+        "key": "skill:listening",
+        "id": "PLc1avYS6uKVo"
+      }
+    ],
+    "buildSeconds": 341,
+    "dir": "output/2026-10-14-b2-listening-describing-a-photo-in-detail"
+  },
+  {
+    "date": "2026-10-14",
+    "level": "a2",
+    "skill": "vocabulary",
+    "topic": "Health Problems and Advice",
+    "title": "Health Problems and Advice: 10 English Words with Pictures (A2 Elementary)",
+    "durationSec": 274,
+    "sizeMb": 14.9,
+    "videoId": "APfA5goHboM",
+    "url": "https://www.youtube.com/watch?v=APfA5goHboM",
+    "publishAt": "2026-10-14T14:30:00.000Z",
+    "playlists": [
+      {
+        "key": "level:a2",
+        "id": "PLMUHkdE-F1_Q"
+      },
+      {
+        "key": "skill:vocabulary",
+        "id": "PLRKWAimfYWh4"
+      }
+    ],
+    "buildSeconds": 361,
+    "dir": "output/2026-10-14-a2-vocabulary-health-problems-and-advice"
+  },
+  {
+    "date": "2026-10-14",
+    "level": "a1",
+    "skill": "speaking",
+    "topic": "Breakfast, Lunch and Dinner",
+    "title": "Breakfast, Lunch and Dinner — English Speaking Practice & Shadowing (A1)",
+    "durationSec": 172,
+    "sizeMb": 11.5,
+    "videoId": "MEbibvUsYao",
+    "url": "https://www.youtube.com/watch?v=MEbibvUsYao",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:a1",
+        "id": "PLIJ5pu8Ch1Pc"
+      },
+      {
+        "key": "skill:speaking",
+        "id": "PLCadq2A6pEK8"
+      }
+    ],
+    "buildSeconds": 221,
+    "dir": "output/2026-10-14-a1-speaking-breakfast-lunch-and-dinner"
+  },
+  {
     "date": "2026-10-13",
     "level": "a2",
     "skill": "short",
