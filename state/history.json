@@ -1,5 +1,117 @@
 [
   {
+    "date": "2026-10-15",
+    "level": "b2",
+    "skill": "short",
+    "topic": "Describing a Place You Love",
+    "title": "Describing a Place You Love: 3 English Words in 60 Seconds (B2) #shorts",
+    "durationSec": 30,
+    "sizeMb": 1.7,
+    "videoId": "g32Z_RfTCrM",
+    "url": "https://www.youtube.com/watch?v=g32Z_RfTCrM",
+    "publishAt": "2026-10-15T18:00:00.000Z",
+    "playlists": [
+      {
+        "key": "level:b2",
+        "id": "PLEyMEjEr22bU"
+      }
+    ],
+    "buildSeconds": 31,
+    "dir": "output/2026-10-15-b2-short-describing-a-place-you-love"
+  },
+  {
+    "date": "2026-10-15",
+    "level": "a2",
+    "skill": "short",
+    "topic": "The Best and the Worst",
+    "title": "The Best and the Worst: 3 English Words in 60 Seconds (A2) #shorts",
+    "durationSec": 30,
+    "sizeMb": 2,
+    "videoId": "A0Hoz50qiwA",
+    "url": "https://www.youtube.com/watch?v=A0Hoz50qiwA",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:a2",
+        "id": "PLMUHkdE-F1_Q"
+      }
+    ],
+    "buildSeconds": 40,
+    "dir": "output/2026-10-15-a2-short-the-best-and-the-worst"
+  },
+  {
+    "date": "2026-10-15",
+    "level": "c1",
+    "skill": "vocabulary",
+    "topic": "Expressing Frustration Politely",
+    "title": "Expressing Frustration Politely: 8 English Words with Pictures (C1 Advanced)",
+    "durationSec": 314,
+    "sizeMb": 19.8,
+    "videoId": "vi_BWGO8PBM",
+    "url": "https://www.youtube.com/watch?v=vi_BWGO8PBM",
+    "publishAt": "2026-10-15T19:00:00.000Z",
+    "playlists": [
+      {
+        "key": "level:c1",
+        "id": "PLPYmpq9AOiZM"
+      },
+      {
+        "key": "skill:vocabulary",
+        "id": "PLRKWAimfYWh4"
+      }
+    ],
+    "buildSeconds": 176,
+    "dir": "output/2026-10-15-c1-vocabulary-expressing-frustration-politely"
+  },
+  {
+    "date": "2026-10-15",
+    "level": "a2",
+    "skill": "reading",
+    "topic": "Describing Your Hometown",
+    "title": "Describing Your Hometown — Learn English Through Story Level 2 (A2)",
+    "durationSec": 236,
+    "sizeMb": 13.6,
+    "videoId": "Xqba6pNkyDw",
+    "url": "https://www.youtube.com/watch?v=Xqba6pNkyDw",
+    "publishAt": "2026-10-15T14:30:00.000Z",
+    "playlists": [
+      {
+        "key": "level:a2",
+        "id": "PLMUHkdE-F1_Q"
+      },
+      {
+        "key": "skill:reading",
+        "id": "PLYub11V_0AzA"
+      }
+    ],
+    "buildSeconds": 166,
+    "dir": "output/2026-10-15-a2-reading-describing-your-hometown"
+  },
+  {
+    "date": "2026-10-15",
+    "level": "a1",
+    "skill": "vocabulary",
+    "topic": "Money and Prices",
+    "title": "Money and Prices: 10 English Words with Pictures (A1 Beginner)",
+    "durationSec": 233,
+    "sizeMb": 13.1,
+    "videoId": "YamKlnCXDE4",
+    "url": "https://www.youtube.com/watch?v=YamKlnCXDE4",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:a1",
+        "id": "PLIJ5pu8Ch1Pc"
+      },
+      {
+        "key": "skill:vocabulary",
+        "id": "PLRKWAimfYWh4"
+      }
+    ],
+    "buildSeconds": 281,
+    "dir": "output/2026-10-15-a1-vocabulary-money-and-prices"
+  },
+  {
     "date": "2026-10-14",
     "level": "a1",
     "skill": "short",

@@ -13,7 +13,8 @@
       "Shopping for Clothes",
       "Fruits and Vegetables",
       "Asking for Directions",
-      "Food and Drinks"
+      "Food and Drinks",
+      "Money and Prices"
     ],
     "a1:reading": [
       "My Family",
@@ -196,7 +197,8 @@
       "Health Problems and Advice",
       "Travelling by Plane",
       "Learning a New Skill",
-      "Describing a Photograph"
+      "Describing a Photograph",
+      "Describing Your Hometown"
     ],
     "b1:listening": [
       "Culture Shock Abroad",
@@ -227,7 +229,8 @@
       "How to Sound Less Certain on Purpose",
       "Understanding Fast Native Conversation",
       "Talking About the Future With Confidence",
-      "Talking About Risk and Probability"
+      "Talking About Risk and Probability",
+      "Expressing Frustration Politely"
     ],
     "b1:vocabulary": [
       "Learning Languages Faster",
@@ -273,7 +276,8 @@
       "Talking About Your Studies",
       "A Day at the Beach",
       "Future Plans and Intentions",
-      "Staying at a Hotel"
+      "Staying at a Hotel",
+      "The Best and the Worst"
     ],
     "b1:short": [
       "Fake News and Media Literacy",
@@ -289,8 +293,9 @@
       "Talking About Learning English",
       "Talking About Your Job and What You Do",
       "At the Airport and on the Plane",
-      "Phrasal Verbs With Get"
+      "Phrasal Verbs With Get",
+      "Describing a Place You Love"
     ]
   },
-  "updatedAt": "2026-10-14T14:10:27.624Z"
+  "updatedAt": "2026-10-15T13:42:29.326Z"
 }
