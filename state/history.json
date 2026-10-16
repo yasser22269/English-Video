@@ -1,5 +1,97 @@
 [
   {
+    "date": "2026-10-16",
+    "level": "a2",
+    "skill": "short",
+    "topic": "Environment and Recycling",
+    "title": "Environment and Recycling: 3 English Words in 60 Seconds (A2) #shorts",
+    "durationSec": 25,
+    "sizeMb": 1.5,
+    "videoId": "Cky-H8ccXSo",
+    "url": "https://www.youtube.com/watch?v=Cky-H8ccXSo",
+    "publishAt": "2026-10-16T18:00:00.000Z",
+    "playlists": [
+      {
+        "key": "level:a2",
+        "id": "PLMUHkdE-F1_Q"
+      }
+    ],
+    "buildSeconds": 34,
+    "dir": "output/2026-10-16-a2-short-environment-and-recycling"
+  },
+  {
+    "date": "2026-10-16",
+    "level": "b1",
+    "skill": "speaking",
+    "topic": "Sustainable Fashion",
+    "title": "Sustainable Fashion — English Speaking Practice & Shadowing (B1)",
+    "durationSec": 318,
+    "sizeMb": 38.4,
+    "videoId": "ISNcZV0DCvc",
+    "url": "https://www.youtube.com/watch?v=ISNcZV0DCvc",
+    "publishAt": "2026-10-16T16:00:00.000Z",
+    "playlists": [
+      {
+        "key": "level:b1",
+        "id": "PLSkG2Gz0CZos"
+      },
+      {
+        "key": "skill:speaking",
+        "id": "PLCadq2A6pEK8"
+      }
+    ],
+    "buildSeconds": 327,
+    "dir": "output/2026-10-16-b1-speaking-sustainable-fashion"
+  },
+  {
+    "date": "2026-10-16",
+    "level": "a2",
+    "skill": "listening",
+    "topic": "Talking About Your Studies",
+    "title": "Talking About Your Studies — English Conversation Practice (A2 Elementary)",
+    "durationSec": 265,
+    "sizeMb": 40.3,
+    "videoId": "MIdMvgfnIi8",
+    "url": "https://www.youtube.com/watch?v=MIdMvgfnIi8",
+    "publishAt": "2026-10-16T14:30:00.000Z",
+    "playlists": [
+      {
+        "key": "level:a2",
+        "id": "PLMUHkdE-F1_Q"
+      },
+      {
+        "key": "skill:listening",
+        "id": "PLc1avYS6uKVo"
+      }
+    ],
+    "buildSeconds": 291,
+    "dir": "output/2026-10-16-a2-listening-talking-about-your-studies"
+  },
+  {
+    "date": "2026-10-16",
+    "level": "a1",
+    "skill": "reading",
+    "topic": "My House and Rooms",
+    "title": "My House and Rooms — Learn English Through Story Level 1 (A1)",
+    "durationSec": 156,
+    "sizeMb": 9.1,
+    "videoId": "wBPrejo84Nw",
+    "url": "https://www.youtube.com/watch?v=wBPrejo84Nw",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:a1",
+        "id": "PLIJ5pu8Ch1Pc"
+      },
+      {
+        "key": "skill:reading",
+        "id": "PLYub11V_0AzA"
+      }
+    ],
+    "buildSeconds": 184,
+    "dir": "output/2026-10-16-a1-reading-my-house-and-rooms"
+  },
+  {
     "date": "2026-10-15",
     "level": "b2",
     "skill": "short",

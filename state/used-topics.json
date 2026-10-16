@@ -28,7 +28,8 @@
       "Food and Drinks",
       "My Friends",
       "Breakfast, Lunch and Dinner",
-      "Transport and Travel"
+      "Transport and Travel",
+      "My House and Rooms"
     ],
     "a2:listening": [
       "Future Plans and Intentions",
@@ -41,7 +42,8 @@
       "Describing Your Best Friend",
       "The Best and the Worst",
       "Money, Saving and Spending",
-      "Travelling by Plane"
+      "Travelling by Plane",
+      "Talking About Your Studies"
     ],
     "b1:speaking": [
       "Job Interviews and Strengths",
@@ -51,7 +53,8 @@
       "Getting a Driving Licence",
       "Describing a Turning Point",
       "Giving and Receiving Feedback",
-      "Music and Memory"
+      "Music and Memory",
+      "Sustainable Fashion"
     ],
     "b2:vocabulary": [
       "The Attention Economy",
@@ -277,7 +280,8 @@
       "A Day at the Beach",
       "Future Plans and Intentions",
       "Staying at a Hotel",
-      "The Best and the Worst"
+      "The Best and the Worst",
+      "Environment and Recycling"
     ],
     "b1:short": [
       "Fake News and Media Literacy",
@@ -297,5 +301,5 @@
       "Describing a Place You Love"
     ]
   },
-  "updatedAt": "2026-10-15T13:42:29.326Z"
+  "updatedAt": "2026-10-16T13:34:13.655Z"
 }
