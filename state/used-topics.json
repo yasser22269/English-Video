@@ -89,7 +89,8 @@
       "Countries and Nationalities",
       "School Subjects",
       "At a Restaurant",
-      "Days, Months and Dates"
+      "Days, Months and Dates",
+      "Birthdays and Celebrations"
     ],
     "a2:speaking": [
       "Comparing Cities",
@@ -104,7 +105,8 @@
       "Describing a Photograph",
       "Staying at a Hotel",
       "Talking on the Phone at Work",
-      "Talking About Your Job"
+      "Talking About Your Job",
+      "Small Talk with Strangers"
     ],
     "b2:reading": [
       "Universal Basic Income",
@@ -113,7 +115,8 @@
       "Giving Directions in a City",
       "Talking About Your Weekend Naturally",
       "At the Doctor: Describing Symptoms",
-      "Describing Someone's Personality"
+      "Describing Someone's Personality",
+      "Shopping and Returning Something"
     ],
     "c1:listening": [
       "The Economics of Scarcity and Choice",
@@ -263,7 +266,8 @@
       "At a Restaurant",
       "At the Park",
       "In the City",
-      "Food and Drinks"
+      "Food and Drinks",
+      "At the Supermarket"
     ],
     "a2:short": [
       "Giving Simple Instructions",
@@ -291,7 +295,8 @@
       "Learning Languages Faster",
       "Exercise and Motivation",
       "Describing a Turning Point",
-      "Dealing with Difficult People"
+      "Dealing with Difficult People",
+      "Handling Stress and Burnout"
     ],
     "b2:short": [
       "Talking About Learning English",
@@ -301,5 +306,5 @@
       "Describing a Place You Love"
     ]
   },
-  "updatedAt": "2026-10-16T13:34:13.655Z"
+  "updatedAt": "2026-10-17T12:29:23.809Z"
 }

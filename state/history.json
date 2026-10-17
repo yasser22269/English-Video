@@ -1,5 +1,117 @@
 [
   {
+    "date": "2026-10-17",
+    "level": "a1",
+    "skill": "short",
+    "topic": "At the Supermarket",
+    "title": "At the Supermarket: 3 English Words in 60 Seconds (A1) #shorts",
+    "durationSec": 25,
+    "sizeMb": 1.8,
+    "videoId": "rUm9tUiMqHU",
+    "url": "https://www.youtube.com/watch?v=rUm9tUiMqHU",
+    "publishAt": "2026-10-17T18:00:00.000Z",
+    "playlists": [
+      {
+        "key": "level:a1",
+        "id": "PLIJ5pu8Ch1Pc"
+      }
+    ],
+    "buildSeconds": 35,
+    "dir": "output/2026-10-17-a1-short-at-the-supermarket"
+  },
+  {
+    "date": "2026-10-17",
+    "level": "b1",
+    "skill": "short",
+    "topic": "Handling Stress and Burnout",
+    "title": "Handling Stress and Burnout: 3 English Words in 60 Seconds (B1) #shorts",
+    "durationSec": 28,
+    "sizeMb": 2,
+    "videoId": "MjDt-SpJ-Bc",
+    "url": "https://www.youtube.com/watch?v=MjDt-SpJ-Bc",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:b1",
+        "id": "PLSkG2Gz0CZos"
+      }
+    ],
+    "buildSeconds": 45,
+    "dir": "output/2026-10-17-b1-short-handling-stress-and-burnout"
+  },
+  {
+    "date": "2026-10-17",
+    "level": "b2",
+    "skill": "reading",
+    "topic": "Shopping and Returning Something",
+    "title": "Shopping and Returning Something — Learn English Through Story Level 4 (B2)",
+    "durationSec": 407,
+    "sizeMb": 25.4,
+    "videoId": "v09SGV4XIBo",
+    "url": "https://www.youtube.com/watch?v=v09SGV4XIBo",
+    "publishAt": "2026-10-17T17:30:00.000Z",
+    "playlists": [
+      {
+        "key": "level:b2",
+        "id": "PLEyMEjEr22bU"
+      },
+      {
+        "key": "skill:reading",
+        "id": "PLYub11V_0AzA"
+      }
+    ],
+    "buildSeconds": 276,
+    "dir": "output/2026-10-17-b2-reading-shopping-and-returning-something"
+  },
+  {
+    "date": "2026-10-17",
+    "level": "a2",
+    "skill": "speaking",
+    "topic": "Small Talk with Strangers",
+    "title": "Small Talk with Strangers — English Speaking Practice & Shadowing (A2)",
+    "durationSec": 256,
+    "sizeMb": 24.5,
+    "videoId": "sKFeboWqMF8",
+    "url": "https://www.youtube.com/watch?v=sKFeboWqMF8",
+    "publishAt": "2026-10-17T14:30:00.000Z",
+    "playlists": [
+      {
+        "key": "level:a2",
+        "id": "PLMUHkdE-F1_Q"
+      },
+      {
+        "key": "skill:speaking",
+        "id": "PLCadq2A6pEK8"
+      }
+    ],
+    "buildSeconds": 268,
+    "dir": "output/2026-10-17-a2-speaking-small-talk-with-strangers"
+  },
+  {
+    "date": "2026-10-17",
+    "level": "a1",
+    "skill": "listening",
+    "topic": "Birthdays and Celebrations",
+    "title": "Birthdays and Celebrations — English Conversation Practice (A1 Beginner)",
+    "durationSec": 206,
+    "sizeMb": 34.8,
+    "videoId": "LyneS2fIcqE",
+    "url": "https://www.youtube.com/watch?v=LyneS2fIcqE",
+    "publishAt": "2026-10-17T13:00:00.000Z",
+    "playlists": [
+      {
+        "key": "level:a1",
+        "id": "PLIJ5pu8Ch1Pc"
+      },
+      {
+        "key": "skill:listening",
+        "id": "PLc1avYS6uKVo"
+      }
+    ],
+    "buildSeconds": 222,
+    "dir": "output/2026-10-17-a1-listening-birthdays-and-celebrations"
+  },
+  {
     "date": "2026-10-16",
     "level": "a2",
     "skill": "short",
