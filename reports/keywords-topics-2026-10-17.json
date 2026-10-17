@@ -1,0 +1,495 @@
+{
+  "a1": [
+    {
+      "topic": "My Family",
+      "core": "family",
+      "score": 40,
+      "examples": [
+        "family english",
+        "family english movies",
+        "family english conversation",
+        "family english song",
+        "family english word"
+      ]
+    },
+    {
+      "topic": "In the Classroom",
+      "core": "classroom",
+      "score": 40,
+      "examples": [
+        "classroom english",
+        "classroom english phrases for teachers",
+        "classroom english for teachers",
+        "classroom english for kg students",
+        "classroom english language"
+      ]
+    },
+    {
+      "topic": "The Weather",
+      "core": "weather",
+      "score": 40,
+      "examples": [
+        "weather english",
+        "weather english singsing",
+        "weather english conversation",
+        "weather english speaking",
+        "weather english vocabulary"
+      ]
+    },
+    {
+      "topic": "Parts of the Body",
+      "core": "parts body",
+      "score": 40,
+      "examples": [
+        "parts body english mein",
+        "parts body english",
+        "body parts english name",
+        "body parts english singsing",
+        "body parts english song"
+      ]
+    },
+    {
+      "topic": "In the City",
+      "core": "city",
+      "score": 40,
+      "examples": [
+        "city english school",
+        "city english",
+        "city english song",
+        "city english school system",
+        "city english school ghatakpukur"
+      ]
+    },
+    {
+      "topic": "My Friends",
+      "core": "friends",
+      "score": 40,
+      "examples": [
+        "friends english",
+        "friends english subtitles",
+        "friends english learning",
+        "friends english class",
+        "friends english song"
+      ]
+    },
+    {
+      "topic": "At the Hotel",
+      "core": "hotel",
+      "score": 40,
+      "examples": [
+        "hotel english conversation",
+        "hotel english",
+        "hotel english speaking practice",
+        "hotel english phrases",
+        "hotel english vocabulary"
+      ]
+    },
+    {
+      "topic": "At a Restaurant",
+      "core": "restaurant",
+      "score": 39,
+      "examples": [
+        "restaurant english",
+        "restaurant english conversation",
+        "restaurant english conversation for waiter",
+        "restaurant english conversation for beginners",
+        "restaurant english songs"
+      ]
+    },
+    {
+      "topic": "At the Airport",
+      "core": "airport",
+      "score": 38,
+      "examples": [
+        "airport english conversation",
+        "airport english",
+        "airport english vocabulary",
+        "airport english sentences",
+        "airport english a2"
+      ]
+    },
+    {
+      "topic": "At the Doctor",
+      "core": "doctor",
+      "score": 37,
+      "examples": [
+        "doctor english",
+        "doctor english channel",
+        "doctor english drama",
+        "doctor english video",
+        "doctor english movie"
+      ]
+    },
+    {
+      "topic": "Fruits and Vegetables",
+      "core": "fruits vegetables",
+      "score": 37,
+      "examples": [
+        "fruits vegetables english",
+        "fruits vegetables english name",
+        "fruits and vegetables english singsing",
+        "fruits and vegetables english tree tv",
+        "fruits and vegetables english song"
+      ]
+    },
+    {
+      "topic": "On the Phone",
+      "core": "phone",
+      "score": 37,
+      "examples": [
+        "phone english",
+        "phone english mein kaise karen",
+        "phone english setting",
+        "phone english mein hindi mein kaise karen",
+        "phone english mein kaise hoga"
+      ]
+    },
+    {
+      "topic": "At the Park",
+      "core": "park",
+      "score": 36,
+      "examples": [
+        "park english",
+        "park english song",
+        "park english sentence",
+        "park english mein",
+        "park english mein kya kahate hain"
+      ]
+    },
+    {
+      "topic": "Describing People",
+      "core": "people",
+      "score": 35,
+      "examples": [
+        "people english",
+        "people english song",
+        "people english song lyrics",
+        "people english series",
+        "people english meaning"
+      ]
+    },
+    {
+      "topic": "At the Supermarket",
+      "core": "supermarket",
+      "score": 31,
+      "examples": [
+        "supermarket english conversation",
+        "supermarket english",
+        "supermarket english lesson",
+        "supermarket english vocabulary",
+        "supermarket english songs"
+      ]
+    },
+    {
+      "topic": "My Weekend",
+      "core": "weekend",
+      "score": 27,
+      "examples": [
+        "weekend english",
+        "weekend english movie",
+        "weekend english conversation",
+        "weekend english song",
+        "weekend english song lyrics"
+      ]
+    },
+    {
+      "topic": "Telling the Time",
+      "core": "telling time",
+      "score": 22,
+      "examples": [
+        "telling time english",
+        "telling time in english quiz",
+        "telling time in english song",
+        "telling time in english am pm",
+        "telling time american english"
+      ]
+    },
+    {
+      "topic": "Countries and Nationalities",
+      "core": "countries nationalities",
+      "score": 22,
+      "examples": [
+        "countries nationalities english",
+        "countries and nationalities english vocabulary",
+        "countries nationalities and languages english vocabulary",
+        "countries and nationalities in english quiz",
+        "countries and nationalities woodward english"
+      ]
+    },
+    {
+      "topic": "Feelings and Emotions",
+      "core": "feelings emotions",
+      "score": 21,
+      "examples": [
+        "feelings emotions english",
+        "feelings and emotions english lesson",
+        "feelings and emotions in english for beginners",
+        "feelings and emotions easy english",
+        "feelings and emotions english singsing"
+      ]
+    },
+    {
+      "topic": "Food and Drinks",
+      "core": "food drinks",
+      "score": 20,
+      "examples": [
+        "food and drinks english",
+        "food and drinks english singsing",
+        "food and drinks easy english",
+        "food and drinks english plus 6",
+        "food and drinks vocabulary english singsing"
+      ]
+    },
+    {
+      "topic": "Shopping for Clothes",
+      "core": "shopping clothes",
+      "score": 18,
+      "examples": [
+        "shopping clothes english",
+        "shopping clothes english conversation",
+        "shopping clothes english a1",
+        "shopping clothes vocabulary english",
+        "shopping for clothes english in general"
+      ]
+    },
+    {
+      "topic": "Jobs and Occupations",
+      "core": "jobs occupations",
+      "score": 16,
+      "examples": [
+        "jobs and occupations english vocabulary",
+        "jobs and occupations english singsing",
+        "jobs and occupations dream english",
+        "jobs and occupations english",
+        "jobs and occupations learn english"
+      ]
+    },
+    {
+      "topic": "Healthy Habits",
+      "core": "healthy habits",
+      "score": 14,
+      "examples": [
+        "healthy habits english",
+        "healthy habits english singsing",
+        "healthy habits english lesson",
+        "english healthy habits",
+        "class 2 english healthy habits"
+      ]
+    },
+    {
+      "topic": "Greetings and Introductions",
+      "core": "greetings introductions",
+      "score": 13,
+      "examples": [
+        "greetings and introductions in english",
+        "greetings and introductions in english a1",
+        "greetings and introductions – english for beginners",
+        "greetings and introductions in english by dear sir",
+        "greetings and introductions – english class 101"
+      ]
+    },
+    {
+      "topic": "School Subjects",
+      "core": "school subjects",
+      "score": 13,
+      "examples": [
+        "school subjects english singsing",
+        "school subjects english vocabulary",
+        "school subjects in english song",
+        "english school subjects",
+        "english vocabulary school subjects"
+      ]
+    },
+    {
+      "topic": "My House and Rooms",
+      "core": "house rooms",
+      "score": 11,
+      "examples": [
+        "house rooms english",
+        "english singsing house rooms",
+        "house rooms vocabulary",
+        "my house rooms vocabulary",
+        "house rooms and furniture vocabulary"
+      ]
+    },
+    {
+      "topic": "Asking for Directions",
+      "core": "asking directions",
+      "score": 9,
+      "examples": [
+        "asking directions english",
+        "asking directions in english dialogue",
+        "asking for directions english lesson",
+        "english asking for directions",
+        "poc english asking directions"
+      ]
+    },
+    {
+      "topic": "Seasons of the Year",
+      "core": "seasons year",
+      "score": 7,
+      "examples": [
+        "seasons of the year english",
+        "seasons of the year english and spanish",
+        "seasons of the year english singsing",
+        "seasons of the year vocabulary",
+        "seasons of the year in english"
+      ]
+    },
+    {
+      "topic": "My Daily Routine",
+      "core": "daily routine",
+      "score": 6,
+      "examples": [
+        "english daily routines",
+        "english daily routines a1 a2",
+        "english daily routines a2",
+        "english daily routines b1",
+        "english daily routines a1 a2 with subtitles"
+      ]
+    },
+    {
+      "topic": "Hobbies and Free Time",
+      "core": "hobbies free time",
+      "score": 4,
+      "examples": [
+        "hobbies and free time activities english conversation practice",
+        "freetime and hobbies vocabulary",
+        "hobbies and free time activities vocabulary",
+        "free time activities and hobbies in english"
+      ]
+    },
+    {
+      "topic": "Breakfast, Lunch and Dinner",
+      "core": "breakfast lunch dinner",
+      "score": 4,
+      "examples": [
+        "breakfast lunch dinner english",
+        "english breakfast lunch and dinner",
+        "breakfast lunch dinner vocabulary",
+        "breakfast lunch dinner words"
+      ]
+    },
+    {
+      "topic": "Animals and Pets",
+      "core": "animals pets",
+      "score": 3,
+      "examples": [
+        "animals pets english",
+        "animals pets vocabulary",
+        "pets vocabulary animals at home"
+      ]
+    },
+    {
+      "topic": "Transport and Travel",
+      "core": "transport travel",
+      "score": 2,
+      "examples": [
+        "transport and travel vocabulary",
+        "travel and transport essay in english"
+      ]
+    },
+    {
+      "topic": "My Bedroom and Furniture",
+      "core": "bedroom furniture",
+      "score": 2,
+      "examples": [
+        "bedroom furniture vocabulary english",
+        "bedroom furniture vocabulary"
+      ]
+    },
+    {
+      "topic": "My Favourite Music",
+      "core": "favourite music",
+      "score": 2,
+      "examples": [
+        "favourite english music",
+        "english favourite music"
+      ]
+    },
+    {
+      "topic": "Days, Months and Dates",
+      "core": "days months dates",
+      "score": 1,
+      "examples": [
+        "days months in english"
+      ]
+    },
+    {
+      "topic": "Money and Prices",
+      "core": "money prices",
+      "score": 1,
+      "examples": [
+        "money and prices in english"
+      ]
+    },
+    {
+      "topic": "Housework and Chores",
+      "core": "housework chores",
+      "score": 1,
+      "examples": [
+        "housework chores vocabulary"
+      ]
+    },
+    {
+      "topic": "Numbers, Age and Phone Numbers",
+      "core": "numbers age phone",
+      "score": 0,
+      "examples": []
+    },
+    {
+      "topic": "Colours and Clothes",
+      "core": "colours clothes",
+      "score": 0,
+      "examples": []
+    },
+    {
+      "topic": "Sports I Play",
+      "core": "sports play",
+      "score": 0,
+      "examples": []
+    },
+    {
+      "topic": "Technology at Home",
+      "core": "technology home",
+      "score": 0,
+      "examples": []
+    },
+    {
+      "topic": "Birthdays and Celebrations",
+      "core": "birthdays celebrations",
+      "score": 0,
+      "examples": []
+    },
+    {
+      "topic": "Common Verbs of Movement",
+      "core": "common verbs movement",
+      "score": 0,
+      "examples": []
+    },
+    {
+      "topic": "Things in My Bag",
+      "core": "things bag",
+      "score": 0,
+      "examples": []
+    },
+    {
+      "topic": "Making Plans with Friends",
+      "core": "making plans friends",
+      "score": 0,
+      "examples": []
+    },
+    {
+      "topic": "Simple Online Shopping",
+      "core": "simple online shopping",
+      "score": 0,
+      "examples": []
+    },
+    {
+      "topic": "Saying Goodbye Politely",
+      "core": "saying goodbye politely",
+      "score": 0,
+      "examples": []
+    }
+  ]
+}

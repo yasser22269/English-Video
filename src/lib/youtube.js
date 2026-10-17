@@ -14,6 +14,7 @@ const COST = {
   playlistItemsInsert: 50,
   playlistsInsert: 50,
   playlistsList: 1,
+  commentThreadsInsert: 50,
 };
 const DAILY_QUOTA = Number(process.env.YOUTUBE_DAILY_QUOTA || 10000);
 // Quota resets at midnight Pacific Time. A fixed UTC-8 offset was an hour off
@@ -126,6 +127,28 @@ export async function uploadVideo({ videoPath, thumbPath, title, description, ta
   return { videoId, url: `https://www.youtube.com/watch?v=${videoId}` };
 }
 
+/** Posting a question is best effort: old OAuth tokens may lack force-ssl. */
+export async function postComment(videoId, text) {
+  if (!videoId || !text || env.dryRun) return null;
+  if (!quotaAvailable(COST.commentThreadsInsert)) {
+    console.warn('[youtube] question comment skipped — quota exhausted');
+    return null;
+  }
+  try {
+    const youtube = google.youtube({ version: 'v3', auth: oauthClient() });
+    // Reserve the request cost even when YouTube rejects permissions/comments.
+    spend(COST.commentThreadsInsert, 'question comment');
+    const res = await youtube.commentThreads.insert({
+      part: ['snippet'], requestBody: { snippet: { videoId,
+        topLevelComment: { snippet: { textOriginal: text } } } },
+    });
+    return res.data;
+  } catch (err) {
+    console.warn('[youtube] question comment skipped — ' + err.message);
+    return null;
+  }
+}
+
 /* ── playlists ─────────────────────────────────────────────────────────────
  * A viewer who finishes a lesson either leaves or watches the next one, and a
  * playlist is what makes the second outcome the default. Two axes are worth
@@ -157,6 +180,10 @@ export function playlistsFor(lesson, { levelConfig, skillConfig }) {
   const cfg = channel.youtube.playlists || {};
   const out = [];
 
+  if (lesson.skill === 'short') {
+    return cfg.shorts ? [{ key: 'shorts', title: '3 Words a Day (Shorts)',
+      description: 'English words with pictures, pronunciation and examples. Two Shorts a day.' }] : [];
+  }
   if (cfg.byLevel !== false) {
     const lvl = levelConfig(lesson.level);
     const name = lvl.label.split('·')[1]?.trim() || lvl.label;

@@ -21,6 +21,7 @@ const REDIRECT = `http://localhost:${PORT}/callback`;
 const SCOPES = [
   'https://www.googleapis.com/auth/youtube.upload',
   'https://www.googleapis.com/auth/youtube',
+  'https://www.googleapis.com/auth/youtube.force-ssl',
   // Impressions and click-through rate exist only in the YouTube Reporting API
   // (channel_reach_basic_a1), which refuses the two scopes above with a 403.
   // Without this the channel has no way to tell a thumbnail problem from a

@@ -97,6 +97,14 @@
   /* end */
   .end-h { font-size: 88px; line-height: 1.08; font-weight: 900; }
   .end-sub { font-size: 48px; color: var(--ink-dim); font-weight: 600; }
+  .end-k { font-size: 56px; font-weight: 800; color: var(--accent); }
+  /* main spans 370-1270px; this lands at ~1370-1570px on the left, below the
+     caption band, pointing at the related-video pill above the channel name. */
+  .end-arrow {
+    position: absolute; left: 0; top: 1000px;
+    font-size: 200px; line-height: 1; font-weight: 900; color: var(--accent);
+    text-shadow: 0 10px 40px rgba(0,0,0,.6);
+  }
 </style>
 </head>
 <body>
@@ -140,10 +148,17 @@ const LAYOUTS = {
     ${art(d, 'small')}
     <div class="example">${mark(d.example, d.word)}</div>`,
 
+  // Growth plan C2: name the paired lesson and point down at YouTube's
+  // related-video pill, which sits just above the channel name.
   'short-end': (d) => `
-    <div class="end-h">Full lesson on the channel</div>
-    <div class="end-sub">${esc(d.level)} · a new one every day</div>
-    <div class="chips">${(d.chips || []).map(c => `<span class="chip">${esc(c)}</span>`).join('')}</div>`,
+    ${d.pairedTopic
+      ? `<div class="end-k">▶ Full lesson:</div>
+    <div class="end-h">${esc(d.pairedTopic)} (${esc(d.pairedLevel)})</div>
+    <div class="end-sub">Tap the lesson link below</div>`
+      : `<div class="end-h">▶ Full lessons on the channel</div>
+    <div class="end-sub">${esc(d.level)} · a new one every day</div>`}
+    <div class="chips">${(d.chips || []).map(c => `<span class="chip">${esc(c)}</span>`).join('')}</div>
+    ${d.pairedTopic ? '<div class="end-arrow">↓</div>' : ''}`,
 };
 
 window.renderScene = function renderScene(scene) {

@@ -11,7 +11,7 @@ on:
   workflow_dispatch:
     inputs:
       level:
-        description: 'Single level to build (blank = all five)'
+        description: 'Single level to build (blank = daily batch)'
         required: false
         default: ''
         type: choice
@@ -91,7 +91,10 @@ jobs:
           npm ci
           pip install --upgrade -r requirements.txt
 
-      # Generating five lessons costs roughly an hour of runner time. Finding out
+      - name: 🧪 Verify metadata and experiment contracts
+        run: npm test
+
+      # Generating five videos costs substantial runner time. Finding out
       # afterwards that the refresh token died is an hour wasted, so check first.
       - name: 🔐 Verify YouTube credentials
         if: ${{ github.event.inputs.upload != 'false' }}
@@ -151,9 +154,8 @@ jobs:
           echo "node src/generate.js $ARGS"
           node src/generate.js $ARGS
 
-      # Whatever quota the uploads left (about 1,350 units with 4 lessons and a
-      # Short) goes to bringing older videos onto the current title patterns and
-      # adding localised titles. Best effort: it never fails the run.
+      # Maintenance runs only after all five uploads. Best effort: it never
+      # fails the publishing run.
       - name: 🔁 Refresh the back catalogue
         if: ${{ success() && github.event.inputs.upload != 'false' }}
         continue-on-error: true
@@ -169,7 +171,8 @@ jobs:
         run: |
           # Playlists first: nine calls at most, then a no-op once they match.
           node scripts/refresh-playlists.js --apply || true
-          node scripts/retitle-published.js --apply --limit 20
+          # E6 assignments are opt-in; never mass-retitle the control catalogue.
+          node scripts/retitle-published.js --sample 30 --seed e6-2026-10-17 --limit 30
 
       # MP4s are 10-80 MB each and already on YouTube; keeping them on every run
       # would blow the artifact quota within a week. Only on failure, briefly.

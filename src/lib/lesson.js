@@ -1,5 +1,6 @@
 import { generateJson } from './llm.js';
-import { levelConfig, skillConfig, translation } from './config.js';
+import { levelConfig, skillConfig, translation, channel } from './config.js';
+import { openingVariant, normalizeCommentQuestion, openingChapterLabel, dayNumber } from './build.js';
 
 const COMMON_RULES = `
 GLOBAL RULES
@@ -23,8 +24,26 @@ LANGUAGE FOCUS: ${focus}
 ${COMMON_RULES}`;
 }
 
+// Experiment E4 (C7). 'old' is the exact rule the channel shipped before.
+const HOOK_RULES = {
+  old: "ONE spoken sentence, 10-16 words, that states the concrete benefit — never a tease, never a question, never 'in this video'",
+  new: "ONE spoken line, 10-16 words: a one-line challenge the viewer can answer in their head, for example 'Can you understand this conversation at the hotel? Let us see.' A question is allowed. Never 'in this video'",
+};
+const hookRule = (opening) => HOOK_RULES[opening === 'new' ? 'new' : 'old'];
+
+// Growth plan C8: screen and description text, not narration.
+const COMMENT_QUESTION_RULE = "ONE question a viewer can answer in the comments with one tap: a number, a letter or one word. Name the three choices from this lesson or end with 'Comment 1, 2 or 3'. Max 100 characters, may end with one 👇 emoji. Example: 'Which phrase will you use? Comment 1, 2 or 3 👇'";
+
+// Growth plan C2: name the paired lesson when there is one.
+function shortCtaRule(pairedVideo) {
+  const t = String(pairedVideo?.topic || '').replace(/"/g, "'").trim();
+  return t
+    ? `exactly this sentence: The full ${t} lesson is linked above my name.`
+    : 'one short spoken sentence, max 10 words, telling them the full lesson is on the channel';
+}
+
 const PROMPTS = {
-  vocabulary(level, topic, focus) {
+  vocabulary(level, topic, focus, opts = {}) {
     const lvl = levelConfig(level);
     return `${head(level, topic, focus)}
 TASK: a "${lvl.wordCount} new words" lesson about ${topic}.
@@ -32,7 +51,7 @@ TASK: a "${lvl.wordCount} new words" lesson about ${topic}.
 Return this exact shape:
 {
   "title": "short punchy English title, max 60 characters, no level name",
-  "hook": "ONE spoken sentence, 10-16 words, that states the concrete benefit — never a tease, never a question, never 'in this video'",
+  "hook": "${hookRule(opts.opening)}",
   "intro": "unused, return an empty string",
   "words": [
     {
@@ -51,6 +70,7 @@ Return this exact shape:
   "quiz": [
     { "prompt": "a gap-fill sentence using ___ for the missing word", "answer": "the word", "prompt_ar": "${translation.name} of the sentence" }
   ],
+  "commentQuestion": "${COMMENT_QUESTION_RULE}",
   "outro": "two spoken sentences: tell them to say the words out loud, and to subscribe for a lesson every day"
 }
 
@@ -58,7 +78,7 @@ Exactly ${lvl.wordCount} items in "words", ${lvl.wordCount} lines in "recap", an
 Choose genuinely useful, high-frequency words a learner at this level does not know yet. No proper nouns.`;
   },
 
-  reading(level, topic, focus) {
+  reading(level, topic, focus, opts = {}) {
     const lvl = levelConfig(level);
     return `${head(level, topic, focus)}
 TASK: a guided reading lesson about ${topic}.
@@ -66,7 +86,7 @@ TASK: a guided reading lesson about ${topic}.
 Return this exact shape:
 {
   "title": "short punchy English title, max 60 characters",
-  "hook": "ONE spoken sentence, 10-16 words, that states the concrete benefit — never a tease, never a question, never 'in this video'",
+  "hook": "${hookRule(opts.opening)}",
   "intro": "unused, return an empty string",
   "passage_title": "a title for the text itself",
   "passage": [
@@ -84,6 +104,7 @@ Return this exact shape:
       "explain": "one spoken sentence explaining why that answer is right, quoting the passage"
     }
   ],
+  "commentQuestion": "${COMMENT_QUESTION_RULE}",
   "outro": "two spoken sentences encouraging re-reading and daily practice"
 }
 
@@ -92,7 +113,7 @@ The passage must be ${lvl.targetMinutes <= 7 ? '12 to 15' : '16 to 20'} sentence
 Distractor options must be plausible and drawn from the passage, never obviously silly.`;
   },
 
-  listening(level, topic, focus) {
+  listening(level, topic, focus, opts = {}) {
     const lvl = levelConfig(level);
     return `${head(level, topic, focus)}
 TASK: a listening-comprehension lesson about ${topic}, built around a two-person conversation.
@@ -100,7 +121,7 @@ TASK: a listening-comprehension lesson about ${topic}, built around a two-person
 Return this exact shape:
 {
   "title": "short punchy English title, max 60 characters",
-  "hook": "ONE spoken sentence, 10-16 words, that states the concrete benefit — never a tease, never a question, never 'in this video'",
+  "hook": "${hookRule(opts.opening)}",
   "intro": "unused, return an empty string",
   "setting": "one sentence describing where the conversation happens",
   "footage_query": "three or four English stock-footage search words matching the setting",
@@ -119,6 +140,7 @@ Return this exact shape:
       "explain": "one spoken sentence explaining the answer"
     }
   ],
+  "commentQuestion": "${COMMENT_QUESTION_RULE}",
   "outro": "two spoken sentences encouraging the viewer to listen again without subtitles"
 }
 
@@ -126,7 +148,7 @@ The dialogue alternates strictly between speaker "A" and speaker "B", is ${lvl.t
 Include 5 key phrases and exactly ${lvl.questionCount} questions. "answer" is the 0-based index.`;
   },
 
-  short(level, topic, focus) {
+  short(level, topic, focus, opts = {}) {
     return `${head(level, topic, focus)}
 TASK: a vertical YouTube Short under 50 seconds that teaches exactly THREE useful English words about ${topic}.
 A Short is watched on a phone by someone scrolling. The first sentence decides whether they stay, and the video should feel complete and loop cleanly.
@@ -146,13 +168,14 @@ Return this exact shape:
       "image_prompt": "a concrete literal photo description of the word, 8-14 words, no text in image"
     }
   ],
-  "cta": "one short spoken sentence, max 10 words, telling them the full lesson is on the channel"
+  "cta": "${shortCtaRule(opts.pairedVideo)}",
+  "commentQuestion": "${COMMENT_QUESTION_RULE}"
 }
 
 Exactly 3 items in "words". Choose words a learner at this level genuinely needs and probably does not know yet. No proper nouns.`;
   },
 
-  speaking(level, topic, focus) {
+  speaking(level, topic, focus, opts = {}) {
     const lvl = levelConfig(level);
     return `${head(level, topic, focus)}
 TASK: a speaking and pronunciation practice lesson about ${topic}, in listen-and-repeat format.
@@ -160,7 +183,7 @@ TASK: a speaking and pronunciation practice lesson about ${topic}, in listen-and
 Return this exact shape:
 {
   "title": "short punchy English title, max 60 characters",
-  "hook": "ONE spoken sentence, 10-16 words, that states the concrete benefit — never a tease, never a question, never 'in this video'",
+  "hook": "${hookRule(opts.opening)}",
   "intro": "unused, return an empty string",
   "footage_query": "three or four English stock-footage search words matching the situation",
   "drills": [
@@ -176,6 +199,7 @@ Return this exact shape:
     { "speaker": "A", "en": "line of a short model conversation that reuses the drilled phrases", "ar": "${translation.name} translation" }
   ],
   "shadowing": ["three to five sentences the viewer will shadow at natural speed, reusing the phrases"],
+  "commentQuestion": "${COMMENT_QUESTION_RULE}",
   "outro": "two spoken sentences telling them to record themselves and compare, and to come back tomorrow"
 }
 
@@ -270,12 +294,28 @@ function shuffleAnswers(lesson) {
   return lesson;
 }
 
-export async function writeLesson({ level, skill, topic, focus, footage }) {
+/**
+ * Optional fields from the scheduler (growth plan contracts), all optional:
+ * searchTopic, pairedVideo {videoId,url,topic,title,level} (Shorts),
+ * pairedShort {videoId,url} (long lessons), shortIndex, date, opening.
+ */
+const CARRIED = ['searchTopic', 'pairedVideo', 'pairedShort', 'shortIndex'];
+
+export async function writeLesson({ level, skill, topic, focus, footage, ...extra }) {
   const lvl = levelConfig(level);
   const build = PROMPTS[skill];
   if (!build) throw new Error(`No prompt for skill "${skill}"`);
 
-  const lesson = await generateJson(build(level, topic, focus), {
+  const date = extra.date instanceof Date && !Number.isNaN(extra.date.getTime())
+    ? extra.date.toISOString().slice(0, 10)
+    : (typeof extra.date === 'string' && extra.date ? extra.date.slice(0, 10) : null);
+  // Experiment E4: the hook rule and the opening scenes must agree, so the
+  // variant is decided once here and stored on the lesson.
+  const opening = skill === 'short'
+    ? null
+    : (extra.opening === 'new' || extra.opening === 'old' ? extra.opening : openingVariant(date || new Date(), channel));
+
+  const lesson = await generateJson(build(level, topic, focus, { opening, pairedVideo: extra.pairedVideo }), {
     temperature: 0.9,
     maxTokens: 12000,
     validate: (l) => VALIDATORS[skill](l, lvl),
@@ -294,20 +334,82 @@ export async function writeLesson({ level, skill, topic, focus, footage }) {
   lesson.levelLabel = lvl.label;
   lesson.skillLabel = skillConfig(skill).label;
   if (!lesson.title) lesson.title = topic;
+  for (const k of CARRIED) if (extra[k] != null && extra[k] !== '') lesson[k] = extra[k];
+  if (date) lesson.date = date;
+  if (opening) lesson.opening = opening;
+  lesson.commentQuestion = normalizeCommentQuestion(lesson.commentQuestion ?? lesson.comment_question, lesson);
   return lesson;
 }
+
+/** The topic as a learner types it: titles and tags use it, narration does not. */
+function searchTopicOf(lesson) {
+  return String(lesson.searchTopic || lesson.topic || '').trim();
+}
+
+/** "Colours in English" stays as it is; "At the Hotel" becomes "At the Hotel in English". */
+function inEnglish(t) {
+  const s = /\benglish\b/i.test(t) ? t : `${t} in English`;
+  return s.charAt(0).toUpperCase() + s.slice(1);
+}
+
+/** One line of description text: no newlines, no stray hashtags, no angle brackets (the API rejects them). */
+const clean = (s) => String(s ?? '').replace(/[\r\n]+/g, ' ').replace(/[#<>]/g, '').replace(/\s{2,}/g, ' ').trim();
 
 /** Titles/descriptions the channel uses. Kept here so wording stays in one place. */
 /** Fill a title or tag pattern from the lesson and its level. */
 export function fillPattern(pattern, lesson, { wordCount } = {}) {
   const lvl = levelConfig(lesson.level);
-  return String(pattern)
-    .replaceAll('{topic}', lesson.topic)
+  const topic = searchTopicOf(lesson);
+  const out = String(pattern ?? '')
+    .replaceAll('{topic}', topic)
+    .replaceAll('{concept}', topic)
+    .replaceAll('{llmTitle}', clean(lesson.title || lesson.topic))
     .replaceAll('{levelLabel}', lvl.label)
     .replaceAll('{levelName}', lvl.levelName || lvl.label.split('·').pop().trim())
     .replaceAll('{level}', lesson.level.toUpperCase())
+    .replaceAll('{LEVEL}', lesson.level.toUpperCase())
     .replaceAll('{storyLevel}', String(lvl.storyLevel ?? ''))
     .replaceAll('{wordCount}', String(wordCount ?? lvl.wordCount));
+  return out
+    .replace(/\{[^{}]*\}/g, '')          // unknown placeholders
+    .replace(/[{}]/g, '')
+    .replace(/\bin English in English\b/gi, 'in English')
+    .replace(/\(\s*\)/g, '')
+    .replace(/\s+([,:;)])/g, '$1')
+    .replace(/\s{2,}/g, ' ')
+    .replace(/^[\s—–|:,-]+|[\s—–|:,-]+$/g, '')
+    .trim();
+}
+
+/** Trim to `max` on a word boundary, keeping a trailing "#shorts". */
+function fitTitle(title, max = 98) {
+  if (title.length <= max) return title;
+  const tail = title.match(/\s+#shorts$/i)?.[0] || '';
+  const room = max - tail.length;
+  let body = title.slice(0, title.length - tail.length).slice(0, room);
+  const cut = body.lastIndexOf(' ');
+  if (cut > room * 0.6) body = body.slice(0, cut);
+  return `${body.replace(/[\s—–|:,-]+$/, '')}${tail}`;
+}
+
+/**
+ * Growth plan C4/C6: titlePatternByLevel[level] wins, then a deterministic
+ * rotation through titlePatterns (day number + shortIndex), then titlePattern.
+ */
+function pickTitlePattern(skill, lesson, { date, shortIndex } = {}) {
+  const byLevel = skill.titlePatternByLevel?.[lesson.level];
+  const index = dayNumber(lesson.date || date || new Date()) + (Number(lesson.shortIndex ?? shortIndex) || 0);
+  if (typeof byLevel === 'string' && byLevel.trim()) return { pattern: byLevel, index: null };
+  if (Array.isArray(byLevel) && byLevel.length) {
+    const patternIndex = ((index % byLevel.length) + byLevel.length) % byLevel.length;
+    return { pattern: byLevel[patternIndex], index: patternIndex };
+  }
+  const list = Array.isArray(skill.titlePatterns) ? skill.titlePatterns.filter(p => typeof p === 'string' && p.trim()) : [];
+  if (list.length) {
+    const patternIndex = ((index % list.length) + list.length) % list.length;
+    return { pattern: list[patternIndex], index: patternIndex };
+  }
+  return { pattern: skill.titlePattern || '{topic} ({level})', index: null };
 }
 
 // Short, search-language names for each format, used in the description opener.
@@ -319,74 +421,142 @@ const FORMAT_PHRASE = {
   short: 'three English words with pictures and examples',
 };
 
-export function buildMetadata(lesson, { channel: ch, playlists = [], chapters = [] }) {
+// The query family a searcher types, with the level (growth plan §4.4 item 3).
+const FORMAT_TAG = {
+  vocabulary: (lv, b) => (b ? `english vocabulary for beginners ${lv}` : `english vocabulary ${lv}`),
+  reading: (lv, b, story) => (story ? `learn english through story level ${story}` : `english story ${lv}`),
+  listening: (lv, b) => (b ? `english conversation for beginners ${lv}` : `english conversation practice ${lv}`),
+  speaking: (lv) => `english shadowing ${lv}`,
+  short: (lv) => `english words ${lv}`,
+};
+
+const shortsUrl = (p) => p?.url || (p?.videoId ? `https://youtube.com/shorts/${p.videoId}` : null);
+const watchUrl = (p) => p?.url || (p?.videoId ? `https://youtu.be/${p.videoId}` : null);
+const playlistLink = (id) => `https://www.youtube.com/playlist?list=${id}`;
+
+/** YouTube's tag budget: 500 characters, commas included, multi-word tags quoted. */
+export function tagsLength(tags) {
+  return tags.reduce((n, t) => n + t.length + (/\s/.test(t) ? 2 : 0), 0) + Math.max(0, tags.length - 1);
+}
+
+function buildTags(lesson, skill, ch, { wordCount, levelName }) {
+  const lv = lesson.level.toLowerCase();
+  const beginner = lv === 'a1' || lv === 'a2';
+  const lvl = levelConfig(lesson.level);
+  const t = searchTopicOf(lesson).toLowerCase().replace(/[,"<>]/g, '').replace(/\s{2,}/g, ' ').trim();
+  const core = t.replace(/\s+in english$/, '').replace(/^english\s+/, '').trim();
+  const bare = core.replace(/^(at|in|on|to)\s+(a|an|the)\s+/, '').replace(/^(a|an|the)\s+/, '');
+
+  const candidates = [
+    // 1 the exact topic query
+    lesson.skill === 'listening' ? `english conversation ${core}` : `${core} in english`,
+    // 2 topic + level
+    `${bare} english ${lv}`,
+    // 3 format query + level
+    FORMAT_TAG[lesson.skill]?.(lv, beginner, lvl.storyLevel),
+    // 4 level phrase
+    beginner ? `english for beginners ${lv}` : `english ${lv}`,
+    // 5 only true because the translation is burned in on every video
+    `english with ${String(translation.name || '').toLowerCase()} translation`,
+    ...(skill.searchTags || []).map(p => fillPattern(p, lesson, { wordCount }).toLowerCase()),
+    `english for ${levelName.toLowerCase()}`,
+    ...((ch?.youtube?.baseTags) || []),
+  ];
+
+  const tags = [];
+  for (const raw of candidates) {
+    const tag = String(raw ?? '').toLowerCase().replace(/[,<>"]/g, '').replace(/\s{2,}/g, ' ').trim();
+    if (!tag || tag.length > 100 || tags.includes(tag)) continue;
+    if (tagsLength([...tags, tag]) > 490) continue;
+    tags.push(tag);
+  }
+  return tags;
+}
+
+export function buildMetadata(lesson, { channel: ch = channel, playlists = [], chapters = [], date = null, shortIndex = 0 } = {}) {
   const skill = skillConfig(lesson.skill);
   const lvl = levelConfig(lesson.level);
   const wordCount = lesson.words?.length || lvl.wordCount;
   const levelName = lvl.levelName || lvl.label.split('·').pop().trim();
+  const LEVEL = lesson.level.toUpperCase();
+  const topic = searchTopicOf(lesson);
+  const isShort = lesson.skill === 'short';
+  const question = normalizeCommentQuestion(lesson.commentQuestion, lesson);
+  const levelPlaylist = playlists.find(p => p.key === `level:${lesson.level}`) || playlists.find(p => String(p.key || '').startsWith('level:'));
 
-  // Patterns come from YouTube autocomplete data (scripts/keywords.js). The
-  // topic goes first because a phone shows ~48 characters; the query family
-  // ("learn english through story level 2", "english conversation practice a1")
-  // follows, and YouTube still matches the whole string for search.
-  const title = fillPattern(skill.titlePattern, lesson, { wordCount }).slice(0, 98);
+  // Patterns come from YouTube autocomplete data (scripts/keywords.js).
+  const selectedTitlePattern = pickTitlePattern(skill, lesson, { date, shortIndex });
+  let title = fillPattern(selectedTitlePattern.pattern, lesson, { wordCount });
+  if (isShort && !/#shorts\b/i.test(title)) title = `${title} #shorts`;
+  title = fitTitle(title, 98);
 
-  // The ~100 characters shown before "...more" carry the most search weight, so
-  // they state topic, format and level in the phrasing learners actually type.
-  const opener = `${lesson.topic}: ${FORMAT_PHRASE[lesson.skill] || skill.label} for ${levelName.toLowerCase()} learners (${lesson.level.toUpperCase()}).`;
+  const lines = [];
+  const hashtags = isShort
+    ? `#shorts #LearnEnglish #English${LEVEL}`
+    : `#LearnEnglish #English${LEVEL} #${skill.label.replace(/[^A-Za-z0-9]/g, '')}`;
 
-  const lines = [
-    opener,
-    lesson.hook || '',
-    '',
-    ...(chapters.length ? [...chapters.map(c => `${c.stamp} ${c.label}`), ''] : []),
-    `${skill.emoji} ${skill.label} — ${lvl.label}`,
-    lesson.focus ? `Language focus: ${lesson.focus}` : '',
-    '',
-    'A new English lesson every day, for every level from A1 to C1.',
-    `English captions with ${translation.name} translation on screen.`,
-    '',
-    'IN THIS LESSON',
-  ];
+  if (isShort) {
+    // Growth plan §4.3. Line 2 is the paired lesson: not clickable in the Shorts
+    // player, but it is on the watch page and on desktop.
+    const words = (lesson.words || []).map(w => clean(w.word)).filter(Boolean);
+    lines.push(`${inEnglish(clean(topic))}: ${words.join(', ')} — pictures, pronunciation and examples (${LEVEL}).`);
+    const paired = watchUrl(lesson.pairedVideo);
+    if (paired) lines.push(`▶ Full lesson: ${paired}`);
+    else if (levelPlaylist?.id) lines.push(`▶ Full lessons (${LEVEL}): ${playlistLink(levelPlaylist.id)}`);
+    lines.push(clean(question), hashtags, '');
+    if (lesson.words?.length) {
+      lines.push('IN THIS SHORT');
+      lines.push(...lesson.words.map((w, i) => `${i + 1}. ${clean(w.word)} — ${clean(w.meaning)}`));
+      lines.push('');
+    }
+    lines.push(`English captions with ${translation.name} translation on screen.`);
+  } else {
+    // Growth plan §4.2. The two lines before "...more" carry the query phrase,
+    // the format, the level and what is true of every lesson.
+    const slow = (parseInt(String(lvl.rate).replace('%', ''), 10) || 0) <= -5 ? 'Slow English' : 'Clear English';
+    lines.push(
+      `${inEnglish(clean(topic))} — ${FORMAT_PHRASE[lesson.skill] || skill.label} for ${levelName.toLowerCase()} learners (${LEVEL}). ${slow}, English subtitles and ${translation.name} translation on screen.`,
+      clean(lesson.hook),
+    );
+    const short = shortsUrl(lesson.pairedShort);
+    if (short) lines.push(`▶ 60-second version: ${short}`);
+    if (levelPlaylist?.id) lines.push(`▶ Next lesson (${LEVEL}): ${playlistLink(levelPlaylist.id)}`);
 
-  if (lesson.words) lines.push(...lesson.words.map((w, i) => `${i + 1}. ${w.word} — ${w.meaning}`));
-  if (lesson.key_phrases) lines.push(...lesson.key_phrases.map((p, i) => `${i + 1}. ${p.phrase} — ${p.meaning}`));
-  if (lesson.drills) lines.push(...lesson.drills.map((d, i) => `${i + 1}. ${d.phrase}`));
-  if (lesson.glossary) lines.push(...lesson.glossary.map((g, i) => `${i + 1}. ${g.word} — ${g.meaning}`));
+    const q = clean(question).replace(/\s*👇\s*$/u, '');
+    lines.push('', `❓ Today's question: ${q}${/comment/i.test(q) ? '' : ' — answer in the comments.'}`);
 
-  // Playlist links are the cheapest way to turn one view into a session.
-  if (playlists.length) {
-    lines.push('', 'KEEP GOING');
-    for (const pl of playlists) lines.push(`${pl.title}`, `https://www.youtube.com/playlist?list=${pl.id}`);
+    if (chapters.length) {
+      const first = String(chapters[0].label || '');
+      const topical = [topic, lesson.topic].some(t => t && first.toLowerCase().includes(String(t).toLowerCase()));
+      const list = chapters.map((c, i) => `${c.stamp} ${clean(i === 0 && !topical ? openingChapterLabel(lesson) : c.label)}`);
+      lines.push('', ...list);
+    }
+
+    lines.push('', 'IN THIS LESSON');
+    if (lesson.words) lines.push(...lesson.words.map((w, i) => `${i + 1}. ${clean(w.word)} — ${clean(w.meaning)}`));
+    if (lesson.key_phrases) lines.push(...lesson.key_phrases.map((p, i) => `${i + 1}. ${clean(p.phrase)} — ${clean(p.meaning)}`));
+    if (lesson.drills) lines.push(...lesson.drills.map((d, i) => `${i + 1}. ${clean(d.phrase)}`));
+    if (lesson.glossary) lines.push(...lesson.glossary.map((g, i) => `${i + 1}. ${clean(g.word)} — ${clean(g.meaning)}`));
+    if (lesson.focus) lines.push('', `Language focus: ${clean(lesson.focus)}`);
+
+    // Playlist links are the cheapest way to turn one view into a session.
+    if (playlists.length) {
+      lines.push('', 'KEEP GOING');
+      for (const pl of playlists) lines.push(clean(pl.title), playlistLink(pl.id));
+    }
+
+    lines.push(
+      '',
+      `${skill.emoji} ${skill.label} — ${lvl.label}`,
+      'A new English lesson every day, for every level from A1 to C1.',
+      '',
+      hashtags,
+    );
   }
 
-  lines.push(
-    '',
-    `Level: ${lvl.label}  |  Skill: ${skill.label}`,
-    '',
-    `#LearnEnglish #English${lesson.level.toUpperCase()} #${skill.label.replace(/\s+/g, '')} #ESL`,
-  );
-
-  // Tags: the skill's real query family first, then the topic, then the base
-  // set. De-duplicated, and capped to YouTube's 500-character tag budget.
-  const candidates = [
-    ...(skill.searchTags || []).map(t => fillPattern(t, lesson, { wordCount }).toLowerCase()),
-    lesson.topic.toLowerCase().replace(/,/g, ''),
-    `${lesson.topic.toLowerCase().replace(/,/g, '')} in english`,
-    `english ${lesson.level}`,
-    `english for ${levelName.toLowerCase()}`,
-    ...ch.youtube.baseTags,
-  ];
-  const tags = [];
-  let budget = 0;
-  for (const t of candidates) {
-    if (!t || tags.includes(t)) continue;
-    if (budget + t.length + 2 > 480) break;
-    tags.push(t);
-    budget += t.length + 2;
-  }
-
-  return { title, description: lines.filter(l => l !== undefined).join('\n').slice(0, 4900), tags };
+  const description = lines.join('\n').replace(/\n{3,}/g, '\n\n').trim().slice(0, 4900);
+  const tags = buildTags(lesson, skill, ch, { wordCount, levelName });
+  return { title, description, tags, titlePatternIndex: selectedTitlePattern.index };
 }
 
 /**

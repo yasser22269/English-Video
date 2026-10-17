@@ -32,10 +32,11 @@ export function skillFor(level, date = new Date()) {
  */
 export function levelsFor(date = new Date()) {
   const alternate = channel.batch?.alternate || [];
-  const fixed = channel.levels.filter(l => !alternate.includes(l));
-  if (!alternate.length) return channel.levels;
+  const active = channel.levels.filter(l => !channel.batch?.excluded?.includes(l));
+  const fixed = active.filter(l => !alternate.includes(l));
+  if (!alternate.length) return active;
   const turn = alternate[dayIndex(date) % alternate.length];
-  return channel.levels.filter(l => fixed.includes(l) || l === turn);
+  return active.filter(l => fixed.includes(l) || l === turn);
 }
 
 export function todaysBatch(date = new Date()) {
@@ -59,7 +60,7 @@ export function todaysShorts(date = new Date()) {
   for (let i = 0; i < perDay; i++) {
     const level = cfg.levels[(dayIndex(date) * perDay + i) % cfg.levels.length];
     // Each Short gets its own hour so two do not land in the same minute.
-    out.push({ level, skill: 'short', date, slot: cfg.slots?.[i] || null });
+    out.push({ level, skill: 'short', date, shortIndex: i, slot: cfg.slots?.[i] || null });
   }
   return out;
 }
@@ -82,8 +83,46 @@ function saveState(state) {
  * is used once for a given skill before any repeats, so a 48-topic bank yields
  * 48 unique lessons per skill per level (~6 months at one skill every 4 days).
  */
+export function publishedHistory() {
+  try { return JSON.parse(fs.readFileSync(path.join(paths.state, 'history.json'), 'utf8')); }
+  catch { return []; }
+}
+
+export function pairedShortFor(level, topic, date = new Date()) {
+  return publishedHistory().filter(h => h.videoId && h.skill === 'short' && h.level === level && h.topic === topic &&
+    new Date(h.publishAt || h.date).getTime() <= date.getTime())
+    .sort((a, b) => new Date(b.publishAt || b.date) - new Date(a.publishAt || a.date))[0];
+}
+
 export function pickTopic(level, skill, date = new Date()) {
   const bank = curriculum(level).topics;
+  if (skill === 'short') {
+    const history = publishedHistory();
+    const shorts = history.filter(h => h.videoId && h.skill === 'short' && h.level === level);
+    const candidate = history.filter(h => {
+      const age = dayIndex(date) - dayIndex(new Date(h.publishAt || h.date));
+      return h.videoId && h.skill !== 'short' && h.level === level && age >= 3 && age <= 14 &&
+        !shorts.some(short => short.topic === h.topic || short.pairedVideoId === h.videoId) && bank.some(t => t.topic === h.topic);
+    }).sort((a, b) => {
+      // Weekly/report tooling may enrich history with either field. Prefer the
+      // proven lesson when it is available; otherwise the newest eligible one.
+      const viewsA = Number(a.views ?? a.viewCount);
+      const viewsB = Number(b.views ?? b.viewCount);
+      const hasViewsA = Number.isFinite(viewsA);
+      const hasViewsB = Number.isFinite(viewsB);
+      if (hasViewsA || hasViewsB) {
+        const byViews = (hasViewsB ? viewsB : -1) - (hasViewsA ? viewsA : -1);
+        if (byViews) return byViews;
+      }
+      return new Date(b.publishAt || b.date) - new Date(a.publishAt || a.date);
+    })[0];
+    if (candidate) return {
+      ...bank.find(t => t.topic === candidate.topic),
+      pairedVideo: { videoId: candidate.videoId, url: candidate.url || 'https://youtu.be/' + candidate.videoId,
+        topic: candidate.topic, title: candidate.title, level: candidate.level },
+      commit() {}, // Pairing is tracked in published history, not the fallback rotation.
+    };
+  }
   const state = loadState();
   const key = `${level}:${skill}`;
   const used = state.used[key] || [];
@@ -163,15 +202,15 @@ export function publishAtSlot(slot, date = new Date(), now = new Date()) {
   const cfg = channel.publish;
   if (!slot) return null;
 
-  const at = wallClockToUtc(date, slot, cfg.timezone || 'UTC');
+  const at = wallClockToUtc(date, slot, cfg?.timezone || 'UTC');
   const leadMs = (cfg.minLeadMinutes ?? 15) * 60_000;
   return at.getTime() - now.getTime() >= leadMs ? at : null;
 }
 
 /** "19:00 Africa/Cairo · 16:00 UTC" — for run logs and the --plan table. */
-export function describeSlot(level, date = new Date()) {
+export function describeSlot(level, date = new Date(), overrideSlot = null) {
   const cfg = channel.publish;
-  const slot = cfg?.slots?.[level];
+  const slot = overrideSlot || cfg?.slots?.[level];
   if (!slot) return 'immediately';
   const at = wallClockToUtc(date, slot, cfg.timezone || 'UTC');
   return `${slot} ${cfg.timezone} · ${at.toISOString().slice(11, 16)} UTC`;

@@ -2,9 +2,10 @@
 import fs from 'fs';
 import path from 'path';
 import { channel, levelConfig, skillConfig, paths, env, fontConfig } from './lib/config.js';
-import { todaysBatch, todaysShorts, pickTopic, slugify, dayIndex, publishAtFor, publishAtSlot, describeSlot } from './lib/schedule.js';
+import { todaysBatch, todaysShorts, pickTopic, slugify, dayIndex, publishAtFor, publishAtSlot, describeSlot, pairedShortFor } from './lib/schedule.js';
 import { writeLesson, buildMetadata, localizeMetadata } from './lib/lesson.js';
-import { buildPlan, resolveTimings, buildChapters } from './lib/build.js';
+import * as build from './lib/build.js';
+const { buildPlan, resolveTimings, buildChapters } = build;
 import { checkRetention } from './lib/guards.js';
 import { synthesizeLines, assembleVoiceTrack } from './lib/tts.js';
 import { masterVoice, mixWithMusic, ffprobeDuration } from './lib/ffmpeg.js';
@@ -12,7 +13,7 @@ import { generateImages, fetchFootage, gradeFootage, extractFrame } from './lib/
 import { SceneRenderer, renderThumbnail } from './lib/render.js';
 import { buildAss, buildSrt } from './lib/ass.js';
 import { composeStills, composeFootage, generateGradientBackground } from './lib/compose.js';
-import { uploadVideo, verifyCredentials, quotaStatus, playlistsFor, resolvePlaylists, addToPlaylists } from './lib/youtube.js';
+import { uploadVideo, verifyCredentials, quotaStatus, playlistsFor, resolvePlaylists, addToPlaylists, postComment } from './lib/youtube.js';
 
 const argv = process.argv.slice(2);
 const has = (flag) => argv.includes(`--${flag}`);
@@ -76,7 +77,7 @@ function thumbnailSub(lesson, skill) {
   }
 }
 
-async function buildOne({ level, skill, date, upload, slot = null }) {
+async function buildOne({ level, skill, date, upload, slot = null, shortIndex = 0 }) {
   const started = Date.now();
   const lvl = levelConfig(level);
   const skl = skillConfig(skill);
@@ -96,16 +97,24 @@ async function buildOne({ level, skill, date, upload, slot = null }) {
 
   // 1 ─ script. A previously written lesson is reused unless --fresh is passed,
   // so re-running a failed build does not burn LLM quota rewriting it.
+  const pairedShort = !isShort ? pairedShortFor(level, topic.topic, date) : null;
+  const context = {
+    searchTopic: topic.searchTopic, date: stamp,
+    ...(isShort ? { shortIndex, pairedVideo: topic.pairedVideo } :
+      { pairedShort: pairedShort ? { videoId: pairedShort.videoId, url: pairedShort.url || 'https://youtube.com/shorts/' + pairedShort.videoId } : undefined }),
+  };
   const lessonFile = path.join(workDir, 'lesson.json');
   let lesson;
   if (fs.existsSync(lessonFile) && !has('fresh')) {
     lesson = JSON.parse(fs.readFileSync(lessonFile, 'utf8'));
     log('script', `"${lesson.title}" (cached — pass --fresh to rewrite)`);
   } else {
-    lesson = await writeLesson({ level, skill, topic: topic.topic, focus: topic.focus, footage: topic.footage });
-    fs.writeFileSync(lessonFile, JSON.stringify(lesson, null, 2));
+    lesson = await writeLesson({ level, skill, topic: topic.topic, focus: topic.focus, footage: topic.footage, ...context });
     log('script', `"${lesson.title}"`);
   }
+
+  Object.assign(lesson, context);
+  fs.writeFileSync(lessonFile, JSON.stringify(lesson, null, 2));
 
   // 2 ─ scene/narration plan
   const plan = buildPlan(lesson);
@@ -259,9 +268,12 @@ async function buildOne({ level, skill, date, upload, slot = null }) {
     });
     log('youtube', result.url);
     log('publish', publishAt
-      ? `scheduled for ${describeSlot(level, date)}`
+      ? `scheduled for ${describeSlot(level, date, isShort ? slot : null)}`
       : 'now — the slot had already passed when the build finished');
 
+    if (channel.youtube.postQuestionComment && lesson.commentQuestion) {
+      await postComment(result.videoId, lesson.commentQuestion);
+    }
     const added = await addToPlaylists(result.videoId, playlists);
     if (added.length) log('added to', `${added.length} playlist(s)`);
   } else {
@@ -273,6 +285,10 @@ async function buildOne({ level, skill, date, upload, slot = null }) {
 
   const entry = {
     date: stamp, level, skill, topic: topic.topic, title: meta.title,
+    searchTopic: lesson.searchTopic,
+    pairedVideoId: lesson.pairedVideo?.videoId, pairedShortId: lesson.pairedShort?.videoId,
+    openingVariant: lesson.opening || (typeof build.openingVariant === 'function' ? build.openingVariant(date, channel) : 'old'),
+    titlePatternIndex: meta.titlePatternIndex,
     durationSec: Math.round(finalSec), sizeMb: Number(sizeMb),
     videoId: result?.videoId || null, url: result?.url || null,
     publishAt: publishAt ? publishAt.toISOString() : null,
@@ -295,9 +311,9 @@ async function main() {
   if (arg('level')) {
     batch = [{ level: arg('level'), skill: arg('skill') || 'vocabulary', date }];
   } else {
-    batch = todaysBatch(date);
+    batch = [...todaysShorts(date), ...todaysBatch(date)];
     // Shorts on top of the long lessons — see todaysShorts for why there are two.
-    batch.push(...todaysShorts(date));
+
     if (arg('only')) batch = batch.filter(b => b.level === arg('only'));
   }
 
@@ -305,7 +321,7 @@ async function main() {
     console.log(`\nSchedule for ${date.toISOString().slice(0, 10)} (day ${dayIndex(date)}):\n`);
     for (const b of batch) {
       const t = pickTopic(b.level, b.skill, date);
-      console.log(`  ${b.level.toUpperCase().padEnd(3)} ${skillConfig(b.skill).label.padEnd(18)} ${describeSlot(b.level, date).padEnd(34)} ${t.topic}`);
+      console.log(`  ${b.level.toUpperCase().padEnd(3)} ${skillConfig(b.skill).label.padEnd(18)} ${describeSlot(b.level, date, b.slot).padEnd(34)} ${t.topic}${t.pairedVideo ? ` → paired lesson ${t.pairedVideo.videoId}` : ''}`);
     }
     console.log(`\nYouTube quota: ${JSON.stringify(quotaStatus())}\n`);
     return;

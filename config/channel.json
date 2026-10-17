@@ -168,12 +168,16 @@
         "english listening practice",
         "english listening practice {level}",
         "english podcast for learning english"
-      ]
+      ],
+      "titlePatternByLevel": {
+        "a1": "English Conversation {topic} for Beginners ({level}) — Slow, with Subtitles",
+        "a2": "English Conversation {topic} for Beginners ({level}) — Slow, with Subtitles"
+      }
     },
     "short": {
       "label": "Short",
       "emoji": "⚡",
-      "titlePattern": "{topic}: 3 English Words in 60 Seconds ({level}) #shorts",
+      "titlePattern": "{topic}: 3 English Words ({level}) #shorts",
       "searchTags": [
         "english words",
         "english vocabulary",
@@ -181,7 +185,14 @@
         "english shorts",
         "english words for {levelName}"
       ],
-      "playlistTitle": null
+      "playlistTitle": null,
+      "titlePatterns": [
+        "{topic} in English — Spelling & Pronunciation ({level}) #shorts",
+        "{topic}: 3 Words Every Learner Needs ({level}) #shorts",
+        "English Words You Must Know: {topic} ({level}) #shorts",
+        "{llmTitle} | {topic} in English ({level}) #shorts",
+        "Do You Know These 3 English Words? {topic} ({level}) #shorts"
+      ]
     }
   },
   "youtube": {
@@ -199,7 +210,8 @@
     "playlists": {
       "byLevel": true,
       "bySkill": true,
-      "note": "Each video joins its level playlist and its skill playlist. 2 x playlistItems.insert = 100 units per video, 500 per day."
+      "note": "Long lessons join level and skill playlists: 6 adds = 300 units/day. Shorts join neither; optional shorts playlist costs 100/day. Five question comments cost 250/day.",
+      "shorts": false
     },
     "localizations": [
       "es",
@@ -210,7 +222,8 @@
       "tr",
       "vi",
       "fr"
-    ]
+    ],
+    "postQuestionComment": true
   },
   "audio": {
     "preset": "broadcast",
@@ -221,13 +234,13 @@
     "timezone": "UTC",
     "minLeadMinutes": 15,
     "slots": {
-      "a1": "13:00",
-      "a2": "14:30",
-      "b1": "16:00",
-      "b2": "17:30",
+      "a1": "15:00",
+      "a2": "16:30",
+      "b1": "18:00",
+      "b2": "18:00",
       "c1": "19:00"
     },
-    "note": "UTC wall-clock times, so the schedule is the same everywhere and never shifts with daylight saving. Each level owns one slot; B2 and C1 alternate days. A slot already past when the run finishes falls back to publishing immediately."
+    "note": "UTC slots: Shorts 14:00 and 19:00; A1 15:00; A2 16:30; alternating B1/B2 18:00. Past slots publish immediately."
   },
   "translation": {
     "code": "ar",
@@ -243,8 +256,7 @@
   "batch": {
     "alternate": [
       "b1",
-      "b2",
-      "c1"
+      "b2"
     ],
     "shorts": {
       "enabled": true,
@@ -258,11 +270,14 @@
         "b2"
       ],
       "slots": [
-        "12:30",
-        "18:00"
+        "14:00",
+        "19:00"
       ]
     },
-    "note": "16-26 Sep measured: 11 Shorts earned 963 views (88 each) against ~290 for 44 long lessons, and the channel went from 472 to 1,725 views. So three long lessons a day (A1, A2, and B1/B2/C1 in turn) plus two Shorts, weighted to A1/A2. Quota: 5 inserts 8,000 + 3 thumbnails 150 + 8 playlist adds 400 = 8,550. Set shorts.enabled false and alternate [] to restore one long lesson per level."
+    "note": "Three long lessons daily (A1, A2, and alternating B1/B2) plus two Shorts, weighted to A1/A2. C1 remains available for manual builds. Budget: 8,000 inserts + 150 thumbnails + 300 playlist adds + 250 comments = 8,700 units; optional Shorts playlist adds 100.",
+    "excluded": [
+      "c1"
+    ]
   },
   "shortVideo": {
     "width": 1080,
@@ -270,5 +285,9 @@
     "fps": 30,
     "crf": 20,
     "preset": "veryfast"
+  },
+  "experiments": {
+    "newOpening": "alternate",
+    "midAsk": true
   }
 }

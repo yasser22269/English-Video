@@ -1,0 +1,90 @@
+{
+  "seed": "english vocabulary",
+  "markets": {
+    "en": [
+      "english vocabulary",
+      "english vocabulary in use",
+      "english vocabulary in use elementary",
+      "english vocabulary in use pre-intermediate and intermediate",
+      "english vocabulary in use upper intermediate",
+      "english vocabulary for kids",
+      "english vocabulary advanced",
+      "english vocabulary for beginners",
+      "english vocabulary b2",
+      "english vocabulary in use advanced"
+    ],
+    "es": [
+      "english vocabulary",
+      "english vocabulary in use elementary",
+      "english vocabulary booster",
+      "english vocabulary b2",
+      "english vocabulary advanced",
+      "english vocabulary games",
+      "english vocabulary for beginners",
+      "english vocabulary practice",
+      "english vocabulary c1",
+      "english vocabulary common english words"
+    ],
+    "pt": [
+      "english vocabulary",
+      "english vocabulary advanced",
+      "english vocabulary in use",
+      "english vocabulary - 4000 essential english words",
+      "english vocabulary with pictures",
+      "english vocabulary help",
+      "english vocabulary for beginners",
+      "english vocabulary a1",
+      "english vocabulary in use elementary",
+      "english vocabulary b2"
+    ],
+    "hi": [
+      "english vocabulary",
+      "english vocabulary in use",
+      "english vocabulary in use pre-intermediate and intermediate",
+      "english vocabulary in use upper intermediate",
+      "english vocabulary advanced",
+      "english vocabulary for beginners",
+      "english vocabulary b2",
+      "english vocabulary in use advanced",
+      "english vocabulary in use intermediate",
+      "english vocabulary course"
+    ],
+    "ar": [
+      "english vocabulary",
+      "english vocabulary in use pre-intermediate and intermediate",
+      "english vocabulary b1",
+      "english vocabulary in use upper intermediate",
+      "english vocabulary for beginners",
+      "english vocabulary in use advanced",
+      "english vocabulary a1",
+      "english vocabulary course",
+      "english vocabulary advanced",
+      "english vocabulary in use elementary شرح"
+    ],
+    "id": [],
+    "tr": [
+      "english vocabulary",
+      "english vocabulary in use",
+      "english vocabulary - 4000 essential english words",
+      "english vocabulary in use pre-intermediate and intermediate",
+      "english vocabulary b1",
+      "english vocabulary b2",
+      "english vocabulary test",
+      "english vocabulary practice",
+      "english vocabulary in use elementary türkçe",
+      "english vocabulary learning"
+    ],
+    "vi": [
+      "english vocabulary in use elementary",
+      "english vocabulary",
+      "english vocabulary in use pre-intermediate and intermediate",
+      "english vocabulary in use upper intermediate",
+      "english vocabulary topic",
+      "english vocabulary in use elementary audio",
+      "english vocabulary in use pre-intermediate and intermediate audio",
+      "english vocabulary advanced",
+      "english vocabulary in use advanced",
+      "english vocabulary for ielts"
+    ]
+  }
+}

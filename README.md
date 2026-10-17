@@ -1,15 +1,18 @@
 # English Every Day
 
-An automated YouTube channel that publishes **four English lessons and one Short a day** across the CEFR levels (B2 and C1 alternate days), rotating through the four skills, for a global audience.
+An automated YouTube channel that publishes **three English lessons and two Shorts a day**: A1 and A2 daily, with B1/B2 alternating. C1 remains available for manual builds only. Skills rotate through speaking, vocabulary, reading and listening.
 
-```
-day 0   A1 speaking   A2 vocabulary  B1 reading    B2 listening  C1 speaking
-day 1   A1 vocabulary A2 reading     B1 listening  B2 speaking   C1 vocabulary
-day 2   A1 reading    A2 listening   B1 speaking   B2 vocabulary C1 reading
-day 3   A1 listening  A2 speaking    B1 vocabulary B2 reading    C1 listening
-```
+The workflow starts at **06:17 UTC** and builds/uploads Shorts first. Planned UTC slots:
 
-Every level walks the full skill cycle every four days, and each day's batch covers all four skills — so the channel never looks like four copies of the same lesson.
+| Content | Time |
+|---|---|
+| First Short | 14:00 |
+| A1 | 15:00 |
+| A2 | 16:30 |
+| B1 or B2 | 18:00 |
+| Second Short | 19:00 |
+
+The Shorts slots are five hours apart. A slot already past when its build finishes falls back to immediate publication; delayed runs can therefore miss the planned spacing. Quota resets at Pacific midnight (07:00/08:00 UTC); the earlier workflow can start before reset, and accounting always follows the actual Pacific date.
 
 Everything from writing the script to publishing runs unattended in GitHub Actions.
 
@@ -17,7 +20,7 @@ Everything from writing the script to publishing runs unattended in GitHub Actio
 
 ## Why five a day and not twenty
 
-The YouTube Data API gives a project **10,000 quota units per day**, and one `videos.insert` costs **1,600** (a thumbnail is another 50). That is a hard ceiling of about six automated uploads per day. Five lessons plus five thumbnails spend 8,050 units and leave headroom for a retry.
+The YouTube Data API gives a project **10,000 quota units per day**, and one `videos.insert` costs **1,600** (a thumbnail is another 50). That is a hard ceiling of about six automated uploads per day. Five uploads cost 8,000 units before thumbnails, playlists and comments; the full daily budget below leaves maintenance headroom, not a full upload retry.
 
 There is a second reason. High upload volume on one channel demonstrably dilutes reach — the sibling project cut from twelve uploads a day to three after the long-form uploads flatlined.
 
@@ -27,13 +30,14 @@ There is a second reason. High upload volume on one channel demonstrably dilutes
 
 | Operation | Calls/day | Units |
 |---|---|---|
-| `videos.insert` — 4 lessons + 1 Short | 5 | 8,000 |
-| `thumbnails.set` — lessons only | 4 | 200 |
-| `playlistItems.insert` — level + skill, Short level only | 9 | 450 |
-| **Publishing total** | | **8,650 / 10,000** |
-| `videos.update` — back catalogue, leftover quota | ~20 | ~1,000 |
+| `videos.insert` — 3 lessons + 2 Shorts | 5 | 8,000 |
+| `thumbnails.set` — long lessons only | 3 | 150 |
+| `playlistItems.insert` — long level + skill only | 6 | 300 |
+| `commentThreads.insert` — optional question comments | 5 | 250 |
+| **Publishing total** | | **8,700 / 10,000** |
+| Maintenance headroom (before reads/playlist creation) | | **1,300** |
 
-B2 and C1 share one daily slot (`channel.batch.alternate`) and the freed upload is a vertical Short (`channel.batch.shorts`). After month one A1 earned 9.5 views per video against 1.8 for B2 and C1, and the channel had no Shorts at all. Localised titles and descriptions in eight languages ride along inside `videos.insert` at no extra cost.
+B1 and B2 share the alternating slot; C1 is excluded from automatic rotation. Shorts retain their A1/A2-weighted level cycle. Localised titles and descriptions in eight languages ride inside `videos.insert` at no extra cost. Enabling `youtube.playlists.shorts` adds 100 units/day; new playlists cost 50 units each plus discovery reads. Question comments default on, cost 50 units per attempted request, and warn/continue if the token lacks permission or comments are disabled. The API cannot pin comments.
 
 ### Research tools
 
@@ -43,12 +47,18 @@ node scripts/keywords.js expand "english words for"       # a-z expansion
 node scripts/keywords.js topics --level a1                # demand score per curriculum topic
 node scripts/reach-report.js                              # impressions + CTR (Reporting API)
 node scripts/retitle-published.js                         # dry-run the back-catalogue refresh
+node scripts/retitle-published.js --sample 30 --seed e6     # offline E6 assignment preview
+node scripts/link-shorts.js --limit 20                    # offline link back-fill preview
 node scripts/refresh-playlists.js                         # sync live playlist titles/descriptions
 node scripts/update-channel-about.js                       # publish config/channel-about.txt in 8 languages
 node scripts/weekly-report.js                              # same-age cohort report (also runs every Monday)
 ```
 
-Each lesson joins two playlists — its level and its skill — so a viewer who finishes one has an obvious next one either way. Ids are cached in `state/playlists.json`, so the 50-unit create happens once per playlist rather than once per day. Either axis can be turned off in `config/channel.json` under `youtube.playlists`.
+Each long lesson joins two playlists — its level and its skill — so a viewer who finishes one has an obvious next one either way. Ids are cached in `state/playlists.json`, so the 50-unit create happens once per playlist rather than once per day. Either axis can be turned off in `config/channel.json` under `youtube.playlists`. Shorts join neither by default; opt into a single Shorts playlist with `youtube.playlists.shorts`.
+
+Retitling defaults to dry-run. `--sample N --seed S` deterministically assigns N treated A1/A2 long lessons and N controls matched by level, skill and nearest publication date. Only `--apply` persists the assignment to `state/experiments/e6-retitle.json` and updates treated videos (title only, no new descriptions/localizations); successful updates write titles back to history. Reusing the same assignment resumes it, and ordinary maintenance protects both arms. The daily workflow previews E6 instead of mass-retitling the catalogue. `--limit N` caps changes; each update costs 50 units.
+
+`link-shorts.js` previews line-2 full-lesson links from local history/build metadata without API calls. With `--apply`, it checks live snippets, skips existing links, preserves other snippet fields and accounts for each 1-unit read and 50-unit update; `--limit N` caps edits. Shorts-player description links are not clickable: set the Related video in Studio manually (the API cannot set it).
 
 ---
 
@@ -64,7 +74,7 @@ Every format opens on teaching, not on a title card, and runs **comprehensible f
 
 **Speaking** — opens on three of the phrases, then listen-and-repeat drills with a pronunciation point and a silence scaled to each phrase. Ends with a model dialogue and a shadowing round.
 
-**Short** — vertical 1080x1920, under a minute: a hook, three words with a picture and an example each.
+**Short** — vertical 1080x1920, under a minute: a hook, three words with a picture and an example each. Topics prefer the most recent published same-level long lesson aged 3–14 days with no published Short for that topic, falling back to the independent Short rotation. Five title patterns rotate without a 60-second promise. Paired lessons supply the specific CTA and description link; long lessons link back when a published matching Short exists.
 
 The translation language is one block in `config/channel.json` (`translation`); titles and descriptions are localised separately into the languages in `youtube.localizations`.
 
@@ -131,6 +141,8 @@ Fill in what you have. Only one LLM key is strictly required; the rest degrade g
 npm run auth:youtube
 ```
 
+OAuth requests `youtube.force-ssl` for comments and `yt-analytics.readonly` for measurement as well as upload/channel scopes. Older refresh tokens must be re-authorized manually and the CI secret updated.
+
 Before you run it: in Google Cloud Console, set the OAuth consent screen's publishing status to **In production**. A refresh token issued while the app is in *Testing* silently expires after seven days, and every run will then fail at the credential check.
 
 ### 3. Repository secrets
@@ -173,7 +185,9 @@ Failures are isolated per level: if B2 cannot be written, the other four still p
 
 ## Content rotation
 
-`config/curriculum/<level>.json` holds 48 topics per level, each with a grammar focus and stock-footage keywords. `state/used-topics.json` records what has already been used for each `(level, skill)` pair, and a topic is not reused until every other topic has had its turn — 48 unique lessons per skill per level, about six months before the first repeat, and the repeat is a different lesson because the script is written fresh each time.
+`config/curriculum/<level>.json` holds 48 topics per level, each with a grammar focus and stock-footage keywords. Optional `searchTopic` supplies a query-shaped label without changing the stable `topic` rotation key. `state/used-topics.json` records what has already been used for each `(level, skill)` pair, and a topic is not reused until every other topic has had its turn — 48 unique lessons per skill per level, about six months before the first repeat, and the repeat is a different lesson because the script is written fresh each time.
+
+History also records search topics, pairing IDs, opening variants and available title-pattern indices. `experiments.newOpening: "alternate"` supports the other worker's opening test; `experiments.midAsk: true` enables the mid-lesson ask.
 
 ---
 

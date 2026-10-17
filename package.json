@@ -11,7 +11,8 @@
     "plan": "node src/generate.js --plan",
     "voices": "node scripts/list-voices.js",
     "preview:audio": "node scripts/preview-audio.js",
-    "preview:voice": "node scripts/preview-voice.js"
+    "preview:voice": "node scripts/preview-voice.js",
+    "test": "node scripts/smoke-metadata.js"
   },
   "dependencies": {
     "dotenv": "^16.4.5",
