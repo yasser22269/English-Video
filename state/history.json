@@ -1,5 +1,117 @@
 [
   {
+    "date": "2026-10-18",
+    "level": "b2",
+    "skill": "short",
+    "topic": "Talking About Sport and Staying Fit",
+    "title": "Talking About Sport and Staying Fit: 3 English Words in 60 Seconds (B2) #shorts",
+    "durationSec": 30,
+    "sizeMb": 1.7,
+    "videoId": "ut8Sfn05gHQ",
+    "url": "https://www.youtube.com/watch?v=ut8Sfn05gHQ",
+    "publishAt": "2026-10-18T18:00:00.000Z",
+    "playlists": [
+      {
+        "key": "level:b2",
+        "id": "PLEyMEjEr22bU"
+      }
+    ],
+    "buildSeconds": 30,
+    "dir": "output/2026-10-18-b2-short-talking-about-sport-and-staying-fit"
+  },
+  {
+    "date": "2026-10-18",
+    "level": "a2",
+    "skill": "short",
+    "topic": "Talking About the Weather",
+    "title": "Talking About the Weather: 3 English Words in 60 Seconds (A2) #shorts",
+    "durationSec": 26,
+    "sizeMb": 1.7,
+    "videoId": "SJyIUqzeH_4",
+    "url": "https://www.youtube.com/watch?v=SJyIUqzeH_4",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:a2",
+        "id": "PLMUHkdE-F1_Q"
+      }
+    ],
+    "buildSeconds": 33,
+    "dir": "output/2026-10-18-a2-short-talking-about-the-weather"
+  },
+  {
+    "date": "2026-10-18",
+    "level": "c1",
+    "skill": "speaking",
+    "topic": "Talking About Money and Investing",
+    "title": "Talking About Money and Investing — English Speaking Practice & Shadowing (C1)",
+    "durationSec": 394,
+    "sizeMb": 43.7,
+    "videoId": "WpIGzOlDAec",
+    "url": "https://www.youtube.com/watch?v=WpIGzOlDAec",
+    "publishAt": "2026-10-18T19:00:00.000Z",
+    "playlists": [
+      {
+        "key": "level:c1",
+        "id": "PLPYmpq9AOiZM"
+      },
+      {
+        "key": "skill:speaking",
+        "id": "PLCadq2A6pEK8"
+      }
+    ],
+    "buildSeconds": 337,
+    "dir": "output/2026-10-18-c1-speaking-talking-about-money-and-investing"
+  },
+  {
+    "date": "2026-10-18",
+    "level": "a2",
+    "skill": "vocabulary",
+    "topic": "A Problem at Work",
+    "title": "A Problem at Work: 10 English Words with Pictures (A2 Elementary)",
+    "durationSec": 282,
+    "sizeMb": 15.1,
+    "videoId": "rdhAORLWDlA",
+    "url": "https://www.youtube.com/watch?v=rdhAORLWDlA",
+    "publishAt": "2026-10-18T14:30:00.000Z",
+    "playlists": [
+      {
+        "key": "level:a2",
+        "id": "PLMUHkdE-F1_Q"
+      },
+      {
+        "key": "skill:vocabulary",
+        "id": "PLRKWAimfYWh4"
+      }
+    ],
+    "buildSeconds": 278,
+    "dir": "output/2026-10-18-a2-vocabulary-a-problem-at-work"
+  },
+  {
+    "date": "2026-10-18",
+    "level": "a1",
+    "skill": "speaking",
+    "topic": "The Weather",
+    "title": "The Weather — English Speaking Practice & Shadowing (A1)",
+    "durationSec": 180,
+    "sizeMb": 14.1,
+    "videoId": "E7KdG8Ajx1U",
+    "url": "https://www.youtube.com/watch?v=E7KdG8Ajx1U",
+    "publishAt": "2026-10-18T13:00:00.000Z",
+    "playlists": [
+      {
+        "key": "level:a1",
+        "id": "PLIJ5pu8Ch1Pc"
+      },
+      {
+        "key": "skill:speaking",
+        "id": "PLCadq2A6pEK8"
+      }
+    ],
+    "buildSeconds": 178,
+    "dir": "output/2026-10-18-a1-speaking-the-weather"
+  },
+  {
     "date": "2026-10-17",
     "level": "a1",
     "skill": "short",
