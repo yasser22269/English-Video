@@ -1,5 +1,117 @@
 [
   {
+    "date": "2026-10-19",
+    "level": "a2",
+    "skill": "short",
+    "topic": "Renting an Apartment",
+    "title": "Renting an Apartment: 3 English Words in 60 Seconds (A2) #shorts",
+    "durationSec": 26,
+    "sizeMb": 1.8,
+    "videoId": "dVaNoQNGcpA",
+    "url": "https://www.youtube.com/watch?v=dVaNoQNGcpA",
+    "publishAt": "2026-10-19T18:00:00.000Z",
+    "playlists": [
+      {
+        "key": "level:a2",
+        "id": "PLMUHkdE-F1_Q"
+      }
+    ],
+    "buildSeconds": 35,
+    "dir": "output/2026-10-19-a2-short-renting-an-apartment"
+  },
+  {
+    "date": "2026-10-19",
+    "level": "a1",
+    "skill": "short",
+    "topic": "School Subjects",
+    "title": "School Subjects: 3 English Words in 60 Seconds (A1) #shorts",
+    "durationSec": 21,
+    "sizeMb": 1.5,
+    "videoId": "kywi6GTLT0M",
+    "url": "https://www.youtube.com/watch?v=kywi6GTLT0M",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:a1",
+        "id": "PLIJ5pu8Ch1Pc"
+      }
+    ],
+    "buildSeconds": 36,
+    "dir": "output/2026-10-19-a1-short-school-subjects"
+  },
+  {
+    "date": "2026-10-19",
+    "level": "b1",
+    "skill": "listening",
+    "topic": "Personal Goals for This Year",
+    "title": "Personal Goals for This Year — English Conversation Practice (B1 Intermediate)",
+    "durationSec": 365,
+    "sizeMb": 16.9,
+    "videoId": "bG6aFpu9nZU",
+    "url": "https://www.youtube.com/watch?v=bG6aFpu9nZU",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:b1",
+        "id": "PLSkG2Gz0CZos"
+      },
+      {
+        "key": "skill:listening",
+        "id": "PLc1avYS6uKVo"
+      }
+    ],
+    "buildSeconds": 367,
+    "dir": "output/2026-10-19-b1-listening-personal-goals-for-this-year"
+  },
+  {
+    "date": "2026-10-19",
+    "level": "a2",
+    "skill": "reading",
+    "topic": "Weekend Markets and Bargaining",
+    "title": "Weekend Markets and Bargaining — Learn English Through Story Level 2 (A2)",
+    "durationSec": 216,
+    "sizeMb": 12.1,
+    "videoId": "ZOq6VllbrlY",
+    "url": "https://www.youtube.com/watch?v=ZOq6VllbrlY",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:a2",
+        "id": "PLMUHkdE-F1_Q"
+      },
+      {
+        "key": "skill:reading",
+        "id": "PLYub11V_0AzA"
+      }
+    ],
+    "buildSeconds": 200,
+    "dir": "output/2026-10-19-a2-reading-weekend-markets-and-bargaining"
+  },
+  {
+    "date": "2026-10-19",
+    "level": "a1",
+    "skill": "vocabulary",
+    "topic": "In the Classroom",
+    "title": "In the Classroom: 10 English Words with Pictures (A1 Beginner)",
+    "durationSec": 205,
+    "sizeMb": 11.5,
+    "videoId": "FK5O_jKIozw",
+    "url": "https://www.youtube.com/watch?v=FK5O_jKIozw",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:a1",
+        "id": "PLIJ5pu8Ch1Pc"
+      },
+      {
+        "key": "skill:vocabulary",
+        "id": "PLRKWAimfYWh4"
+      }
+    ],
+    "buildSeconds": 275,
+    "dir": "output/2026-10-19-a1-vocabulary-in-the-classroom"
+  },
+  {
     "date": "2026-10-18",
     "level": "b2",
     "skill": "short",

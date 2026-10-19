@@ -14,7 +14,8 @@
       "Fruits and Vegetables",
       "Asking for Directions",
       "Food and Drinks",
-      "Money and Prices"
+      "Money and Prices",
+      "In the Classroom"
     ],
     "a1:reading": [
       "My Family",
@@ -207,7 +208,8 @@
       "Travelling by Plane",
       "Learning a New Skill",
       "Describing a Photograph",
-      "Describing Your Hometown"
+      "Describing Your Hometown",
+      "Weekend Markets and Bargaining"
     ],
     "b1:listening": [
       "Culture Shock Abroad",
@@ -218,7 +220,8 @@
       "Health Insurance and Doctors",
       "Making Small Talk at Work",
       "Books That Changed My Mind",
-      "Choosing a Career Path"
+      "Choosing a Career Path",
+      "Personal Goals for This Year"
     ],
     "b2:speaking": [
       "The Psychology of Habits",
@@ -270,7 +273,8 @@
       "At the Park",
       "In the City",
       "Food and Drinks",
-      "At the Supermarket"
+      "At the Supermarket",
+      "School Subjects"
     ],
     "a2:short": [
       "Giving Simple Instructions",
@@ -289,7 +293,8 @@
       "Staying at a Hotel",
       "The Best and the Worst",
       "Environment and Recycling",
-      "Talking About the Weather"
+      "Talking About the Weather",
+      "Renting an Apartment"
     ],
     "b1:short": [
       "Fake News and Media Literacy",
@@ -311,5 +316,5 @@
       "Talking About Sport and Staying Fit"
     ]
   },
-  "updatedAt": "2026-10-18T12:53:40.451Z"
+  "updatedAt": "2026-10-19T15:57:46.849Z"
 }
