@@ -30,7 +30,8 @@
       "My Friends",
       "Breakfast, Lunch and Dinner",
       "Transport and Travel",
-      "My House and Rooms"
+      "My House and Rooms",
+      "Describing People"
     ],
     "a2:listening": [
       "Future Plans and Intentions",
@@ -44,7 +45,8 @@
       "The Best and the Worst",
       "Money, Saving and Spending",
       "Travelling by Plane",
-      "Talking About Your Studies"
+      "Talking About Your Studies",
+      "Making Invitations"
     ],
     "b1:speaking": [
       "Job Interviews and Strengths",
@@ -66,7 +68,8 @@
       "Making Plans With Friends",
       "Talking About Learning English",
       "Talking About Holidays and Trips",
-      "Prepositions People Get Wrong"
+      "Prepositions People Get Wrong",
+      "Job Interviews: The Most Common Questions"
     ],
     "c1:reading": [
       "Consciousness and the Hard Problem",
@@ -274,7 +277,8 @@
       "In the City",
       "Food and Drinks",
       "At the Supermarket",
-      "School Subjects"
+      "School Subjects",
+      "At the Doctor"
     ],
     "a2:short": [
       "Giving Simple Instructions",
@@ -305,7 +309,8 @@
       "Exercise and Motivation",
       "Describing a Turning Point",
       "Dealing with Difficult People",
-      "Handling Stress and Burnout"
+      "Handling Stress and Burnout",
+      "Privacy and Personal Data"
     ],
     "b2:short": [
       "Talking About Learning English",
@@ -316,5 +321,5 @@
       "Talking About Sport and Staying Fit"
     ]
   },
-  "updatedAt": "2026-10-19T15:57:46.849Z"
+  "updatedAt": "2026-10-20T14:05:11.220Z"
 }

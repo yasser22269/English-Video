@@ -1,5 +1,117 @@
 [
   {
+    "date": "2026-10-20",
+    "level": "a1",
+    "skill": "short",
+    "topic": "At the Doctor",
+    "title": "At the Doctor: 3 English Words in 60 Seconds (A1) #shorts",
+    "durationSec": 20,
+    "sizeMb": 1.4,
+    "videoId": "6rjW5XFZ_Ww",
+    "url": "https://www.youtube.com/watch?v=6rjW5XFZ_Ww",
+    "publishAt": "2026-10-20T18:00:00.000Z",
+    "playlists": [
+      {
+        "key": "level:a1",
+        "id": "PLIJ5pu8Ch1Pc"
+      }
+    ],
+    "buildSeconds": 136,
+    "dir": "output/2026-10-20-a1-short-at-the-doctor"
+  },
+  {
+    "date": "2026-10-20",
+    "level": "b1",
+    "skill": "short",
+    "topic": "Privacy and Personal Data",
+    "title": "Privacy and Personal Data: 3 English Words in 60 Seconds (B1) #shorts",
+    "durationSec": 30,
+    "sizeMb": 2,
+    "videoId": "ia_WPPVxvXs",
+    "url": "https://www.youtube.com/watch?v=ia_WPPVxvXs",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:b1",
+        "id": "PLSkG2Gz0CZos"
+      }
+    ],
+    "buildSeconds": 317,
+    "dir": "output/2026-10-20-b1-short-privacy-and-personal-data"
+  },
+  {
+    "date": "2026-10-20",
+    "level": "b2",
+    "skill": "vocabulary",
+    "topic": "Job Interviews: The Most Common Questions",
+    "title": "Job Interviews: The Most Common Questions: 9 English Words with Pictures (B2 Upper-Intermediate)",
+    "durationSec": 317,
+    "sizeMb": 17.6,
+    "videoId": "bDYN7uwpTO4",
+    "url": "https://www.youtube.com/watch?v=bDYN7uwpTO4",
+    "publishAt": "2026-10-20T17:30:00.000Z",
+    "playlists": [
+      {
+        "key": "level:b2",
+        "id": "PLEyMEjEr22bU"
+      },
+      {
+        "key": "skill:vocabulary",
+        "id": "PLRKWAimfYWh4"
+      }
+    ],
+    "buildSeconds": 454,
+    "dir": "output/2026-10-20-b2-vocabulary-job-interviews-the-most-common-questions"
+  },
+  {
+    "date": "2026-10-20",
+    "level": "a2",
+    "skill": "listening",
+    "topic": "Making Invitations",
+    "title": "Making Invitations — English Conversation Practice (A2 Elementary)",
+    "durationSec": 247,
+    "sizeMb": 17.2,
+    "videoId": "mqYNbUdBNHI",
+    "url": "https://www.youtube.com/watch?v=mqYNbUdBNHI",
+    "publishAt": "2026-10-20T14:30:00.000Z",
+    "playlists": [
+      {
+        "key": "level:a2",
+        "id": "PLMUHkdE-F1_Q"
+      },
+      {
+        "key": "skill:listening",
+        "id": "PLc1avYS6uKVo"
+      }
+    ],
+    "buildSeconds": 326,
+    "dir": "output/2026-10-20-a2-listening-making-invitations"
+  },
+  {
+    "date": "2026-10-20",
+    "level": "a1",
+    "skill": "reading",
+    "topic": "Describing People",
+    "title": "Describing People — Learn English Through Story Level 1 (A1)",
+    "durationSec": 161,
+    "sizeMb": 9.2,
+    "videoId": "-z8lgN951G4",
+    "url": "https://www.youtube.com/watch?v=-z8lgN951G4",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:a1",
+        "id": "PLIJ5pu8Ch1Pc"
+      },
+      {
+        "key": "skill:reading",
+        "id": "PLYub11V_0AzA"
+      }
+    ],
+    "buildSeconds": 404,
+    "dir": "output/2026-10-20-a1-reading-describing-people"
+  },
+  {
     "date": "2026-10-19",
     "level": "a2",
     "skill": "short",
