@@ -94,7 +94,8 @@
       "School Subjects",
       "At a Restaurant",
       "Days, Months and Dates",
-      "Birthdays and Celebrations"
+      "Birthdays and Celebrations",
+      "The Weather"
     ],
     "a2:speaking": [
       "Comparing Cities",
@@ -110,7 +111,8 @@
       "Staying at a Hotel",
       "Talking on the Phone at Work",
       "Talking About Your Job",
-      "Small Talk with Strangers"
+      "Small Talk with Strangers",
+      "Shopping Online and Returns"
     ],
     "b2:reading": [
       "Universal Basic Income",
@@ -132,7 +134,8 @@
       "Twelve Better Words Than Very",
       "Understanding Fast Native Conversation",
       "Academic Phrases for IELTS Writing",
-      "Making a Recommendation With Confidence"
+      "Making a Recommendation With Confidence",
+      "Explaining a Delay or a Mistake at Work"
     ],
     "a1:speaking": [
       "Food and Drinks",
@@ -298,7 +301,8 @@
       "The Best and the Worst",
       "Environment and Recycling",
       "Talking About the Weather",
-      "Renting an Apartment"
+      "Renting an Apartment",
+      "Describing Personality"
     ],
     "b1:short": [
       "Fake News and Media Literacy",
@@ -318,8 +322,9 @@
       "At the Airport and on the Plane",
       "Phrasal Verbs With Get",
       "Describing a Place You Love",
-      "Talking About Sport and Staying Fit"
+      "Talking About Sport and Staying Fit",
+      "Explaining Why You Are Late"
     ]
   },
-  "updatedAt": "2026-10-20T14:05:11.220Z"
+  "updatedAt": "2026-10-21T14:13:25.025Z"
 }

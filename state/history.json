@@ -1,5 +1,117 @@
 [
   {
+    "date": "2026-10-21",
+    "level": "b2",
+    "skill": "short",
+    "topic": "Explaining Why You Are Late",
+    "title": "Explaining Why You Are Late: 3 English Words in 60 Seconds (B2) #shorts",
+    "durationSec": 29,
+    "sizeMb": 1.9,
+    "videoId": "DHvxcG_8xQM",
+    "url": "https://www.youtube.com/watch?v=DHvxcG_8xQM",
+    "publishAt": "2026-10-21T18:00:00.000Z",
+    "playlists": [
+      {
+        "key": "level:b2",
+        "id": "PLEyMEjEr22bU"
+      }
+    ],
+    "buildSeconds": 39,
+    "dir": "output/2026-10-21-b2-short-explaining-why-you-are-late"
+  },
+  {
+    "date": "2026-10-21",
+    "level": "a2",
+    "skill": "short",
+    "topic": "Describing Personality",
+    "title": "Describing Personality: 3 English Words in 60 Seconds (A2) #shorts",
+    "durationSec": 28,
+    "sizeMb": 1.9,
+    "videoId": "g3FLxH-Ia3M",
+    "url": "https://www.youtube.com/watch?v=g3FLxH-Ia3M",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:a2",
+        "id": "PLMUHkdE-F1_Q"
+      }
+    ],
+    "buildSeconds": 62,
+    "dir": "output/2026-10-21-a2-short-describing-personality"
+  },
+  {
+    "date": "2026-10-21",
+    "level": "c1",
+    "skill": "listening",
+    "topic": "Explaining a Delay or a Mistake at Work",
+    "title": "Explaining a Delay or a Mistake at Work — English Conversation Practice (C1 Advanced)",
+    "durationSec": 469,
+    "sizeMb": 28.7,
+    "videoId": "IRaj9JV7xOQ",
+    "url": "https://www.youtube.com/watch?v=IRaj9JV7xOQ",
+    "publishAt": "2026-10-21T19:00:00.000Z",
+    "playlists": [
+      {
+        "key": "level:c1",
+        "id": "PLPYmpq9AOiZM"
+      },
+      {
+        "key": "skill:listening",
+        "id": "PLc1avYS6uKVo"
+      }
+    ],
+    "buildSeconds": 474,
+    "dir": "output/2026-10-21-c1-listening-explaining-a-delay-or-a-mistake-at-work"
+  },
+  {
+    "date": "2026-10-21",
+    "level": "a2",
+    "skill": "speaking",
+    "topic": "Shopping Online and Returns",
+    "title": "Shopping Online and Returns — English Speaking Practice & Shadowing (A2)",
+    "durationSec": 237,
+    "sizeMb": 42.5,
+    "videoId": "t19dkWLP_W4",
+    "url": "https://www.youtube.com/watch?v=t19dkWLP_W4",
+    "publishAt": "2026-10-21T14:30:00.000Z",
+    "playlists": [
+      {
+        "key": "level:a2",
+        "id": "PLMUHkdE-F1_Q"
+      },
+      {
+        "key": "skill:speaking",
+        "id": "PLCadq2A6pEK8"
+      }
+    ],
+    "buildSeconds": 287,
+    "dir": "output/2026-10-21-a2-speaking-shopping-online-and-returns"
+  },
+  {
+    "date": "2026-10-21",
+    "level": "a1",
+    "skill": "listening",
+    "topic": "The Weather",
+    "title": "The Weather — English Conversation Practice (A1 Beginner)",
+    "durationSec": 200,
+    "sizeMb": 37.3,
+    "videoId": "FpiC-iOOCS0",
+    "url": "https://www.youtube.com/watch?v=FpiC-iOOCS0",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:a1",
+        "id": "PLIJ5pu8Ch1Pc"
+      },
+      {
+        "key": "skill:listening",
+        "id": "PLc1avYS6uKVo"
+      }
+    ],
+    "buildSeconds": 284,
+    "dir": "output/2026-10-21-a1-listening-the-weather"
+  },
+  {
     "date": "2026-10-20",
     "level": "a1",
     "skill": "short",
