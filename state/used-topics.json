@@ -150,7 +150,8 @@
       "Feelings and Emotions",
       "At the Airport",
       "Breakfast, Lunch and Dinner",
-      "The Weather"
+      "The Weather",
+      "Housework and Chores"
     ],
     "a2:vocabulary": [
       "The Best and the Worst",
@@ -166,7 +167,8 @@
       "Technology and Gadgets",
       "Money, Saving and Spending",
       "Health Problems and Advice",
-      "A Problem at Work"
+      "A Problem at Work",
+      "Making Invitations"
     ],
     "b1:reading": [
       "Travelling on a Budget",
@@ -178,7 +180,8 @@
       "Online Shopping and Scams",
       "Artificial Intelligence at Work",
       "Learning Languages Faster",
-      "Describing a Turning Point"
+      "Describing a Turning Point",
+      "Remote Work and Productivity"
     ],
     "b2:listening": [
       "Gentrification and Neighbourhoods",
@@ -281,7 +284,8 @@
       "Food and Drinks",
       "At the Supermarket",
       "School Subjects",
-      "At the Doctor"
+      "At the Doctor",
+      "Greetings and Introductions"
     ],
     "a2:short": [
       "Giving Simple Instructions",
@@ -302,7 +306,8 @@
       "Environment and Recycling",
       "Talking About the Weather",
       "Renting an Apartment",
-      "Describing Personality"
+      "Describing Personality",
+      "Making Appointments"
     ],
     "b1:short": [
       "Fake News and Media Literacy",
@@ -326,5 +331,5 @@
       "Explaining Why You Are Late"
     ]
   },
-  "updatedAt": "2026-10-21T14:13:25.025Z"
+  "updatedAt": "2026-10-22T14:08:01.346Z"
 }

@@ -1,5 +1,117 @@
 [
   {
+    "date": "2026-10-22",
+    "level": "a2",
+    "skill": "short",
+    "topic": "Making Appointments",
+    "title": "Making Appointments: 3 English Words in 60 Seconds (A2) #shorts",
+    "durationSec": 27,
+    "sizeMb": 1.8,
+    "videoId": "8eluoC3HSvU",
+    "url": "https://www.youtube.com/watch?v=8eluoC3HSvU",
+    "publishAt": "2026-10-22T18:00:00.000Z",
+    "playlists": [
+      {
+        "key": "level:a2",
+        "id": "PLMUHkdE-F1_Q"
+      }
+    ],
+    "buildSeconds": 56,
+    "dir": "output/2026-10-22-a2-short-making-appointments"
+  },
+  {
+    "date": "2026-10-22",
+    "level": "a1",
+    "skill": "short",
+    "topic": "Greetings and Introductions",
+    "title": "Greetings and Introductions: 3 English Words in 60 Seconds (A1) #shorts",
+    "durationSec": 20,
+    "sizeMb": 1.6,
+    "videoId": "EVGeyD-n-mg",
+    "url": "https://www.youtube.com/watch?v=EVGeyD-n-mg",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:a1",
+        "id": "PLIJ5pu8Ch1Pc"
+      }
+    ],
+    "buildSeconds": 61,
+    "dir": "output/2026-10-22-a1-short-greetings-and-introductions"
+  },
+  {
+    "date": "2026-10-22",
+    "level": "b1",
+    "skill": "reading",
+    "topic": "Remote Work and Productivity",
+    "title": "Remote Work and Productivity — Learn English Through Story Level 3 (B1)",
+    "durationSec": 338,
+    "sizeMb": 21.1,
+    "videoId": "9YIx7m8_GSo",
+    "url": "https://www.youtube.com/watch?v=9YIx7m8_GSo",
+    "publishAt": "2026-10-22T16:00:00.000Z",
+    "playlists": [
+      {
+        "key": "level:b1",
+        "id": "PLSkG2Gz0CZos"
+      },
+      {
+        "key": "skill:reading",
+        "id": "PLYub11V_0AzA"
+      }
+    ],
+    "buildSeconds": 225,
+    "dir": "output/2026-10-22-b1-reading-remote-work-and-productivity"
+  },
+  {
+    "date": "2026-10-22",
+    "level": "a2",
+    "skill": "vocabulary",
+    "topic": "Making Invitations",
+    "title": "Making Invitations: 10 English Words with Pictures (A2 Elementary)",
+    "durationSec": 297,
+    "sizeMb": 16.7,
+    "videoId": "l-wNCk0DKuk",
+    "url": "https://www.youtube.com/watch?v=l-wNCk0DKuk",
+    "publishAt": "2026-10-22T14:30:00.000Z",
+    "playlists": [
+      {
+        "key": "level:a2",
+        "id": "PLMUHkdE-F1_Q"
+      },
+      {
+        "key": "skill:vocabulary",
+        "id": "PLRKWAimfYWh4"
+      }
+    ],
+    "buildSeconds": 272,
+    "dir": "output/2026-10-22-a2-vocabulary-making-invitations"
+  },
+  {
+    "date": "2026-10-22",
+    "level": "a1",
+    "skill": "speaking",
+    "topic": "Housework and Chores",
+    "title": "Housework and Chores — English Speaking Practice & Shadowing (A1)",
+    "durationSec": 187,
+    "sizeMb": 40,
+    "videoId": "AvdhWngytOs",
+    "url": "https://www.youtube.com/watch?v=AvdhWngytOs",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:a1",
+        "id": "PLIJ5pu8Ch1Pc"
+      },
+      {
+        "key": "skill:speaking",
+        "id": "PLCadq2A6pEK8"
+      }
+    ],
+    "buildSeconds": 287,
+    "dir": "output/2026-10-22-a1-speaking-housework-and-chores"
+  },
+  {
     "date": "2026-10-21",
     "level": "b2",
     "skill": "short",
