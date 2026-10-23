@@ -218,7 +218,8 @@
       "Learning a New Skill",
       "Describing a Photograph",
       "Describing Your Hometown",
-      "Weekend Markets and Bargaining"
+      "Weekend Markets and Bargaining",
+      "Talking About Films and Series"
     ],
     "b1:listening": [
       "Culture Shock Abroad",
@@ -239,7 +240,8 @@
       "Describing Your Working Day",
       "Job Interview: Strengths and Weaknesses",
       "Talking About the Weather Naturally",
-      "Talking About Your Studies"
+      "Talking About Your Studies",
+      "Making Suggestions and Offers"
     ],
     "c1:vocabulary": [
       "Algorithmic Bias and Accountability",
@@ -285,7 +287,8 @@
       "At the Supermarket",
       "School Subjects",
       "At the Doctor",
-      "Greetings and Introductions"
+      "Greetings and Introductions",
+      "Technology at Home"
     ],
     "a2:short": [
       "Giving Simple Instructions",
@@ -319,7 +322,8 @@
       "Describing a Turning Point",
       "Dealing with Difficult People",
       "Handling Stress and Burnout",
-      "Privacy and Personal Data"
+      "Privacy and Personal Data",
+      "Remote Work and Productivity"
     ],
     "b2:short": [
       "Talking About Learning English",
@@ -331,5 +335,5 @@
       "Explaining Why You Are Late"
     ]
   },
-  "updatedAt": "2026-10-22T14:08:01.346Z"
+  "updatedAt": "2026-10-23T14:29:28.299Z"
 }

@@ -1,5 +1,93 @@
 [
   {
+    "date": "2026-10-23",
+    "level": "a1",
+    "skill": "short",
+    "topic": "Technology at Home",
+    "title": "Technology at Home: 3 English Words in 60 Seconds (A1) #shorts",
+    "durationSec": 24,
+    "sizeMb": 1.8,
+    "videoId": "VPbkrZFgc5Q",
+    "url": "https://www.youtube.com/watch?v=VPbkrZFgc5Q",
+    "publishAt": "2026-10-23T18:00:00.000Z",
+    "playlists": [
+      {
+        "key": "level:a1",
+        "id": "PLIJ5pu8Ch1Pc"
+      }
+    ],
+    "buildSeconds": 607,
+    "dir": "output/2026-10-23-a1-short-technology-at-home"
+  },
+  {
+    "date": "2026-10-23",
+    "level": "b1",
+    "skill": "short",
+    "topic": "Remote Work and Productivity",
+    "title": "Remote Work and Productivity: 3 English Words in 60 Seconds (B1) #shorts",
+    "durationSec": 27,
+    "sizeMb": 2.1,
+    "videoId": "hBTQnywxcQw",
+    "url": "https://www.youtube.com/watch?v=hBTQnywxcQw",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:b1",
+        "id": "PLSkG2Gz0CZos"
+      }
+    ],
+    "buildSeconds": 195,
+    "dir": "output/2026-10-23-b1-short-remote-work-and-productivity"
+  },
+  {
+    "date": "2026-10-23",
+    "level": "b2",
+    "skill": "speaking",
+    "topic": "Making Suggestions and Offers",
+    "title": "Making Suggestions and Offers — English Speaking Practice & Shadowing (B2)",
+    "durationSec": 337,
+    "sizeMb": 56.5,
+    "videoId": "2-OkcMFCqDM",
+    "url": "https://www.youtube.com/watch?v=2-OkcMFCqDM",
+    "publishAt": "2026-10-23T17:30:00.000Z",
+    "playlists": [
+      {
+        "key": "level:b2",
+        "id": "PLEyMEjEr22bU"
+      },
+      {
+        "key": "skill:speaking",
+        "id": "PLCadq2A6pEK8"
+      }
+    ],
+    "buildSeconds": 872,
+    "dir": "output/2026-10-23-b2-speaking-making-suggestions-and-offers"
+  },
+  {
+    "date": "2026-10-23",
+    "level": "a2",
+    "skill": "reading",
+    "topic": "Talking About Films and Series",
+    "title": "Talking About Films and Series — Learn English Through Story Level 2 (A2)",
+    "durationSec": 243,
+    "sizeMb": 13.9,
+    "videoId": "-fkwjQ0w1Wg",
+    "url": "https://www.youtube.com/watch?v=-fkwjQ0w1Wg",
+    "publishAt": "2026-10-23T14:30:00.000Z",
+    "playlists": [
+      {
+        "key": "level:a2",
+        "id": "PLMUHkdE-F1_Q"
+      },
+      {
+        "key": "skill:reading",
+        "id": "PLYub11V_0AzA"
+      }
+    ],
+    "buildSeconds": 263,
+    "dir": "output/2026-10-23-a2-reading-talking-about-films-and-series"
+  },
+  {
     "date": "2026-10-22",
     "level": "a2",
     "skill": "short",
