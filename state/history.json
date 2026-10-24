@@ -1,5 +1,117 @@
 [
   {
+    "date": "2026-10-24",
+    "level": "b2",
+    "skill": "short",
+    "topic": "Travel Problems and How to Fix Them",
+    "title": "Travel Problems and How to Fix Them: 3 English Words in 60 Seconds (B2) #shorts",
+    "durationSec": 30,
+    "sizeMb": 2.1,
+    "videoId": "31ePnPQG5ZM",
+    "url": "https://www.youtube.com/watch?v=31ePnPQG5ZM",
+    "publishAt": "2026-10-24T18:00:00.000Z",
+    "playlists": [
+      {
+        "key": "level:b2",
+        "id": "PLEyMEjEr22bU"
+      }
+    ],
+    "buildSeconds": 222,
+    "dir": "output/2026-10-24-b2-short-travel-problems-and-how-to-fix-them"
+  },
+  {
+    "date": "2026-10-24",
+    "level": "a2",
+    "skill": "short",
+    "topic": "Talking About Your Job",
+    "title": "Talking About Your Job: 3 English Words in 60 Seconds (A2) #shorts",
+    "durationSec": 30,
+    "sizeMb": 2.1,
+    "videoId": "yOHAHyXKoJY",
+    "url": "https://www.youtube.com/watch?v=yOHAHyXKoJY",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:a2",
+        "id": "PLMUHkdE-F1_Q"
+      }
+    ],
+    "buildSeconds": 119,
+    "dir": "output/2026-10-24-a2-short-talking-about-your-job"
+  },
+  {
+    "date": "2026-10-24",
+    "level": "c1",
+    "skill": "reading",
+    "topic": "Word Stress That Changes the Meaning",
+    "title": "Word Stress That Changes the Meaning — Learn English Through Story Level 5 (C1)",
+    "durationSec": 445,
+    "sizeMb": 31.2,
+    "videoId": "o1yBSKf8UAU",
+    "url": "https://www.youtube.com/watch?v=o1yBSKf8UAU",
+    "publishAt": "2026-10-24T19:00:00.000Z",
+    "playlists": [
+      {
+        "key": "level:c1",
+        "id": "PLPYmpq9AOiZM"
+      },
+      {
+        "key": "skill:reading",
+        "id": "PLYub11V_0AzA"
+      }
+    ],
+    "buildSeconds": 396,
+    "dir": "output/2026-10-24-c1-reading-word-stress-that-changes-the-meaning"
+  },
+  {
+    "date": "2026-10-24",
+    "level": "a2",
+    "skill": "listening",
+    "topic": "Volunteering and Helping Others",
+    "title": "Volunteering and Helping Others — English Conversation Practice (A2 Elementary)",
+    "durationSec": 235,
+    "sizeMb": 69.5,
+    "videoId": "v1-5YaJQ9-E",
+    "url": "https://www.youtube.com/watch?v=v1-5YaJQ9-E",
+    "publishAt": "2026-10-24T14:30:00.000Z",
+    "playlists": [
+      {
+        "key": "level:a2",
+        "id": "PLMUHkdE-F1_Q"
+      },
+      {
+        "key": "skill:listening",
+        "id": "PLc1avYS6uKVo"
+      }
+    ],
+    "buildSeconds": 520,
+    "dir": "output/2026-10-24-a2-listening-volunteering-and-helping-others"
+  },
+  {
+    "date": "2026-10-24",
+    "level": "a1",
+    "skill": "reading",
+    "topic": "Hobbies and Free Time",
+    "title": "Hobbies and Free Time — Learn English Through Story Level 1 (A1)",
+    "durationSec": 178,
+    "sizeMb": 10.4,
+    "videoId": "LW7HxfTp7Ds",
+    "url": "https://www.youtube.com/watch?v=LW7HxfTp7Ds",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:a1",
+        "id": "PLIJ5pu8Ch1Pc"
+      },
+      {
+        "key": "skill:reading",
+        "id": "PLYub11V_0AzA"
+      }
+    ],
+    "buildSeconds": 276,
+    "dir": "output/2026-10-24-a1-reading-hobbies-and-free-time"
+  },
+  {
     "date": "2026-10-23",
     "level": "a1",
     "skill": "short",
