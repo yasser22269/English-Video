@@ -98,7 +98,8 @@
       "At a Restaurant",
       "Days, Months and Dates",
       "Birthdays and Celebrations",
-      "The Weather"
+      "The Weather",
+      "Housework and Chores"
     ],
     "a2:speaking": [
       "Comparing Cities",
@@ -115,7 +116,8 @@
       "Talking on the Phone at Work",
       "Talking About Your Job",
       "Small Talk with Strangers",
-      "Shopping Online and Returns"
+      "Shopping Online and Returns",
+      "Talking About Childhood"
     ],
     "b2:reading": [
       "Universal Basic Income",
@@ -267,7 +269,8 @@
       "Comparing Education Systems",
       "Public Speaking Nerves",
       "Fake News and Media Literacy",
-      "Friendship as an Adult"
+      "Friendship as an Adult",
+      "Travelling on a Budget"
     ],
     "a1:short": [
       "Countries and Nationalities",
@@ -291,7 +294,8 @@
       "School Subjects",
       "At the Doctor",
       "Greetings and Introductions",
-      "Technology at Home"
+      "Technology at Home",
+      "Days, Months and Dates"
     ],
     "a2:short": [
       "Giving Simple Instructions",
@@ -314,7 +318,8 @@
       "Renting an Apartment",
       "Describing Personality",
       "Making Appointments",
-      "Talking About Your Job"
+      "Talking About Your Job",
+      "Small Talk with Strangers"
     ],
     "b1:short": [
       "Fake News and Media Literacy",
@@ -340,5 +345,5 @@
       "Travel Problems and How to Fix Them"
     ]
   },
-  "updatedAt": "2026-10-24T13:10:33.901Z"
+  "updatedAt": "2026-10-25T13:55:40.076Z"
 }

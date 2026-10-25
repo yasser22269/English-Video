@@ -1,5 +1,117 @@
 [
   {
+    "date": "2026-10-25",
+    "level": "a2",
+    "skill": "short",
+    "topic": "Small Talk with Strangers",
+    "title": "Small Talk with Strangers: 3 English Words in 60 Seconds (A2) #shorts",
+    "durationSec": 26,
+    "sizeMb": 1.8,
+    "videoId": "kH3jSJYkqPM",
+    "url": "https://www.youtube.com/watch?v=kH3jSJYkqPM",
+    "publishAt": "2026-10-25T18:00:00.000Z",
+    "playlists": [
+      {
+        "key": "level:a2",
+        "id": "PLMUHkdE-F1_Q"
+      }
+    ],
+    "buildSeconds": 264,
+    "dir": "output/2026-10-25-a2-short-small-talk-with-strangers"
+  },
+  {
+    "date": "2026-10-25",
+    "level": "a1",
+    "skill": "short",
+    "topic": "Days, Months and Dates",
+    "title": "Days, Months and Dates: 3 English Words in 60 Seconds (A1) #shorts",
+    "durationSec": 19,
+    "sizeMb": 1.5,
+    "videoId": "PILLyH08cqY",
+    "url": "https://www.youtube.com/watch?v=PILLyH08cqY",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:a1",
+        "id": "PLIJ5pu8Ch1Pc"
+      }
+    ],
+    "buildSeconds": 511,
+    "dir": "output/2026-10-25-a1-short-days-months-and-dates"
+  },
+  {
+    "date": "2026-10-25",
+    "level": "b1",
+    "skill": "vocabulary",
+    "topic": "Travelling on a Budget",
+    "title": "Travelling on a Budget: 9 English Words with Pictures (B1 Intermediate)",
+    "durationSec": 311,
+    "sizeMb": 18.4,
+    "videoId": "HhAwyhiyIiQ",
+    "url": "https://www.youtube.com/watch?v=HhAwyhiyIiQ",
+    "publishAt": "2026-10-25T16:00:00.000Z",
+    "playlists": [
+      {
+        "key": "level:b1",
+        "id": "PLSkG2Gz0CZos"
+      },
+      {
+        "key": "skill:vocabulary",
+        "id": "PLRKWAimfYWh4"
+      }
+    ],
+    "buildSeconds": 608,
+    "dir": "output/2026-10-25-b1-vocabulary-travelling-on-a-budget"
+  },
+  {
+    "date": "2026-10-25",
+    "level": "a2",
+    "skill": "speaking",
+    "topic": "Talking About Childhood",
+    "title": "Talking About Childhood — English Speaking Practice & Shadowing (A2)",
+    "durationSec": 251,
+    "sizeMb": 29.7,
+    "videoId": "mw8k7qkPSPs",
+    "url": "https://www.youtube.com/watch?v=mw8k7qkPSPs",
+    "publishAt": "2026-10-25T14:30:00.000Z",
+    "playlists": [
+      {
+        "key": "level:a2",
+        "id": "PLMUHkdE-F1_Q"
+      },
+      {
+        "key": "skill:speaking",
+        "id": "PLCadq2A6pEK8"
+      }
+    ],
+    "buildSeconds": 555,
+    "dir": "output/2026-10-25-a2-speaking-talking-about-childhood"
+  },
+  {
+    "date": "2026-10-25",
+    "level": "a1",
+    "skill": "listening",
+    "topic": "Housework and Chores",
+    "title": "Housework and Chores — English Conversation Practice (A1 Beginner)",
+    "durationSec": 196,
+    "sizeMb": 33.4,
+    "videoId": "HLfGqpCXXiA",
+    "url": "https://www.youtube.com/watch?v=HLfGqpCXXiA",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:a1",
+        "id": "PLIJ5pu8Ch1Pc"
+      },
+      {
+        "key": "skill:listening",
+        "id": "PLc1avYS6uKVo"
+      }
+    ],
+    "buildSeconds": 557,
+    "dir": "output/2026-10-25-a1-listening-housework-and-chores"
+  },
+  {
     "date": "2026-10-24",
     "level": "b2",
     "skill": "short",
