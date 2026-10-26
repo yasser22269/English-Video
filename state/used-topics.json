@@ -156,7 +156,8 @@
       "At the Airport",
       "Breakfast, Lunch and Dinner",
       "The Weather",
-      "Housework and Chores"
+      "Housework and Chores",
+      "Asking for Directions"
     ],
     "a2:vocabulary": [
       "The Best and the Worst",
@@ -173,7 +174,8 @@
       "Money, Saving and Spending",
       "Health Problems and Advice",
       "A Problem at Work",
-      "Making Invitations"
+      "Making Invitations",
+      "Fast Food vs Home Cooking"
     ],
     "b1:reading": [
       "Travelling on a Budget",
@@ -198,7 +200,8 @@
       "Talking About Holidays and Trips",
       "Habits in the Past: Used To",
       "Describing Your Working Day",
-      "Describing a Photo in Detail"
+      "Describing a Photo in Detail",
+      "Phrasal Verbs With Get"
     ],
     "c1:speaking": [
       "Translation and the Limits of Language",
@@ -295,7 +298,8 @@
       "At the Doctor",
       "Greetings and Introductions",
       "Technology at Home",
-      "Days, Months and Dates"
+      "Days, Months and Dates",
+      "Colours and Clothes"
     ],
     "a2:short": [
       "Giving Simple Instructions",
@@ -332,7 +336,8 @@
       "Dealing with Difficult People",
       "Handling Stress and Burnout",
       "Privacy and Personal Data",
-      "Remote Work and Productivity"
+      "Remote Work and Productivity",
+      "Online Learning vs Classroom"
     ],
     "b2:short": [
       "Talking About Learning English",
@@ -345,5 +350,5 @@
       "Travel Problems and How to Fix Them"
     ]
   },
-  "updatedAt": "2026-10-25T13:55:40.076Z"
+  "updatedAt": "2026-10-26T16:11:40.107Z"
 }
