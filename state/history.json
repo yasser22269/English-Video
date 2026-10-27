@@ -1,5 +1,93 @@
 [
   {
+    "date": "2026-10-27",
+    "level": "b2",
+    "skill": "short",
+    "topic": "Talking About Holidays and Trips",
+    "title": "Talking About Holidays and Trips: 3 English Words in 60 Seconds (B2) #shorts",
+    "durationSec": 23,
+    "sizeMb": 1.6,
+    "videoId": "szPBPMEqKas",
+    "url": "https://www.youtube.com/watch?v=szPBPMEqKas",
+    "publishAt": "2026-10-27T18:00:00.000Z",
+    "playlists": [
+      {
+        "key": "level:b2",
+        "id": "PLEyMEjEr22bU"
+      }
+    ],
+    "buildSeconds": 35,
+    "dir": "output/2026-10-27-b2-short-talking-about-holidays-and-trips"
+  },
+  {
+    "date": "2026-10-27",
+    "level": "a2",
+    "skill": "short",
+    "topic": "Public Transport Problems",
+    "title": "Public Transport Problems: 3 English Words in 60 Seconds (A2) #shorts",
+    "durationSec": 25,
+    "sizeMb": 2.1,
+    "videoId": "YnwYzUhhdrY",
+    "url": "https://www.youtube.com/watch?v=YnwYzUhhdrY",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:a2",
+        "id": "PLMUHkdE-F1_Q"
+      }
+    ],
+    "buildSeconds": 73,
+    "dir": "output/2026-10-27-a2-short-public-transport-problems"
+  },
+  {
+    "date": "2026-10-27",
+    "level": "c1",
+    "skill": "vocabulary",
+    "topic": "Discussing the News Without Sounding Rude",
+    "title": "Discussing the News Without Sounding Rude: 8 English Words with Pictures (C1 Advanced)",
+    "durationSec": 342,
+    "sizeMb": 21.9,
+    "videoId": "TvC5V74s3jY",
+    "url": "https://www.youtube.com/watch?v=TvC5V74s3jY",
+    "publishAt": "2026-10-27T19:00:00.000Z",
+    "playlists": [
+      {
+        "key": "level:c1",
+        "id": "PLPYmpq9AOiZM"
+      },
+      {
+        "key": "skill:vocabulary",
+        "id": "PLRKWAimfYWh4"
+      }
+    ],
+    "buildSeconds": 493,
+    "dir": "output/2026-10-27-c1-vocabulary-discussing-the-news-without-sounding-rude"
+  },
+  {
+    "date": "2026-10-27",
+    "level": "a2",
+    "skill": "reading",
+    "topic": "Getting Lost in a New City",
+    "title": "Getting Lost in a New City — Learn English Through Story Level 2 (A2)",
+    "durationSec": 206,
+    "sizeMb": 11.6,
+    "videoId": "OsAnGx4m5Uc",
+    "url": "https://www.youtube.com/watch?v=OsAnGx4m5Uc",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:a2",
+        "id": "PLMUHkdE-F1_Q"
+      },
+      {
+        "key": "skill:reading",
+        "id": "PLYub11V_0AzA"
+      }
+    ],
+    "buildSeconds": 251,
+    "dir": "output/2026-10-27-a2-reading-getting-lost-in-a-new-city"
+  },
+  {
     "date": "2026-10-26",
     "level": "a1",
     "skill": "short",
