@@ -48,7 +48,8 @@
       "Travelling by Plane",
       "Talking About Your Studies",
       "Making Invitations",
-      "Volunteering and Helping Others"
+      "Volunteering and Helping Others",
+      "Talking on the Phone at Work"
     ],
     "b1:speaking": [
       "Job Interviews and Strengths",
@@ -301,7 +302,8 @@
       "Greetings and Introductions",
       "Technology at Home",
       "Days, Months and Dates",
-      "Colours and Clothes"
+      "Colours and Clothes",
+      "Describing People"
     ],
     "a2:short": [
       "Giving Simple Instructions",
@@ -326,7 +328,8 @@
       "Making Appointments",
       "Talking About Your Job",
       "Small Talk with Strangers",
-      "Public Transport Problems"
+      "Public Transport Problems",
+      "Describing Your Hometown"
     ],
     "b1:short": [
       "Fake News and Media Literacy",
@@ -354,5 +357,5 @@
       "Talking About Holidays and Trips"
     ]
   },
-  "updatedAt": "2026-10-27T15:02:28.273Z"
+  "updatedAt": "2026-10-28T15:25:15.828Z"
 }
