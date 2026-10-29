@@ -118,7 +118,8 @@
       "Talking About Your Job",
       "Small Talk with Strangers",
       "Shopping Online and Returns",
-      "Talking About Childhood"
+      "Talking About Childhood",
+      "Learning a New Skill"
     ],
     "b2:reading": [
       "Universal Basic Income",
@@ -128,7 +129,8 @@
       "Talking About Your Weekend Naturally",
       "At the Doctor: Describing Symptoms",
       "Describing Someone's Personality",
-      "Shopping and Returning Something"
+      "Shopping and Returning Something",
+      "Job Interview: Strengths and Weaknesses"
     ],
     "c1:listening": [
       "The Economics of Scarcity and Choice",
@@ -303,7 +305,8 @@
       "Technology at Home",
       "Days, Months and Dates",
       "Colours and Clothes",
-      "Describing People"
+      "Describing People",
+      "Shopping for Clothes"
     ],
     "a2:short": [
       "Giving Simple Instructions",
@@ -343,7 +346,8 @@
       "Handling Stress and Burnout",
       "Privacy and Personal Data",
       "Remote Work and Productivity",
-      "Online Learning vs Classroom"
+      "Online Learning vs Classroom",
+      "Music and Memory"
     ],
     "b2:short": [
       "Talking About Learning English",
@@ -357,5 +361,5 @@
       "Talking About Holidays and Trips"
     ]
   },
-  "updatedAt": "2026-10-28T15:25:15.828Z"
+  "updatedAt": "2026-10-29T16:09:26.392Z"
 }

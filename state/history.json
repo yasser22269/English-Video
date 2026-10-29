@@ -1,5 +1,93 @@
 [
   {
+    "date": "2026-10-29",
+    "level": "a1",
+    "skill": "short",
+    "topic": "Shopping for Clothes",
+    "title": "Shopping for Clothes: 3 English Words in 60 Seconds (A1) #shorts",
+    "durationSec": 23,
+    "sizeMb": 1.9,
+    "videoId": "mwODukj2uv8",
+    "url": "https://www.youtube.com/watch?v=mwODukj2uv8",
+    "publishAt": "2026-10-29T18:00:00.000Z",
+    "playlists": [
+      {
+        "key": "level:a1",
+        "id": "PLIJ5pu8Ch1Pc"
+      }
+    ],
+    "buildSeconds": 1073,
+    "dir": "output/2026-10-29-a1-short-shopping-for-clothes"
+  },
+  {
+    "date": "2026-10-29",
+    "level": "b1",
+    "skill": "short",
+    "topic": "Music and Memory",
+    "title": "Music and Memory: 3 English Words in 60 Seconds (B1) #shorts",
+    "durationSec": 29,
+    "sizeMb": 2.2,
+    "videoId": "55zl3iLzM5c",
+    "url": "https://www.youtube.com/watch?v=55zl3iLzM5c",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:b1",
+        "id": "PLSkG2Gz0CZos"
+      }
+    ],
+    "buildSeconds": 297,
+    "dir": "output/2026-10-29-b1-short-music-and-memory"
+  },
+  {
+    "date": "2026-10-29",
+    "level": "b2",
+    "skill": "reading",
+    "topic": "Job Interview: Strengths and Weaknesses",
+    "title": "Job Interview: Strengths and Weaknesses — Learn English Through Story Level 4 (B2)",
+    "durationSec": 393,
+    "sizeMb": 24,
+    "videoId": "MJHTI_DTEXQ",
+    "url": "https://www.youtube.com/watch?v=MJHTI_DTEXQ",
+    "publishAt": "2026-10-29T17:30:00.000Z",
+    "playlists": [
+      {
+        "key": "level:b2",
+        "id": "PLEyMEjEr22bU"
+      },
+      {
+        "key": "skill:reading",
+        "id": "PLYub11V_0AzA"
+      }
+    ],
+    "buildSeconds": 555,
+    "dir": "output/2026-10-29-b2-reading-job-interview-strengths-and-weaknesses"
+  },
+  {
+    "date": "2026-10-29",
+    "level": "a2",
+    "skill": "speaking",
+    "topic": "Learning a New Skill",
+    "title": "Learning a New Skill — English Speaking Practice & Shadowing (A2)",
+    "durationSec": 265,
+    "sizeMb": 45.2,
+    "videoId": "HHFUwQy7lVQ",
+    "url": "https://www.youtube.com/watch?v=HHFUwQy7lVQ",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:a2",
+        "id": "PLMUHkdE-F1_Q"
+      },
+      {
+        "key": "skill:speaking",
+        "id": "PLCadq2A6pEK8"
+      }
+    ],
+    "buildSeconds": 836,
+    "dir": "output/2026-10-29-a2-speaking-learning-a-new-skill"
+  },
+  {
     "date": "2026-10-28",
     "level": "a2",
     "skill": "short",
