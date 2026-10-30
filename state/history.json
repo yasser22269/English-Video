@@ -1,5 +1,117 @@
 [
   {
+    "date": "2026-10-30",
+    "level": "b2",
+    "skill": "short",
+    "topic": "Ordering in a Restaurant Like a Local",
+    "title": "Ordering in a Restaurant Like a Local: 3 English Words in 60 Seconds (B2) #shorts",
+    "durationSec": 23,
+    "sizeMb": 1.6,
+    "videoId": "16q7kEeVYXk",
+    "url": "https://www.youtube.com/watch?v=16q7kEeVYXk",
+    "publishAt": "2026-10-30T18:00:00.000Z",
+    "playlists": [
+      {
+        "key": "level:b2",
+        "id": "PLEyMEjEr22bU"
+      }
+    ],
+    "buildSeconds": 72,
+    "dir": "output/2026-10-30-b2-short-ordering-in-a-restaurant-like-a-local"
+  },
+  {
+    "date": "2026-10-30",
+    "level": "a2",
+    "skill": "short",
+    "topic": "Getting Lost in a New City",
+    "title": "Getting Lost in a New City: 3 English Words in 60 Seconds (A2) #shorts",
+    "durationSec": 26,
+    "sizeMb": 2,
+    "videoId": "TLjYZbpfhXE",
+    "url": "https://www.youtube.com/watch?v=TLjYZbpfhXE",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:a2",
+        "id": "PLMUHkdE-F1_Q"
+      }
+    ],
+    "buildSeconds": 884,
+    "dir": "output/2026-10-30-a2-short-getting-lost-in-a-new-city"
+  },
+  {
+    "date": "2026-10-30",
+    "level": "c1",
+    "skill": "speaking",
+    "topic": "Talking About Films and Books Intelligently",
+    "title": "Talking About Films and Books Intelligently — English Speaking Practice & Shadowing (C1)",
+    "durationSec": 412,
+    "sizeMb": 52.1,
+    "videoId": "7SOgKUAoJnA",
+    "url": "https://www.youtube.com/watch?v=7SOgKUAoJnA",
+    "publishAt": "2026-10-30T19:00:00.000Z",
+    "playlists": [
+      {
+        "key": "level:c1",
+        "id": "PLPYmpq9AOiZM"
+      },
+      {
+        "key": "skill:speaking",
+        "id": "PLCadq2A6pEK8"
+      }
+    ],
+    "buildSeconds": 1881,
+    "dir": "output/2026-10-30-c1-speaking-talking-about-films-and-books-intelligently"
+  },
+  {
+    "date": "2026-10-30",
+    "level": "a2",
+    "skill": "vocabulary",
+    "topic": "Neighbours and Community",
+    "title": "Neighbours and Community: 10 English Words with Pictures (A2 Elementary)",
+    "durationSec": 278,
+    "sizeMb": 17.1,
+    "videoId": "3Iv4L7okhyA",
+    "url": "https://www.youtube.com/watch?v=3Iv4L7okhyA",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:a2",
+        "id": "PLMUHkdE-F1_Q"
+      },
+      {
+        "key": "skill:vocabulary",
+        "id": "PLRKWAimfYWh4"
+      }
+    ],
+    "buildSeconds": 1347,
+    "dir": "output/2026-10-30-a2-vocabulary-neighbours-and-community"
+  },
+  {
+    "date": "2026-10-30",
+    "level": "a1",
+    "skill": "speaking",
+    "topic": "Saying Goodbye Politely",
+    "title": "Saying Goodbye Politely — English Speaking Practice & Shadowing (A1)",
+    "durationSec": 188,
+    "sizeMb": 36.4,
+    "videoId": "g7NYGQAKu1Q",
+    "url": "https://www.youtube.com/watch?v=g7NYGQAKu1Q",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:a1",
+        "id": "PLIJ5pu8Ch1Pc"
+      },
+      {
+        "key": "skill:speaking",
+        "id": "PLCadq2A6pEK8"
+      }
+    ],
+    "buildSeconds": 1004,
+    "dir": "output/2026-10-30-a1-speaking-saying-goodbye-politely"
+  },
+  {
     "date": "2026-10-29",
     "level": "a1",
     "skill": "short",

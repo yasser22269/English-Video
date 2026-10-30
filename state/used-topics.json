@@ -160,7 +160,8 @@
       "Breakfast, Lunch and Dinner",
       "The Weather",
       "Housework and Chores",
-      "Asking for Directions"
+      "Asking for Directions",
+      "Saying Goodbye Politely"
     ],
     "a2:vocabulary": [
       "The Best and the Worst",
@@ -178,7 +179,8 @@
       "Health Problems and Advice",
       "A Problem at Work",
       "Making Invitations",
-      "Fast Food vs Home Cooking"
+      "Fast Food vs Home Cooking",
+      "Neighbours and Community"
     ],
     "b1:reading": [
       "Travelling on a Budget",
@@ -213,7 +215,8 @@
       "Apologising Like a Professional",
       "Linking Words That Make You Sound Fluent",
       "Making a Recommendation With Confidence",
-      "Talking About Money and Investing"
+      "Talking About Money and Investing",
+      "Talking About Films and Books Intelligently"
     ],
     "a2:reading": [
       "Ordering Food and Complaining Politely",
@@ -332,7 +335,8 @@
       "Talking About Your Job",
       "Small Talk with Strangers",
       "Public Transport Problems",
-      "Describing Your Hometown"
+      "Describing Your Hometown",
+      "Getting Lost in a New City"
     ],
     "b1:short": [
       "Fake News and Media Literacy",
@@ -358,8 +362,9 @@
       "Talking About Sport and Staying Fit",
       "Explaining Why You Are Late",
       "Travel Problems and How to Fix Them",
-      "Talking About Holidays and Trips"
+      "Talking About Holidays and Trips",
+      "Ordering in a Restaurant Like a Local"
     ]
   },
-  "updatedAt": "2026-10-29T16:09:26.392Z"
+  "updatedAt": "2026-10-30T16:32:36.852Z"
 }
