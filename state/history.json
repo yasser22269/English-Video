@@ -1,5 +1,117 @@
 [
   {
+    "date": "2026-10-31",
+    "level": "a2",
+    "skill": "short",
+    "topic": "Travelling by Plane",
+    "title": "Travelling by Plane: 3 English Words in 60 Seconds (A2) #shorts",
+    "durationSec": 25,
+    "sizeMb": 1.7,
+    "videoId": "xUMFmJciHGI",
+    "url": "https://www.youtube.com/watch?v=xUMFmJciHGI",
+    "publishAt": "2026-10-31T18:00:00.000Z",
+    "playlists": [
+      {
+        "key": "level:a2",
+        "id": "PLMUHkdE-F1_Q"
+      }
+    ],
+    "buildSeconds": 28,
+    "dir": "output/2026-10-31-a2-short-travelling-by-plane"
+  },
+  {
+    "date": "2026-10-31",
+    "level": "a1",
+    "skill": "short",
+    "topic": "Seasons of the Year",
+    "title": "Seasons of the Year: 3 English Words in 60 Seconds (A1) #shorts",
+    "durationSec": 20,
+    "sizeMb": 2.2,
+    "videoId": "LuBOB-L2VRw",
+    "url": "https://www.youtube.com/watch?v=LuBOB-L2VRw",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:a1",
+        "id": "PLIJ5pu8Ch1Pc"
+      }
+    ],
+    "buildSeconds": 50,
+    "dir": "output/2026-10-31-a1-short-seasons-of-the-year"
+  },
+  {
+    "date": "2026-10-31",
+    "level": "b1",
+    "skill": "listening",
+    "topic": "Managing Personal Finances",
+    "title": "Managing Personal Finances — English Conversation Practice (B1 Intermediate)",
+    "durationSec": 372,
+    "sizeMb": 53.9,
+    "videoId": "aor93FxwMvU",
+    "url": "https://www.youtube.com/watch?v=aor93FxwMvU",
+    "publishAt": "2026-10-31T16:00:00.000Z",
+    "playlists": [
+      {
+        "key": "level:b1",
+        "id": "PLSkG2Gz0CZos"
+      },
+      {
+        "key": "skill:listening",
+        "id": "PLc1avYS6uKVo"
+      }
+    ],
+    "buildSeconds": 324,
+    "dir": "output/2026-10-31-b1-listening-managing-personal-finances"
+  },
+  {
+    "date": "2026-10-31",
+    "level": "a2",
+    "skill": "reading",
+    "topic": "Describing Personality",
+    "title": "Describing Personality — Learn English Through Story Level 2 (A2)",
+    "durationSec": 203,
+    "sizeMb": 11.4,
+    "videoId": "XLPq2oQ0o8k",
+    "url": "https://www.youtube.com/watch?v=XLPq2oQ0o8k",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:a2",
+        "id": "PLMUHkdE-F1_Q"
+      },
+      {
+        "key": "skill:reading",
+        "id": "PLYub11V_0AzA"
+      }
+    ],
+    "buildSeconds": 152,
+    "dir": "output/2026-10-31-a2-reading-describing-personality"
+  },
+  {
+    "date": "2026-10-31",
+    "level": "a1",
+    "skill": "vocabulary",
+    "topic": "Greetings and Introductions",
+    "title": "Greetings and Introductions: 10 English Words with Pictures (A1 Beginner)",
+    "durationSec": 206,
+    "sizeMb": 11.8,
+    "videoId": "ir3G0lprVuQ",
+    "url": "https://www.youtube.com/watch?v=ir3G0lprVuQ",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:a1",
+        "id": "PLIJ5pu8Ch1Pc"
+      },
+      {
+        "key": "skill:vocabulary",
+        "id": "PLRKWAimfYWh4"
+      }
+    ],
+    "buildSeconds": 247,
+    "dir": "output/2026-10-31-a1-vocabulary-greetings-and-introductions"
+  },
+  {
     "date": "2026-10-30",
     "level": "b2",
     "skill": "short",
