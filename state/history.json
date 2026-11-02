@@ -1,5 +1,93 @@
 [
   {
+    "date": "2026-11-02",
+    "level": "b2",
+    "skill": "short",
+    "topic": "English Idioms About Time",
+    "title": "English Idioms About Time: 3 English Words in 60 Seconds (B2) #shorts",
+    "durationSec": 24,
+    "sizeMb": 1.6,
+    "videoId": "kibych-gXv0",
+    "url": "https://www.youtube.com/watch?v=kibych-gXv0",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:b2",
+        "id": "PLEyMEjEr22bU"
+      }
+    ],
+    "buildSeconds": 42,
+    "dir": "output/2026-11-02-b2-short-english-idioms-about-time"
+  },
+  {
+    "date": "2026-11-02",
+    "level": "a2",
+    "skill": "short",
+    "topic": "A Problem at Work",
+    "title": "A Problem at Work: 3 English Words in 60 Seconds (A2) #shorts",
+    "durationSec": 26,
+    "sizeMb": 1.8,
+    "videoId": "WHWxAIjIxzw",
+    "url": "https://www.youtube.com/watch?v=WHWxAIjIxzw",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:a2",
+        "id": "PLMUHkdE-F1_Q"
+      }
+    ],
+    "buildSeconds": 363,
+    "dir": "output/2026-11-02-a2-short-a-problem-at-work"
+  },
+  {
+    "date": "2026-11-02",
+    "level": "c1",
+    "skill": "listening",
+    "topic": "Formal English vs Everyday English",
+    "title": "Formal English vs Everyday English — English Conversation Practice (C1 Advanced)",
+    "durationSec": 385,
+    "sizeMb": 37.3,
+    "videoId": "fc7-SmWmyAk",
+    "url": "https://www.youtube.com/watch?v=fc7-SmWmyAk",
+    "publishAt": "2026-11-02T19:00:00.000Z",
+    "playlists": [
+      {
+        "key": "level:c1",
+        "id": "PLPYmpq9AOiZM"
+      },
+      {
+        "key": "skill:listening",
+        "id": "PLc1avYS6uKVo"
+      }
+    ],
+    "buildSeconds": 488,
+    "dir": "output/2026-11-02-c1-listening-formal-english-vs-everyday-english"
+  },
+  {
+    "date": "2026-11-02",
+    "level": "a2",
+    "skill": "speaking",
+    "topic": "Describing Personality",
+    "title": "Describing Personality — English Speaking Practice & Shadowing (A2)",
+    "durationSec": 231,
+    "sizeMb": 40.1,
+    "videoId": "bx5qHwvgtZ4",
+    "url": "https://www.youtube.com/watch?v=bx5qHwvgtZ4",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:a2",
+        "id": "PLMUHkdE-F1_Q"
+      },
+      {
+        "key": "skill:speaking",
+        "id": "PLCadq2A6pEK8"
+      }
+    ],
+    "buildSeconds": 380,
+    "dir": "output/2026-11-02-a2-speaking-describing-personality"
+  },
+  {
     "date": "2026-11-01",
     "level": "a1",
     "skill": "short",

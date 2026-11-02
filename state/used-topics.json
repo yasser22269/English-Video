@@ -121,7 +121,8 @@
       "Small Talk with Strangers",
       "Shopping Online and Returns",
       "Talking About Childhood",
-      "Learning a New Skill"
+      "Learning a New Skill",
+      "Describing Personality"
     ],
     "b2:reading": [
       "Universal Basic Income",
@@ -145,7 +146,8 @@
       "Understanding Fast Native Conversation",
       "Academic Phrases for IELTS Writing",
       "Making a Recommendation With Confidence",
-      "Explaining a Delay or a Mistake at Work"
+      "Explaining a Delay or a Mistake at Work",
+      "Formal English vs Everyday English"
     ],
     "a1:speaking": [
       "Food and Drinks",
@@ -343,7 +345,8 @@
       "Public Transport Problems",
       "Describing Your Hometown",
       "Getting Lost in a New City",
-      "Travelling by Plane"
+      "Travelling by Plane",
+      "A Problem at Work"
     ],
     "b1:short": [
       "Fake News and Media Literacy",
@@ -371,8 +374,9 @@
       "Explaining Why You Are Late",
       "Travel Problems and How to Fix Them",
       "Talking About Holidays and Trips",
-      "Ordering in a Restaurant Like a Local"
+      "Ordering in a Restaurant Like a Local",
+      "English Idioms About Time"
     ]
   },
-  "updatedAt": "2026-11-01T15:34:18.214Z"
+  "updatedAt": "2026-11-02T18:53:05.194Z"
 }
