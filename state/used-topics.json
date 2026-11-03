@@ -165,7 +165,8 @@
       "The Weather",
       "Housework and Chores",
       "Asking for Directions",
-      "Saying Goodbye Politely"
+      "Saying Goodbye Politely",
+      "Describing People"
     ],
     "a2:vocabulary": [
       "The Best and the Worst",
@@ -184,7 +185,8 @@
       "A Problem at Work",
       "Making Invitations",
       "Fast Food vs Home Cooking",
-      "Neighbours and Community"
+      "Neighbours and Community",
+      "Going to the Bank"
     ],
     "b1:reading": [
       "Travelling on a Budget",
@@ -197,7 +199,8 @@
       "Artificial Intelligence at Work",
       "Learning Languages Faster",
       "Describing a Turning Point",
-      "Remote Work and Productivity"
+      "Remote Work and Productivity",
+      "Healthy Eating Habits"
     ],
     "b2:listening": [
       "Gentrification and Neighbourhoods",
@@ -317,7 +320,8 @@
       "Describing People",
       "Shopping for Clothes",
       "Seasons of the Year",
-      "Feelings and Emotions"
+      "Feelings and Emotions",
+      "Numbers, Age and Phone Numbers"
     ],
     "a2:short": [
       "Giving Simple Instructions",
@@ -346,7 +350,8 @@
       "Describing Your Hometown",
       "Getting Lost in a New City",
       "Travelling by Plane",
-      "A Problem at Work"
+      "A Problem at Work",
+      "Going to the Bank"
     ],
     "b1:short": [
       "Fake News and Media Literacy",
@@ -378,5 +383,5 @@
       "English Idioms About Time"
     ]
   },
-  "updatedAt": "2026-11-02T18:53:05.194Z"
+  "updatedAt": "2026-11-03T16:51:21.107Z"
 }
