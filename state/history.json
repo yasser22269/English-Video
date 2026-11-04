@@ -1,5 +1,93 @@
 [
   {
+    "date": "2026-11-04",
+    "level": "a1",
+    "skill": "short",
+    "topic": "At the Hotel",
+    "title": "At the Hotel: 3 English Words in 60 Seconds (A1) #shorts",
+    "durationSec": 18,
+    "sizeMb": 1.5,
+    "videoId": "QyHX8lisFJo",
+    "url": "https://www.youtube.com/watch?v=QyHX8lisFJo",
+    "publishAt": "2026-11-04T18:00:00.000Z",
+    "playlists": [
+      {
+        "key": "level:a1",
+        "id": "PLIJ5pu8Ch1Pc"
+      }
+    ],
+    "buildSeconds": 48,
+    "dir": "output/2026-11-04-a1-short-at-the-hotel"
+  },
+  {
+    "date": "2026-11-04",
+    "level": "b1",
+    "skill": "short",
+    "topic": "Food Waste at Home",
+    "title": "Food Waste at Home: 3 English Words in 60 Seconds (B1) #shorts",
+    "durationSec": 24,
+    "sizeMb": 1.7,
+    "videoId": "lV5fHGiqT-U",
+    "url": "https://www.youtube.com/watch?v=lV5fHGiqT-U",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:b1",
+        "id": "PLSkG2Gz0CZos"
+      }
+    ],
+    "buildSeconds": 105,
+    "dir": "output/2026-11-04-b1-short-food-waste-at-home"
+  },
+  {
+    "date": "2026-11-04",
+    "level": "b2",
+    "skill": "speaking",
+    "topic": "Asking for Help at Work",
+    "title": "Asking for Help at Work — English Speaking Practice & Shadowing (B2)",
+    "durationSec": 290,
+    "sizeMb": 43.5,
+    "videoId": "xb274VPqqQM",
+    "url": "https://www.youtube.com/watch?v=xb274VPqqQM",
+    "publishAt": "2026-11-04T17:30:00.000Z",
+    "playlists": [
+      {
+        "key": "level:b2",
+        "id": "PLEyMEjEr22bU"
+      },
+      {
+        "key": "skill:speaking",
+        "id": "PLCadq2A6pEK8"
+      }
+    ],
+    "buildSeconds": 591,
+    "dir": "output/2026-11-04-b2-speaking-asking-for-help-at-work"
+  },
+  {
+    "date": "2026-11-04",
+    "level": "a2",
+    "skill": "reading",
+    "topic": "A Problem at Work",
+    "title": "A Problem at Work — Learn English Through Story Level 2 (A2)",
+    "durationSec": 213,
+    "sizeMb": 12.1,
+    "videoId": "7gSqbpXuRl4",
+    "url": "https://www.youtube.com/watch?v=7gSqbpXuRl4",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:a2",
+        "id": "PLMUHkdE-F1_Q"
+      },
+      {
+        "key": "skill:reading",
+        "id": "PLYub11V_0AzA"
+      }
+    ],
+    "buildSeconds": 943,
+    "dir": "output/2026-11-04-a2-reading-a-problem-at-work"
+  },
+  {
     "date": "2026-11-03",
     "level": "a2",
     "skill": "short",

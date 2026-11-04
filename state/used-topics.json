@@ -242,7 +242,8 @@
       "Weekend Markets and Bargaining",
       "Talking About Films and Series",
       "Getting Lost in a New City",
-      "Describing Personality"
+      "Describing Personality",
+      "A Problem at Work"
     ],
     "b1:listening": [
       "Culture Shock Abroad",
@@ -265,7 +266,8 @@
       "Job Interview: Strengths and Weaknesses",
       "Talking About the Weather Naturally",
       "Talking About Your Studies",
-      "Making Suggestions and Offers"
+      "Making Suggestions and Offers",
+      "Asking for Help at Work"
     ],
     "c1:vocabulary": [
       "Algorithmic Bias and Accountability",
@@ -321,7 +323,8 @@
       "Shopping for Clothes",
       "Seasons of the Year",
       "Feelings and Emotions",
-      "Numbers, Age and Phone Numbers"
+      "Numbers, Age and Phone Numbers",
+      "At the Hotel"
     ],
     "a2:short": [
       "Giving Simple Instructions",
@@ -367,7 +370,8 @@
       "Remote Work and Productivity",
       "Online Learning vs Classroom",
       "Music and Memory",
-      "Travelling on a Budget"
+      "Travelling on a Budget",
+      "Food Waste at Home"
     ],
     "b2:short": [
       "Talking About Learning English",
@@ -383,5 +387,5 @@
       "English Idioms About Time"
     ]
   },
-  "updatedAt": "2026-11-03T16:51:21.107Z"
+  "updatedAt": "2026-11-04T16:52:09.436Z"
 }
