@@ -1,5 +1,117 @@
 [
   {
+    "date": "2026-11-05",
+    "level": "b2",
+    "skill": "short",
+    "topic": "Talking About Your Weekend Naturally",
+    "title": "Talking About Your Weekend Naturally: 3 English Words in 60 Seconds (B2) #shorts",
+    "durationSec": 23,
+    "sizeMb": 1.6,
+    "videoId": "5f4M0gxgnp4",
+    "url": "https://www.youtube.com/watch?v=5f4M0gxgnp4",
+    "publishAt": "2026-11-05T18:00:00.000Z",
+    "playlists": [
+      {
+        "key": "level:b2",
+        "id": "PLEyMEjEr22bU"
+      }
+    ],
+    "buildSeconds": 30,
+    "dir": "output/2026-11-05-b2-short-talking-about-your-weekend-naturally"
+  },
+  {
+    "date": "2026-11-05",
+    "level": "a2",
+    "skill": "short",
+    "topic": "Job Interviews Basics",
+    "title": "Job Interviews Basics: 3 English Words in 60 Seconds (A2) #shorts",
+    "durationSec": 28,
+    "sizeMb": 1.9,
+    "videoId": "y_SgADoO_Ls",
+    "url": "https://www.youtube.com/watch?v=y_SgADoO_Ls",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:a2",
+        "id": "PLMUHkdE-F1_Q"
+      }
+    ],
+    "buildSeconds": 353,
+    "dir": "output/2026-11-05-a2-short-job-interviews-basics"
+  },
+  {
+    "date": "2026-11-05",
+    "level": "c1",
+    "skill": "reading",
+    "topic": "Telling a Story People Want to Hear",
+    "title": "Telling a Story People Want to Hear — Learn English Through Story Level 5 (C1)",
+    "durationSec": 394,
+    "sizeMb": 26.6,
+    "videoId": "kD9WZv-98OM",
+    "url": "https://www.youtube.com/watch?v=kD9WZv-98OM",
+    "publishAt": "2026-11-05T19:00:00.000Z",
+    "playlists": [
+      {
+        "key": "level:c1",
+        "id": "PLPYmpq9AOiZM"
+      },
+      {
+        "key": "skill:reading",
+        "id": "PLYub11V_0AzA"
+      }
+    ],
+    "buildSeconds": 476,
+    "dir": "output/2026-11-05-c1-reading-telling-a-story-people-want-to-hear"
+  },
+  {
+    "date": "2026-11-05",
+    "level": "a2",
+    "skill": "listening",
+    "topic": "Health Problems and Advice",
+    "title": "Health Problems and Advice — English Conversation Practice (A2 Elementary)",
+    "durationSec": 236,
+    "sizeMb": 29.1,
+    "videoId": "i0_fKJj2QKE",
+    "url": "https://www.youtube.com/watch?v=i0_fKJj2QKE",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:a2",
+        "id": "PLMUHkdE-F1_Q"
+      },
+      {
+        "key": "skill:listening",
+        "id": "PLc1avYS6uKVo"
+      }
+    ],
+    "buildSeconds": 541,
+    "dir": "output/2026-11-05-a2-listening-health-problems-and-advice"
+  },
+  {
+    "date": "2026-11-05",
+    "level": "a1",
+    "skill": "reading",
+    "topic": "My Daily Routine",
+    "title": "My Daily Routine — Learn English Through Story Level 1 (A1)",
+    "durationSec": 154,
+    "sizeMb": 8.8,
+    "videoId": "U4p9oeacgs0",
+    "url": "https://www.youtube.com/watch?v=U4p9oeacgs0",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:a1",
+        "id": "PLIJ5pu8Ch1Pc"
+      },
+      {
+        "key": "skill:reading",
+        "id": "PLYub11V_0AzA"
+      }
+    ],
+    "buildSeconds": 376,
+    "dir": "output/2026-11-05-a1-reading-my-daily-routine"
+  },
+  {
     "date": "2026-11-04",
     "level": "a1",
     "skill": "short",
