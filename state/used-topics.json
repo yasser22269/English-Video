@@ -125,7 +125,8 @@
       "Shopping Online and Returns",
       "Talking About Childhood",
       "Learning a New Skill",
-      "Describing Personality"
+      "Describing Personality",
+      "Job Interviews Basics"
     ],
     "b2:reading": [
       "Universal Basic Income",
@@ -358,7 +359,8 @@
       "Travelling by Plane",
       "A Problem at Work",
       "Going to the Bank",
-      "Job Interviews Basics"
+      "Job Interviews Basics",
+      "Fast Food vs Home Cooking"
     ],
     "b1:short": [
       "Fake News and Media Literacy",
@@ -392,5 +394,5 @@
       "Talking About Your Weekend Naturally"
     ]
   },
-  "updatedAt": "2026-11-05T17:01:52.909Z"
+  "updatedAt": "2026-11-06T16:17:57.935Z"
 }

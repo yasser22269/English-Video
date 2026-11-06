@@ -1,5 +1,49 @@
 [
   {
+    "date": "2026-11-06",
+    "level": "a2",
+    "skill": "short",
+    "topic": "Fast Food vs Home Cooking",
+    "title": "Fast Food vs Home Cooking: 3 English Words in 60 Seconds (A2) #shorts",
+    "durationSec": 24,
+    "sizeMb": 1.8,
+    "videoId": "RNyhz9ABgVU",
+    "url": "https://www.youtube.com/watch?v=RNyhz9ABgVU",
+    "publishAt": "2026-11-06T18:00:00.000Z",
+    "playlists": [
+      {
+        "key": "level:a2",
+        "id": "PLMUHkdE-F1_Q"
+      }
+    ],
+    "buildSeconds": 93,
+    "dir": "output/2026-11-06-a2-short-fast-food-vs-home-cooking"
+  },
+  {
+    "date": "2026-11-06",
+    "level": "a2",
+    "skill": "speaking",
+    "topic": "Job Interviews Basics",
+    "title": "Job Interviews Basics — English Speaking Practice & Shadowing (A2)",
+    "durationSec": 214,
+    "sizeMb": 16.4,
+    "videoId": "sZCTAF-CBS8",
+    "url": "https://www.youtube.com/watch?v=sZCTAF-CBS8",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:a2",
+        "id": "PLMUHkdE-F1_Q"
+      },
+      {
+        "key": "skill:speaking",
+        "id": "PLCadq2A6pEK8"
+      }
+    ],
+    "buildSeconds": 278,
+    "dir": "output/2026-11-06-a2-speaking-job-interviews-basics"
+  },
+  {
     "date": "2026-11-05",
     "level": "b2",
     "skill": "short",
