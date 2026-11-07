@@ -190,7 +190,8 @@
       "Making Invitations",
       "Fast Food vs Home Cooking",
       "Neighbours and Community",
-      "Going to the Bank"
+      "Going to the Bank",
+      "Describing Your Hometown"
     ],
     "b1:reading": [
       "Travelling on a Budget",
@@ -328,7 +329,8 @@
       "Seasons of the Year",
       "Feelings and Emotions",
       "Numbers, Age and Phone Numbers",
-      "At the Hotel"
+      "At the Hotel",
+      "Money and Prices"
     ],
     "a2:short": [
       "Giving Simple Instructions",
@@ -377,7 +379,8 @@
       "Online Learning vs Classroom",
       "Music and Memory",
       "Travelling on a Budget",
-      "Food Waste at Home"
+      "Food Waste at Home",
+      "Renting vs Buying a Home"
     ],
     "b2:short": [
       "Talking About Learning English",
@@ -394,5 +397,5 @@
       "Talking About Your Weekend Naturally"
     ]
   },
-  "updatedAt": "2026-11-06T16:17:57.935Z"
+  "updatedAt": "2026-11-07T15:15:14.466Z"
 }

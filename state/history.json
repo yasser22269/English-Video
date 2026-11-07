@@ -1,5 +1,69 @@
 [
   {
+    "date": "2026-11-07",
+    "level": "a1",
+    "skill": "short",
+    "topic": "Money and Prices",
+    "title": "Money and Prices: 3 English Words in 60 Seconds (A1) #shorts",
+    "durationSec": 22,
+    "sizeMb": 1.7,
+    "videoId": "CGiWfXWab28",
+    "url": "https://www.youtube.com/watch?v=CGiWfXWab28",
+    "publishAt": "2026-11-07T18:00:00.000Z",
+    "playlists": [
+      {
+        "key": "level:a1",
+        "id": "PLIJ5pu8Ch1Pc"
+      }
+    ],
+    "buildSeconds": 171,
+    "dir": "output/2026-11-07-a1-short-money-and-prices"
+  },
+  {
+    "date": "2026-11-07",
+    "level": "b1",
+    "skill": "short",
+    "topic": "Renting vs Buying a Home",
+    "title": "Renting vs Buying a Home: 3 English Words in 60 Seconds (B1) #shorts",
+    "durationSec": 30,
+    "sizeMb": 2.4,
+    "videoId": "YHRBg-HaVhc",
+    "url": "https://www.youtube.com/watch?v=YHRBg-HaVhc",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:b1",
+        "id": "PLSkG2Gz0CZos"
+      }
+    ],
+    "buildSeconds": 124,
+    "dir": "output/2026-11-07-b1-short-renting-vs-buying-a-home"
+  },
+  {
+    "date": "2026-11-07",
+    "level": "a2",
+    "skill": "vocabulary",
+    "topic": "Describing Your Hometown",
+    "title": "Describing Your Hometown: 10 English Words with Pictures (A2 Elementary)",
+    "durationSec": 306,
+    "sizeMb": 18.2,
+    "videoId": "t0ImYHhaOks",
+    "url": "https://www.youtube.com/watch?v=t0ImYHhaOks",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:a2",
+        "id": "PLMUHkdE-F1_Q"
+      },
+      {
+        "key": "skill:vocabulary",
+        "id": "PLRKWAimfYWh4"
+      }
+    ],
+    "buildSeconds": 513,
+    "dir": "output/2026-11-07-a2-vocabulary-describing-your-hometown"
+  },
+  {
     "date": "2026-11-06",
     "level": "a2",
     "skill": "short",
