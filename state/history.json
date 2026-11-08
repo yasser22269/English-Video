@@ -1,5 +1,93 @@
 [
   {
+    "date": "2026-11-08",
+    "level": "b2",
+    "skill": "short",
+    "topic": "Small Talk With Colleagues",
+    "title": "Small Talk With Colleagues: 3 English Words in 60 Seconds (B2) #shorts",
+    "durationSec": 24,
+    "sizeMb": 1.6,
+    "videoId": "uREdaoGsG_k",
+    "url": "https://www.youtube.com/watch?v=uREdaoGsG_k",
+    "publishAt": "2026-11-08T18:00:00.000Z",
+    "playlists": [
+      {
+        "key": "level:b2",
+        "id": "PLEyMEjEr22bU"
+      }
+    ],
+    "buildSeconds": 47,
+    "dir": "output/2026-11-08-b2-short-small-talk-with-colleagues"
+  },
+  {
+    "date": "2026-11-08",
+    "level": "a2",
+    "skill": "short",
+    "topic": "Pets and Responsibility",
+    "title": "Pets and Responsibility: 3 English Words in 60 Seconds (A2) #shorts",
+    "durationSec": 26,
+    "sizeMb": 2,
+    "videoId": "Ue7bO7-vcYo",
+    "url": "https://www.youtube.com/watch?v=Ue7bO7-vcYo",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:a2",
+        "id": "PLMUHkdE-F1_Q"
+      }
+    ],
+    "buildSeconds": 62,
+    "dir": "output/2026-11-08-a2-short-pets-and-responsibility"
+  },
+  {
+    "date": "2026-11-08",
+    "level": "c1",
+    "skill": "vocabulary",
+    "topic": "Academic Phrases for IELTS Writing",
+    "title": "Academic Phrases for IELTS Writing: 8 English Words with Pictures (C1 Advanced)",
+    "durationSec": 245,
+    "sizeMb": 14.9,
+    "videoId": "WnNi7-p9vZE",
+    "url": "https://www.youtube.com/watch?v=WnNi7-p9vZE",
+    "publishAt": "2026-11-08T19:00:00.000Z",
+    "playlists": [
+      {
+        "key": "level:c1",
+        "id": "PLPYmpq9AOiZM"
+      },
+      {
+        "key": "skill:vocabulary",
+        "id": "PLRKWAimfYWh4"
+      }
+    ],
+    "buildSeconds": 171,
+    "dir": "output/2026-11-08-c1-vocabulary-academic-phrases-for-ielts-writing"
+  },
+  {
+    "date": "2026-11-08",
+    "level": "a2",
+    "skill": "reading",
+    "topic": "Renting an Apartment",
+    "title": "Renting an Apartment — Learn English Through Story Level 2 (A2)",
+    "durationSec": 251,
+    "sizeMb": 14.3,
+    "videoId": "EaF8_iI4Xw0",
+    "url": "https://www.youtube.com/watch?v=EaF8_iI4Xw0",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:a2",
+        "id": "PLMUHkdE-F1_Q"
+      },
+      {
+        "key": "skill:reading",
+        "id": "PLYub11V_0AzA"
+      }
+    ],
+    "buildSeconds": 702,
+    "dir": "output/2026-11-08-a2-reading-renting-an-apartment"
+  },
+  {
     "date": "2026-11-07",
     "level": "a1",
     "skill": "short",
