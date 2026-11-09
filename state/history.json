@@ -1,5 +1,49 @@
 [
   {
+    "date": "2026-11-09",
+    "level": "a2",
+    "skill": "short",
+    "topic": "Money, Saving and Spending",
+    "title": "Money, Saving and Spending: 3 English Words in 60 Seconds (A2) #shorts",
+    "durationSec": 28,
+    "sizeMb": 1.9,
+    "videoId": "rYR9sgBhH3A",
+    "url": "https://www.youtube.com/watch?v=rYR9sgBhH3A",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:a2",
+        "id": "PLMUHkdE-F1_Q"
+      }
+    ],
+    "buildSeconds": 646,
+    "dir": "output/2026-11-09-a2-short-money-saving-and-spending"
+  },
+  {
+    "date": "2026-11-09",
+    "level": "b1",
+    "skill": "speaking",
+    "topic": "Friendship as an Adult",
+    "title": "Friendship as an Adult — English Speaking Practice & Shadowing (B1)",
+    "durationSec": 320,
+    "sizeMb": 50.3,
+    "videoId": "4sMka2Ed8jA",
+    "url": "https://www.youtube.com/watch?v=4sMka2Ed8jA",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:b1",
+        "id": "PLSkG2Gz0CZos"
+      },
+      {
+        "key": "skill:speaking",
+        "id": "PLCadq2A6pEK8"
+      }
+    ],
+    "buildSeconds": 1878,
+    "dir": "output/2026-11-09-b1-speaking-friendship-as-an-adult"
+  },
+  {
     "date": "2026-11-08",
     "level": "b2",
     "skill": "short",
