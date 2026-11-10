@@ -1,5 +1,69 @@
 [
   {
+    "date": "2026-11-10",
+    "level": "a1",
+    "skill": "short",
+    "topic": "My Weekend",
+    "title": "My Weekend: 3 English Words in 60 Seconds (A1) #shorts",
+    "durationSec": 24,
+    "sizeMb": 1.8,
+    "videoId": "Q7IKsH9PoUA",
+    "url": "https://www.youtube.com/watch?v=Q7IKsH9PoUA",
+    "publishAt": "2026-11-10T18:00:00.000Z",
+    "playlists": [
+      {
+        "key": "level:a1",
+        "id": "PLIJ5pu8Ch1Pc"
+      }
+    ],
+    "buildSeconds": 46,
+    "dir": "output/2026-11-10-a1-short-my-weekend"
+  },
+  {
+    "date": "2026-11-10",
+    "level": "b1",
+    "skill": "short",
+    "topic": "Kindness and Small Acts",
+    "title": "Kindness and Small Acts: 3 English Words in 60 Seconds (B1) #shorts",
+    "durationSec": 27,
+    "sizeMb": 2,
+    "videoId": "L92PbM-4PPQ",
+    "url": "https://www.youtube.com/watch?v=L92PbM-4PPQ",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:b1",
+        "id": "PLSkG2Gz0CZos"
+      }
+    ],
+    "buildSeconds": 120,
+    "dir": "output/2026-11-10-b1-short-kindness-and-small-acts"
+  },
+  {
+    "date": "2026-11-10",
+    "level": "b2",
+    "skill": "reading",
+    "topic": "Talking About the Weather Naturally",
+    "title": "Talking About the Weather Naturally — Learn English Through Story Level 4 (B2)",
+    "durationSec": 344,
+    "sizeMb": 20.7,
+    "videoId": "BqovEd7icFQ",
+    "url": "https://www.youtube.com/watch?v=BqovEd7icFQ",
+    "publishAt": "2026-11-10T17:30:00.000Z",
+    "playlists": [
+      {
+        "key": "level:b2",
+        "id": "PLEyMEjEr22bU"
+      },
+      {
+        "key": "skill:reading",
+        "id": "PLYub11V_0AzA"
+      }
+    ],
+    "buildSeconds": 635,
+    "dir": "output/2026-11-10-b2-reading-talking-about-the-weather-naturally"
+  },
+  {
     "date": "2026-11-09",
     "level": "a2",
     "skill": "short",

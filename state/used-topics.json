@@ -138,7 +138,8 @@
       "At the Doctor: Describing Symptoms",
       "Describing Someone's Personality",
       "Shopping and Returning Something",
-      "Job Interview: Strengths and Weaknesses"
+      "Job Interview: Strengths and Weaknesses",
+      "Talking About the Weather Naturally"
     ],
     "c1:listening": [
       "The Economics of Scarcity and Choice",
@@ -333,7 +334,8 @@
       "Feelings and Emotions",
       "Numbers, Age and Phone Numbers",
       "At the Hotel",
-      "Money and Prices"
+      "Money and Prices",
+      "My Weekend"
     ],
     "a2:short": [
       "Giving Simple Instructions",
@@ -385,7 +387,8 @@
       "Music and Memory",
       "Travelling on a Budget",
       "Food Waste at Home",
-      "Renting vs Buying a Home"
+      "Renting vs Buying a Home",
+      "Kindness and Small Acts"
     ],
     "b2:short": [
       "Talking About Learning English",
@@ -403,5 +406,5 @@
       "Small Talk With Colleagues"
     ]
   },
-  "updatedAt": "2026-11-09T19:51:53.573Z"
+  "updatedAt": "2026-11-10T16:44:45.787Z"
 }
