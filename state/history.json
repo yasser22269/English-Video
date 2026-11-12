@@ -1,5 +1,73 @@
 [
   {
+    "date": "2026-11-12",
+    "level": "a2",
+    "skill": "short",
+    "topic": "Ordering Food and Complaining Politely",
+    "title": "Ordering Food and Complaining Politely: 3 English Words in 60 Seconds (A2) #shorts",
+    "durationSec": 26,
+    "sizeMb": 1.8,
+    "videoId": "k-CoiplPxFU",
+    "url": "https://www.youtube.com/watch?v=k-CoiplPxFU",
+    "publishAt": "2026-11-12T18:00:00.000Z",
+    "playlists": [
+      {
+        "key": "level:a2",
+        "id": "PLMUHkdE-F1_Q"
+      }
+    ],
+    "buildSeconds": 69,
+    "dir": "output/2026-11-12-a2-short-ordering-food-and-complaining-politely"
+  },
+  {
+    "date": "2026-11-12",
+    "level": "b1",
+    "skill": "listening",
+    "topic": "Technology That Changed Life",
+    "title": "Technology That Changed Life — English Conversation Practice (B1 Intermediate)",
+    "durationSec": 391,
+    "sizeMb": 55.5,
+    "videoId": "Dz1FEAeeeRw",
+    "url": "https://www.youtube.com/watch?v=Dz1FEAeeeRw",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:b1",
+        "id": "PLSkG2Gz0CZos"
+      },
+      {
+        "key": "skill:listening",
+        "id": "PLc1avYS6uKVo"
+      }
+    ],
+    "buildSeconds": 410,
+    "dir": "output/2026-11-12-b1-listening-technology-that-changed-life"
+  },
+  {
+    "date": "2026-11-12",
+    "level": "a2",
+    "skill": "reading",
+    "topic": "Public Transport Problems",
+    "title": "Public Transport Problems — Learn English Through Story Level 2 (A2)",
+    "durationSec": 225,
+    "sizeMb": 12.8,
+    "videoId": "8pVNG_wfhlo",
+    "url": "https://www.youtube.com/watch?v=8pVNG_wfhlo",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:a2",
+        "id": "PLMUHkdE-F1_Q"
+      },
+      {
+        "key": "skill:reading",
+        "id": "PLYub11V_0AzA"
+      }
+    ],
+    "buildSeconds": 235,
+    "dir": "output/2026-11-12-a2-reading-public-transport-problems"
+  },
+  {
     "date": "2026-11-10",
     "level": "a1",
     "skill": "short",

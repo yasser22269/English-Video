@@ -251,7 +251,8 @@
       "Getting Lost in a New City",
       "Describing Personality",
       "A Problem at Work",
-      "Renting an Apartment"
+      "Renting an Apartment",
+      "Public Transport Problems"
     ],
     "b1:listening": [
       "Culture Shock Abroad",
@@ -264,7 +265,8 @@
       "Books That Changed My Mind",
       "Choosing a Career Path",
       "Personal Goals for This Year",
-      "Managing Personal Finances"
+      "Managing Personal Finances",
+      "Technology That Changed Life"
     ],
     "b2:speaking": [
       "The Psychology of Habits",
@@ -369,7 +371,8 @@
       "Job Interviews Basics",
       "Fast Food vs Home Cooking",
       "Pets and Responsibility",
-      "Money, Saving and Spending"
+      "Money, Saving and Spending",
+      "Ordering Food and Complaining Politely"
     ],
     "b1:short": [
       "Fake News and Media Literacy",
@@ -406,5 +409,5 @@
       "Small Talk With Colleagues"
     ]
   },
-  "updatedAt": "2026-11-10T16:44:45.787Z"
+  "updatedAt": "2026-11-12T17:06:59.198Z"
 }
