@@ -1,5 +1,49 @@
 [
   {
+    "date": "2026-11-13",
+    "level": "b1",
+    "skill": "short",
+    "topic": "Work-Life Balance",
+    "title": "Work-Life Balance: 3 English Words in 60 Seconds (B1) #shorts",
+    "durationSec": 27,
+    "sizeMb": 1.9,
+    "videoId": "5eNbA_DyHrA",
+    "url": "https://www.youtube.com/watch?v=5eNbA_DyHrA",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:b1",
+        "id": "PLSkG2Gz0CZos"
+      }
+    ],
+    "buildSeconds": 152,
+    "dir": "output/2026-11-13-b1-short-work-life-balance"
+  },
+  {
+    "date": "2026-11-13",
+    "level": "b2",
+    "skill": "vocabulary",
+    "topic": "Talking About the Weather Naturally",
+    "title": "Talking About the Weather Naturally: 9 English Words with Pictures (B2 Upper-Intermediate)",
+    "durationSec": 252,
+    "sizeMb": 13.8,
+    "videoId": "uWav-Jrpip0",
+    "url": "https://www.youtube.com/watch?v=uWav-Jrpip0",
+    "publishAt": "2026-11-13T17:30:00.000Z",
+    "playlists": [
+      {
+        "key": "level:b2",
+        "id": "PLEyMEjEr22bU"
+      },
+      {
+        "key": "skill:vocabulary",
+        "id": "PLRKWAimfYWh4"
+      }
+    ],
+    "buildSeconds": 233,
+    "dir": "output/2026-11-13-b2-vocabulary-talking-about-the-weather-naturally"
+  },
+  {
     "date": "2026-11-12",
     "level": "a2",
     "skill": "short",
