@@ -1,5 +1,69 @@
 [
   {
+    "date": "2026-11-14",
+    "level": "b2",
+    "skill": "short",
+    "topic": "Talking About Food and Cooking",
+    "title": "Talking About Food and Cooking: 3 English Words in 60 Seconds (B2) #shorts",
+    "durationSec": 24,
+    "sizeMb": 1.6,
+    "videoId": "dAcC2Pll5Fw",
+    "url": "https://www.youtube.com/watch?v=dAcC2Pll5Fw",
+    "publishAt": "2026-11-14T18:00:00.000Z",
+    "playlists": [
+      {
+        "key": "level:b2",
+        "id": "PLEyMEjEr22bU"
+      }
+    ],
+    "buildSeconds": 65,
+    "dir": "output/2026-11-14-b2-short-talking-about-food-and-cooking"
+  },
+  {
+    "date": "2026-11-14",
+    "level": "a2",
+    "skill": "short",
+    "topic": "Volunteering and Helping Others",
+    "title": "Volunteering and Helping Others: 3 English Words in 60 Seconds (A2) #shorts",
+    "durationSec": 28,
+    "sizeMb": 2,
+    "videoId": "L6uIgwvuVq0",
+    "url": "https://www.youtube.com/watch?v=L6uIgwvuVq0",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:a2",
+        "id": "PLMUHkdE-F1_Q"
+      }
+    ],
+    "buildSeconds": 559,
+    "dir": "output/2026-11-14-a2-short-volunteering-and-helping-others"
+  },
+  {
+    "date": "2026-11-14",
+    "level": "c1",
+    "skill": "listening",
+    "topic": "Word Stress That Changes the Meaning",
+    "title": "Word Stress That Changes the Meaning — English Conversation Practice (C1 Advanced)",
+    "durationSec": 431,
+    "sizeMb": 16.2,
+    "videoId": "GGQ2r_L16ss",
+    "url": "https://www.youtube.com/watch?v=GGQ2r_L16ss",
+    "publishAt": "2026-11-14T19:00:00.000Z",
+    "playlists": [
+      {
+        "key": "level:c1",
+        "id": "PLPYmpq9AOiZM"
+      },
+      {
+        "key": "skill:listening",
+        "id": "PLc1avYS6uKVo"
+      }
+    ],
+    "buildSeconds": 714,
+    "dir": "output/2026-11-14-c1-listening-word-stress-that-changes-the-meaning"
+  },
+  {
     "date": "2026-11-13",
     "level": "b1",
     "skill": "short",
