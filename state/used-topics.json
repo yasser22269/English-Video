@@ -195,7 +195,8 @@
       "Fast Food vs Home Cooking",
       "Neighbours and Community",
       "Going to the Bank",
-      "Describing Your Hometown"
+      "Describing Your Hometown",
+      "Social Media in Daily Life"
     ],
     "b1:reading": [
       "Travelling on a Budget",
@@ -209,7 +210,8 @@
       "Learning Languages Faster",
       "Describing a Turning Point",
       "Remote Work and Productivity",
-      "Healthy Eating Habits"
+      "Healthy Eating Habits",
+      "Job Interviews and Strengths"
     ],
     "b2:listening": [
       "Gentrification and Neighbourhoods",
@@ -375,7 +377,8 @@
       "Pets and Responsibility",
       "Money, Saving and Spending",
       "Ordering Food and Complaining Politely",
-      "Volunteering and Helping Others"
+      "Volunteering and Helping Others",
+      "Talking About Childhood"
     ],
     "b1:short": [
       "Fake News and Media Literacy",
@@ -414,5 +417,5 @@
       "Talking About Food and Cooking"
     ]
   },
-  "updatedAt": "2026-11-14T15:45:29.327Z"
+  "updatedAt": "2026-11-15T16:18:38.357Z"
 }

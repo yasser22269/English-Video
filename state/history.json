@@ -1,5 +1,73 @@
 [
   {
+    "date": "2026-11-15",
+    "level": "a2",
+    "skill": "short",
+    "topic": "Talking About Childhood",
+    "title": "Talking About Childhood: 3 English Words in 60 Seconds (A2) #shorts",
+    "durationSec": 26,
+    "sizeMb": 1.8,
+    "videoId": "V-Pd9hrDRZ4",
+    "url": "https://www.youtube.com/watch?v=V-Pd9hrDRZ4",
+    "publishAt": "2026-11-15T18:00:00.000Z",
+    "playlists": [
+      {
+        "key": "level:a2",
+        "id": "PLMUHkdE-F1_Q"
+      }
+    ],
+    "buildSeconds": 184,
+    "dir": "output/2026-11-15-a2-short-talking-about-childhood"
+  },
+  {
+    "date": "2026-11-15",
+    "level": "b1",
+    "skill": "reading",
+    "topic": "Job Interviews and Strengths",
+    "title": "Job Interviews and Strengths — Learn English Through Story Level 3 (B1)",
+    "durationSec": 322,
+    "sizeMb": 20.2,
+    "videoId": "CeM3LQU6Vxg",
+    "url": "https://www.youtube.com/watch?v=CeM3LQU6Vxg",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:b1",
+        "id": "PLSkG2Gz0CZos"
+      },
+      {
+        "key": "skill:reading",
+        "id": "PLYub11V_0AzA"
+      }
+    ],
+    "buildSeconds": 388,
+    "dir": "output/2026-11-15-b1-reading-job-interviews-and-strengths"
+  },
+  {
+    "date": "2026-11-15",
+    "level": "a2",
+    "skill": "vocabulary",
+    "topic": "Social Media in Daily Life",
+    "title": "Social Media in Daily Life: 10 English Words with Pictures (A2 Elementary)",
+    "durationSec": 299,
+    "sizeMb": 16.6,
+    "videoId": "We7rnrFmT_c",
+    "url": "https://www.youtube.com/watch?v=We7rnrFmT_c",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:a2",
+        "id": "PLMUHkdE-F1_Q"
+      },
+      {
+        "key": "skill:vocabulary",
+        "id": "PLRKWAimfYWh4"
+      }
+    ],
+    "buildSeconds": 1231,
+    "dir": "output/2026-11-15-a2-vocabulary-social-media-in-daily-life"
+  },
+  {
     "date": "2026-11-14",
     "level": "b2",
     "skill": "short",
