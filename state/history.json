@@ -1,5 +1,69 @@
 [
   {
+    "date": "2026-11-16",
+    "level": "a1",
+    "skill": "short",
+    "topic": "Animals and Pets",
+    "title": "Animals and Pets: 3 English Words in 60 Seconds (A1) #shorts",
+    "durationSec": 23,
+    "sizeMb": 1.7,
+    "videoId": "-CAzIBTZSxc",
+    "url": "https://www.youtube.com/watch?v=-CAzIBTZSxc",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:a1",
+        "id": "PLIJ5pu8Ch1Pc"
+      }
+    ],
+    "buildSeconds": 93,
+    "dir": "output/2026-11-16-a1-short-animals-and-pets"
+  },
+  {
+    "date": "2026-11-16",
+    "level": "b1",
+    "skill": "short",
+    "topic": "Technology That Changed Life",
+    "title": "Technology That Changed Life: 3 English Words in 60 Seconds (B1) #shorts",
+    "durationSec": 28,
+    "sizeMb": 2.1,
+    "videoId": "QXAlnDNjA84",
+    "url": "https://www.youtube.com/watch?v=QXAlnDNjA84",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:b1",
+        "id": "PLSkG2Gz0CZos"
+      }
+    ],
+    "buildSeconds": 553,
+    "dir": "output/2026-11-16-b1-short-technology-that-changed-life"
+  },
+  {
+    "date": "2026-11-16",
+    "level": "a2",
+    "skill": "reading",
+    "topic": "Talking About Dreams and Wishes",
+    "title": "Talking About Dreams and Wishes — Learn English Through Story Level 2 (A2)",
+    "durationSec": 208,
+    "sizeMb": 11.6,
+    "videoId": "Hi1n56ienbQ",
+    "url": "https://www.youtube.com/watch?v=Hi1n56ienbQ",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:a2",
+        "id": "PLMUHkdE-F1_Q"
+      },
+      {
+        "key": "skill:reading",
+        "id": "PLYub11V_0AzA"
+      }
+    ],
+    "buildSeconds": 389,
+    "dir": "output/2026-11-16-a2-reading-talking-about-dreams-and-wishes"
+  },
+  {
     "date": "2026-11-15",
     "level": "a2",
     "skill": "short",
