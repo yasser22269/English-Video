@@ -1,5 +1,49 @@
 [
   {
+    "date": "2026-11-18",
+    "level": "a2",
+    "skill": "short",
+    "topic": "Social Media in Daily Life",
+    "title": "Social Media in Daily Life: 3 English Words in 60 Seconds (A2) #shorts",
+    "durationSec": 26,
+    "sizeMb": 1.9,
+    "videoId": "h4OecmnM1v0",
+    "url": "https://www.youtube.com/watch?v=h4OecmnM1v0",
+    "publishAt": "2026-11-18T18:00:00.000Z",
+    "playlists": [
+      {
+        "key": "level:a2",
+        "id": "PLMUHkdE-F1_Q"
+      }
+    ],
+    "buildSeconds": 137,
+    "dir": "output/2026-11-18-a2-short-social-media-in-daily-life"
+  },
+  {
+    "date": "2026-11-18",
+    "level": "b1",
+    "skill": "vocabulary",
+    "topic": "Describing a Turning Point",
+    "title": "Describing a Turning Point: 9 English Words with Pictures (B1 Intermediate)",
+    "durationSec": 297,
+    "sizeMb": 17.7,
+    "videoId": "Cxq9VDlpAZ0",
+    "url": "https://www.youtube.com/watch?v=Cxq9VDlpAZ0",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:b1",
+        "id": "PLSkG2Gz0CZos"
+      },
+      {
+        "key": "skill:vocabulary",
+        "id": "PLRKWAimfYWh4"
+      }
+    ],
+    "buildSeconds": 476,
+    "dir": "output/2026-11-18-b1-vocabulary-describing-a-turning-point"
+  },
+  {
     "date": "2026-11-17",
     "level": "b2",
     "skill": "short",
