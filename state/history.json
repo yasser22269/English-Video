@@ -1,5 +1,49 @@
 [
   {
+    "date": "2026-11-19",
+    "level": "b1",
+    "skill": "short",
+    "topic": "Living in a Big City",
+    "title": "Living in a Big City: 3 English Words in 60 Seconds (B1) #shorts",
+    "durationSec": 24,
+    "sizeMb": 2.1,
+    "videoId": "CmYK2OZTilU",
+    "url": "https://www.youtube.com/watch?v=CmYK2OZTilU",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:b1",
+        "id": "PLSkG2Gz0CZos"
+      }
+    ],
+    "buildSeconds": 614,
+    "dir": "output/2026-11-19-b1-short-living-in-a-big-city"
+  },
+  {
+    "date": "2026-11-19",
+    "level": "a2",
+    "skill": "vocabulary",
+    "topic": "Holiday Memories",
+    "title": "Holiday Memories: 10 English Words with Pictures (A2 Elementary)",
+    "durationSec": 285,
+    "sizeMb": 16.1,
+    "videoId": "p79gLxZVETs",
+    "url": "https://www.youtube.com/watch?v=p79gLxZVETs",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:a2",
+        "id": "PLMUHkdE-F1_Q"
+      },
+      {
+        "key": "skill:vocabulary",
+        "id": "PLRKWAimfYWh4"
+      }
+    ],
+    "buildSeconds": 630,
+    "dir": "output/2026-11-19-a2-vocabulary-holiday-memories"
+  },
+  {
     "date": "2026-11-18",
     "level": "a2",
     "skill": "short",
