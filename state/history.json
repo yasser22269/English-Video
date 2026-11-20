@@ -1,5 +1,93 @@
 [
   {
+    "date": "2026-11-20",
+    "level": "b2",
+    "skill": "short",
+    "topic": "Job Applications and Your CV",
+    "title": "Job Applications and Your CV: 3 English Words in 60 Seconds (B2) #shorts",
+    "durationSec": 27,
+    "sizeMb": 1.7,
+    "videoId": "UZVzmbvfFw4",
+    "url": "https://www.youtube.com/watch?v=UZVzmbvfFw4",
+    "publishAt": "2026-11-20T18:00:00.000Z",
+    "playlists": [
+      {
+        "key": "level:b2",
+        "id": "PLEyMEjEr22bU"
+      }
+    ],
+    "buildSeconds": 24,
+    "dir": "output/2026-11-20-b2-short-job-applications-and-your-cv"
+  },
+  {
+    "date": "2026-11-20",
+    "level": "a2",
+    "skill": "short",
+    "topic": "Emergencies and Calling for Help",
+    "title": "Emergencies and Calling for Help: 3 English Words in 60 Seconds (A2) #shorts",
+    "durationSec": 28,
+    "sizeMb": 2,
+    "videoId": "gci80KG3wO8",
+    "url": "https://www.youtube.com/watch?v=gci80KG3wO8",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:a2",
+        "id": "PLMUHkdE-F1_Q"
+      }
+    ],
+    "buildSeconds": 201,
+    "dir": "output/2026-11-20-a2-short-emergencies-and-calling-for-help"
+  },
+  {
+    "date": "2026-11-20",
+    "level": "c1",
+    "skill": "vocabulary",
+    "topic": "Making a Recommendation With Confidence",
+    "title": "Making a Recommendation With Confidence: 8 English Words with Pictures (C1 Advanced)",
+    "durationSec": 249,
+    "sizeMb": 14.8,
+    "videoId": "wI0OKDon44A",
+    "url": "https://www.youtube.com/watch?v=wI0OKDon44A",
+    "publishAt": "2026-11-20T19:00:00.000Z",
+    "playlists": [
+      {
+        "key": "level:c1",
+        "id": "PLPYmpq9AOiZM"
+      },
+      {
+        "key": "skill:vocabulary",
+        "id": "PLRKWAimfYWh4"
+      }
+    ],
+    "buildSeconds": 890,
+    "dir": "output/2026-11-20-c1-vocabulary-making-a-recommendation-with-confidence"
+  },
+  {
+    "date": "2026-11-20",
+    "level": "a2",
+    "skill": "reading",
+    "topic": "Talking About Music Taste",
+    "title": "Talking About Music Taste — Learn English Through Story Level 2 (A2)",
+    "durationSec": 236,
+    "sizeMb": 13.2,
+    "videoId": "7Xc8v1flbSg",
+    "url": "https://www.youtube.com/watch?v=7Xc8v1flbSg",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:a2",
+        "id": "PLMUHkdE-F1_Q"
+      },
+      {
+        "key": "skill:reading",
+        "id": "PLYub11V_0AzA"
+      }
+    ],
+    "buildSeconds": 1044,
+    "dir": "output/2026-11-20-a2-reading-talking-about-music-taste"
+  },
+  {
     "date": "2026-11-19",
     "level": "b1",
     "skill": "short",
