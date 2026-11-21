@@ -1,5 +1,49 @@
 [
   {
+    "date": "2026-11-21",
+    "level": "a2",
+    "skill": "short",
+    "topic": "Talking About Dreams and Wishes",
+    "title": "Talking About Dreams and Wishes: 3 English Words in 60 Seconds (A2) #shorts",
+    "durationSec": 26,
+    "sizeMb": 1.8,
+    "videoId": "CgirJZ5PANo",
+    "url": "https://www.youtube.com/watch?v=CgirJZ5PANo",
+    "publishAt": "2026-11-21T18:00:00.000Z",
+    "playlists": [
+      {
+        "key": "level:a2",
+        "id": "PLMUHkdE-F1_Q"
+      }
+    ],
+    "buildSeconds": 738,
+    "dir": "output/2026-11-21-a2-short-talking-about-dreams-and-wishes"
+  },
+  {
+    "date": "2026-11-21",
+    "level": "b1",
+    "skill": "speaking",
+    "topic": "Time Management Techniques",
+    "title": "Time Management Techniques — English Speaking Practice & Shadowing (B1)",
+    "durationSec": 343,
+    "sizeMb": 74.1,
+    "videoId": "rPLqB0_uq9Q",
+    "url": "https://www.youtube.com/watch?v=rPLqB0_uq9Q",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:b1",
+        "id": "PLSkG2Gz0CZos"
+      },
+      {
+        "key": "skill:speaking",
+        "id": "PLCadq2A6pEK8"
+      }
+    ],
+    "buildSeconds": 984,
+    "dir": "output/2026-11-21-b1-speaking-time-management-techniques"
+  },
+  {
     "date": "2026-11-20",
     "level": "b2",
     "skill": "short",
