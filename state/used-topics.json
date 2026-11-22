@@ -142,7 +142,8 @@
       "Describing Someone's Personality",
       "Shopping and Returning Something",
       "Job Interview: Strengths and Weaknesses",
-      "Talking About the Weather Naturally"
+      "Talking About the Weather Naturally",
+      "Describing Your Working Day"
     ],
     "c1:listening": [
       "The Economics of Scarcity and Choice",
@@ -349,7 +350,8 @@
       "At the Hotel",
       "Money and Prices",
       "My Weekend",
-      "Animals and Pets"
+      "Animals and Pets",
+      "Jobs and Occupations"
     ],
     "a2:short": [
       "Giving Simple Instructions",
@@ -412,7 +414,8 @@
       "Kindness and Small Acts",
       "Work-Life Balance",
       "Technology That Changed Life",
-      "Living in a Big City"
+      "Living in a Big City",
+      "Social Media and Mental Health"
     ],
     "b2:short": [
       "Talking About Learning English",
@@ -433,5 +436,5 @@
       "Job Applications and Your CV"
     ]
   },
-  "updatedAt": "2026-11-21T16:50:03.701Z"
+  "updatedAt": "2026-11-22T16:45:04.768Z"
 }

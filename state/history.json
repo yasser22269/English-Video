@@ -1,5 +1,69 @@
 [
   {
+    "date": "2026-11-22",
+    "level": "a1",
+    "skill": "short",
+    "topic": "Jobs and Occupations",
+    "title": "Jobs and Occupations: 3 English Words in 60 Seconds (A1) #shorts",
+    "durationSec": 22,
+    "sizeMb": 1.6,
+    "videoId": "TPvejYGSEvA",
+    "url": "https://www.youtube.com/watch?v=TPvejYGSEvA",
+    "publishAt": "2026-11-22T18:00:00.000Z",
+    "playlists": [
+      {
+        "key": "level:a1",
+        "id": "PLIJ5pu8Ch1Pc"
+      }
+    ],
+    "buildSeconds": 78,
+    "dir": "output/2026-11-22-a1-short-jobs-and-occupations"
+  },
+  {
+    "date": "2026-11-22",
+    "level": "b1",
+    "skill": "short",
+    "topic": "Social Media and Mental Health",
+    "title": "Social Media and Mental Health: 3 English Words in 60 Seconds (B1) #shorts",
+    "durationSec": 29,
+    "sizeMb": 2.1,
+    "videoId": "GGja7UREaiE",
+    "url": "https://www.youtube.com/watch?v=GGja7UREaiE",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:b1",
+        "id": "PLSkG2Gz0CZos"
+      }
+    ],
+    "buildSeconds": 692,
+    "dir": "output/2026-11-22-b1-short-social-media-and-mental-health"
+  },
+  {
+    "date": "2026-11-22",
+    "level": "b2",
+    "skill": "reading",
+    "topic": "Describing Your Working Day",
+    "title": "Describing Your Working Day — Learn English Through Story Level 4 (B2)",
+    "durationSec": 327,
+    "sizeMb": 19.6,
+    "videoId": "TfHy3g25KS4",
+    "url": "https://www.youtube.com/watch?v=TfHy3g25KS4",
+    "publishAt": "2026-11-22T17:30:00.000Z",
+    "playlists": [
+      {
+        "key": "level:b2",
+        "id": "PLEyMEjEr22bU"
+      },
+      {
+        "key": "skill:reading",
+        "id": "PLYub11V_0AzA"
+      }
+    ],
+    "buildSeconds": 281,
+    "dir": "output/2026-11-22-b2-reading-describing-your-working-day"
+  },
+  {
     "date": "2026-11-21",
     "level": "a2",
     "skill": "short",
