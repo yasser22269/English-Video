@@ -1,5 +1,97 @@
 [
   {
+    "date": "2026-11-24",
+    "level": "a2",
+    "skill": "short",
+    "topic": "Sports and Fitness Routines",
+    "title": "Sports and Fitness Routines: 3 English Words in 60 Seconds (A2) #shorts",
+    "durationSec": 25,
+    "sizeMb": 1.7,
+    "videoId": "6ZcRnSDGKOo",
+    "url": "https://www.youtube.com/watch?v=6ZcRnSDGKOo",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:a2",
+        "id": "PLMUHkdE-F1_Q"
+      }
+    ],
+    "buildSeconds": 38,
+    "dir": "output/2026-11-24-a2-short-sports-and-fitness-routines"
+  },
+  {
+    "date": "2026-11-24",
+    "level": "b1",
+    "skill": "listening",
+    "topic": "Online Shopping and Scams",
+    "title": "Online Shopping and Scams — English Conversation Practice (B1 Intermediate)",
+    "durationSec": 390,
+    "sizeMb": 65.4,
+    "videoId": "y12sMVzvh2s",
+    "url": "https://www.youtube.com/watch?v=y12sMVzvh2s",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:b1",
+        "id": "PLSkG2Gz0CZos"
+      },
+      {
+        "key": "skill:listening",
+        "id": "PLc1avYS6uKVo"
+      }
+    ],
+    "buildSeconds": 581,
+    "dir": "output/2026-11-24-b1-listening-online-shopping-and-scams"
+  },
+  {
+    "date": "2026-11-24",
+    "level": "a2",
+    "skill": "reading",
+    "topic": "Social Media in Daily Life",
+    "title": "Social Media in Daily Life — Learn English Through Story Level 2 (A2)",
+    "durationSec": 199,
+    "sizeMb": 11.2,
+    "videoId": "33IFWi8ylfc",
+    "url": "https://www.youtube.com/watch?v=33IFWi8ylfc",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:a2",
+        "id": "PLMUHkdE-F1_Q"
+      },
+      {
+        "key": "skill:reading",
+        "id": "PLYub11V_0AzA"
+      }
+    ],
+    "buildSeconds": 415,
+    "dir": "output/2026-11-24-a2-reading-social-media-in-daily-life"
+  },
+  {
+    "date": "2026-11-24",
+    "level": "a1",
+    "skill": "vocabulary",
+    "topic": "Countries and Nationalities",
+    "title": "Countries and Nationalities: 10 English Words with Pictures (A1 Beginner)",
+    "durationSec": 243,
+    "sizeMb": 13.9,
+    "videoId": "yk1J0-64Opo",
+    "url": "https://www.youtube.com/watch?v=yk1J0-64Opo",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:a1",
+        "id": "PLIJ5pu8Ch1Pc"
+      },
+      {
+        "key": "skill:vocabulary",
+        "id": "PLRKWAimfYWh4"
+      }
+    ],
+    "buildSeconds": 332,
+    "dir": "output/2026-11-24-a1-vocabulary-countries-and-nationalities"
+  },
+  {
     "date": "2026-11-23",
     "level": "b2",
     "skill": "short",

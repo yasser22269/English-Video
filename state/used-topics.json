@@ -16,7 +16,8 @@
       "Food and Drinks",
       "Money and Prices",
       "In the Classroom",
-      "Greetings and Introductions"
+      "Greetings and Introductions",
+      "Countries and Nationalities"
     ],
     "a1:reading": [
       "My Family",
@@ -265,7 +266,8 @@
       "Renting an Apartment",
       "Public Transport Problems",
       "Talking About Dreams and Wishes",
-      "Talking About Music Taste"
+      "Talking About Music Taste",
+      "Social Media in Daily Life"
     ],
     "b1:listening": [
       "Culture Shock Abroad",
@@ -279,7 +281,8 @@
       "Choosing a Career Path",
       "Personal Goals for This Year",
       "Managing Personal Finances",
-      "Technology That Changed Life"
+      "Technology That Changed Life",
+      "Online Shopping and Scams"
     ],
     "b2:speaking": [
       "The Psychology of Habits",
@@ -396,7 +399,8 @@
       "Social Media in Daily Life",
       "Emergencies and Calling for Help",
       "Talking About Dreams and Wishes",
-      "Ending a Conversation Politely"
+      "Ending a Conversation Politely",
+      "Sports and Fitness Routines"
     ],
     "b1:short": [
       "Fake News and Media Literacy",
@@ -441,5 +445,5 @@
       "Prepositions People Get Wrong"
     ]
   },
-  "updatedAt": "2026-11-23T20:33:32.786Z"
+  "updatedAt": "2026-11-24T20:02:04.288Z"
 }
