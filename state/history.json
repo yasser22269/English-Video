@@ -1,5 +1,117 @@
 [
   {
+    "date": "2026-11-25",
+    "level": "a1",
+    "skill": "short",
+    "topic": "Fruits and Vegetables",
+    "title": "Fruits and Vegetables: 3 English Words in 60 Seconds (A1) #shorts",
+    "durationSec": 21,
+    "sizeMb": 1.8,
+    "videoId": "xVwfnQG7FNA",
+    "url": "https://www.youtube.com/watch?v=xVwfnQG7FNA",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:a1",
+        "id": "PLIJ5pu8Ch1Pc"
+      }
+    ],
+    "buildSeconds": 21,
+    "dir": "output/2026-11-25-a1-short-fruits-and-vegetables"
+  },
+  {
+    "date": "2026-11-25",
+    "level": "b1",
+    "skill": "short",
+    "topic": "Getting a Driving Licence",
+    "title": "Getting a Driving Licence: 3 English Words in 60 Seconds (B1) #shorts",
+    "durationSec": 29,
+    "sizeMb": 2.2,
+    "videoId": "P2KWgHpHs3M",
+    "url": "https://www.youtube.com/watch?v=P2KWgHpHs3M",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:b1",
+        "id": "PLSkG2Gz0CZos"
+      }
+    ],
+    "buildSeconds": 37,
+    "dir": "output/2026-11-25-b1-short-getting-a-driving-licence"
+  },
+  {
+    "date": "2026-11-25",
+    "level": "b2",
+    "skill": "vocabulary",
+    "topic": "Booking and Changing Appointments",
+    "title": "Booking and Changing Appointments: 9 English Words with Pictures (B2 Upper-Intermediate)",
+    "durationSec": 310,
+    "sizeMb": 17.6,
+    "videoId": "uiJo6AyvkXc",
+    "url": "https://www.youtube.com/watch?v=uiJo6AyvkXc",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:b2",
+        "id": "PLEyMEjEr22bU"
+      },
+      {
+        "key": "skill:vocabulary",
+        "id": "PLRKWAimfYWh4"
+      }
+    ],
+    "buildSeconds": 293,
+    "dir": "output/2026-11-25-b2-vocabulary-booking-and-changing-appointments"
+  },
+  {
+    "date": "2026-11-25",
+    "level": "a2",
+    "skill": "listening",
+    "topic": "Describing a Photograph",
+    "title": "Describing a Photograph — English Conversation Practice (A2 Elementary)",
+    "durationSec": 228,
+    "sizeMb": 29.3,
+    "videoId": "Wfhj_sxMOX0",
+    "url": "https://www.youtube.com/watch?v=Wfhj_sxMOX0",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:a2",
+        "id": "PLMUHkdE-F1_Q"
+      },
+      {
+        "key": "skill:listening",
+        "id": "PLc1avYS6uKVo"
+      }
+    ],
+    "buildSeconds": 193,
+    "dir": "output/2026-11-25-a2-listening-describing-a-photograph"
+  },
+  {
+    "date": "2026-11-25",
+    "level": "a1",
+    "skill": "reading",
+    "topic": "My Bedroom and Furniture",
+    "title": "My Bedroom and Furniture — Learn English Through Story Level 1 (A1)",
+    "durationSec": 167,
+    "sizeMb": 9.4,
+    "videoId": "pbakMNFLi4g",
+    "url": "https://www.youtube.com/watch?v=pbakMNFLi4g",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:a1",
+        "id": "PLIJ5pu8Ch1Pc"
+      },
+      {
+        "key": "skill:reading",
+        "id": "PLYub11V_0AzA"
+      }
+    ],
+    "buildSeconds": 248,
+    "dir": "output/2026-11-25-a1-reading-my-bedroom-and-furniture"
+  },
+  {
     "date": "2026-11-24",
     "level": "a2",
     "skill": "short",

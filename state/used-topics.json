@@ -35,7 +35,8 @@
       "My House and Rooms",
       "Describing People",
       "Hobbies and Free Time",
-      "My Daily Routine"
+      "My Daily Routine",
+      "My Bedroom and Furniture"
     ],
     "a2:listening": [
       "Future Plans and Intentions",
@@ -53,7 +54,8 @@
       "Making Invitations",
       "Volunteering and Helping Others",
       "Talking on the Phone at Work",
-      "Health Problems and Advice"
+      "Health Problems and Advice",
+      "Describing a Photograph"
     ],
     "b1:speaking": [
       "Job Interviews and Strengths",
@@ -80,7 +82,8 @@
       "Prepositions People Get Wrong",
       "Job Interviews: The Most Common Questions",
       "Talking About Stress and Relaxing",
-      "Talking About the Weather Naturally"
+      "Talking About the Weather Naturally",
+      "Booking and Changing Appointments"
     ],
     "c1:reading": [
       "Consciousness and the Hard Problem",
@@ -357,7 +360,8 @@
       "Money and Prices",
       "My Weekend",
       "Animals and Pets",
-      "Jobs and Occupations"
+      "Jobs and Occupations",
+      "Fruits and Vegetables"
     ],
     "a2:short": [
       "Giving Simple Instructions",
@@ -423,7 +427,8 @@
       "Work-Life Balance",
       "Technology That Changed Life",
       "Living in a Big City",
-      "Social Media and Mental Health"
+      "Social Media and Mental Health",
+      "Getting a Driving Licence"
     ],
     "b2:short": [
       "Talking About Learning English",
@@ -445,5 +450,5 @@
       "Prepositions People Get Wrong"
     ]
   },
-  "updatedAt": "2026-11-24T20:02:04.288Z"
+  "updatedAt": "2026-11-25T18:54:23.078Z"
 }
