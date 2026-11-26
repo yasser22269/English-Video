@@ -1,5 +1,117 @@
 [
   {
+    "date": "2026-11-26",
+    "level": "b2",
+    "skill": "short",
+    "topic": "Phone Calls in English",
+    "title": "Phone Calls in English: 3 English Words in 60 Seconds (B2) #shorts",
+    "durationSec": 25,
+    "sizeMb": 1.8,
+    "videoId": "LCOiJvr4Hqg",
+    "url": "https://www.youtube.com/watch?v=LCOiJvr4Hqg",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:b2",
+        "id": "PLEyMEjEr22bU"
+      }
+    ],
+    "buildSeconds": 37,
+    "dir": "output/2026-11-26-b2-short-phone-calls-in-english"
+  },
+  {
+    "date": "2026-11-26",
+    "level": "a2",
+    "skill": "short",
+    "topic": "Health Problems and Advice",
+    "title": "Health Problems and Advice: 3 English Words in 60 Seconds (A2) #shorts",
+    "durationSec": 23,
+    "sizeMb": 1.6,
+    "videoId": "c48wCFbzm5I",
+    "url": "https://www.youtube.com/watch?v=c48wCFbzm5I",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:a2",
+        "id": "PLMUHkdE-F1_Q"
+      }
+    ],
+    "buildSeconds": 87,
+    "dir": "output/2026-11-26-a2-short-health-problems-and-advice"
+  },
+  {
+    "date": "2026-11-26",
+    "level": "c1",
+    "skill": "listening",
+    "topic": "Talking About Films and Books Intelligently",
+    "title": "Talking About Films and Books Intelligently — English Conversation Practice (C1 Advanced)",
+    "durationSec": 390,
+    "sizeMb": 66.1,
+    "videoId": "DbH6QZBQQ-8",
+    "url": "https://www.youtube.com/watch?v=DbH6QZBQQ-8",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:c1",
+        "id": "PLPYmpq9AOiZM"
+      },
+      {
+        "key": "skill:listening",
+        "id": "PLc1avYS6uKVo"
+      }
+    ],
+    "buildSeconds": 445,
+    "dir": "output/2026-11-26-c1-listening-talking-about-films-and-books-intelligently"
+  },
+  {
+    "date": "2026-11-26",
+    "level": "a2",
+    "skill": "speaking",
+    "topic": "Going to the Bank",
+    "title": "Going to the Bank — English Speaking Practice & Shadowing (A2)",
+    "durationSec": 218,
+    "sizeMb": 8,
+    "videoId": "jWrEkD85g8s",
+    "url": "https://www.youtube.com/watch?v=jWrEkD85g8s",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:a2",
+        "id": "PLMUHkdE-F1_Q"
+      },
+      {
+        "key": "skill:speaking",
+        "id": "PLCadq2A6pEK8"
+      }
+    ],
+    "buildSeconds": 579,
+    "dir": "output/2026-11-26-a2-speaking-going-to-the-bank"
+  },
+  {
+    "date": "2026-11-26",
+    "level": "a1",
+    "skill": "listening",
+    "topic": "My Bedroom and Furniture",
+    "title": "My Bedroom and Furniture — English Conversation Practice (A1 Beginner)",
+    "durationSec": 211,
+    "sizeMb": 10.6,
+    "videoId": "IeV9ZfLP0nI",
+    "url": "https://www.youtube.com/watch?v=IeV9ZfLP0nI",
+    "publishAt": null,
+    "playlists": [
+      {
+        "key": "level:a1",
+        "id": "PLIJ5pu8Ch1Pc"
+      },
+      {
+        "key": "skill:listening",
+        "id": "PLc1avYS6uKVo"
+      }
+    ],
+    "buildSeconds": 453,
+    "dir": "output/2026-11-26-a1-listening-my-bedroom-and-furniture"
+  },
+  {
     "date": "2026-11-25",
     "level": "a1",
     "skill": "short",
