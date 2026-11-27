@@ -185,7 +185,8 @@
       "Asking for Directions",
       "Saying Goodbye Politely",
       "Describing People",
-      "Hobbies and Free Time"
+      "Hobbies and Free Time",
+      "Things in My Bag"
     ],
     "a2:vocabulary": [
       "The Best and the Worst",
@@ -209,7 +210,8 @@
       "Describing Your Hometown",
       "Social Media in Daily Life",
       "Holiday Memories",
-      "Small Talk with Strangers"
+      "Small Talk with Strangers",
+      "Making Appointments"
     ],
     "b1:reading": [
       "Travelling on a Budget",
@@ -224,7 +226,8 @@
       "Describing a Turning Point",
       "Remote Work and Productivity",
       "Healthy Eating Habits",
-      "Job Interviews and Strengths"
+      "Job Interviews and Strengths",
+      "Dealing with Difficult People"
     ],
     "b2:listening": [
       "Gentrification and Neighbourhoods",
@@ -364,7 +367,8 @@
       "My Weekend",
       "Animals and Pets",
       "Jobs and Occupations",
-      "Fruits and Vegetables"
+      "Fruits and Vegetables",
+      "Housework and Chores"
     ],
     "a2:short": [
       "Giving Simple Instructions",
@@ -408,7 +412,8 @@
       "Talking About Dreams and Wishes",
       "Ending a Conversation Politely",
       "Sports and Fitness Routines",
-      "Health Problems and Advice"
+      "Health Problems and Advice",
+      "Making Invitations"
     ],
     "b1:short": [
       "Fake News and Media Literacy",
@@ -455,5 +460,5 @@
       "Phone Calls in English"
     ]
   },
-  "updatedAt": "2026-11-26T18:55:21.691Z"
+  "updatedAt": "2026-11-27T18:29:51.352Z"
 }
